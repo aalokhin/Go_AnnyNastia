@@ -44,19 +44,13 @@ final class Client {
     static let locateUrl = "https://cisco-cmx.unit.ua/"
     static let presenceUrl = "https://cisco-presence.unit.ua/"
     static let username = "RO"
-    // we will need to take password from application later bu for now we'll hardcode it in here
-    static let locatePass = "just4reading"
+    static let locatePass = "just4reading" // we will need to take password from application later bu for now we'll hardcode it in here
     static let presencePass = "Passw0rd"
     
-        /* For e1r4p18  madAddr 38:c9:86:1c:37:7f  */
+    /* For e1r4p18  madAddr 38:c9:86:1c:37:7f  */
     static let macAddress = "38:c9:86:1c:37:7f"
     
-    //"https://cisco-cmx.unit.ua/api/location/v2/clients", "just4reading"
-    //https://cisco-presence.unit.ua/apidocs/location-api#Active-Clients-API-GET-This-API-returns-active-clients-count
-    //https://cisco-cmx.unit.ua/api/location/v2/clients?macAddress=38:c9:86:1c:37:7f
-
-    
-    
+ 
     let searchByMacAddress = "https://cisco-cmx.unit.ua/api/location/v2/clients?macAddress=\(macAddress)" // GET
     let searchByUser = "https://cisco-cmx.unit.ua/api/location/v2/clients?username=aalokhin"
     
