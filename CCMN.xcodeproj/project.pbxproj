@@ -15,6 +15,7 @@
 		EF48C50F22EDE93100980012 /* CCMNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C50E22EDE93100980012 /* CCMNTests.swift */; };
 		EF48C51A22EDE93100980012 /* CCMNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C51922EDE93100980012 /* CCMNUITests.swift */; };
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
+		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EF48C51922EDE93100980012 /* CCMNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMNUITests.swift; sourceTree = "<group>"; };
 		EF48C51B22EDE93100980012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,11 @@
 		EF48C4F822EDE92F00980012 /* CCMN */ = {
 			isa = PBXGroup;
 			children = (
+				EF8580C822EF62C700F6B58D /* Utilities */,
 				EF8580C522EF568E00F6B58D /* View */,
 				EF8580C422EF566500F6B58D /* Model */,
 				EF8580C122EF562500F6B58D /* Controllers */,
 				EF48C4F922EDE92F00980012 /* AppDelegate.swift */,
-				EF48C4FB22EDE92F00980012 /* ViewController.swift */,
 				EF48C4FD22EDE92F00980012 /* Main.storyboard */,
 				EF48C50022EDE93100980012 /* Assets.xcassets */,
 				EF48C50222EDE93100980012 /* LaunchScreen.storyboard */,
@@ -133,6 +135,7 @@
 		EF8580C122EF562500F6B58D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF48C4FB22EDE92F00980012 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF8580C822EF62C700F6B58D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EF8580C922EF62DA00F6B58D /* Extension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +297,7 @@
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EF8580C722EF569F00F6B58D /* Client.swift in Sources */,
+				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
