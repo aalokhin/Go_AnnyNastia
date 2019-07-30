@@ -18,28 +18,29 @@ class ViewController: UIViewController {
     
     func testRequestLocate(){
       //  let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
-        let searchStr = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
+        
+        
+        let urlPath: String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
+        let url = URL(string: urlPath)
+        
+        let request: NSMutableURLRequest = NSMutableURLRequest(url: url!)
         let auth = "Basic " + String("RO:" + "just4reading").toBase64()
-        let queryItems = [ NSURLQueryItem(name: "Authorization", value: auth)]
-        let urlComps = NSURLComponents(string: searchStr)!
-        urlComps.queryItems = queryItems as [URLQueryItem]
-        if let url = urlComps.url{
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            print(url)
-            DispatchQueue.global().async{
-                let task = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
-                    if let err = error {
-                        print("error occured \(err)")
-                    } else if let d = data
-                    {
-                       print("some data received")
-                    print(d)
-                    }
-                }
-                task.resume()
+        request.setValue(auth, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        print(url)
+        DispatchQueue.global().async{
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
+            if let err = error {
+                print("error occured \(err)")
+            } else if let d = data
+            {
+               print("some data received")
+            print(d)
             }
         }
+        task.resume()
+    }
+        
     }
 
 
