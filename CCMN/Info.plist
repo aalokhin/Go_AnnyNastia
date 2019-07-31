@@ -4,9 +4,20 @@
 <dict>
     <key>NSAppTransportSecurity</key>
     <dict>
-        <!--Include to allow all connections (DANGER)-->
         <key>NSAllowsArbitraryLoads</key>
         <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>cisco-cmx.unit.ua</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
     </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

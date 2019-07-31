@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        test()
-        //self.testRequestLocate()
+        //test()
+        self.testRequestLocate()
         // Do any additional setup after loading the view.
     }
     
