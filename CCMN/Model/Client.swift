@@ -51,7 +51,8 @@ final class Client {
     var manager : SessionManager = {
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "cisco-cmx.unit.ua": .disableEvaluation
+            "cisco-cmx.unit.ua" : .disableEvaluation,
+            "cisco-presence.unit.ua" : .disableEvaluation
         ]
         
         // Create custom manager
