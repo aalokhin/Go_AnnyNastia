@@ -12,23 +12,7 @@ import Alamofire
 class ViewController: UIViewController {
     
     //this shit helps us a  lot
-    var manager : SessionManager = {
-        // Create the server trust policies
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
-            "cisco-cmx.unit.ua": .disableEvaluation
-        ]
-        
-        // Create custom manager
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        
-        let manager = Alamofire.SessionManager(
-            configuration: URLSessionConfiguration.default,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-        )
-        
-        return manager
-    }()
+    
     
 
     override func viewDidLoad() {
@@ -44,7 +28,7 @@ class ViewController: UIViewController {
         let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
         let auth = "Basic " + String("RO:" + "just4reading").toBase64()
         
-        manager.request(urlPath, method: .get, headers: ["Authorization": auth]).validate().responseJSON { response in
+        Client.sharedInstance.manager.request(urlPath, method: .get, headers: ["Authorization": auth]).validate().responseJSON { response in
             switch response.result {
                 
             case .success:
