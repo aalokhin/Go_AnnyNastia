@@ -40,32 +40,33 @@ import Foundation
 import Alamofire
 
 final class Client {
-    let aalokhin = "aalokhin"
-    let gdanylov = "gdanylov"
     static let locateUrl = "https://cisco-cmx.unit.ua/"
     static let presenceUrl = "https://cisco-presence.unit.ua/"
     static let username = "RO"
     static let locatePass = "just4reading" // we will need to take password from application later bu for now we'll hardcode it in here
     static let presencePass = "Passw0rd"
     
+    
+    let locateAuthHeader = "Basic " + String("\(username):" + locatePass).toBase64()
+    let presenceAuthHeader = "Basic " + String("\(username):" + presencePass).toBase64()
+   
     var manager : SessionManager = {
         // Create the server trust policies
         let serverTrustPolicies: [String: ServerTrustPolicy] = [
             "cisco-cmx.unit.ua" : .disableEvaluation,
             "cisco-presence.unit.ua" : .disableEvaluation
         ]
-        
         // Create custom manager
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        
+
         let manager = Alamofire.SessionManager(
             configuration: URLSessionConfiguration.default,
             serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
         )
-        
         return manager
     }()
+    
     /* For e1r4p18  madAddr 38:c9:86:1c:37:7f  */
     static let macAddress = "38:c9:86:1c:37:7f"
     

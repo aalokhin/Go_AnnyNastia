@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     func testRequestLocate(){
       //  let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
         let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
-        let auth = "Basic " + String("RO:" + "just4reading").toBase64()
         
+        let auth = Client.sharedInstance.locateAuthHeader
         Client.sharedInstance.manager.request(urlPath, method: .get, headers: ["Authorization": auth]).validate().responseJSON { response in
             switch response.result {
                 
