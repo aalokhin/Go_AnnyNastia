@@ -70,6 +70,8 @@ final class Client {
     /* For e1r4p18  madAddr 38:c9:86:1c:37:7f  */
     static let macAddress = "38:c9:86:1c:37:7f"
     
+    
+    //enum
  
     let searchByMacAddress = "https://cisco-cmx.unit.ua/api/location/v2/clients?macAddress=\(macAddress)" // GET
     let searchByUser = "https://cisco-cmx.unit.ua/api/location/v2/clients?username=aalokhin"

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     //IT WORKED FUCKAS!!!!!
     func testRequestLocate(){
       //  let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
-        let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
+        let urlPath : String = "https://cisco-cmx.unit.ua/" +  locationEndpoints.clientsCount.rawValue
         
         let auth = Client.sharedInstance.locateAuthHeader
         Client.sharedInstance.manager.request(urlPath, method: .get, headers: ["Authorization": auth]).validate().responseJSON { response in
