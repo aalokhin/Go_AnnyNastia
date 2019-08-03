@@ -19,13 +19,7 @@ protocol locationEndpoint {
 
 enum locationEndpoints: String, locationEndpoint {
     case clientsCount = "api/location/v2/clients/count"  // wireless clients
-    
-  
-    
-//    static func deleteMessage(id: Int) -> String {
-//        return "v2/messages/\(id)"
-//    }
-    
+
 }
 
 

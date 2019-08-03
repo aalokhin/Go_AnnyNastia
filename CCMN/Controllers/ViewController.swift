@@ -21,11 +21,11 @@ class ViewController: UIViewController {
         //test()
         
         
-        let parameters : Parameters = [
+        var parameters : Parameters = [
             "" : ""
         ]
-        let urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
-        let auth = Client.sharedInstance.locateAuthHeader
+        var urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
+        var auth = Client.sharedInstance.locateAuthHeader
         
  
         self.performRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
@@ -36,6 +36,35 @@ class ViewController: UIViewController {
                 print("some error completing task")
             }
         }
+        
+        //https://cisco-cmx.unit.ua/api/config/v1/maps/image
+        
+        parameters = ["date" : "2019/08/02", "username" : "aalokhin"]
+        
+        
+        self.performRequest(urlPath : "https://cisco-cmx.unit.ua/api/location/v1/historylite/byusername/aalokhin", authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
+            if complete {
+                print("request2 completed")
+            }
+            else {
+                print("some error completing request2")
+            }
+        }
+        
+        /*
+         date
+         Y
+         —
+         String
+         query
+         Date in format of yyyy/mm/dd
+         username
+         Y
+         —
+         String
+         pathReplace
+         User name.
+ */
         // Do any additional setup after loading the view.
     }
     
