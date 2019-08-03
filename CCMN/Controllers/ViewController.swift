@@ -19,27 +19,38 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //test()
-        self.testRequestLocate()
-        // Do any additional setup after loading the view.
-    }
-    //IT WORKED FUCKAS!!!!!
-    func testRequestLocate(){
-      //  let urlPath : String = "https://cisco-cmx.unit.ua/api/location/v2/clients/count"
-        let urlPath : String = "https://cisco-cmx.unit.ua/" +  locationEndpoints.clientsCount.rawValue
         
+        
+        let parameters : Parameters = [
+            "" : ""
+        ]
+        let urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
         let auth = Client.sharedInstance.locateAuthHeader
-        Client.sharedInstance.manager.request(urlPath, method: .get, headers: ["Authorization": auth]).validate().responseJSON { response in
-            switch response.result {
-                
-            case .success:
-                if let value = response.result.value {
-                    print(value)
-                    print("success")
-                }
-            case .failure(let error):
-               print("failure")
-               print(error)
+        
+ 
+        self.performRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
+            if complete {
+                print("request completed")
+            }
+            else {
+                print("some error completing task")
             }
         }
+        // Do any additional setup after loading the view.
     }
+    
+    
+    //IT WORKED FUCKAS!!!!!
+    
+    
 }
+
+
+
+/*    _ url: URLConvertible,
+ method: HTTPMethod = .get,
+ parameters: Parameters? = nil,
+ encoding: ParameterEncoding = URLEncoding.default,
+ headers: HTTPHeaders? = nil)
+ */
+

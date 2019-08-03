@@ -40,8 +40,8 @@ import Foundation
 import Alamofire
 
 final class Client {
-    static let locateUrl = "https://cisco-cmx.unit.ua/"
-    static let presenceUrl = "https://cisco-presence.unit.ua/"
+    let locateUrl = "https://cisco-cmx.unit.ua/"
+    let presenceUrl = "https://cisco-presence.unit.ua/"
     static let username = "RO"
     static let locatePass = "just4reading" // we will need to take password from application later bu for now we'll hardcode it in here
     static let presencePass = "Passw0rd"
