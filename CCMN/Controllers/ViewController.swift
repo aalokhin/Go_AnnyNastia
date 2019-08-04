@@ -31,6 +31,26 @@ class ViewController: UIViewController {
             }
         }
         
+        urlPath = Client.sharedInstance.locateUrl + locationEndpoints.allFloors.rawValue
+        //getting the floors information
+        self.getCampusDetails(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get)
+        { complete in
+            if complete {
+                print("request on getting maps info completed")
+            }
+            else {
+                print("some error completing maps info completed request")
+            }
+        }
+        
+        
+        // get the floor info
+        
+        
+        
+        
+        //  "floorInfo" : ("https://cisco-cmx.unit.ua/api/config/v1/maps/count", "just4reading"),
+        
         //https://cisco-cmx.unit.ua/api/config/v1/maps/image
         
 //        parameters = ["date" : "2019/30/06", "username" : "aalokhin"]
@@ -46,45 +66,40 @@ class ViewController: UIViewController {
 //        }
         
         
-
+       // parameters = ["campusName" : "System Campus", "buildingName" : "UNIT.Factory", "floorName" : "1st_Floor"]
         
-        urlPath = Client.sharedInstance.locateUrl + locationEndpoints.firstFloorImg.rawValue
-        self.performDataRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .post){ complete in
-            if complete {
-                print("request2 completed")
-            }
-            else {
-                print("some error completing request2")
-            }
-        }
+        
 
 
     }
     
-    func performDataRequest(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
-        
-        Client.sharedInstance.manager.request(urlPath, method: .get, parameters : params, headers: authHeader).validate().responseData { response in
-            switch response.result {
-                
-            case .success:
-                print("we successfully compted request with data")
-                
-                
-                if let value = response.result.value {
-                    let downloadedImage = UIImage(data: value)
-                    self.imageMap.image = downloadedImage
-                    print(value)
-                    print(type(of: response))
-                    print("success data")
-                    completion(true)
-                }
-            case .failure(let error):
-                print("failure data")
-                print(error)
-                completion(false)
-            }
-        }
-    }
+    
+    
+//    func performDataRequest(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
+//
+//
+//        Client.sharedInstance.manager.request(urlPath, method: .get, parameters : params, headers: authHeader).validate().responseData { response in
+//            switch response.result {
+//
+//            case .success:
+//                print("we successfully completed request with data")
+//
+//
+//                if let value = response.result.value {
+//                    let downloadedImage = UIImage(data: value)
+//                    self.imageMap.image = downloadedImage
+//                    print(value)
+//                    print(type(of: response))
+//                    print("success data")
+//                    completion(true)
+//                }
+//            case .failure(let error):
+//                print("failure data")
+//                print(error)
+//                completion(false)
+//            }
+//        }
+//    }
     
     
     //IT WORKED FUCKAS!!!!!

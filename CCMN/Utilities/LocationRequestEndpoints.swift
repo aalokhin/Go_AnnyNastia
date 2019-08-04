@@ -20,10 +20,10 @@ protocol locationEndpoint {
 enum locationEndpoints: String, locationEndpoint {
     case clientsCount = "api/location/v2/clients/count"  // wireless clients
     
-    
-    case firstFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor"
-    case secondFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
-    case thirdFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"
+    case allFloors = "api/config/v1/maps/count"
+    case firstFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
+//    case secondFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
+//    case thirdFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"
     
 
 }

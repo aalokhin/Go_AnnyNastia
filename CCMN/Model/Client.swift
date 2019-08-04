@@ -46,6 +46,7 @@ final class Client {
     static let locatePass = "just4reading" // we will need to take password from application later bu for now we'll hardcode it in here
     static let presencePass = "Passw0rd"
     
+    var campusInformation : mapJSON?
     
     let locateAuthHeader = "Basic " + String("\(username):" + locatePass).toBase64()
     let presenceAuthHeader = "Basic " + String("\(username):" + presencePass).toBase64()
