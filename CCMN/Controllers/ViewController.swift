@@ -17,17 +17,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //test()
-        
-        
-        var parameters : Parameters = [
-            "" : ""
-        ]
+        var parameters : Parameters = ["" : ""]
         var urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
-        var auth = Client.sharedInstance.locateAuthHeader
+        let auth = Client.sharedInstance.locateAuthHeader
         
- 
         self.performRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
             if complete {
                 print("request completed")
@@ -39,10 +32,23 @@ class ViewController: UIViewController {
         
         //https://cisco-cmx.unit.ua/api/config/v1/maps/image
         
-        parameters = ["date" : "2019/08/02", "username" : "aalokhin"]
+//        parameters = ["date" : "2019/30/06", "username" : "aalokhin"]
+//
+//
+//        self.performRequest(urlPath : "https://cisco-cmx.unit.ua/api/location/v1/historylite/byusername/aalokhin", authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
+//            if complete {
+//                print("request2 completed")
+//            }
+//            else {
+//                print("some error completing request2")
+//            }
+//        }
         
         
-        self.performRequest(urlPath : "https://cisco-cmx.unit.ua/api/location/v1/historylite/byusername/aalokhin", authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
+
+        
+        urlPath = Client.sharedInstance.locateUrl + locationEndpoints.firstFloorImg.rawValue
+        self.performDataRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .post){ complete in
             if complete {
                 print("request2 completed")
             }
@@ -50,22 +56,8 @@ class ViewController: UIViewController {
                 print("some error completing request2")
             }
         }
-        
-        /*
-         date
-         Y
-         —
-         String
-         query
-         Date in format of yyyy/mm/dd
-         username
-         Y
-         —
-         String
-         pathReplace
-         User name.
- */
-        // Do any additional setup after loading the view.
+
+
     }
     
     
