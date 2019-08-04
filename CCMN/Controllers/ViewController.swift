@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     //this shit helps us a  lot
     
     
-
+    @IBOutlet weak var imageMap: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var parameters : Parameters = ["" : ""]
@@ -58,6 +59,31 @@ class ViewController: UIViewController {
         }
 
 
+    }
+    
+    func performDataRequest(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
+        
+        Client.sharedInstance.manager.request(urlPath, method: .get, parameters : params, headers: authHeader).validate().responseData { response in
+            switch response.result {
+                
+            case .success:
+                print("we successfully compted request with data")
+                
+                
+                if let value = response.result.value {
+                    let downloadedImage = UIImage(data: value)
+                    self.imageMap.image = downloadedImage
+                    print(value)
+                    print(type(of: response))
+                    print("success data")
+                    completion(true)
+                }
+            case .failure(let error):
+                print("failure data")
+                print(error)
+                completion(false)
+            }
+        }
     }
     
     

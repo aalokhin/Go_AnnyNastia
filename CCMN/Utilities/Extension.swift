@@ -40,35 +40,7 @@ extension UIViewController{
     //https://cisco-cmx.unit.ua/api/config/v1/maps/count
     
     
-    func performDataRequest(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
-        
-        Client.sharedInstance.manager.request(urlPath, method: .get, parameters : params, headers: authHeader).validate().responseData { response in
-            switch response.result {
-                
-            case .success:
-                print("we successfully compted request with data")
-
-                
-                if let value = response.result.value {
-//                    let data = value // received from a network request, for example
-//                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-//                    print(json)
-                    print(value)
-                    print(type(of: response))
-                    print("success data")
-                    completion(true)
-                }
-            case .failure(let error):
-                print("failure data")
-                print(error)
-                completion(false)
-            }
-        }
-    }
-    
-    
-
-    func performRequestImg(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
+      func performRequestImg(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Bool) -> Void){
         
         Client.sharedInstance.manager.request(urlPath, method: .get, headers: authHeader).validate().responseJSON { response in
             switch response.result {
