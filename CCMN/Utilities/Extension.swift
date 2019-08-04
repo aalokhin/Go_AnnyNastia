@@ -50,9 +50,9 @@ extension UIViewController{
 
                 
                 if let value = response.result.value {
-                    let data = value // received from a network request, for example
-                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
+//                    let data = value // received from a network request, for example
+//                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
+//                    print(json)
                     print(value)
                     print(type(of: response))
                     print("success data")
