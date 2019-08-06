@@ -47,6 +47,33 @@ class ViewController: UIViewController {
                         return
                     }
                     t.printAllMapInfo()
+                    Client.sharedInstance.campusInformation = t
+                   // t.campusCounts
+                    
+                    guard let index = t.campusCounts?.firstIndex(where: { (item) -> Bool in
+                        item.campusName == "System Campus"
+
+                    }) else {
+                        print("there is no such campus")
+                        return
+                    }
+                    print(index)
+                    
+                    if let name = t.campusCounts![index].campusName{
+                        if let buildingName = t.campusCounts![index].buildingCounts![0].buildingName {
+                            var floors : [String] = []
+                            if let f = t.campusCounts![index].buildingCounts![0].floorCounts{
+                                for i in f {
+                                    floors.append(i.floorName!)
+                                }
+                                Client.sharedInstance.campus = Campus(campusName: name, buildingName: buildingName, floorName: floors)
+                            }
+                        }
+                    }
+                    //guard let validCampus = t.campusCounts("")
+                    if let camp = Client.sharedInstance.campus{
+                        print(camp.campusName, camp.buildingName, camp.floorName.count)
+                    }
                    // print(t.campusCounts?.count ?? "no campus counts")
                 }
             })

@@ -10,6 +10,7 @@
 		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
 		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
+		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
 		EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C4F922EDE92F00980012 /* AppDelegate.swift */; };
 		EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C4FB22EDE92F00980012 /* ViewController.swift */; };
 		EF48C4FF22EDE92F00980012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF48C4FD22EDE92F00980012 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF06EA4B22F9D91700681741 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		EF48C4F622EDE92F00980012 /* CCMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF48C4F922EDE92F00980012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF48C4FB22EDE92F00980012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				EF8580C622EF569F00F6B58D /* Client.swift */,
 				EFE8C33F22F71AE600C054F6 /* MapJSON.swift */,
+				EF06EA4B22F9D91700681741 /* Campus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */,
+				EF06EA4C22F9D91700681741 /* Campus.swift in Sources */,
 				EF8580C722EF569F00F6B58D /* Client.swift in Sources */,
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
