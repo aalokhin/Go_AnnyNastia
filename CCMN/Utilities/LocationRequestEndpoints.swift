@@ -21,6 +21,7 @@ enum locationEndpoints: String, locationEndpoint {
     case clientsCount = "api/location/v2/clients/count"  // wireless clients
     
     case allFloors = "api/config/v1/maps/count"
+    case imageMapReq = "api/config/v1/maps/image"
     
    // case firstFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
 //    case secondFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"

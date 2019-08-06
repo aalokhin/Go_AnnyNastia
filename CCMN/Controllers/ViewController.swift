@@ -35,6 +35,7 @@ class ViewController: UIViewController {
        
         //getting the floors information
         getRequestData(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
+            //if let error should be added
                 if let d =  data{
                     print("request on getting maps info completed")
                    // print(d)
@@ -47,39 +48,46 @@ class ViewController: UIViewController {
                         return
                     }
                     t.printAllMapInfo()
-                    Client.sharedInstance.campusInformation = t
-                   // t.campusCounts
+                    Client.sharedInstance.setCampus(t : t)
+                    self.setImage(2)
                     
-                    guard let index = t.campusCounts?.firstIndex(where: { (item) -> Bool in
-                        item.campusName == "System Campus"
-
-                    }) else {
-                        print("there is no such campus")
-                        return
-                    }
-                    print(index)
-                    
-                    if let name = t.campusCounts![index].campusName{
-                        if let buildingName = t.campusCounts![index].buildingCounts![0].buildingName {
-                            var floors : [String] = []
-                            if let f = t.campusCounts![index].buildingCounts![0].floorCounts{
-                                for i in f {
-                                    floors.append(i.floorName!)
-                                }
-                                Client.sharedInstance.campus = Campus(campusName: name, buildingName: buildingName, floorName: floors)
-                            }
-                        }
-                    }
-                    //guard let validCampus = t.campusCounts("")
-                    if let camp = Client.sharedInstance.campus{
-                        print(camp.campusName, camp.buildingName, camp.floorName.count)
-                    }
-                   // print(t.campusCounts?.count ?? "no campus counts")
                 }
             })
+        
            
         }
-
+    
+        func setImage(_ floor : Int){
+            
+            
+                //locationEndpoints.imageMapReq.rawValue
+            // "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
+            let auth = Client.sharedInstance.locateAuthHeader
+            let camp = Client.sharedInstance.campus
+            
+            guard let name = camp?.campusName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed), let build = camp?.buildingName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed), let floor = camp?.floorName[floor - 1].addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+                print("no such thing")
+                return
+            }
+            
+            let urlPath : String = "https://cisco-cmx.unit.ua/api/config/v1/maps/image/\(name)/\(build)/\(floor)"
+            
+          //  urlPath = "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
+        //    "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/ UNIT.Factory/2nd_Floor"
+            let parameters : Parameters = [:]
+            
+            //let parameters : Parameters = ["campusName" : name, "buildingName" : build, "floorName" : floor]
+            
+            getRequestData(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
+                if let d =  data{
+                    let downloadedImage = UIImage(data:d)
+                    self.imageMap.image = downloadedImage
+                    print("request on getting maps info completed")
+                } else if let err = error {
+                    print(err.localizedDescription)
+                }
+            })
+        }
     
     
     //IT WORKED FUCKAS!!!!!

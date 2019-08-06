@@ -89,5 +89,37 @@ final class Client {
     
     }
     
+    func setCampus(t : mapJSON){
+        self.campusInformation = t
+        // t.campusCounts
+        
+        guard let index = t.campusCounts?.firstIndex(where: { (item) -> Bool in
+            item.campusName == "System Campus"
+            
+        }) else {
+            print("there is no such campus")
+            return
+        }
+        print(index)
+        
+        if let name = t.campusCounts![index].campusName{
+            if let buildingName = t.campusCounts![index].buildingCounts![0].buildingName {
+                var floors : [String] = []
+                if let f = t.campusCounts![index].buildingCounts![0].floorCounts{
+                    for i in f {
+                        floors.append(i.floorName!)
+                    }
+                    self.campus = Campus(campusName: name, buildingName: buildingName, floorName: floors)
+                }
+            }
+        }
+        //guard let validCampus = t.campusCounts("")
+        if let camp = self.campus{
+            print(camp.campusName, camp.buildingName, camp.floorName.count)
+        }
+        // print(t.campusCounts?.count ?? "no campus counts")
+
+    }
+    
  
 }
