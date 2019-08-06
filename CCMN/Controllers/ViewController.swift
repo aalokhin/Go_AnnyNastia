@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         getRequestData(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
                 if let d =  data{
                     print("request on getting maps info completed")
-                    print(d)
-                    let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                    print(json ?? "serialization of json failed")
+                   // print(d)
+                    // let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                   // print(json ?? "serialization of json failed")
                     
                     let decoder = JSONDecoder()
                     guard let t = try? decoder.decode(mapJSON.self, from: d) else {

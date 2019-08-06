@@ -39,26 +39,54 @@ class mapJSON : Decodable {
 class CampusCounts : Decodable {
     let campusName : String?
     let totalBuildings : Int?
-   // let buildingCounts : BuildingCounts?
+    let buildingCounts : [BuildingCounts]?
     
     enum CodingKeys: String, CodingKey {
         case campusName = "campusName"
         case totalBuildings = "totalBuildings"
-       // case buildingCounts = "buildingCounts"
+        case buildingCounts = "buildingCounts"
     }
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.campusName = (try? values.decode(String.self, forKey: .campusName))
         self.totalBuildings = (try? values.decode(Int.self, forKey: .campusName))
-      //  self.buildingCounts = (try? values.decode(BuildingCounts.self, forKey: .campusName))
-        
+        self.buildingCounts = (try? values.decode([BuildingCounts].self, forKey: .campusName))
     }
 }
 
 class BuildingCounts : Decodable {
+    let buildingName : String?
+    let floorCounts : [FloorCounts]?
+    let totalFloors : Int?
+    enum CodingKeys: String, CodingKey {
+        case buildingName = "buildingName"
+        case floorCounts = "floorCounts"
+        case totalFloors = "totalFloors"
+    }
     
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.buildingName = (try? values.decode(String.self, forKey: .buildingName))
+        self.floorCounts = (try? values.decode([FloorCounts].self, forKey: .floorCounts))
+        self.totalFloors = (try? values.decode(Int.self, forKey: .totalFloors))
+    }
     
+}
+
+class FloorCounts : Decodable{
+    let apCount : Int?
+    let floorName : String?
+    enum CodingKeys: String, CodingKey {
+        case apCount = "apCount"
+        case floorName = "floorName"
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.apCount = (try? values.decode(Int.self, forKey: .apCount))
+        self.floorName = (try? values.decode(String.self, forKey: .floorName))
+    }
 }
 /*
 
