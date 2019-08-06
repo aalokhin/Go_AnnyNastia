@@ -8,46 +8,6 @@
 
 import Foundation
 
-/*
- {
-    campusCounts =(
-            {
-                buildingCounts = "<null>";
-                campusName = "UNIT.Factory";
-                totalBuildings = 0;
-                },
-            {
-                buildingCounts =             (
-                {
-                    buildingName = "UNIT.Factory";
-                    floorCounts =                     (
-                    {
-                                apCount = 5;
-                                floorName = "1st_Floor";
-                        },
-                            {
-                                apCount = 3;
-                                floorName = "3rd_Floor";
-                        },
-                            {
-                                apCount = 4;
-                                floorName = "2nd_Floor";
-                        }
-                    );
-                        totalFloors = 3;
-                    }
-                );
-                campusName = "System Campus";
-                totalBuildings = 1;
-        }
-        );
-        totalAps = 12;
-        totalBuildings = 1;
-        totalCampuses = 2;
-        totalFloors = 3;
-}
- 
- */
 class mapJSON : Decodable {
     //let campusCounts : CampusCounts
     
@@ -55,12 +15,14 @@ class mapJSON : Decodable {
     let totalBuildings : Int?
     let totalCampuses : Int?
     let totalFloors : Int?
+    let campusCounts : [CampusCounts]?
     
     enum CodingKeys: String, CodingKey {
         case totalAps = "totalAps"
         case totalBuildings = "totalBuildings"
         case totalCampuses = "totalCampuses"
         case totalFloors = "totalFloors"
+        case campusCounts = "campusCounts"
     }
     
     required init(from decoder: Decoder) throws {
@@ -69,9 +31,76 @@ class mapJSON : Decodable {
         self.totalBuildings = (try? values.decode(Int.self, forKey: .totalAps))
         self.totalCampuses = (try? values.decode(Int.self, forKey: .totalAps))
         self.totalFloors = (try? values.decode(Int.self, forKey: .totalAps))
+        self.campusCounts = (try? values.decode([CampusCounts].self, forKey: .campusCounts))
     }
 }
 
 
 class CampusCounts : Decodable {
+    let campusName : String?
+    let totalBuildings : Int?
+   // let buildingCounts : BuildingCounts?
+    
+    enum CodingKeys: String, CodingKey {
+        case campusName = "campusName"
+        case totalBuildings = "totalBuildings"
+       // case buildingCounts = "buildingCounts"
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.campusName = (try? values.decode(String.self, forKey: .campusName))
+        self.totalBuildings = (try? values.decode(Int.self, forKey: .campusName))
+      //  self.buildingCounts = (try? values.decode(BuildingCounts.self, forKey: .campusName))
+        
+    }
 }
+
+class BuildingCounts : Decodable {
+    
+    
+}
+/*
+
+{
+    campusCounts = (
+        {
+            buildingCounts = "<null>";
+            campusName = "UNIT.Factory";
+            totalBuildings = 0;
+        },
+        {
+            buildingCounts = (
+                {
+                    buildingName = "UNIT.Factory";
+                    floorCounts =                     (
+                        {
+                            apCount = 5;
+                            floorName = "1st_Floor";
+                    },
+                        {
+                            apCount = 3;
+                            floorName = "3rd_Floor";
+                    },
+                        {
+                            apCount = 4;
+                            floorName = "2nd_Floor";
+                    }
+                    );
+                    totalFloors = 3;
+                }
+            );
+            campusName = "System Campus";
+            totalBuildings = 1;
+        }
+    );
+    
+    
+    
+    
+    totalAps = 12;
+    totalBuildings = 1;
+    totalCampuses = 2;
+    totalFloors = 3;
+}
+*/
