@@ -38,15 +38,16 @@ class ViewController: UIViewController {
                 if let d =  data{
                     print("request on getting maps info completed")
                    // print(d)
-                    // let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                   // print(json ?? "serialization of json failed")
+                     let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                    print(json ?? "serialization of json failed")
                     
                     let decoder = JSONDecoder()
                     guard let t = try? decoder.decode(mapJSON.self, from: d) else {
                         print("error decoding json")
                         return
                     }
-                    print(t.campusCounts?.count ?? "no campus counts")
+                    t.printAllMapInfo()
+                   // print(t.campusCounts?.count ?? "no campus counts")
                 }
             })
            

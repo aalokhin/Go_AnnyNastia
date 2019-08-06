@@ -28,9 +28,9 @@ class mapJSON : Decodable {
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.totalAps = (try? values.decode(Int.self, forKey: .totalAps))
-        self.totalBuildings = (try? values.decode(Int.self, forKey: .totalAps))
-        self.totalCampuses = (try? values.decode(Int.self, forKey: .totalAps))
-        self.totalFloors = (try? values.decode(Int.self, forKey: .totalAps))
+        self.totalBuildings = (try? values.decode(Int.self, forKey: .totalBuildings))
+        self.totalCampuses = (try? values.decode(Int.self, forKey: .totalCampuses))
+        self.totalFloors = (try? values.decode(Int.self, forKey: .totalFloors))
         self.campusCounts = (try? values.decode([CampusCounts].self, forKey: .campusCounts))
     }
 }
@@ -50,8 +50,8 @@ class CampusCounts : Decodable {
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.campusName = (try? values.decode(String.self, forKey: .campusName))
-        self.totalBuildings = (try? values.decode(Int.self, forKey: .campusName))
-        self.buildingCounts = (try? values.decode([BuildingCounts].self, forKey: .campusName))
+        self.totalBuildings = (try? values.decode(Int.self, forKey: .totalBuildings))
+        self.buildingCounts = (try? values.decode([BuildingCounts].self, forKey: .buildingCounts))
     }
 }
 
@@ -88,6 +88,47 @@ class FloorCounts : Decodable{
         self.floorName = (try? values.decode(String.self, forKey: .floorName))
     }
 }
+
+
+extension mapJSON {
+    func printAllMapInfo(){
+        print("totalAps : \(totalAps ?? -1) ")
+        print("totalBuildings : \(totalBuildings ?? -1) ")
+        print("totalCampuses : \(totalCampuses ?? -1) ")
+        print("totalFloors : \(totalFloors ?? -1) ")
+        print("we have this many campuses \(campusCounts?.count ?? 0)")
+        
+        if let campuses = campusCounts{
+            for campus in campuses {
+                print(" ->campusName \(campus.campusName ?? "no campus name")")
+                print(" ->totalBuildings \(campus.totalBuildings ?? -1)")
+                print(" ->buildingCounts \(campus.buildingCounts?.count ?? -1)")
+                if let buildings = campus.buildingCounts {
+                    
+                    for b in buildings {
+                        print("   building name \(b.buildingName ?? "no building name")")
+                        print("   totalFloors \(b.totalFloors ?? -1)")
+                        print("   floorCounts nbr \(b.floorCounts?.count ?? -1)")
+                        
+                        if let floors = b.floorCounts {
+                            for f in floors{
+                                print("    * apCount \(f.apCount ?? -1)")
+                                print("    * floorName \(f.floorName ?? "no floor name")")
+                                print(" ")
+                            }
+                        }
+                    }
+
+                }
+                print("==============================================")
+                
+            }
+        }
+
+    }
+}
+
+
 /*
 
 {
