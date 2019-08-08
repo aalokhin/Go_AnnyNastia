@@ -22,6 +22,7 @@
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
 		EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */; };
+		EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDD022FC558E00F1287B /* SiteID.swift */; };
 		EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8C33F22F71AE600C054F6 /* MapJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtensions.swift; sourceTree = "<group>"; };
+		EFE5DDD022FC558E00F1287B /* SiteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteID.swift; sourceTree = "<group>"; };
 		EFE8C33F22F71AE600C054F6 /* MapJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 				EF8580C622EF569F00F6B58D /* Client.swift */,
 				EFE8C33F22F71AE600C054F6 /* MapJSON.swift */,
 				EF06EA4B22F9D91700681741 /* Campus.swift */,
+				EFE5DDD022FC558E00F1287B /* SiteID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */,
 				EF06EA4C22F9D91700681741 /* Campus.swift in Sources */,
+				EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */,
 				EF8580C722EF569F00F6B58D /* Client.swift in Sources */,
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 				EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */,

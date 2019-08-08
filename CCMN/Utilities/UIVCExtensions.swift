@@ -32,7 +32,7 @@ extension UIViewController{
     func setImageForImgView(_ url : String, _ parameters : Parameters, _ img : UIImageView){
         let auth = Client.sharedInstance.locateAuthHeader
         getRequestData(urlPath: url, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
-            if let d =  data{
+            if let d =  data {
                 let downloadedImage = UIImage(data:d)
                 img.image = downloadedImage
                 print("request on getting image info completed successfully")

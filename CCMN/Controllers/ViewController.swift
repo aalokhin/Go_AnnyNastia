@@ -14,31 +14,35 @@ class ViewController: UIViewController {
     //this shit helps us a  lot
     
     
+    ///api/analytics/v1/now/connectedDetected
     @IBOutlet weak var imageMap: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let floorImgs : [UIImage]?
-        
-        ///api/analytics/v1/now/connectedDetected
-        
        // getInit()
         let auth = Client.sharedInstance.presenceAuthHeader
         let sitesURL = Client.sharedInstance.presenceUrl + "api/config/v1/sites"
         self.getRequestData(urlPath: sitesURL, authHeader: ["Authorization" : auth], params: [:], method: .get, completion: { data, error in
             if let d = data {
-            print("request on getting sites ID info completed")
-            let json = try? JSONSerialization.jsonObject(with: d, options: [])
-            print(json ?? "serialization of json failed")
+                print("request on getting sites ID info completed")
+                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
+                let decoder = JSONDecoder()
+                guard let t = try? decoder.decode([SiteID].self, from: d) else {
+                    print("error decoding json")
+                    return
+                    }
+                t[0].printAll()
             }
         })
-
+        
+        
         //getting the floors information
     
     }
     
     func getInit(){
-        
         let parameters : Parameters = ["" : ""]
         var urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
         let auth = Client.sharedInstance.locateAuthHeader
