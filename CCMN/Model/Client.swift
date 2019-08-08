@@ -49,6 +49,7 @@ final class Client {
     
     var campus : Campus?
     var campusInformation : mapJSON?
+    var siteID : SiteID?
     
     
     
@@ -107,7 +108,6 @@ final class Client {
 //
 //
 //
-    
     
     func setCampus(t : mapJSON){
         self.campusInformation = t

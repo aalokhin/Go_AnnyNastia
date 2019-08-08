@@ -20,26 +20,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let floorImgs : [UIImage]?
-       // getInit()
+        getInit()
+        getSiteID()
+       
+        
+        //getting the floors information
+    
+    }
+    
+    func getSiteID (){
         let auth = Client.sharedInstance.presenceAuthHeader
         let sitesURL = Client.sharedInstance.presenceUrl + "api/config/v1/sites"
         self.getRequestData(urlPath: sitesURL, authHeader: ["Authorization" : auth], params: [:], method: .get, completion: { data, error in
             if let d = data {
                 print("request on getting sites ID info completed")
-                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
+                //let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                //print(json ?? "serialization of json failed")
                 let decoder = JSONDecoder()
                 guard let t = try? decoder.decode([SiteID].self, from: d) else {
                     print("error decoding json")
                     return
-                    }
-                t[0].printAll()
+                }
+                Client.sharedInstance.siteID = t[0]
+                Client.sharedInstance.siteID?.printAll()
+
             }
         })
         
-        
-        //getting the floors information
-    
     }
     
     func getInit(){
