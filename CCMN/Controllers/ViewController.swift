@@ -19,10 +19,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let floorImgs : [UIImage]?
+        
+        ///api/analytics/v1/now/connectedDetected
+        
+       // getInit()
+        let auth = Client.sharedInstance.presenceAuthHeader
+        let sitesURL = Client.sharedInstance.presenceUrl + "api/config/v1/sites"
+        self.getRequestData(urlPath: sitesURL, authHeader: ["Authorization" : auth], params: [:], method: .get, completion: { data, error in
+            if let d = data {
+            print("request on getting sites ID info completed")
+            let json = try? JSONSerialization.jsonObject(with: d, options: [])
+            print(json ?? "serialization of json failed")
+            }
+        })
+
+        //getting the floors information
+    
+    }
+    
+    func getInit(){
+        
         let parameters : Parameters = ["" : ""]
         var urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
         let auth = Client.sharedInstance.locateAuthHeader
-        
         self.performRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
             if complete {
                 print("request completed")
@@ -31,36 +50,32 @@ class ViewController: UIViewController {
                 print("some error completing task")
             }
         }
-        
+        // /api/config/v1/sites
         urlPath = Client.sharedInstance.locateUrl + locationEndpoints.allFloors.rawValue
-       
-        //getting the floors information
+        
+        
         getRequestData(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
             //if let error should be added
-                if let d =  data{
-                    print("request on getting maps info completed")
-                   // print(d)
-                     let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                    print(json ?? "serialization of json failed")
-                    
-                    let decoder = JSONDecoder()
-                    guard let t = try? decoder.decode(mapJSON.self, from: d) else {
-                        print("error decoding json")
-                        return
-                    }
-                    t.printAllMapInfo()
-                    Client.sharedInstance.setCampus(t : t)
-                    let url = locationEndpoints.firstFloorImg.rawValue
-                    self.setImageForImgView(url, [:],  self.imageMap)
-                    
+            if let d =  data{
+                print("request on getting maps info completed")
+                // print(d)
+                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
+                
+                let decoder = JSONDecoder()
+                guard let t = try? decoder.decode(mapJSON.self, from: d) else {
+                    print("error decoding json")
+                    return
                 }
-            })
-        
-           
-        }
+                t.printAllMapInfo()
+                Client.sharedInstance.setCampus(t : t)
+                let url = locationEndpoints.firstFloorImg.rawValue
+                self.setImageForImgView(url, [:],  self.imageMap)
+                
+            }
+        })
+    }
     
-   
-
-
+    
 
 }

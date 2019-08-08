@@ -28,7 +28,7 @@ extension UIViewController{
         }
         print(request)
     }
-    // sets the image given the view 
+    // sets the image given the view, url and the request parameters
     func setImageForImgView(_ url : String, _ parameters : Parameters, _ img : UIImageView){
         let auth = Client.sharedInstance.locateAuthHeader
         getRequestData(urlPath: url, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
