@@ -21,6 +21,7 @@
 		EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */; };
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
+		EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */; };
 		EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8C33F22F71AE600C054F6 /* MapJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestEndpoints.swift; sourceTree = "<group>"; };
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtensions.swift; sourceTree = "<group>"; };
 		EFE8C33F22F71AE600C054F6 /* MapJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +210,7 @@
 			children = (
 				EF8580C922EF62DA00F6B58D /* Extension.swift */,
 				EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */,
+				EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				EF06EA4C22F9D91700681741 /* Campus.swift in Sources */,
 				EF8580C722EF569F00F6B58D /* Client.swift in Sources */,
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
+				EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,15 +19,20 @@ protocol locationEndpoint {
 
 enum locationEndpoints: String, locationEndpoint {
     case clientsCount = "api/location/v2/clients/count"  // wireless clients
-    
+//  ************************************ floors images and maps ************************************
     case allFloors = "api/config/v1/maps/count"
     case imageMapReq = "api/config/v1/maps/image"
-    
-   // case firstFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
-//    case secondFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
-//    case thirdFloorImg = "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"
-    
+    case firstFloorImg = "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor"
+    case secondFloorImg = "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor"
+    case thirdFloorImg = "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"
+//  ************************************ floors images and maps ************************************
 
+
+}
+
+struct imgsEndpoints {
+    let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+    
 }
 
 

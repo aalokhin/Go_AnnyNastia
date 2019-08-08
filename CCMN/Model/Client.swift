@@ -56,15 +56,12 @@ final class Client {
     let presenceAuthHeader = "Basic " + String("\(username):" + presencePass).toBase64()
    
     var manager : SessionManager = {
-        // Create the server trust policies
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+        let serverTrustPolicies: [String : ServerTrustPolicy] = [
             "cisco-cmx.unit.ua" : .disableEvaluation,
             "cisco-presence.unit.ua" : .disableEvaluation
         ]
-        // Create custom manager
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-
         let manager = Alamofire.SessionManager(
             configuration: URLSessionConfiguration.default,
             serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
@@ -77,10 +74,10 @@ final class Client {
     
     
     //enum
- 
-    let searchByMacAddress = "https://cisco-cmx.unit.ua/api/location/v2/clients?macAddress=\(macAddress)" // GET
-    let searchByUser = "https://cisco-cmx.unit.ua/api/location/v2/clients?username=aalokhin"
-    
+//
+//    let searchByMacAddress = "https://cisco-cmx.unit.ua/api/location/v2/clients?macAddress=\(macAddress)" // GET
+//    let searchByUser = "https://cisco-cmx.unit.ua/api/location/v2/clients?username=aalokhin"
+//
     
     static let sharedInstance = Client()
     
@@ -88,6 +85,29 @@ final class Client {
         print("Singleton client has been initialized")
     
     }
+    
+//
+//
+//
+//
+//
+//
+//    
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+    
     
     func setCampus(t : mapJSON){
         self.campusInformation = t
