@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     //this shit helps us a  lot
     ///api/analytics/v1/now/connectedDetected
+    let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,28 +21,12 @@ class ViewController: UIViewController {
         
         getInit()
         getSiteID()
+        //testPresenceConnect()
+        testPresenceRepeat()
+        
+        
        // setFloorImgs()
-        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
-        var connectedVisitorsTotalOverPeriod : [[String : Int]] = []
-
-
-            for one in periods {
-                let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(one)?siteId=\(siteID)"
-                self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
-                    data, error in
-                    if let d = data{
-                        let nbr = String(data: d, encoding: .utf8)?.toInt()
-                        
-                        connectedVisitorsTotalOverPeriod.append([one : nbr ?? -1])
-                        print(connectedVisitorsTotalOverPeriod)
-                        
-                        
-                    }
-                })
-                
-            }
- 
+     
        
 
        
@@ -51,6 +36,75 @@ class ViewController: UIViewController {
         //getting the floors information
     
     }
+    
+    func testPresenceRepeat(){
+        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+     
+        for one in self.periods{
+            let url = "https://cisco-presence.unit.ua/api/presence/v1/repeatvisitors/count/\(one)?siteId=\(siteID)"
+            self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                print("repeeeeeeeeeat ===================================================")
+
+                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
+                print("repeeeeeeeeeat ===================================================")
+
+                }
+            })
+        }
+        
+        
+        //&startDate=<date in yyyy-mm-dd>&endDate=<date in yyyy-mm-dd> dweell time done we can add some tdate picker here and it might wanna work after that
+        
+    }
+    
+    
+    
+    
+    func testPresenceConnect(){
+        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+       
+        var connectedVisitorsTotalOverPeriod : [[String : Int]] = []
+        
+        
+        for one in self.periods {
+            let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(one)?siteId=\(siteID)"
+            self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+                data, error in
+                if let d = data{
+                    let nbr = String(data: d, encoding: .utf8)?.toInt()
+                    
+                    connectedVisitorsTotalOverPeriod.append([one : nbr ?? -1])
+                    print(connectedVisitorsTotalOverPeriod)
+                    
+                    
+                }
+            })
+            
+        }
+        
+        //&startDate=<date in yyyy-mm-dd>&endDate=<date in yyyy-mm-dd> dweell time done we can add some tdate picker here and it might wanna work after that
+        
+        let startDate = "2019-06-01"
+        let endDate = "2019-08-01"
+        
+        let urlForDwell = "https://cisco-presence.unit.ua/api/presence/v1/connected/total?siteId=\(siteID)&startDate=\(startDate)&endDate=\(endDate)"
+        self.getRequestData(urlPath: urlForDwell, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                let nbr = String(data: d, encoding: .utf8)?.toInt()
+                print(nbr ?? "nothing received")
+                
+                
+            }
+        })
+    }
+    
+    
+    
+    
     
     //
     //    func getConnectedVisitors(_ period : String) {
