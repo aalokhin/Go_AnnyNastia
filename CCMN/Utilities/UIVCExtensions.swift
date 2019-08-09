@@ -14,10 +14,15 @@ extension UIViewController{
     //perfrms request and returns data as Data
     func getRequestData(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Data?, Error?) -> Void){
         
-        let request = Client.sharedInstance.manager.request(urlPath, method: .get, encoding: URLEncoding(destination: .queryString), headers: authHeader).validate().responseData { response in
+        let request = Client.sharedInstance.manager.request(urlPath,
+                                                            method: .get,
+                                                            encoding: URLEncoding.default,
+                                                            headers: authHeader).validate().responseData { response in
+            print("response of the getRequestData status code (if -1 means something is totally wrong)", response.response?.statusCode ?? -1)
             switch response.result {
             case .success:
                 if let value = response.result.value {
+                  
                     completion(value, nil)
                 }
             case .failure(let error):

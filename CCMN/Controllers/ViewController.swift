@@ -12,16 +12,36 @@ import Alamofire
 class ViewController: UIViewController {
     
     //this shit helps us a  lot
-    
-    
     ///api/analytics/v1/now/connectedDetected
     @IBOutlet weak var imageMap: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        getInit()
+        
+       // getInit()
         getSiteID()
+        //setFloorImgs()
+        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        let urlPath = PresenceEndpoints.connectedDevicesUntilNow.rawValue + "?siteId=\(siteID)"
+        print(urlPath)
+        
+        self.getRequestData(urlPath: urlPath, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
+            if let d = data {
+                print("request on getting connectedDevicesUntilNow  info completed")
+                print(d)
+                print("what we recieved in utf8: ", String(data: d, encoding: .utf8) ?? "nothing")
+                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
+//                let decoder = JSONDecoder()
+//                guard let t = try? decoder.decode([SiteID].self, from: d) else {
+//                    print("error decoding json")
+//                    return
+//                }
+            }
+            if let err = error{
+                print(err.localizedDescription)
+            }
+        })
        
         
         //getting the floors information
@@ -33,7 +53,7 @@ class ViewController: UIViewController {
         let sitesURL = Client.sharedInstance.presenceUrl + "api/config/v1/sites"
         self.getRequestData(urlPath: sitesURL, authHeader: ["Authorization" : auth], params: [:], method: .get, completion: { data, error in
             if let d = data {
-                print("request on getting sites ID info completed")
+               // print("request on getting sites ID info completed")
                 //let json = try? JSONSerialization.jsonObject(with: d, options: [])
                 //print(json ?? "serialization of json failed")
                 let decoder = JSONDecoder()
@@ -81,22 +101,23 @@ class ViewController: UIViewController {
                 t.printAllMapInfo()
                 Client.sharedInstance.setCampus(t : t)
 //                let url = locationEndpoints.firstFloorImg.rawValue
-                let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
-                for i in 0..<3{
-                    Client.sharedInstance.floorImgs?.append(UIImage())
-                    self.getImage(floorsImgs[i], [:] , completion: { image, error in
-                        if let img = image {
-                            print("we've got an image")
-                            self.imageMap.image = img
-                        }
-                    })
-                }
-               
-                
+   
             }
         })
     }
     
     
-
+    func setFloorImgs(){
+        let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+        for i in 0..<3{
+            //Client.sharedInstance.floorImgs?.append(UIImage())
+            self.getImage(floorsImgs[i], [:] , completion: { image, error in
+                if let img = image {
+                    print("we've got an image")
+                    Client.sharedInstance.floorImgs?.append(img)
+                    self.imageMap.image = img
+                }
+            })
+        }
+    }
 }
