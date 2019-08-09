@@ -14,7 +14,7 @@ extension UIViewController{
     //perfrms request and returns data as Data
     func getRequestData(urlPath : String, authHeader : HTTPHeaders?, params : Parameters?, method : HTTPMethod, completion: @escaping (Data?, Error?) -> Void){
         
-        let request = Client.sharedInstance.manager.request(urlPath,
+        Client.sharedInstance.manager.request(urlPath,
                                                             method: .get,
                                                             encoding: URLEncoding.default,
                                                             headers: authHeader).validate().responseData { response in
@@ -49,7 +49,28 @@ extension UIViewController{
         })
     }
     
+
     
+    
+    
+    /*
+    func getConnectedVisitors(_ period : String) {
+        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        var nbrConnectedDevices : Int?
+        let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(period)?siteId=\(siteID)"
+        self.getRequestData(urlPath: url, authHeader:["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
+            if let d = data {
+                let nbr =  String(data: d, encoding: .utf8)?.toInt()
+                
+                print("what we recieved in from \(period) utf8: ", nbr ?? "nothing")
+                //return nbrConnectedDevices
+            }
+            else if let err = error {
+                print(err.localizedDescription)
+            }
+        })
+    }
+    */
     
     
     

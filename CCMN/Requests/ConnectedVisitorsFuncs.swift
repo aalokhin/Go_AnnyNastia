@@ -20,17 +20,21 @@ import Alamofire
 //yyyy-mm-dd>&endDate=<date in yyyy-mm-dd>
 
 extension ViewController {
-    
-    func getConnectedVisitors(_ period : String){
-        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        
-        let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(period)?siteId=\(siteID)"
-        self.getRequestData(urlPath: url, authHeader:["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
-            if let d = data {
-                let nbrConnectedDevicesToday =  String(data: d, encoding: .utf8)?.toInt()
-                print("what we recieved in from \(period) utf8: ", nbrConnectedDevicesToday ?? "nothing")
-            }
-        })
-        
-    }
+//    
+//    func getConnectedVisitors(_ period : String) {
+//        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+//        var nbrConnectedDevices : Int?
+//        let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(period)?siteId=\(siteID)"
+//        self.getRequestData(urlPath: url, authHeader:["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
+//            if let d = data {
+//                let nbr =  String(data: d, encoding: .utf8)?.toInt()
+//                
+//                print("what we recieved in from \(period) utf8: ", nbr ?? "nothing")
+//                //return nbrConnectedDevices
+//            }
+//            else if let err = error {
+//                print(err.localizedDescription)
+//            }
+//        })
+//    }
 }

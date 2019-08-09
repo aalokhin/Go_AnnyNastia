@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     //this shit helps us a  lot
     ///api/analytics/v1/now/connectedDetected
     @IBOutlet weak var imageMap: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +21,30 @@ class ViewController: UIViewController {
         getInit()
         getSiteID()
        // setFloorImgs()
-        getConnectedVisitors("lastmonth")
+        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
+        var connectedVisitorsTotalOverPeriod : [[String : Int]] = []
+
+
+            for one in periods {
+                let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(one)?siteId=\(siteID)"
+                self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+                    data, error in
+                    if let d = data{
+                        let nbr = String(data: d, encoding: .utf8)?.toInt()
+                        
+                        connectedVisitorsTotalOverPeriod.append([one : nbr ?? -1])
+                        print(connectedVisitorsTotalOverPeriod)
+                        
+                        
+                    }
+                })
+                
+            }
+ 
+       
+
+       
        // getConnectedDevices()
        
         
@@ -30,6 +52,34 @@ class ViewController: UIViewController {
     
     }
     
+    //
+    //    func getConnectedVisitors(_ period : String) {
+    //        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+    //        var nbrConnectedDevices : Int?
+    //        let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(period)?siteId=\(siteID)"
+    //        self.getRequestData(urlPath: url, authHeader:["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
+    //            if let d = data {
+    //                let nbr =  String(data: d, encoding: .utf8)?.toInt()
+    //
+    //                print("what we recieved in from \(period) utf8: ", nbr ?? "nothing")
+    //                //return nbrConnectedDevices
+    //            }
+    //            else if let err = error {
+    //                print(err.localizedDescription)
+    //            }
+    //        })
+    //    }
+
+    
+    
+//    "Today" : ("/today", "/hourly/today"),
+//    "Yesterday" : ("/yesterday", "/hourly/yesterday"),
+//    "Last 3 days" : ("/3days", "/hourly/3days"),
+//    "Last 7 days" : ("/lastweek", "/daily/lastweek"),
+//    "Last 30 days" : ("/lastmonth", "/daily/lastmonth"),
+//    "Custom" : ("", "/daily"),
+//    "hourly" : ("", "/hourly")
+//    
     func getConnectedDevices(){
         
         let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"

@@ -29,7 +29,7 @@ extension String {
         return Int((self as NSString).intValue)
     }
     
-    func toDouble() -> Double {
+    func toDouble() -> Double { 
         return (self as NSString).doubleValue
     }
     
