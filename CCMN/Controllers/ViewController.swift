@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let floorImgs : [UIImage]?
+         
         getInit()
         getSiteID()
        
@@ -80,8 +80,18 @@ class ViewController: UIViewController {
                 }
                 t.printAllMapInfo()
                 Client.sharedInstance.setCampus(t : t)
-                let url = locationEndpoints.firstFloorImg.rawValue
-                self.setImageForImgView(url, [:],  self.imageMap)
+//                let url = locationEndpoints.firstFloorImg.rawValue
+                let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+                for i in 0..<3{
+                    Client.sharedInstance.floorImgs?.append(UIImage())
+                    self.getImage(floorsImgs[i], [:] , completion: { image, error in
+                        if let img = image {
+                            print("we've got an image")
+                            self.imageMap.image = img
+                        }
+                    })
+                }
+               
                 
             }
         })

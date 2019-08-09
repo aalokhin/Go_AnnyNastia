@@ -29,13 +29,14 @@ extension UIViewController{
         print(request)
     }
     // sets the image given the view, url and the request parameters
-    func setImageForImgView(_ url : String, _ parameters : Parameters, _ img : UIImageView){
+    func getImage(_ url : String, _ parameters : Parameters, completion: @escaping (UIImage?, Error?) -> Void){
         let auth = Client.sharedInstance.locateAuthHeader
         getRequestData(urlPath: url, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
             if let d =  data {
-                let downloadedImage = UIImage(data:d)
-                img.image = downloadedImage
-                print("request on getting image info completed successfully")
+                if let downloadedImage = UIImage(data:d) {
+                    print("request on getting image info completed successfully")
+                    completion(downloadedImage, nil)
+                }
             } else if let err = error {
                 print(err.localizedDescription)
                 print("request on getting image info failed")

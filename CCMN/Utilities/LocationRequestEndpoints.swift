@@ -30,10 +30,9 @@ enum locationEndpoints: String, locationEndpoint {
 
 }
 
-struct imgsEndpoints {
-    let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+
     
-}
+
 
 
  

@@ -50,6 +50,7 @@ final class Client {
     var campus : Campus?
     var campusInformation : mapJSON?
     var siteID : SiteID?
+    var floorImgs : [UIImage]?
     
     
     
