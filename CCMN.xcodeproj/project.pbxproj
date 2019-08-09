@@ -22,6 +22,7 @@
 		EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */; };
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
+		EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */; };
 		EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */; };
 		EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDD022FC558E00F1287B /* SiteID.swift */; };
 		EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8C33F22F71AE600C054F6 /* MapJSON.swift */; };
@@ -72,6 +73,7 @@
 		EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestEndpoints.swift; sourceTree = "<group>"; };
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedVisitorsFuncs.swift; sourceTree = "<group>"; };
 		EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtensions.swift; sourceTree = "<group>"; };
 		EFE5DDD022FC558E00F1287B /* SiteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteID.swift; sourceTree = "<group>"; };
 		EFE8C33F22F71AE600C054F6 /* MapJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapJSON.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		EF48C4F822EDE92F00980012 /* CCMN */ = {
 			isa = PBXGroup;
 			children = (
+				EFB281DC22FDA37E00B714EA /* Requests */,
 				EF8580C822EF62C700F6B58D /* Utilities */,
 				EF8580C522EF568E00F6B58D /* View */,
 				EF8580C422EF566500F6B58D /* Model */,
@@ -219,6 +222,14 @@
 				EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EFB281DC22FDA37E00B714EA /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +444,7 @@
 				EF8580C722EF569F00F6B58D /* Client.swift in Sources */,
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 				EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */,
+				EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

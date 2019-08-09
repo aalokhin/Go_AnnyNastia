@@ -31,7 +31,7 @@ extension UIViewController{
                 completion(nil, error)
             }
         }
-        print(request)
+        //print(request)
     }
     // sets the image given the view, url and the request parameters
     func getImage(_ url : String, _ parameters : Parameters, completion: @escaping (UIImage?, Error?) -> Void){

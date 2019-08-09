@@ -18,34 +18,45 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // getInit()
+        
+        getInit()
         getSiteID()
-        //setFloorImgs()
+       // setFloorImgs()
+        getConnectedVisitors("lastmonth")
+       // getConnectedDevices()
+       
+        
+        //getting the floors information
+    
+    }
+    
+    func getConnectedDevices(){
+        
         let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
         let urlPath = PresenceEndpoints.connectedDevicesUntilNow.rawValue + "?siteId=\(siteID)"
         print(urlPath)
         
         self.getRequestData(urlPath: urlPath, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
             if let d = data {
-                print("request on getting connectedDevicesUntilNow  info completed")
+                print("request on getting connectedDevicesUntilNow info completed")
                 print(d)
-                print("what we recieved in utf8: ", String(data: d, encoding: .utf8) ?? "nothing")
-                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
-//                let decoder = JSONDecoder()
-//                guard let t = try? decoder.decode([SiteID].self, from: d) else {
-//                    print("error decoding json")
-//                    return
-//                }
+                let nbrConnectedDevicesToday =  String(data: d, encoding: .utf8)?.toInt()
+                print("what we recieved in utf8: ", nbrConnectedDevicesToday ?? "nothing")
+                
+                /*
+                 let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                 print(json ?? "serialization of json failed")
+                 */
+                //                let decoder = JSONDecoder()
+                //                guard let t = try? decoder.decode([SiteID].self, from: d) else {
+                //                    print("error decoding json")
+                //                    return
+                //                }
             }
             if let err = error{
                 print(err.localizedDescription)
             }
         })
-       
-        
-        //getting the floors information
-    
     }
     
     func getSiteID (){
@@ -90,15 +101,15 @@ class ViewController: UIViewController {
             if let d =  data{
                 print("request on getting maps info completed")
                 // print(d)
-                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
+               // let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                //print(json ?? "serialization of json failed")
                 
                 let decoder = JSONDecoder()
                 guard let t = try? decoder.decode(mapJSON.self, from: d) else {
                     print("error decoding json")
                     return
                 }
-                t.printAllMapInfo()
+               // t.printAllMapInfo()
                 Client.sharedInstance.setCampus(t : t)
 //                let url = locationEndpoints.firstFloorImg.rawValue
    
