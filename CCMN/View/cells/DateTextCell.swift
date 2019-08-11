@@ -10,13 +10,8 @@ import Foundation
 import UIKit
 
 enum DateFormatType: String {
-    /// Time
     case time = "HH:mm:ss"
-    
-    /// Date with hours
     case dateWithTime = "dd-MMM-yyyy  H:mm"
-    
-    /// Date
     case date = "dd-MMM-yyyy"
 }
 
@@ -24,8 +19,6 @@ class DateTextCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    //  @IBOutlet weak var label: UILabel!
-    //@IBOutlet weak var dateLabel: UILabel!
     
     // Reuser identifier
     class func reuseIdentifier() -> String {
@@ -57,7 +50,7 @@ class DateTextCell: UITableViewCell {
     // Update text
     func updateText(text: String, date: Date) {
         label.text = text
-        dateLabel.text = date.convertToString(dateformat: .dateWithTime)
+        dateLabel.text = date.convertToString(dateformat: .date)
     }
     
 }

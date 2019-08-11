@@ -11,7 +11,7 @@ import UIKit
 
 class SeachSetUpVC: UIViewController {
     var str : String?
-    var inputTexts: [String] = ["Start date", "End date", "Another date"]
+    var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
     var inputDates: [Date] = []
     
@@ -24,12 +24,8 @@ class SeachSetUpVC: UIViewController {
     }
     
     func setupTableView() {
-        
-        
         tableView.register(UINib(nibName: DateTextCell.nibName(), bundle: nil), forCellReuseIdentifier: DateTextCell.reuseIdentifier())
         tableView.register(UINib(nibName: DateCell.nibName(), bundle: nil), forCellReuseIdentifier: DateCell.reuseIdentifier())
-        
-       
     }
     
     func addInitailValues() {
