@@ -60,7 +60,8 @@ final class Client {
     var manager : SessionManager = {
         let serverTrustPolicies: [String : ServerTrustPolicy] = [
             "cisco-cmx.unit.ua" : .disableEvaluation,
-            "cisco-presence.unit.ua" : .disableEvaluation
+            "cisco-presence.unit.ua" : .disableEvaluation,
+            "cmxloactionsandbox": .disableEvaluation
         ]
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
