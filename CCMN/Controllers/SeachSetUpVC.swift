@@ -9,21 +9,33 @@
 import Foundation
 import UIKit
 
+protocol SetUpDelegate {
+    func specifyDates(from : String, to : String)
+}
+
+
+
 class SeachSetUpVC: UIViewController {
     var str : String?
     var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
     var inputDates: [Date] = []
     
+    var delegate: SetUpDelegate?
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello here")
         addInitailValues()
-        setupTableView()
+        setupVC()
     }
     
-    func setupTableView() {
+    func setupVC() {
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save(sender:)))
+        
         tableView.register(UINib(nibName: DateTextCell.nibName(), bundle: nil), forCellReuseIdentifier: DateTextCell.reuseIdentifier())
         tableView.register(UINib(nibName: DateCell.nibName(), bundle: nil), forCellReuseIdentifier: DateCell.reuseIdentifier())
     }
@@ -39,4 +51,12 @@ class SeachSetUpVC: UIViewController {
             return IndexPath(row: indexPath.row + 1, section: indexPath.section)
         }
     }
+    
+    @objc func save(sender:UIView){
+        print("save button tapped")
+        delegate?.specifyDates(from: "2016-08-08", to: "2016-08-09")
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
 }

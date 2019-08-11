@@ -17,11 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-      //  getInit()
-        //getSiteID()
+       // getInit()
+        getSiteID()
         //testPresenceConnect()
        // testPresenceRepeat()
         
@@ -31,7 +28,7 @@ class ViewController: UIViewController {
        
 
        
-       // getConnectedDevices()
+       getConnectedDevices()
        
         
         //getting the floors information
@@ -260,6 +257,7 @@ class ViewController: UIViewController {
             print("Set up Segue clicked")
             let destination = segue.destination as! SeachSetUpVC
             destination.str = "hi there we reached out to here"
+            destination.delegate = self
             
             /*not using right now but lets leave it for now*/
         case "FromTableView":
@@ -268,4 +266,13 @@ class ViewController: UIViewController {
             print("unexpected segue identifier")
         }
     }
+}
+
+
+extension ViewController : SetUpDelegate {
+    func specifyDates(from: String, to: String) {
+        print("hey frpm delegat here are our dates \(from) and \(to)")
+    }
+    
+    
 }
