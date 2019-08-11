@@ -19,10 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        getInit()
-        getSiteID()
+        
+      //  getInit()
+        //getSiteID()
         //testPresenceConnect()
-        testPresenceRepeat()
+       // testPresenceRepeat()
         
         
        // setFloorImgs()
@@ -54,6 +55,19 @@ class ViewController: UIViewController {
                 }
             })
         }
+        
+        let url = "https://cisco-presence.unit.ua/api/presence/v1/repeatvisitors/count?siteId=\(siteID)"
+        self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                print("repeeeeeeeeeat ===================================================")
+                
+                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
+                print("repeeeeeeeeeat ===================================================")
+                
+            }
+        })
         
         
         //&startDate=<date in yyyy-mm-dd>&endDate=<date in yyyy-mm-dd> dweell time done we can add some tdate picker here and it might wanna work after that
@@ -233,6 +247,25 @@ class ViewController: UIViewController {
                     self.imageMap.image = img
                 }
             })
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+            /*not using right now but lets leave it for now*/
+        case "SetUp":
+            print("Set up Segue clicked")
+            let destination = segue.destination as! SeachSetUpVC
+            destination.str = "hi there we reached out to here"
+            
+            /*not using right now but lets leave it for now*/
+        case "FromTableView":
+            print("FromTableView")
+        default:
+            print("unexpected segue identifier")
         }
     }
 }

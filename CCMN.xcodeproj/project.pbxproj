@@ -12,6 +12,11 @@
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
 		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
 		EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */; };
+		EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF374EF122FFFFA500D6C64A /* SetUpVCExtnsn.swift */; };
+		EF374EF52300016200D6C64A /* DateTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF374EF42300016200D6C64A /* DateTextCell.xib */; };
+		EF374EF72300016E00D6C64A /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF374EF62300016E00D6C64A /* DateCell.xib */; };
+		EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF374EF8230001E200D6C64A /* DateTextCell.swift */; };
+		EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF374EFA2300020A00D6C64A /* DateCell.swift */; };
 		EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C4F922EDE92F00980012 /* AppDelegate.swift */; };
 		EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C4FB22EDE92F00980012 /* ViewController.swift */; };
 		EF48C4FF22EDE92F00980012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF48C4FD22EDE92F00980012 /* Main.storyboard */; };
@@ -23,6 +28,8 @@
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
 		EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */; };
+		EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */; };
+		EFDF3CB222FEFBE800A86B3E /* SeachSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */; };
 		EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */; };
 		EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDD022FC558E00F1287B /* SiteID.swift */; };
 		EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE8C33F22F71AE600C054F6 /* MapJSON.swift */; };
@@ -57,6 +64,11 @@
 		C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF06EA4B22F9D91700681741 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceEndpoints.swift; sourceTree = "<group>"; };
+		EF374EF122FFFFA500D6C64A /* SetUpVCExtnsn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpVCExtnsn.swift; sourceTree = "<group>"; };
+		EF374EF42300016200D6C64A /* DateTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTextCell.xib; sourceTree = "<group>"; };
+		EF374EF62300016E00D6C64A /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
+		EF374EF8230001E200D6C64A /* DateTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextCell.swift; sourceTree = "<group>"; };
+		EF374EFA2300020A00D6C64A /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		EF48C4F622EDE92F00980012 /* CCMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF48C4F922EDE92F00980012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF48C4FB22EDE92F00980012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,8 @@
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedVisitorsFuncs.swift; sourceTree = "<group>"; };
+		EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SearchSetUpVC.storyboard; path = CCMN/Requests/SearchSetUpVC.storyboard; sourceTree = SOURCE_ROOT; };
+		EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachSetUpVC.swift; sourceTree = "<group>"; };
 		EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtensions.swift; sourceTree = "<group>"; };
 		EFE5DDD022FC558E00F1287B /* SiteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteID.swift; sourceTree = "<group>"; };
 		EFE8C33F22F71AE600C054F6 /* MapJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapJSON.swift; sourceTree = "<group>"; };
@@ -128,6 +142,17 @@
 				C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF374EF32300010900D6C64A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF374EF42300016200D6C64A /* DateTextCell.xib */,
+				EF374EF62300016E00D6C64A /* DateCell.xib */,
+				EF374EF8230001E200D6C64A /* DateTextCell.swift */,
+				EF374EFA2300020A00D6C64A /* DateCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		EF48C4ED22EDE92F00980012 = {
@@ -191,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				EF48C4FB22EDE92F00980012 /* ViewController.swift */,
+				EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */,
+				EF374EF122FFFFA500D6C64A /* SetUpVCExtnsn.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +236,8 @@
 		EF8580C522EF568E00F6B58D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF374EF32300010900D6C64A /* cells */,
+				EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,9 +368,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF374EF52300016200D6C64A /* DateTextCell.xib in Resources */,
 				EF48C50422EDE93100980012 /* LaunchScreen.storyboard in Resources */,
 				EF48C50122EDE93100980012 /* Assets.xcassets in Resources */,
+				EF374EF72300016E00D6C64A /* DateCell.xib in Resources */,
 				EF48C4FF22EDE92F00980012 /* Main.storyboard in Resources */,
+				EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
+				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */,
@@ -445,7 +478,10 @@
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 				EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */,
 				EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */,
+				EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */,
+				EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
+				EFDF3CB222FEFBE800A86B3E /* SeachSetUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
