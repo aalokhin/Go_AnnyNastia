@@ -13,8 +13,8 @@ protocol PresenceEndpoint {
     var rawValue: String { get }
 }
 
-enum PresenceEndpoints: String, locationEndpoint {
-    case connectedDevicesUntilNow = "https://cisco-presence.unit.ua/api/presence/v1/connected/count/today"
+enum PresenceEndpoints: String {
+    case connectedDevicesUntilNow = "api/presence/v1/connected/count/today"
     //  ************************************ floors images and maps ************************************
     
     

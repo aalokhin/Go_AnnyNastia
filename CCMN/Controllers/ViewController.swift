@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       // getInit()
+       getInit()
         getSiteID()
-        //testPresenceConnect()
-       // testPresenceRepeat()
+        testPresenceConnect()
+       testPresenceRepeat()
         
         
-       // setFloorImgs()
+       setFloorImgs()
      
        
 
@@ -39,8 +39,7 @@ class ViewController: UIViewController {
         let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
      
         for one in self.periods{
-            let url = "https://cisco-presence.unit.ua/api/presence/v1/repeatvisitors/count/\(one)?siteId=\(siteID)"
-            self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+            NetworkManager.getRequestData(isLocation : false, endpoint : "api/presence/v1/repeatvisitors/count/\(one)?siteId=\(siteID)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 print("repeeeeeeeeeat ===================================================")
@@ -53,8 +52,7 @@ class ViewController: UIViewController {
             })
         }
         
-        let url = "https://cisco-presence.unit.ua/api/presence/v1/repeatvisitors/count?siteId=\(siteID)"
-        self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/repeatvisitors/count?siteId=\(siteID)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 print("repeeeeeeeeeat ===================================================")
@@ -81,8 +79,8 @@ class ViewController: UIViewController {
         
         
         for one in self.periods {
-            let url = "https://cisco-presence.unit.ua/api/presence/v1/connected/total/\(one)?siteId=\(siteID)"
-            self.getRequestData(urlPath: url, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+   
+            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/total/\(one)?siteId=\(siteID)", params: [:], method: .get, completion: {
                 data, error in
                 if let d = data{
                     let nbr = String(data: d, encoding: .utf8)?.toInt()
@@ -100,9 +98,8 @@ class ViewController: UIViewController {
         
         let startDate = "2019-06-01"
         let endDate = "2019-08-01"
-        
-        let urlForDwell = "https://cisco-presence.unit.ua/api/presence/v1/connected/total?siteId=\(siteID)&startDate=\(startDate)&endDate=\(endDate)"
-        self.getRequestData(urlPath: urlForDwell, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: {
+
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/total?siteId=\(siteID)&startDate=\(startDate)&endDate=\(endDate)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 let nbr = String(data: d, encoding: .utf8)?.toInt()
@@ -151,7 +148,7 @@ class ViewController: UIViewController {
         let urlPath = PresenceEndpoints.connectedDevicesUntilNow.rawValue + "?siteId=\(siteID)"
         print(urlPath)
         
-        self.getRequestData(urlPath: urlPath, authHeader: ["Authorization" : Client.sharedInstance.presenceAuthHeader], params: [:], method: .get, completion: { data, error in
+        NetworkManager.getRequestData(isLocation: false, endpoint: PresenceEndpoints.connectedDevicesUntilNow.rawValue, params: [:], method: .get, completion: { data, error in
             if let d = data {
                 print("request on getting connectedDevicesUntilNow info completed")
                 print(d)
@@ -175,9 +172,8 @@ class ViewController: UIViewController {
     }
     
     func getSiteID (){
-        let auth = Client.sharedInstance.presenceAuthHeader
-        let sitesURL = Client.sharedInstance.presenceUrl + "api/config/v1/sites"
-        self.getRequestData(urlPath: sitesURL, authHeader: ["Authorization" : auth], params: [:], method: .get, completion: { data, error in
+
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/config/v1/sites", params: [:], method: .get, completion: { data, error in
             if let d = data {
                // print("request on getting sites ID info completed")
                 //let json = try? JSONSerialization.jsonObject(with: d, options: [])
@@ -197,21 +193,22 @@ class ViewController: UIViewController {
     
     func getInit(){
         let parameters : Parameters = ["" : ""]
-        var urlPath : String = Client.sharedInstance.locateUrl +  locationEndpoints.clientsCount.rawValue
-        let auth = Client.sharedInstance.locateAuthHeader
-        self.performRequest(urlPath : urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get){ complete in
-            if complete {
+       
+        NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.clientsCount.rawValue, params : parameters, method : .get, completion:  { data, error in
+            if let d =  data{
                 print("request completed")
+                 let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                print(json ?? "serialization of json failed")
             }
             else {
                 print("some error completing task")
             }
-        }
+        })
         // /api/config/v1/sites
-        urlPath = Client.sharedInstance.locateUrl + locationEndpoints.allFloors.rawValue
+  
         
         
-        getRequestData(urlPath: urlPath, authHeader : ["Authorization" : auth], params : parameters, method : .get, completion: { data, error in
+        NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.allFloors.rawValue, params : parameters, method : .get, completion: { data, error in
             //if let error should be added
             if let d =  data{
                 print("request on getting maps info completed")
@@ -234,10 +231,10 @@ class ViewController: UIViewController {
     
     
     func setFloorImgs(){
-        let floorsImgs = ["https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "https://cisco-cmx.unit.ua/api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+        let floorsImgs = ["api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
         for i in 0..<3{
             //Client.sharedInstance.floorImgs?.append(UIImage())
-            self.getImage(floorsImgs[i], [:] , completion: { image, error in
+             NetworkManager.getImage(floorsImgs[i], [:] , completion: { image, error in
                 if let img = image {
                     print("we've got an image")
                     Client.sharedInstance.floorImgs?.append(img)

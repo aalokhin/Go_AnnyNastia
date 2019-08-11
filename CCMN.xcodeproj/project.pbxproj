@@ -27,6 +27,7 @@
 		EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */; };
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
+		EF97360B2300649100ABC318 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF97360A2300649100ABC318 /* NetworkManager.swift */; };
 		EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */; };
 		EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */; };
 		EFDF3CB222FEFBE800A86B3E /* SeachSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */; };
@@ -85,6 +86,7 @@
 		EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestEndpoints.swift; sourceTree = "<group>"; };
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EF97360A2300649100ABC318 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedVisitorsFuncs.swift; sourceTree = "<group>"; };
 		EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SearchSetUpVC.storyboard; path = CCMN/Requests/SearchSetUpVC.storyboard; sourceTree = SOURCE_ROOT; };
 		EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachSetUpVC.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				EFE8C33F22F71AE600C054F6 /* MapJSON.swift */,
 				EF06EA4B22F9D91700681741 /* Campus.swift */,
 				EFE5DDD022FC558E00F1287B /* SiteID.swift */,
+				EF97360A2300649100ABC318 /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
+				EF97360B2300649100ABC318 /* NetworkManager.swift in Sources */,
 				EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */,
 				EF06EA4C22F9D91700681741 /* Campus.swift in Sources */,
 				EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */,
