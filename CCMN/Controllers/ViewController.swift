@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import Charts
+
 
 class ViewController: UIViewController {
     
