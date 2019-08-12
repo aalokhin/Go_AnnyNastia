@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SetUpDelegate {
-    func specifyDates(from : String, to : String)
+    func specifyDates(from : Date, to : Date)
 }
 
 
@@ -54,7 +54,7 @@ class SeachSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        delegate?.specifyDates(from: "2016-08-08", to: "2016-08-09")
+        delegate?.specifyDates(from: inputDates[0], to: inputDates[1])
         navigationController?.popViewController(animated: true)
         
     }

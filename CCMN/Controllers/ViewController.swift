@@ -19,18 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       getInit()
+        getInit()
         getSiteID()
         testPresenceConnect()
-       testPresenceRepeat()
-        
-        
-       setFloorImgs()
-     
-       
-
-       
-       getConnectedDevices()
+        testPresenceRepeat()
+        setFloorImgs()
+        getConnectedDevices()
        
         
         //getting the floors information
@@ -268,7 +262,7 @@ class ViewController: UIViewController {
 
 
 extension ViewController : SetUpDelegate {
-    func specifyDates(from: String, to: String) {
+    func specifyDates(from: Date, to: Date) {
         print("hey frpm delegat here are our dates \(from) and \(to)")
     }
     

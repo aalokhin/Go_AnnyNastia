@@ -15,7 +15,6 @@ class NetworkManager {
     static func getRequestData(isLocation : Bool, endpoint : String, params : Parameters?, method : HTTPMethod, completion: @escaping (Data?, Error?) -> Void){
         var authHeader : HTTPHeaders
         var urlPath : String
-        
         if isLocation{
             authHeader = ["Authorization" : Client.sharedInstance.locateAuthHeader]
             urlPath = Client.sharedInstance.locateUrl + endpoint
@@ -23,7 +22,6 @@ class NetworkManager {
             authHeader = ["Authorization" : Client.sharedInstance.presenceAuthHeader]
             urlPath = Client.sharedInstance.presenceUrl + endpoint
         }
-        
         Client.sharedInstance.manager.request(urlPath,
                                               method: .get,
                                               encoding: URLEncoding.default,
@@ -32,7 +30,6 @@ class NetworkManager {
                                                 switch response.result {
                                                 case .success:
                                                     if let value = response.result.value {
-                                                        
                                                         completion(value, nil)
                                                     }
                                                 case .failure(let error):
