@@ -12,7 +12,7 @@ import Foundation
 extension ViewController : SetUpDelegate {
     func specifyDates(from: Date, to: Date, detailed : Bool) {
         self.startDate = from.toStringDefault()
-        self.endDate = from.toStringDefault()
+        self.endDate = to.toStringDefault()
         print("hey frpm delegat here are our dates \(from) and \(to)")
     }
     
