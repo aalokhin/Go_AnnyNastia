@@ -28,15 +28,15 @@ class NetworkManager {
                                               headers: authHeader).validate().responseData { response in
                                                 // print("response of the getRequestData status code (if -1 means something is totally wrong)", response.response?.statusCode ?? -1)
                                                 switch response.result {
-                                                case .success:
-                                                    if let value = response.result.value {
-                                                        completion(value, nil)
+                                                    case .success:
+                                                        if let value = response.result.value {
+                                                            completion(value, nil)
+                                                        }
+                                                    case .failure(let error):
+                                                        print("failure avg req")
+                                                        print(error)
+                                                        completion(nil, error)
                                                     }
-                                                case .failure(let error):
-                                                    print("failure avg req")
-                                                    print(error)
-                                                    completion(nil, error)
-                                                }
         }
     }
     
