@@ -26,6 +26,17 @@
                                     <outlet property="delegate" destination="6tm-vU-I6q" id="5Tv-PD-oMC"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-sh-cWQ">
+                                <rect key="frame" x="20" y="535" width="384" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Detailed"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="6tm-vU-I6q" eventType="valueChanged" id="08V-F6-XRD"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -37,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="BmP-ME-Wtm"/>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="2L3-sh-cWQ" id="52S-nf-dkK"/>
                         <outlet property="tableView" destination="YU2-BF-rAS" id="k1K-5h-ybq"/>
                     </connections>
                 </viewController>

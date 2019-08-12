@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SetUpDelegate {
-    func specifyDates(from : Date, to : Date)
+    func specifyDates(from : Date, to : Date, detailed : Bool)
 }
 
 
@@ -20,9 +20,11 @@ class SeachSetUpVC: UIViewController {
     var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
     var inputDates: [Date] = []
-    
     var delegate: SetUpDelegate?
+    var detailed = false
     
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,20 @@ class SeachSetUpVC: UIViewController {
         setupVC()
     }
     
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            print("we want a default date range ")
+            detailed = true
+        case 1:
+            detailed = false
+            print("we want a detailed date range")
+        default:
+            break;
+        }
+    }
     func setupVC() {
         
         
@@ -54,7 +70,7 @@ class SeachSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        delegate?.specifyDates(from: inputDates[0], to: inputDates[1])
+        delegate?.specifyDates(from: inputDates[0], to: inputDates[1], detailed : self.detailed)
         navigationController?.popViewController(animated: true)
         
     }

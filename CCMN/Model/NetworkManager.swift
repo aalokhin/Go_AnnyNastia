@@ -26,7 +26,7 @@ class NetworkManager {
                                               method: .get,
                                               encoding: URLEncoding.default,
                                               headers: authHeader).validate().responseData { response in
-                                                print("response of the getRequestData status code (if -1 means something is totally wrong)", response.response?.statusCode ?? -1)
+                                                // print("response of the getRequestData status code (if -1 means something is totally wrong)", response.response?.statusCode ?? -1)
                                                 switch response.result {
                                                 case .success:
                                                     if let value = response.result.value {
@@ -47,12 +47,10 @@ class NetworkManager {
         getRequestData(isLocation: true, endpoint : urlEndpoint, params : parameters, method : .get, completion: { data, error in
             if let d =  data {
                 if let downloadedImage = UIImage(data:d) {
-                    print("request on getting image info completed successfully")
                     completion(downloadedImage, nil)
                 }
             } else if let err = error {
                 print(err.localizedDescription)
-                print("request on getting image info failed")
             }
         })
     }

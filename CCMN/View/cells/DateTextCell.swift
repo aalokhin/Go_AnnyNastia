@@ -55,13 +55,3 @@ class DateTextCell: UITableViewCell {
     
 }
 
-extension Date {
-    
-    func convertToString(dateformat formatType: DateFormatType) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = formatType.rawValue
-        let newDate: String = dateFormatter.string(from: self)
-        return newDate
-    }
-    
-}
