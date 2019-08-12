@@ -195,7 +195,6 @@ class ViewController: UIViewController {
     
     func getInit(){
         let parameters : Parameters = ["" : ""]
-       
         NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.clientsCount.rawValue, params : parameters, method : .get, completion:  { data, error in
             if let d =  data{
                 print("request completed")

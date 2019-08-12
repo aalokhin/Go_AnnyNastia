@@ -8,18 +8,6 @@
 
 import Foundation
 
-//class SiteIDcheck : Decodable {
-//    let siteId : [SiteID]?
-//    enum CodingKeys: String, CodingKey {
-//         case siteId = ""
-//    }
-//
-//    required init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        self.siteId = (try? values.decode( [SiteID].self, forKey: .siteId))
-//    }
-//}
-
 class SiteID : Decodable {
     let address : String?
     let aesUId : Int?
