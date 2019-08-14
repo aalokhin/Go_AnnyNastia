@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //getInit()
         getSiteID()
-        forToday()
+        //forToday()
         
         /*
          cisco-presence.unit.ua/api/presence/v1/visitor/count/today?siteId=1513804707441
@@ -59,17 +59,7 @@ class ViewController: UIViewController {
             }
         })
         
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/average/today?siteId=1513804707441", params: [:], method: .get, completion: {
-                data, error in
-                if let d = data{
-                    print("dwell/average\n\n")
-                    
-                    let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                    print(json ?? "serialization of json failed")
-            }
-                    
-                   
-        })
+      
         
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary/today?siteId=1513804707441", params: [:], method: .get, completion: {
             data, error in
@@ -279,8 +269,12 @@ class ViewController: UIViewController {
             destination.delegate = self
             
             /*not using right now but lets leave it for now*/
-        case "FromTableView":
-            print("FromTableView")
+        case "testVis":
+           // let destination = segue.destination as! DwellTimeVis
+           // destination.str = "hi there we reached out to here"
+            //destination.delegate = self
+           
+            print("testVis")
         default:
             print("unexpected segue identifier")
         }
