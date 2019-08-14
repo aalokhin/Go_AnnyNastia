@@ -39,6 +39,7 @@ class DateCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         initView()
+        datePicker.maximumDate = Date()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

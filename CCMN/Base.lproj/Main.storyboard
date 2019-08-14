@@ -19,9 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJ9-CW-d64">
-                                <rect key="frame" x="58" y="295" width="311" height="329"/>
+                                <rect key="frame" x="130" y="94" width="233" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-3T-Ena">
+                                <rect key="frame" x="42" y="340" width="330" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check the dweell time distribution visulaiozation"/>
+                                <connections>
+                                    <action selector="goToVisualization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3NJ-YS-OOi"/>
+                                    <segue destination="yha-f1-KA1" kind="show" identifier="testVis" id="2hU-2a-hv1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +49,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="93.75"/>
+        </scene>
+        <!--DwellTimeVis-->
+        <scene sceneID="exf-cR-2hY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DwellTimeVis" id="yha-f1-KA1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yad-vx-b86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="145"/>
         </scene>
         <!--SearchSetUpVC-->
         <scene sceneID="Rbh-PA-oEw">

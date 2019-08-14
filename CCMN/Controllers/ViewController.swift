@@ -17,15 +17,24 @@ class ViewController: UIViewController {
     ///api/analytics/v1/now/connectedDetected
     let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
     
-    var startDate : String = "2019-08-11"
-    var endDate : String =  "2019-08-11"
+    var startDate : String = Date().toStringDefault()
+    var endDate : String =  Date().toStringDefault()
     
 
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getInit()
+        //getInit()
         getSiteID()
+        forToday()
+        
+        /*
+         cisco-presence.unit.ua/api/presence/v1/visitor/count/today?siteId=1513804707441
+         cisco-presence.unit.ua/api/presence/v1/dwell/average/today?siteId=1513804707441
+         cisco-presence.unit.ua/api/presence/v1/kpisummary/today?siteId=1513804707441
+ 
+ 
+ */
        // testPresenceConnect()
 //        testPresenceRepeat()
 //        setFloorImgs()
@@ -34,6 +43,56 @@ class ViewController: UIViewController {
         
         //getting the floors information
     
+    }
+    
+    func forToday(){
+        
+        
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/count/today?siteId=1513804707441", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+              //  print("count/today")
+//                let json = try? JSONSerialization.jsonObject(with: d, options: [])
+//                print(json ?? "serialization of json failed\n\n")
+                 let nbr = String(data: d, encoding: .utf8)?.toInt()
+                print("count/today visitors \(nbr ?? -1)\n\n")
+            }
+        })
+        
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/average/today?siteId=1513804707441", params: [:], method: .get, completion: {
+                data, error in
+                if let d = data{
+                    print("dwell/average\n\n")
+                    
+                    let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                    print(json ?? "serialization of json failed")
+            }
+                    
+                   
+        })
+        
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary/today?siteId=1513804707441", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                print("kpisummary/today\n\n")
+                
+            if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+                print(json)
+            }
+            
+                if let nbr = String(data: d, encoding: .utf8)?.toInt(){
+                    print("kpi summary  \(nbr)\n\n")
+                }
+                }
+            
+        })
+        
+        
+    }
+    
+    
+    @IBAction func goToVisualization(_ sender: UIButton) {
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         testPresenceConnect()

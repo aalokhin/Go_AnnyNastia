@@ -15,6 +15,7 @@ protocol PresenceEndpoint {
 
 enum PresenceEndpoints: String {
     case connectedDevicesUntilNow = "api/presence/v1/connected/count/today"
+    
     //  ************************************ floors images and maps ************************************
     
     
