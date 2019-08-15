@@ -270,8 +270,9 @@ class ViewController: UIViewController {
             
             /*not using right now but lets leave it for now*/
         case "testVis":
-           // let destination = segue.destination as! DwellTimeVis
-           // destination.str = "hi there we reached out to here"
+            let destination = segue.destination as! DwellTimeVis
+            destination.startDate = self.startDate
+            destination.endDate = self.endDate
             //destination.delegate = self
            
             print("testVis")

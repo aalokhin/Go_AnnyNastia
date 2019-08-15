@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
 		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
+		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
 		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
 		EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */; };
@@ -63,6 +64,7 @@
 		0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.release.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.release.xcconfig"; sourceTree = "<group>"; };
 		29F15A1414696DF53B35BA83 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
+		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
 		9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCEC84424141817F5B6830B /* Pods-CCMN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.debug.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,17 @@
 				0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5DADCE6623054B91006AC5AD /* Decoders */ = {
+			isa = PBXGroup;
+			children = (
+				EFE8C33F22F71AE600C054F6 /* MapJSON.swift */,
+				EFE5DDD022FC558E00F1287B /* SiteID.swift */,
+				EF06EA4B22F9D91700681741 /* Campus.swift */,
+				5DADCE6723054BBB006AC5AD /* KPISummary.swift */,
+			);
+			path = Decoders;
 			sourceTree = "<group>";
 		};
 		8487343993A60B23E7E017A1 /* Frameworks */ = {
@@ -240,10 +253,8 @@
 		EF8580C422EF566500F6B58D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5DADCE6623054B91006AC5AD /* Decoders */,
 				EF8580C622EF569F00F6B58D /* Client.swift */,
-				EFE8C33F22F71AE600C054F6 /* MapJSON.swift */,
-				EF06EA4B22F9D91700681741 /* Campus.swift */,
-				EFE5DDD022FC558E00F1287B /* SiteID.swift */,
 				EF97360A2300649100ABC318 /* NetworkManager.swift */,
 				EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */,
 			);
@@ -500,6 +511,7 @@
 				EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */,
 				EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */,
 				EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */,
+				5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */,
 				EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */,
 				EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
