@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
-		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
+		5BFD0AE5C13682169CE0549F /* Pods_CCMNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32793C7BE8793DD0A16883A /* Pods_CCMNTests.framework */; };
 		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
-		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
+		BFB44024839F59163994CFC7 /* Pods_CCMN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C445D92053CEBE4B62F82022 /* Pods_CCMN.framework */; };
+		C95CCDE2883720C16C0BC8ED /* Pods_CCMN_CCMNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97986D58088EA1A2BAF17CD9 /* Pods_CCMN_CCMNUITests.framework */; };
 		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
 		EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */; };
 		EF2E0602230439900034C418 /* DwellTimeVis.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2E0601230439900034C418 /* DwellTimeVis.storyboard */; };
@@ -62,14 +62,16 @@
 /* Begin PBXFileReference section */
 		0842C8F66F65D923BC459256 /* Pods-CCMNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2221D1B7C68BAE95E3A4982E /* Pods-CCMN-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMN-CCMNUITests/Pods-CCMN-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.release.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.release.xcconfig"; sourceTree = "<group>"; };
 		29F15A1414696DF53B35BA83 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
 		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
+		714E275CD0E591BAF8FB8B72 /* Pods-CCMN-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMN-CCMNUITests/Pods-CCMN-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
+		97986D58088EA1A2BAF17CD9 /* Pods_CCMN_CCMNUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCMN_CCMNUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCEC84424141817F5B6830B /* Pods-CCMN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.debug.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.debug.xcconfig"; sourceTree = "<group>"; };
-		B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMNUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32793C7BE8793DD0A16883A /* Pods_CCMNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCMNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C445D92053CEBE4B62F82022 /* Pods_CCMN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCMN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF06EA4B22F9D91700681741 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceEndpoints.swift; sourceTree = "<group>"; };
 		EF2E0601230439900034C418 /* DwellTimeVis.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DwellTimeVis.storyboard; sourceTree = "<group>"; };
@@ -112,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */,
+				BFB44024839F59163994CFC7 /* Pods_CCMN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */,
+				5BFD0AE5C13682169CE0549F /* Pods_CCMNTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */,
+				C95CCDE2883720C16C0BC8ED /* Pods_CCMN_CCMNUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,8 @@
 				236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */,
 				9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */,
 				0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */,
+				2221D1B7C68BAE95E3A4982E /* Pods-CCMN-CCMNUITests.debug.xcconfig */,
+				714E275CD0E591BAF8FB8B72 /* Pods-CCMN-CCMNUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,9 +166,9 @@
 		8487343993A60B23E7E017A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */,
-				C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */,
-				C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */,
+				C445D92053CEBE4B62F82022 /* Pods_CCMN.framework */,
+				97986D58088EA1A2BAF17CD9 /* Pods_CCMN_CCMNUITests.framework */,
+				C32793C7BE8793DD0A16883A /* Pods_CCMNTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,6 +305,7 @@
 				EF48C4F222EDE92F00980012 /* Sources */,
 				EF48C4F322EDE92F00980012 /* Frameworks */,
 				EF48C4F422EDE92F00980012 /* Resources */,
+				E860C499A5F7AFD1A54B7853 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,6 +343,7 @@
 				EF48C51122EDE93100980012 /* Sources */,
 				EF48C51222EDE93100980012 /* Frameworks */,
 				EF48C51322EDE93100980012 /* Resources */,
+				3D78AB66015DE024EB21E8B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,6 +453,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3D78AB66015DE024EB21E8B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCMN-CCMNUITests/Pods-CCMN-CCMNUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCMN-CCMNUITests/Pods-CCMN-CCMNUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCMN-CCMNUITests/Pods-CCMN-CCMNUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5243F673603F407D478E217B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,7 +485,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CCMNUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CCMN-CCMNUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -489,6 +512,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E860C499A5F7AFD1A54B7853 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCMN/Pods-CCMN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCMN/Pods-CCMN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCMN/Pods-CCMN-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -768,7 +808,7 @@
 		};
 		EF48C52522EDE93100980012 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */;
+			baseConfigurationReference = 2221D1B7C68BAE95E3A4982E /* Pods-CCMN-CCMNUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -788,7 +828,7 @@
 		};
 		EF48C52622EDE93100980012 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */;
+			baseConfigurationReference = 714E275CD0E591BAF8FB8B72 /* Pods-CCMN-CCMNUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

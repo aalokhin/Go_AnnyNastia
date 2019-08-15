@@ -3,10 +3,10 @@
 
 target 'CCMN' do
   # Comment the next line if you don't want to use dynamic frameworks
-   pod 'Alamofire'
-   pod 'Charts'
-
-  
+  use_frameworks!
+  pod 'Alamofire'
+  pod 'Charts'
+#  pod 'Charts', '~> 3.1'
 
   # Pods for CCMN
 
@@ -16,7 +16,6 @@ target 'CCMN' do
   end
 
   target 'CCMNUITests' do
-    inherit! :search_paths
     # Pods for testing
   end
 
