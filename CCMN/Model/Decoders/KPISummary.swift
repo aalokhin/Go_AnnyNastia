@@ -56,9 +56,10 @@ extension kpiSummaryJSON {
     func prinAll(){
         print("averageDwell \(averageDwell ?? -1)")
         if let avg = averageDwellByLevels{
-            print(avg.self)
-
+            
+           
             for one in avg {
+                print(one.key)
                 print("averageDwellByLevels \(one.value.average ?? -1)")
                 print("averageDwellByLevels \(one.value.count ?? -1)")
             }
