@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="glz-0e-lOm">
-                                <rect key="frame" x="20" y="221" width="374" height="581"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="glz-0e-lOm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="R9F-Ui-MKt" id="S00-Fr-Ca3"/>
@@ -29,6 +28,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xE9-jB-l1J" firstAttribute="bottom" secondItem="glz-0e-lOm" secondAttribute="bottom" id="VUs-aO-Pae"/>
+                            <constraint firstItem="xE9-jB-l1J" firstAttribute="trailing" secondItem="glz-0e-lOm" secondAttribute="trailing" id="aZr-6l-Tnt"/>
+                            <constraint firstItem="glz-0e-lOm" firstAttribute="leading" secondItem="xE9-jB-l1J" secondAttribute="leading" id="lUi-mQ-SnE"/>
+                            <constraint firstItem="glz-0e-lOm" firstAttribute="top" secondItem="xE9-jB-l1J" secondAttribute="top" id="nEY-y0-oAW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xE9-jB-l1J"/>
                     </view>
                     <connections>
