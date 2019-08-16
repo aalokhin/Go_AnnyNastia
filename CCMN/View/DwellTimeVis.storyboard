@@ -17,13 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="0O7-uv-7vB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="glz-0e-lOm">
+                                <rect key="frame" x="20" y="221" width="374" height="581"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="R9F-Ui-MKt" id="S00-Fr-Ca3"/>
+                                    <outlet property="delegate" destination="R9F-Ui-MKt" id="73U-N9-AnC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xE9-jB-l1J"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="glz-0e-lOm" id="XB3-oP-Vn0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koR-ZF-WsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="126"/>
+            <point key="canvasLocation" x="-123.18840579710145" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>

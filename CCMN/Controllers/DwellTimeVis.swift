@@ -14,15 +14,21 @@ class DwellTimeVis : UIViewController {
     var startDate = ""
     var endDate = ""
     
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
+        setupVC()
         getDwell()
         print("start-", startDate, "end-", endDate)
         
-       
-   
+    }
+    func setupVC() {
+
+        
+        tableView.register(UINib(nibName: ChartViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChartViewCell.reuseIdentifier())
+     
     }
     
     func getDwell(){
@@ -46,4 +52,18 @@ class DwellTimeVis : UIViewController {
         })
         
     }
+}
+
+extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
+       
+       return cell
+    }
+    
+    
 }
