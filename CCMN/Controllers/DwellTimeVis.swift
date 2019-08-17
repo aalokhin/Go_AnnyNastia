@@ -96,7 +96,7 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
         if (YValues.count == 0){
             return 0
         } else {
-            return 1
+            return 3
         }
     }
     
