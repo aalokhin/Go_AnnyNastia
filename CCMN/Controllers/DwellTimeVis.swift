@@ -13,6 +13,8 @@ import Charts
 class DwellTimeVis : UIViewController {
     var startDate = ""
     var endDate = ""
+    var YValues : [Double] = []
+     let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,7 +23,7 @@ class DwellTimeVis : UIViewController {
         super.viewDidLoad()
         setupVC()
        // getDwell()
-         getHourlyConnected()
+        getHourlyConnected()
         print("start-", startDate, "end-", endDate)
         
     }
@@ -41,15 +43,22 @@ class DwellTimeVis : UIViewController {
             if let d = data{
                 print("connected/hourly/yesterday \n\n")
                 
-                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                    print(json)
-
-
-                }
-               
-               
+//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//
+//                    print(json)
+//                }
                 
-             
+                let decoder = JSONDecoder()
+                guard let t = try? decoder.decode([String : Int].self, from: d) else {
+                    print("error decoding json")
+                    return
+                }
+                print(t)
+                for one in t{
+                    self.YValues.append(Double(one.value))
+                }
+                self.tableView.reloadData()
+                //print(self.YValues.count)
 
                 
             }
@@ -84,7 +93,11 @@ class DwellTimeVis : UIViewController {
 
 extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if (YValues.count == 0){
+            return 0
+        } else {
+            return 1
+        }
     }
     
     
@@ -92,9 +105,11 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
     //        let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
+       
         
-        let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+       // getHourlyConnected()
+       let values = YValues
+        //let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
         cell.setChart(dataPoints: hours, values: values)

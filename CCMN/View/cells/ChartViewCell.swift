@@ -52,7 +52,7 @@ class ChartViewCell : UITableViewCell{
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
         let chartData = BarChartData(dataSet: chartDataSet)
         
         barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
