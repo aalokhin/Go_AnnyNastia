@@ -20,6 +20,7 @@ class ChartViewCell : UITableViewCell{
     
     // Nib name
     class func nibName() -> String {
+        
         return "ChartViewCell"
     }
     
@@ -29,8 +30,29 @@ class ChartViewCell : UITableViewCell{
     // Awake from nib method
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+       let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
+        let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        
+        setChart(dataPoints : hours, values: values)        // Initialization code
+    }
+    
+    func setChart(dataPoints: [String], values: [Double]) {
         barChart.noDataText = "You need to provide data for the chart."
-        // Initialization code
+   
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            
+            let dataEntry = BarChartDataEntry(x: values[i], yValues: values)
+            //(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Units Sold")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        barChart.data = chartData
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

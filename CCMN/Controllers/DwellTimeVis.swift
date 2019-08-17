@@ -28,7 +28,8 @@ class DwellTimeVis : UIViewController {
 
         
         tableView.register(UINib(nibName: ChartViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChartViewCell.reuseIdentifier())
-     
+        self.tableView.rowHeight = 300.0
+
     }
     
     func getDwell(){
@@ -61,8 +62,7 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
-       
-       return cell
+        return cell
     }
     
     
