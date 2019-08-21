@@ -14,7 +14,9 @@ class DwellTimeVis : UIViewController {
     var startDate = ""
     var endDate = ""
     var YValues : [Double] = []
-     let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
+    var HoursYValues : [String:Double]?
+    let HoursForDic = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+    let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,13 +56,11 @@ class DwellTimeVis : UIViewController {
                     return
                 }
                 print(t)
-                for one in t{
-                    self.YValues.append(Double(one.value))
+                for one in self.HoursForDic {
+                    let value = Double(t[one] ?? -1)
+                    self.YValues.append(value)
                 }
                 self.tableView.reloadData()
-                //print(self.YValues.count)
-
-                
             }
             
         })
@@ -100,7 +100,6 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
     //       let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
     //        let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
@@ -120,3 +119,18 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
 }
 
 
+
+// YValues.append(Double(t[one]))
+//                    if let entry = t.keys.first(where: { $0 == one }) {
+//                        print(one, "===>", t[entry])
+//                       // print()
+//                        // prints 'hello world'
+//                    } else {
+//                        print("no match")
+//                    }
+//                    for key in t.keys {
+//                        print(key)
+//                        let val = t[key]
+//                        print(val)
+//                        self.YValues.append(Double(val ?? -1))
+//                    }
