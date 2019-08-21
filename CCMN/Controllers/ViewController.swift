@@ -37,7 +37,7 @@ class ViewController: UIViewController {
  */
        // testPresenceConnect()
 //        testPresenceRepeat()
-//        setFloorImgs()
+        setFloorImgs()
       //  getConnectedDevices()
        
         

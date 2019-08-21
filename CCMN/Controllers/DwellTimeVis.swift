@@ -4,7 +4,7 @@
 //
 //  Created by Anastasiia ALOKHINA on 8/14/19.
 //  Copyright © 2019 Anastasiia ALOKHINA. All rights reserved.
-//
+//https://medium.com/@stasost/ios-how-to-build-a-table-view-with-multiple-cell-types-2df91a206429
 
 import Foundation
 import UIKit
@@ -59,14 +59,13 @@ class DwellTimeVis : UIViewController {
                 for one in self.HoursForDic {
                     let value = Double(t[one] ?? -1)
                     self.YValues.append(value)
+                    //print(one, "==>", value)
                 }
                 self.tableView.reloadData()
             }
             
         })
     }
-
-    
     
     func getDwell(){
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary?siteId=1513804707441&startDate=\(startDate)&endDate=\(endDate)", params: [:], method: .get, completion: {
@@ -99,9 +98,6 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
             return 3
         }
     }
-    
-    //       let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
-    //        let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        

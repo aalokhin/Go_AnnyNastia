@@ -53,6 +53,26 @@ class ChartViewCell : UITableViewCell{
         
         barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        
+        barChart.xAxis.labelPosition = .bottom
+        barChart.xAxis.drawAxisLineEnabled = true
+        barChart.xAxis.drawGridLinesEnabled = true
+       // barChart.xAxis.centerAxisLabelsEnabled = true
+        barChart.xAxis.enabled = true
+       // barChart.xAxis.granularityEnabled = true
+       // barChart.xAxis.axisMinimum = 0.0
+        barChart.xAxis.labelPosition = .bottom
+        barChart.xAxis.labelRotationAngle = -90
+        barChart.rightAxis.drawLabelsEnabled = false
+        
+        barChart.rightAxis.enabled = false
+        barChart.rightAxis.drawLabelsEnabled = false
+        barChart.rightAxis.drawGridLinesEnabled = true
+        
+        barChart.leftAxis.enabled = false
+        barChart.leftAxis.drawAxisLineEnabled = false
+        barChart.leftAxis.drawGridLinesEnabled = false
+        
        
         
         barChart.notifyDataSetChanged()
