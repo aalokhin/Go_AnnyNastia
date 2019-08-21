@@ -51,6 +51,20 @@ class ChartViewCell : UITableViewCell{
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
         let chartData = BarChartData(dataSet: chartDataSet)
         
+        
+        let legend = barChart.legend
+        legend.enabled = true
+       
+//        legend.horizontalAlignment = .left
+        legend.verticalAlignment = .top
+//        legend.orientation = .horizontal
+//        legend.font = UIFont.systemFont(ofSize: 9)
+//        legend.drawInside = false
+//
+//        legend.yOffset = 0.0
+//        legend.xOffset = 0.0
+//        legend.yEntrySpace = 10.0
+        
         barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         
@@ -77,6 +91,17 @@ class ChartViewCell : UITableViewCell{
         
         barChart.notifyDataSetChanged()
         barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+        
+        
+     
+       
+        barChart.xAxis.labelCount = dataPoints.count
+        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        barChart.notifyDataSetChanged()
+        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+        
+        
         barChart.data = chartData
         
     }
