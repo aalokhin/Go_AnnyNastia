@@ -124,7 +124,9 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
 
 extension UITableViewCell{
     func createBarChart(dataPoints: [String], values: [Double]) {
+        print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
         barChart.noDataText = "please enter data"
         
         
@@ -143,19 +145,19 @@ extension UITableViewCell{
         let chartData = BarChartData(dataSet: chartDataSet)
         
         
+        
         let legend = barChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
         barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
-        
         barChart.xAxis.labelPosition = .bottom
         barChart.xAxis.drawAxisLineEnabled = true
         barChart.xAxis.drawGridLinesEnabled = true
         // barChart.xAxis.centerAxisLabelsEnabled = true
         barChart.xAxis.enabled = true
         // barChart.xAxis.granularityEnabled = true
-        // barChart.xAxis.axisMinimum = 0.0
+        barChart.xAxis.axisMinimum = 0.0
         barChart.xAxis.labelPosition = .bottom
         barChart.xAxis.labelRotationAngle = -90
         barChart.rightAxis.drawLabelsEnabled = false
@@ -167,7 +169,6 @@ extension UITableViewCell{
         barChart.leftAxis.enabled = false
         barChart.leftAxis.drawAxisLineEnabled = false
         barChart.leftAxis.drawGridLinesEnabled = false
-        
         barChart.notifyDataSetChanged()
         barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
         barChart.xAxis.labelCount = dataPoints.count
