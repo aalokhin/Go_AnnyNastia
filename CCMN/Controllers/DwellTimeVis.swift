@@ -35,7 +35,7 @@ class DwellTimeVis : UIViewController {
         tableView.register(UINib(nibName: ChartViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChartViewCell.reuseIdentifier())
         tableView.register(UINib(nibName: EmptyChartCell.nibName(), bundle: nil), forCellReuseIdentifier: EmptyChartCell.reuseIdentifier())
 
-        self.tableView.rowHeight = 300.0
+        self.tableView.rowHeight = 400.0
 
     }
     
@@ -107,16 +107,11 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
        // getHourlyConnected()
        let values = YValues
         //let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        if (indexPath.row == 1) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
-            cell.createBarChart()
-            return cell
-        }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
-            cell.setChart(dataPoints: hours, values: values)
-            return cell
-        }
+ 
+        let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
+        cell.createBarChart(dataPoints: hours, values: values)
+        return cell
+       
     }
     
     //https://medium.com/@felicity.johnson.mail/lets-make-some-charts-ios-charts-5b8e42c20bc9
@@ -128,10 +123,65 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
 
 
 extension UITableViewCell{
-    func createBarChart(){
+    func createBarChart(dataPoints: [String], values: [Double]) {
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         barChart.noDataText = "please enter data"
+        
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            
+            
+            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
+            //(value: values[i], xIndex: i)
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        
+        
+        let legend = barChart.legend
+        legend.enabled = true
+        legend.verticalAlignment = .top
+        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        
+        barChart.xAxis.labelPosition = .bottom
+        barChart.xAxis.drawAxisLineEnabled = true
+        barChart.xAxis.drawGridLinesEnabled = true
+        // barChart.xAxis.centerAxisLabelsEnabled = true
+        barChart.xAxis.enabled = true
+        // barChart.xAxis.granularityEnabled = true
+        // barChart.xAxis.axisMinimum = 0.0
+        barChart.xAxis.labelPosition = .bottom
+        barChart.xAxis.labelRotationAngle = -90
+        barChart.rightAxis.drawLabelsEnabled = false
+        
+        barChart.rightAxis.enabled = false
+        barChart.rightAxis.drawLabelsEnabled = false
+        barChart.rightAxis.drawGridLinesEnabled = true
+        
+        barChart.leftAxis.enabled = false
+        barChart.leftAxis.drawAxisLineEnabled = false
+        barChart.leftAxis.drawGridLinesEnabled = false
+        
+        barChart.notifyDataSetChanged()
+        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+        barChart.xAxis.labelCount = dataPoints.count
+        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        barChart.notifyDataSetChanged()
+        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+        
+        
+        barChart.data = chartData
+        
         self.addSubview(barChart)
+
+
     }
     
     func createLinearChart(){
