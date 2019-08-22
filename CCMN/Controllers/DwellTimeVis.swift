@@ -109,7 +109,7 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
         //let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         if (indexPath.row == 1) {
             let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
-            
+            cell.createBarChart()
             return cell
         }
         else {
@@ -119,6 +119,30 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //https://medium.com/@felicity.johnson.mail/lets-make-some-charts-ios-charts-5b8e42c20bc9
     
+   
+    
+    
+}
+
+
+extension UITableViewCell{
+    func createBarChart(){
+        let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        barChart.noDataText = "please enter data"
+        self.addSubview(barChart)
+    }
+    
+    func createLinearChart(){
+        let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        lineChart.noDataText = "please enter data"
+        self.addSubview(lineChart)
+        
+    }
+    
+    func createPieChart(){
+        
+    }
 }
 
