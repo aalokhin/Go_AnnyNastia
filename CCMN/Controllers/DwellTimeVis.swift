@@ -107,7 +107,11 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
        // getHourlyConnected()
        let values = YValues
         //let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
- 
+        if indexPath.row == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
+            cell.createLinearChart(dataPoints: hours, values: values)
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
         cell.createBarChart(dataPoints: hours, values: values)
         return cell
@@ -143,9 +147,6 @@ extension UITableViewCell{
         
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
         let chartData = BarChartData(dataSet: chartDataSet)
-        
-        
-        
         let legend = barChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
@@ -161,11 +162,9 @@ extension UITableViewCell{
         barChart.xAxis.labelPosition = .bottom
         barChart.xAxis.labelRotationAngle = -90
         barChart.rightAxis.drawLabelsEnabled = false
-        
         barChart.rightAxis.enabled = false
         barChart.rightAxis.drawLabelsEnabled = false
         barChart.rightAxis.drawGridLinesEnabled = true
-        
         barChart.leftAxis.enabled = false
         barChart.leftAxis.drawAxisLineEnabled = false
         barChart.leftAxis.drawGridLinesEnabled = false
@@ -176,18 +175,38 @@ extension UITableViewCell{
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.notifyDataSetChanged()
         barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
-        
-        
         barChart.data = chartData
         
+        
+        barChart.translatesAutoresizingMaskIntoConstraints = true
+        barChart.topAnchor.constraint(equalTo: self.topAnchor)
+        barChart.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        barChart.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+        barChart.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         self.addSubview(barChart)
-
-
     }
     
-    func createLinearChart(){
+    func createLinearChart(dataPoints: [String], values: [Double]){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            
+            
+            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
+            //(value: values[i], xIndex: i)
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = LineChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
+        let chartData = LineChartData()
+        chartData.addDataSet(chartDataSet)
+        lineChart.data = chartData
+        
+        
+        
         self.addSubview(lineChart)
         
     }
