@@ -33,6 +33,8 @@ class DwellTimeVis : UIViewController {
 
         
         tableView.register(UINib(nibName: ChartViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChartViewCell.reuseIdentifier())
+        tableView.register(UINib(nibName: EmptyChartCell.nibName(), bundle: nil), forCellReuseIdentifier: EmptyChartCell.reuseIdentifier())
+
         self.tableView.rowHeight = 300.0
 
     }
@@ -105,28 +107,18 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
        // getHourlyConnected()
        let values = YValues
         //let values = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0, 20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
-        cell.setChart(dataPoints: hours, values: values)
-        return cell
+        if (indexPath.row == 1) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
+            
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ChartViewCell.reuseIdentifier()) as! ChartViewCell
+            cell.setChart(dataPoints: hours, values: values)
+            return cell
+        }
     }
     
     
 }
 
-
-
-// YValues.append(Double(t[one]))
-//                    if let entry = t.keys.first(where: { $0 == one }) {
-//                        print(one, "===>", t[entry])
-//                       // print()
-//                        // prints 'hello world'
-//                    } else {
-//                        print("no match")
-//                    }
-//                    for key in t.keys {
-//                        print(key)
-//                        let val = t[key]
-//                        print(val)
-//                        self.YValues.append(Double(val ?? -1))
-//                    }

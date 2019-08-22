@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
 		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
+		5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */; };
+		5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */; };
 		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
 		5DADCE6B2305C59D006AC5AD /* ChartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */; };
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
@@ -65,6 +67,8 @@
 		0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.release.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.release.xcconfig"; sourceTree = "<group>"; };
 		29F15A1414696DF53B35BA83 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
+		5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChartCell.xib; sourceTree = "<group>"; };
+		5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChartCell.swift; sourceTree = "<group>"; };
 		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
 		5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewCell.swift; sourceTree = "<group>"; };
 		9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */,
 				EF374EFA2300020A00D6C64A /* DateCell.swift */,
 				EF57000F2302FC4600FF1980 /* ChartViewCell.xib */,
+				5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */,
+				5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			files = (
 				EF374EF52300016200D6C64A /* DateTextCell.xib in Resources */,
 				EF48C50422EDE93100980012 /* LaunchScreen.storyboard in Resources */,
+				5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */,
 				EF48C50122EDE93100980012 /* Assets.xcassets in Resources */,
 				EF5700102302FC4600FF1980 /* ChartViewCell.xib in Resources */,
 				EF374EF72300016E00D6C64A /* DateCell.xib in Resources */,
@@ -501,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */,
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
 				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
