@@ -21,6 +21,7 @@ depends-top-level:
 - "Date"
 - "DateFormatType"
 - "DateTextCell"
+- !private "FloatLiteralType"
 - "String"
 - "StringLiteralType"
 - "UILabel"

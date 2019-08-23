@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "79525ff2acf7ac2963bb0c4d6c5fe033"
-build_time: [1566551832, 274215000]
+build_time: [1566553051, 846665000]
 inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/EmptyChartCell.swift": [1566469081, 686493044]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/ViewController.swift": [1566551330, 86834876]
@@ -21,6 +21,6 @@ inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/DateTextCell.swift": [1565774441, 471944422]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/ChartViewCell.swift": [1566399564, 419235386]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Utilities/LocationRequestEndpoints.swift": [1565774441, 470969507]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/DwellTimeVis.swift": [1566551730, 524303141]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/DwellTimeVis.swift": [1566553051, 77059972]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/ViewControllerExtensions.swift": [1565774441, 467914600]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/SeachSetUpVC.swift": [1565774441, 467116955]

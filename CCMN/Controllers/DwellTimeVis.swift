@@ -111,6 +111,11 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
             cell.createLinearChart(dataPoints: hours, values: values)
             return cell
+        } else if indexPath.row == 2{
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
+            cell.createPieChart(dataPoints: hours, values: values)
+            return cell
+
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
         cell.createBarChart(dataPoints: hours, values: values)
@@ -211,7 +216,28 @@ extension UITableViewCell{
         
     }
     
-    func createPieChart(){
+    func createPieChart(dataPoints: [String], values: [Double]){
+        let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        pieChart.noDataText = "please enter data"
+        
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            
+            
+            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
+            //(value: values[i], xIndex: i)
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
+        let chartData = PieChartData()
+        chartData.addDataSet(chartDataSet)
+        pieChart.data = chartData
+        
+        self.addSubview(pieChart)
+        
         
     }
 }
