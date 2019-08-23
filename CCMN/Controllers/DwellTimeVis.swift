@@ -223,11 +223,7 @@ extension UITableViewCell{
         var dataEntries: [ChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            
-            
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
-            //(value: values[i], xIndex: i)
-            
             dataEntries.append(dataEntry)
         }
         
