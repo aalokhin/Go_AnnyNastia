@@ -10,7 +10,6 @@ depends-top-level:
 - !private "+"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
 - !private "Client"
 - "Data"
 - "Error"

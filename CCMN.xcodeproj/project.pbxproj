@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
 		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
+		5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */; };
+		5D24B7B6230FFC4A002CC7F5 /* DwellTimeExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B5230FFC4A002CC7F5 /* DwellTimeExt.swift */; };
 		5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */; };
 		5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */; };
 		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
@@ -67,6 +69,8 @@
 		0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.release.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.release.xcconfig"; sourceTree = "<group>"; };
 		29F15A1414696DF53B35BA83 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
+		5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICellExt.swift; sourceTree = "<group>"; };
+		5D24B7B5230FFC4A002CC7F5 /* DwellTimeExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DwellTimeExt.swift; sourceTree = "<group>"; };
 		5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChartCell.xib; sourceTree = "<group>"; };
 		5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChartCell.swift; sourceTree = "<group>"; };
 		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
@@ -152,6 +156,27 @@
 				0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5D24B7B2230FFBA2002CC7F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EFE0F5EA2301AA1700EDE4D6 /* ViewControllerExtensions.swift */,
+				5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */,
+				EF374EF122FFFFA500D6C64A /* SetUpVCExtnsn.swift */,
+				5D24B7B5230FFC4A002CC7F5 /* DwellTimeExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D24B7B723100065002CC7F5 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				EF8580C622EF569F00F6B58D /* Client.swift */,
+				EF97360A2300649100ABC318 /* NetworkManager.swift */,
+				EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 		5DADCE6623054B91006AC5AD /* Decoders */ = {
@@ -250,10 +275,9 @@
 		EF8580C122EF562500F6B58D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5D24B7B2230FFBA2002CC7F5 /* Extensions */,
 				EF48C4FB22EDE92F00980012 /* ViewController.swift */,
-				EFE0F5EA2301AA1700EDE4D6 /* ViewControllerExtensions.swift */,
 				EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */,
-				EF374EF122FFFFA500D6C64A /* SetUpVCExtnsn.swift */,
 				EF2E0603230439BD0034C418 /* DwellTimeVis.swift */,
 			);
 			path = Controllers;
@@ -263,9 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				5DADCE6623054B91006AC5AD /* Decoders */,
-				EF8580C622EF569F00F6B58D /* Client.swift */,
-				EF97360A2300649100ABC318 /* NetworkManager.swift */,
-				EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +294,7 @@
 		EF8580C522EF568E00F6B58D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D24B7B723100065002CC7F5 /* Singletons */,
 				EF374EF32300010900D6C64A /* cells */,
 				EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */,
 				EF2E0601230439900034C418 /* DwellTimeVis.storyboard */,
@@ -513,6 +535,7 @@
 				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
 				EFE0F5E92301A9E300EDE4D6 /* NetworkManagerExtension.swift in Sources */,
+				5D24B7B6230FFC4A002CC7F5 /* DwellTimeExt.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EF97360B2300649100ABC318 /* NetworkManager.swift in Sources */,
 				EFE8C34022F71AE600C054F6 /* MapJSON.swift in Sources */,
@@ -524,6 +547,7 @@
 				EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */,
 				5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */,
 				EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */,
+				5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */,
 				EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */,
 				5DADCE6B2305C59D006AC5AD /* ChartViewCell.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
