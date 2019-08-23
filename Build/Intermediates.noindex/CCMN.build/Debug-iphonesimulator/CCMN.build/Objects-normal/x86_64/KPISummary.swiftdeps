@@ -1,0 +1,357 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "kpiSummaryJSON"
+- "AveragegDwellByLevels"
+provides-nominal:
+- "4CCMN14kpiSummaryJSONC"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+provides-member:
+- ["4CCMN14kpiSummaryJSONC", ""]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", ""]
+- ["4CCMN21AveragegDwellByLevelsC", ""]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", ""]
+- ["4CCMN14kpiSummaryJSONC", "prinAll"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "AveragegDwellByLevels"
+- "CodingKey"
+- "Decodable"
+- "Decoder"
+- "Double"
+- "Int"
+- "String"
+- !private "_findStringSwitchCase"
+- "kpiSummaryJSON"
+- !private "print"
+- !private "~="
+depends-member:
+- ["4CCMN21AveragegDwellByLevelsC", "CodingKey"]
+- ["4CCMN21AveragegDwellByLevelsC", "CodingKeys"]
+- ["4CCMN21AveragegDwellByLevelsC", "Decoder"]
+- ["4CCMN21AveragegDwellByLevelsC", "Double"]
+- ["4CCMN21AveragegDwellByLevelsC", "Int"]
+- ["4CCMN21AveragegDwellByLevelsC", "String"]
+- !private ["4CCMN21AveragegDwellByLevelsC", "_findStringSwitchCase"]
+- ["4CCMN21AveragegDwellByLevelsC", "average"]
+- ["4CCMN21AveragegDwellByLevelsC", "count"]
+- ["4CCMN21AveragegDwellByLevelsC", "deinit"]
+- ["4CCMN21AveragegDwellByLevelsC", "init"]
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- !private ["s9CodingKeyP", "average"]
+- !private ["s9CodingKeyP", "averageDwell"]
+- !private ["s9CodingKeyP", "averageDwellByLevels"]
+- !private ["s9CodingKeyP", "connectedPercentage"]
+- !private ["s9CodingKeyP", "conversionRate"]
+- !private ["s9CodingKeyP", "count"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- ["s9CodingKeyP", "rawValue"]
+- ["s9CodingKeyP", "stringValue"]
+- !private ["s9CodingKeyP", "totalConnectedCount"]
+- !private ["s9CodingKeyP", "totalPasserbyCount"]
+- !private ["s9CodingKeyP", "totalVisitorCount"]
+- !private ["s9CodingKeyP", "visitorCount"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "=="]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "=="]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "RawValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "RawValue"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "_Default_RawValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "_Default_RawValue"]
+- !private ["4CCMN14kpiSummaryJSONC10CodingKeysO", "_findStringSwitchCase"]
+- !private ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "_findStringSwitchCase"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "average"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "averageDwell"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "averageDwellByLevels"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "connectedPercentage"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "conversionRate"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "count"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "debugDescription"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "debugDescription"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "deinit"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "deinit"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "description"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "description"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "hash"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "hash"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "hashValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "hashValue"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "init"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "init"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "intValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "intValue"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "rawValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "rawValue"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "stringValue"]
+- ["4CCMN21AveragegDwellByLevelsC10CodingKeysO", "stringValue"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "totalConnectedCount"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "totalPasserbyCount"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "totalVisitorCount"]
+- ["4CCMN14kpiSummaryJSONC10CodingKeysO", "visitorCount"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "average"]
+- !private ["s28CustomDebugStringConvertibleP", "averageDwell"]
+- !private ["s28CustomDebugStringConvertibleP", "averageDwellByLevels"]
+- !private ["s28CustomDebugStringConvertibleP", "connectedPercentage"]
+- !private ["s28CustomDebugStringConvertibleP", "conversionRate"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "totalConnectedCount"]
+- !private ["s28CustomDebugStringConvertibleP", "totalPasserbyCount"]
+- !private ["s28CustomDebugStringConvertibleP", "totalVisitorCount"]
+- !private ["s28CustomDebugStringConvertibleP", "visitorCount"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "average"]
+- !private ["s23CustomStringConvertibleP", "averageDwell"]
+- !private ["s23CustomStringConvertibleP", "averageDwellByLevels"]
+- !private ["s23CustomStringConvertibleP", "connectedPercentage"]
+- !private ["s23CustomStringConvertibleP", "conversionRate"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "totalConnectedCount"]
+- !private ["s23CustomStringConvertibleP", "totalPasserbyCount"]
+- !private ["s23CustomStringConvertibleP", "totalVisitorCount"]
+- !private ["s23CustomStringConvertibleP", "visitorCount"]
+- !private ["Se", "AveragegDwellByLevels"]
+- !private ["Se", "CodingKeys"]
+- !private ["Se", "Double"]
+- !private ["Se", "Int"]
+- !private ["Se", "String"]
+- ["Se", ""]
+- !private ["Se", "_findStringSwitchCase"]
+- !private ["Se", "average"]
+- !private ["Se", "averageDwell"]
+- !private ["Se", "averageDwellByLevels"]
+- !private ["Se", "connectedPercentage"]
+- !private ["Se", "conversionRate"]
+- !private ["Se", "count"]
+- ["Se", "init"]
+- !private ["Se", "print"]
+- !private ["Se", "totalConnectedCount"]
+- !private ["Se", "totalPasserbyCount"]
+- !private ["Se", "totalVisitorCount"]
+- !private ["Se", "visitorCount"]
+- !private ["s7DecoderP", "container"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "average"]
+- !private ["SQ", "averageDwell"]
+- !private ["SQ", "averageDwellByLevels"]
+- !private ["SQ", "connectedPercentage"]
+- !private ["SQ", "conversionRate"]
+- !private ["SQ", "count"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- ["SQ", "rawValue"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "totalConnectedCount"]
+- !private ["SQ", "totalPasserbyCount"]
+- !private ["SQ", "totalVisitorCount"]
+- !private ["SQ", "visitorCount"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "average"]
+- !private ["SH", "averageDwell"]
+- !private ["SH", "averageDwellByLevels"]
+- !private ["SH", "connectedPercentage"]
+- !private ["SH", "conversionRate"]
+- !private ["SH", "count"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- ["SH", "rawValue"]
+- ["SH", "stringValue"]
+- !private ["SH", "totalConnectedCount"]
+- !private ["SH", "totalPasserbyCount"]
+- !private ["SH", "totalVisitorCount"]
+- !private ["SH", "visitorCount"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "average"]
+- !private ["SY", "averageDwell"]
+- !private ["SY", "averageDwellByLevels"]
+- !private ["SY", "connectedPercentage"]
+- !private ["SY", "conversionRate"]
+- !private ["SY", "count"]
+- ["SY", "debugDescription"]
+- ["SY", "description"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- ["SY", "rawValue"]
+- ["SY", "stringValue"]
+- !private ["SY", "totalConnectedCount"]
+- !private ["SY", "totalPasserbyCount"]
+- !private ["SY", "totalVisitorCount"]
+- !private ["SY", "visitorCount"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- ["4CCMN14kpiSummaryJSONC", "AveragegDwellByLevels"]
+- ["4CCMN14kpiSummaryJSONC", "CodingKey"]
+- ["4CCMN14kpiSummaryJSONC", "CodingKeys"]
+- ["4CCMN14kpiSummaryJSONC", "Decoder"]
+- ["4CCMN14kpiSummaryJSONC", "Double"]
+- ["4CCMN14kpiSummaryJSONC", "Int"]
+- ["4CCMN14kpiSummaryJSONC", "String"]
+- !private ["4CCMN14kpiSummaryJSONC", "_findStringSwitchCase"]
+- ["4CCMN14kpiSummaryJSONC", "averageDwell"]
+- ["4CCMN14kpiSummaryJSONC", "averageDwellByLevels"]
+- ["4CCMN14kpiSummaryJSONC", "connectedPercentage"]
+- ["4CCMN14kpiSummaryJSONC", "conversionRate"]
+- ["4CCMN14kpiSummaryJSONC", "deinit"]
+- ["4CCMN14kpiSummaryJSONC", "init"]
+- ["4CCMN14kpiSummaryJSONC", "prinAll"]
+- !private ["4CCMN14kpiSummaryJSONC", "print"]
+- ["4CCMN14kpiSummaryJSONC", "totalConnectedCount"]
+- ["4CCMN14kpiSummaryJSONC", "totalPasserbyCount"]
+- ["4CCMN14kpiSummaryJSONC", "totalVisitorCount"]
+- ["4CCMN14kpiSummaryJSONC", "visitorCount"]
+depends-nominal:
+- "4CCMN21AveragegDwellByLevelsC"
+- "s9CodingKeyP"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- !private "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- !private "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "4CCMN21AveragegDwellByLevelsC10CodingKeysO"
+- "4CCMN14kpiSummaryJSONC10CodingKeysO"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s7DecoderP"
+- !private "s26DefaultStringInterpolationV"
+- "SQ"
+- "SH"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- "SY"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- "4CCMN14kpiSummaryJSONC"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Charts/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire-umbrella.h"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Charts/Charts-umbrella.h"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
+- "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "55ca43f18fede375ad6ca0d91516187c"

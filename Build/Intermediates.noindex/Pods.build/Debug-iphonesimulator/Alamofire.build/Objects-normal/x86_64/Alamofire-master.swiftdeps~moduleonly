@@ -1,0 +1,21 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "7f6f3b9b7809e5307ad53b6ebdeff812"
+build_time: [1566551798, 354192000]
+inputs:
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/AFError.swift": [1564559634, 127841981]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Alamofire.swift": [1564559634, 129948417]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1564559634, 126351834]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/MultipartFormData.swift": [1564559634, 124986482]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1564559634, 125424175]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Notifications.swift": [1564559634, 128920128]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/ParameterEncoding.swift": [1564559634, 127367706]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Request.swift": [1564559634, 130792098]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Response.swift": [1564559634, 129412484]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/ResponseSerialization.swift": [1564559634, 132068463]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Result.swift": [1564559634, 126874761]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1564559634, 132397926]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/SessionDelegate.swift": [1564559634, 143175715]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/SessionManager.swift": [1564559634, 131201226]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/TaskDelegate.swift": [1564559634, 124387828]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Timeline.swift": [1564559634, 125884566]
+  "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Alamofire/Source/Validation.swift": [1564559634, 128411689]
