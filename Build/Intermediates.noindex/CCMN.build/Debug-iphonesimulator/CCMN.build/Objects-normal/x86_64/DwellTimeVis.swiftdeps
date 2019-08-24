@@ -7,10 +7,12 @@ provides-member:
 - ["4CCMN12DwellTimeVisC", ""]
 provides-dynamic-lookup:
 - "tableView"
+- "viewDidAppear"
 - "viewDidLoad"
 depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
+- "Bool"
 - !private "BooleanLiteralType"
 - !private "ChartViewCell"
 - !private "Client"
@@ -166,6 +168,7 @@ depends-member:
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
 - !private ["Sd", "init"]
+- ["4CCMN12DwellTimeVisC", "Bool"]
 - !private ["4CCMN12DwellTimeVisC", "ChartViewCell"]
 - !private ["4CCMN12DwellTimeVisC", "Client"]
 - ["4CCMN12DwellTimeVisC", "Double"]
@@ -183,8 +186,8 @@ depends-member:
 - ["4CCMN12DwellTimeVisC", "allUsers"]
 - ["4CCMN12DwellTimeVisC", "deinit"]
 - ["4CCMN12DwellTimeVisC", "endDate"]
-- ["4CCMN12DwellTimeVisC", "getDwell"]
 - ["4CCMN12DwellTimeVisC", "getHourlyConnected"]
+- ["4CCMN12DwellTimeVisC", "getKPI"]
 - ["4CCMN12DwellTimeVisC", "getProximityUsers"]
 - ["4CCMN12DwellTimeVisC", "hours"]
 - ["4CCMN12DwellTimeVisC", "init"]
@@ -193,6 +196,7 @@ depends-member:
 - ["4CCMN12DwellTimeVisC", "setupVC"]
 - ["4CCMN12DwellTimeVisC", "startDate"]
 - ["4CCMN12DwellTimeVisC", "tableView"]
+- ["4CCMN12DwellTimeVisC", "viewDidAppear"]
 - ["4CCMN12DwellTimeVisC", "viewDidLoad"]
 - !private ["4CCMN14EmptyChartCellC", "nibName"]
 - !private ["4CCMN14EmptyChartCellC", "reuseIdentifier"]
@@ -336,6 +340,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "startDate"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "ChartViewCell"]
 - !private ["So8NSObjectC", "Client"]
 - ["So8NSObjectC", "Double"]
@@ -352,8 +357,8 @@ depends-member:
 - ["So8NSObjectC", "YValues"]
 - ["So8NSObjectC", "allUsers"]
 - ["So8NSObjectC", "endDate"]
-- ["So8NSObjectC", "getDwell"]
 - ["So8NSObjectC", "getHourlyConnected"]
+- ["So8NSObjectC", "getKPI"]
 - ["So8NSObjectC", "getProximityUsers"]
 - ["So8NSObjectC", "hours"]
 - ["So8NSObjectC", "init"]
@@ -368,6 +373,7 @@ depends-member:
 - ["So8NSObjectC", "setupVC"]
 - ["So8NSObjectC", "startDate"]
 - ["So8NSObjectC", "tableView"]
+- ["So8NSObjectC", "viewDidAppear"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectP", "ChartViewCell"]
 - !private ["So8NSObjectP", "Client"]
@@ -568,6 +574,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "startDate"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "ChartViewCell"]
 - !private ["So11UIResponderC", "Client"]
 - ["So11UIResponderC", "Double"]
@@ -584,8 +591,8 @@ depends-member:
 - ["So11UIResponderC", "YValues"]
 - ["So11UIResponderC", "allUsers"]
 - ["So11UIResponderC", "endDate"]
-- ["So11UIResponderC", "getDwell"]
 - ["So11UIResponderC", "getHourlyConnected"]
+- ["So11UIResponderC", "getKPI"]
 - ["So11UIResponderC", "getProximityUsers"]
 - ["So11UIResponderC", "hours"]
 - ["So11UIResponderC", "init"]
@@ -599,6 +606,7 @@ depends-member:
 - ["So11UIResponderC", "setupVC"]
 - ["So11UIResponderC", "startDate"]
 - ["So11UIResponderC", "tableView"]
+- ["So11UIResponderC", "viewDidAppear"]
 - ["So11UIResponderC", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "ChartViewCell"]
 - !private ["So30UIResponderStandardEditActionsP", "Client"]
@@ -790,6 +798,7 @@ depends-member:
 - !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "reuseIdentifier"]
 - !private ["So6UIViewC", "rowHeight"]
+- ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "ChartViewCell"]
 - !private ["So16UIViewControllerC", "Client"]
 - ["So16UIViewControllerC", "Double"]
@@ -807,8 +816,8 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "allUsers"]
 - ["So16UIViewControllerC", "endDate"]
-- ["So16UIViewControllerC", "getDwell"]
 - ["So16UIViewControllerC", "getHourlyConnected"]
+- ["So16UIViewControllerC", "getKPI"]
 - ["So16UIViewControllerC", "getProximityUsers"]
 - ["So16UIViewControllerC", "hours"]
 - ["So16UIViewControllerC", "init"]
@@ -817,6 +826,7 @@ depends-member:
 - ["So16UIViewControllerC", "setupVC"]
 - ["So16UIViewControllerC", "startDate"]
 - ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "viewDidAppear"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s15_CVarArgAlignedP", "init"]
@@ -1002,4 +1012,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8e4697d544f9c2b1e1259a271664537a"
+interface-hash: "4791c4aef3bcd7a7fa008a480ae90f2e"

@@ -8,10 +8,15 @@
 
 import Foundation
 import UIKit
-
+//https://stackoverflow.com/questions/32317474/reloading-tableview-data-from-custom-cell
+//protocol CustomCellUpdater: class { // the name of the protocol you can put any
+//    func updateTableView()
+//}
 
 class EmptyChartCell : UITableViewCell {
     
+   // weak var delegate: CustomCellUpdater?
+
     class func reuseIdentifier() -> String {
         return "EmptyChartCell"
     }
@@ -29,6 +34,13 @@ class EmptyChartCell : UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+       
+        
+        super.layoutSubviews()
     }
     
    

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Charts
 
-class DwellTimeVis : UIViewController {
+class PresenceVisualizationVC : UIViewController {
     var startDate = ""
     var endDate = ""
     var YValues : [Double] = []
@@ -21,6 +21,9 @@ class DwellTimeVis : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
@@ -73,7 +76,7 @@ class DwellTimeVis : UIViewController {
         })
     }
     
-    func getDwell(){
+    func getKPI(){
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary?siteId=1513804707441&startDate=\(startDate)&endDate=\(endDate)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -144,8 +147,8 @@ class DwellTimeVis : UIViewController {
                                 }
                                 self.allUsers.append(thirdSet)
                                 
-                                print(">>>>>>>>>>>>>>>>>>>>>>>>>>>", self.allUsers)
-                                self.tableView.reloadData()
+                                //print(">>>>>>>>>>>>>>>>>>>>>>>>>>>", self.allUsers)
+                               // self.tableView.reloadData()
                                 
                             }
                             
@@ -158,5 +161,7 @@ class DwellTimeVis : UIViewController {
             
         })
     }
+    
+    
 }
 

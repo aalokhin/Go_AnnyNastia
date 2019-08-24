@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var startDate : String = Date().toStringDefault()
     var endDate : String =  Date().toStringDefault()
     
+    
 
     @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
@@ -270,7 +271,7 @@ class ViewController: UIViewController {
             
             /*not using right now but lets leave it for now*/
         case "testVis":
-            let destination = segue.destination as! DwellTimeVis
+            let destination = segue.destination as! PresenceVisualizationVC
             destination.startDate = self.startDate
             destination.endDate = self.endDate
             print("testVis")
