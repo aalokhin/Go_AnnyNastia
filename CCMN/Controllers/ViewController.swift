@@ -273,8 +273,6 @@ class ViewController: UIViewController {
             let destination = segue.destination as! DwellTimeVis
             destination.startDate = self.startDate
             destination.endDate = self.endDate
-            //destination.delegate = self
-           
             print("testVis")
         default:
             print("unexpected segue identifier")

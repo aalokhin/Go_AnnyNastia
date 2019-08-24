@@ -11,10 +11,10 @@ import UIKit
 
 extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (YValues.count == 0){
+        if (allUsers.count == 0){
             return 0
         } else {
-            return 5
+            return 3
         }
     }
     
@@ -35,7 +35,7 @@ extension DwellTimeVis : UITableViewDelegate, UITableViewDataSource {
             
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
-        cell.createBarChart(dataPoints: hours, values: values)
+        cell.createGroupedBarChart(dataPoints: hours, values: allUsers)
         return cell
         
     }

@@ -88,29 +88,7 @@ final class Client {
         print("Singleton client has been initialized")
     
     }
-    
 //
-//
-//
-//
-//
-//
-//    
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-    
     func setCampus(t : mapJSON){
         self.campusInformation = t
         // t.campusCounts
