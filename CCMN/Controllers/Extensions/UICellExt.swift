@@ -19,7 +19,7 @@ extension UITableViewCell{
         
         var dataEntries: [BarChartDataEntry] = []
         
-        for i in 0..<dataPoints.count {
+        for i in 0..<values.count {
             
             
             let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
@@ -79,7 +79,7 @@ extension UITableViewCell{
         
         for one in 0..<values.count{
             var dataEntries: [BarChartDataEntry] = []
-            for i in 0..<dataPoints.count {
+            for i in 0..<values[one].count {
                 let dataEntry = BarChartDataEntry(x: Double(i), y: values[one][i])
                 dataEntries.append(dataEntry)
             }
@@ -113,7 +113,7 @@ extension UITableViewCell{
         let barWidth = 0.3
         // (0.3 + 0.05) * 2 + 0.3 = 1.00 -> interval per "group"
         
-        let groupCount = dataPoints.count
+        let groupCount = values[0].count
         let startYear = 0
         chartData.barWidth = barWidth;
         barChart.xAxis.axisMinimum = Double(startYear)
@@ -157,9 +157,7 @@ extension UITableViewCell{
         lineChart.noDataText = "please enter data"
         var dataEntries: [ChartDataEntry] = []
         
-        for i in 0..<dataPoints.count {
-            
-            
+        for i in 0..<values.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             //(value: values[i], xIndex: i)
             
@@ -182,7 +180,7 @@ extension UITableViewCell{
         pieChart.noDataText = "please enter data"
         
         var dataEntries: [ChartDataEntry] = []
-        for i in 0..<dataPoints.count {
+        for i in 0..<values.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }

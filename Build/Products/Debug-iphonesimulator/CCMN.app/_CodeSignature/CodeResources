@@ -36,10 +36,6 @@
 		<data>
 		RNHyC+xDHmDDoqepdEO80YiJ4jQ=
 		</data>
-		<key>ChartViewCell.nib</key>
-		<data>
-		TmIAHk/TCaq177+UzDUiSDh27ps=
-		</data>
 		<key>DateCell.nib</key>
 		<data>
 		3F4UUKyDxafMQu8YsuS4AORf7Sc=
@@ -145,13 +141,6 @@
 			<key>hash2</key>
 			<data>
 			vT29Z4HzSlDCVaBk4S9P8kl4Pzyz/Nx785qQMepjYhM=
-			</data>
-		</dict>
-		<key>ChartViewCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hGwwx8pEQVSRmtNPqr2Hr9SahJkzl2H4WM8/i9stMQc=
 			</data>
 		</dict>
 		<key>DateCell.nib</key>

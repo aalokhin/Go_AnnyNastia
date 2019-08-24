@@ -14,7 +14,6 @@
 		5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */; };
 		5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */; };
 		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
-		5DADCE6B2305C59D006AC5AD /* ChartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */; };
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
 		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
 		EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25854922FD6E70001019E8 /* PresenceEndpoints.swift */; };
@@ -32,7 +31,6 @@
 		EF48C50422EDE93100980012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF48C50222EDE93100980012 /* LaunchScreen.storyboard */; };
 		EF48C50F22EDE93100980012 /* CCMNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C50E22EDE93100980012 /* CCMNTests.swift */; };
 		EF48C51A22EDE93100980012 /* CCMNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF48C51922EDE93100980012 /* CCMNUITests.swift */; };
-		EF5700102302FC4600FF1980 /* ChartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF57000F2302FC4600FF1980 /* ChartViewCell.xib */; };
 		EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */; };
 		EF8580C722EF569F00F6B58D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C622EF569F00F6B58D /* Client.swift */; };
 		EF8580CA22EF62DA00F6B58D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8580C922EF62DA00F6B58D /* Extension.swift */; };
@@ -74,7 +72,6 @@
 		5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChartCell.xib; sourceTree = "<group>"; };
 		5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChartCell.swift; sourceTree = "<group>"; };
 		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
-		5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewCell.swift; sourceTree = "<group>"; };
 		9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCEC84424141817F5B6830B /* Pods-CCMN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.debug.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCMN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +99,6 @@
 		EF48C51522EDE93100980012 /* CCMNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCMNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF48C51922EDE93100980012 /* CCMNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMNUITests.swift; sourceTree = "<group>"; };
 		EF48C51B22EDE93100980012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF57000F2302FC4600FF1980 /* ChartViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewCell.xib; sourceTree = "<group>"; };
 		EF6E844922F33AE100136C6B /* LocationRequestEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequestEndpoints.swift; sourceTree = "<group>"; };
 		EF8580C622EF569F00F6B58D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		EF8580C922EF62DA00F6B58D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -206,9 +202,7 @@
 				EF374EF42300016200D6C64A /* DateTextCell.xib */,
 				EF374EF62300016E00D6C64A /* DateCell.xib */,
 				EF374EF8230001E200D6C64A /* DateTextCell.swift */,
-				5DADCE6A2305C59D006AC5AD /* ChartViewCell.swift */,
 				EF374EFA2300020A00D6C64A /* DateCell.swift */,
-				EF57000F2302FC4600FF1980 /* ChartViewCell.xib */,
 				5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */,
 				5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */,
 			);
@@ -432,7 +426,6 @@
 				EF48C50422EDE93100980012 /* LaunchScreen.storyboard in Resources */,
 				5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */,
 				EF48C50122EDE93100980012 /* Assets.xcassets in Resources */,
-				EF5700102302FC4600FF1980 /* ChartViewCell.xib in Resources */,
 				EF374EF72300016E00D6C64A /* DateCell.xib in Resources */,
 				EF48C4FF22EDE92F00980012 /* Main.storyboard in Resources */,
 				EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */,
@@ -549,7 +542,6 @@
 				EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */,
 				5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */,
 				EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */,
-				5DADCE6B2305C59D006AC5AD /* ChartViewCell.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
 				EF2E0604230439BD0034C418 /* PresenceVis.swift in Sources */,
 				EFE0F5EB2301AA1700EDE4D6 /* ViewControllerExtensions.swift in Sources */,

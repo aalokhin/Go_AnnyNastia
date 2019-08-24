@@ -201,19 +201,8 @@ SWIFT_CLASS("_TtC4CCMN11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class BarChartView;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC4CCMN13ChartViewCell")
-@interface ChartViewCell : UITableViewCell
-@property (nonatomic, weak) IBOutlet BarChartView * _Null_unspecified barChart;
-- (void)awakeFromNib;
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIDatePicker;
+@class NSCoder;
 
 SWIFT_CLASS("_TtC4CCMN8DateCell")
 @interface DateCell : UITableViewCell

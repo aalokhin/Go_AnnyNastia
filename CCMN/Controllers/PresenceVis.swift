@@ -37,7 +37,7 @@ class PresenceVisualizationVC : UIViewController {
     func setupVC() {
 
         
-        tableView.register(UINib(nibName: ChartViewCell.nibName(), bundle: nil), forCellReuseIdentifier: ChartViewCell.reuseIdentifier())
+        
         tableView.register(UINib(nibName: EmptyChartCell.nibName(), bundle: nil), forCellReuseIdentifier: EmptyChartCell.reuseIdentifier())
 
         self.tableView.rowHeight = 400.0
@@ -47,7 +47,7 @@ class PresenceVisualizationVC : UIViewController {
     func getHourlyConnected(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
 
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 print("connected/hourly/yesterday \n\n")
@@ -64,8 +64,9 @@ class PresenceVisualizationVC : UIViewController {
                 }
                 print(t)
                 for one in self.HoursForDic {
-                    let value = Double(t[one] ?? -1)
-                    self.YValues.append(value)
+                    if let value = t[one]{
+                        self.YValues.append(Double(value))
+                    }
                     //print(one, "==>", value)
                 }
                 
@@ -101,7 +102,7 @@ class PresenceVisualizationVC : UIViewController {
     
     func getProximityUsers(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 let decoder = JSONDecoder()
@@ -112,11 +113,12 @@ class PresenceVisualizationVC : UIViewController {
                 print(t)
                 var firstSet : [Double] = []
                 for one in self.HoursForDic {
-                    let value = Double(t[one] ?? -1)
-                    firstSet.append(value)
+                    if let value = t[one]{
+                        firstSet.append(Double(value))
+                    }
                 }
                 self.allUsers.append(firstSet)
-                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
                     data, error in
                     if let d = data{
                         let decoder = JSONDecoder()
@@ -127,11 +129,13 @@ class PresenceVisualizationVC : UIViewController {
                         print(t)
                         var secondSet : [Double] = []
                         for one in self.HoursForDic {
-                            let value = Double(t[one] ?? -1)
-                            secondSet.append(value)
+                            if let value = t[one]{
+                                
+                                secondSet.append(Double(value))
+                            }
                         }
                         self.allUsers.append(secondSet)
-                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
                             data, error in
                             if let d = data{
                                 let decoder = JSONDecoder()
@@ -142,8 +146,9 @@ class PresenceVisualizationVC : UIViewController {
                                 print(t)
                                 var thirdSet: [Double] = []
                                 for one in self.HoursForDic {
-                                    let value = Double(t[one] ?? -1)
-                                    thirdSet.append(value)
+                                    if let value = t[one]{
+                                        thirdSet.append(Double(value))
+                                    }
                                 }
                                 self.allUsers.append(thirdSet)
                                 
