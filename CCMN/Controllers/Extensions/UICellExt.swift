@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Charts
-
+//https://stackoverflow.com/questions/35294076/how-to-make-a-grouped-barchart-with-ios-charts
 extension UITableViewCell{
     func createBarChart(dataPoints: [String], values: [Double]) {
         print(self.frame.height, self.frame.width)
@@ -52,7 +52,6 @@ extension UITableViewCell{
         barChart.leftAxis.drawAxisLineEnabled = false
         barChart.leftAxis.drawGridLinesEnabled = false
         barChart.notifyDataSetChanged()
-        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
         barChart.xAxis.labelCount = dataPoints.count
         barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
@@ -137,8 +136,20 @@ extension UITableViewCell{
         
         //chart animation
         barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
-    
+        designBarChart(barChart: barChart, dataPoints: dataPoints)
         self.addSubview(barChart)
+    }
+    
+    func designBarChart(barChart : BarChartView, dataPoints: [String]){
+        let xaxis = barChart.xAxis
+        xaxis.drawGridLinesEnabled = true
+        xaxis.labelPosition = .bottom
+        xaxis.valueFormatter = IndexAxisValueFormatter(values : dataPoints)
+       // xaxis.labelCount = dataPoints.count
+        xaxis.labelRotationAngle = -90
+        barChart.rightAxis.drawLabelsEnabled = false
+        barChart.rightAxis.enabled = false
+     
     }
     
     func createLinearChart(dataPoints: [String], values: [Double]){

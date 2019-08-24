@@ -27,6 +27,7 @@ depends-top-level:
 - "SeachSetUpVC"
 - "SetUpDelegate"
 - "String"
+- "StringLiteralType"
 - !private "UIBarButtonItem"
 - !private "UINib"
 - "UISegmentedControl"
