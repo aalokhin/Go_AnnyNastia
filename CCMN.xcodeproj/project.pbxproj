@@ -38,7 +38,6 @@
 		EFB281DE22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */; };
 		EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */; };
 		EFDF3CB222FEFBE800A86B3E /* SeachSetUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */; };
-		EFE0F5E92301A9E300EDE4D6 /* NetworkManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */; };
 		EFE0F5EB2301AA1700EDE4D6 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE0F5EA2301AA1700EDE4D6 /* ViewControllerExtensions.swift */; };
 		EFE5DDCF22FC425800F1287B /* UIVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */; };
 		EFE5DDD122FC558E00F1287B /* SiteID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5DDD022FC558E00F1287B /* SiteID.swift */; };
@@ -106,7 +105,6 @@
 		EFB281DD22FDA3A400B714EA /* ConnectedVisitorsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedVisitorsFuncs.swift; sourceTree = "<group>"; };
 		EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SearchSetUpVC.storyboard; path = CCMN/Requests/SearchSetUpVC.storyboard; sourceTree = SOURCE_ROOT; };
 		EFDF3CB122FEFBE800A86B3E /* SeachSetUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachSetUpVC.swift; sourceTree = "<group>"; };
-		EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerExtension.swift; sourceTree = "<group>"; };
 		EFE0F5EA2301AA1700EDE4D6 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		EFE5DDCE22FC425800F1287B /* UIVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVCExtensions.swift; sourceTree = "<group>"; };
 		EFE5DDD022FC558E00F1287B /* SiteID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteID.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			children = (
 				EF8580C622EF569F00F6B58D /* Client.swift */,
 				EF97360A2300649100ABC318 /* NetworkManager.swift */,
-				EFE0F5E82301A9E300EDE4D6 /* NetworkManagerExtension.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -527,7 +524,6 @@
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
 				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
-				EFE0F5E92301A9E300EDE4D6 /* NetworkManagerExtension.swift in Sources */,
 				5D24B7B6230FFC4A002CC7F5 /* PresenceVisExt.swift in Sources */,
 				EF48C4FA22EDE92F00980012 /* AppDelegate.swift in Sources */,
 				EF97360B2300649100ABC318 /* NetworkManager.swift in Sources */,

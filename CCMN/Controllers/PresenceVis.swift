@@ -29,7 +29,6 @@ class PresenceVisualizationVC : UIViewController {
         super.viewDidLoad()
         setupVC()
        // getDwell()
-       // getHourlyConnected()
         getProximityUsers()
         print("start-", startDate, "end-", endDate)
         
@@ -56,39 +55,6 @@ class PresenceVisualizationVC : UIViewController {
         tableView.register(UINib(nibName: EmptyChartCell.nibName(), bundle: nil), forCellReuseIdentifier: EmptyChartCell.reuseIdentifier())
         self.tableView.rowHeight = 400.0
 
-    }
-    
-    func getHourlyConnected(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                print("connected/hourly/yesterday \n\n")
-                
-//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//
-//                    print(json)
-//                }
-                
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                print(t)
-                for one in self.HoursForDic {
-                    if let value = t[one]{
-                        self.YValues.append(Double(value))
-                    }
-                    //print(one, "==>", value)
-                }
-                
-                self.tableView.reloadData()
-                
-            }
-            
-        })
     }
     
     func getKPI(){
