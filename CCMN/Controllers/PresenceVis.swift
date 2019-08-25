@@ -43,7 +43,7 @@ class PresenceVisualizationVC : UIViewController {
     }
     func getDwellTime(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 //                if let json = try? JSONSerialization.jsonObject(with: d, options: []){

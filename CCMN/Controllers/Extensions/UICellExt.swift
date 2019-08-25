@@ -187,7 +187,9 @@ extension UITableViewCell{
         lineChart.xAxis.labelCount = hours.count
         lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:hours)
+        lineChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
         self.addSubview(lineChart)
+
         
     }
     ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
