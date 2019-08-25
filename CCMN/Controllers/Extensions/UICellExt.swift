@@ -174,14 +174,17 @@ extension UITableViewCell{
             }
             let line = LineChartDataSet(entries: lineChartEntry, label: HoursDwell[i])
             line.colors = [getColor(int: i)]
+            
             line.drawValuesEnabled = false
-            
-            self.setGradient(colorFrom: getColor(int: i).cgColor, colorTo: getColor(int: i).cgColor, line: line)
-            
+            let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
+            line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+            line.drawFilledEnabled =  true// Draw the Gradient
+            line.circleRadius = 2.5
+            line.circleColors = [getColor(int: i), getColor(int: i)]
+            line.circleHoleRadius = 1.3
             data.addDataSet(line)
         }
         lineChart.data = data
-        
         lineChart.xAxis.labelRotationAngle = -90
      
         lineChart.xAxis.labelCount = hours.count
@@ -192,19 +195,6 @@ extension UITableViewCell{
 
         
     }
-    ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    func setGradient(colorFrom : CGColor, colorTo : CGColor, line: LineChartDataSet ){
-        
-        let gradientColors = [colorFrom, colorTo] as CFArray // Colors of the gradient
-        let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
-        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
-        line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
-        line.drawFilledEnabled =  true// Draw the Gradient
-        line.circleRadius = 2.0
-        line.circleHoleRadius = 1.0
-        
-    }
-    ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     func createPieChart(dataPoints: [String], values: [Double]){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
