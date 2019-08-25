@@ -9,7 +9,10 @@ depends-top-level:
 - "AssignmentPrecedence"
 - "Bool"
 - "Date"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "SetUpDelegate"
+- !private "StringLiteralType"
 - "ViewController"
 - !private "print"
 depends-member:

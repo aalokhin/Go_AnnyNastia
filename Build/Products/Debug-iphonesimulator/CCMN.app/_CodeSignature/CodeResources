@@ -36,6 +36,10 @@
 		<data>
 		RNHyC+xDHmDDoqepdEO80YiJ4jQ=
 		</data>
+		<key>ChartViewCell.nib</key>
+		<data>
+		TmIAHk/TCaq177+UzDUiSDh27ps=
+		</data>
 		<key>DateCell.nib</key>
 		<data>
 		3F4UUKyDxafMQu8YsuS4AORf7Sc=
@@ -50,11 +54,11 @@
 		</data>
 		<key>DwellTimeVis.storyboardc/R9F-Ui-MKt-view-0O7-uv-7vB.nib</key>
 		<data>
-		OR/PdUEknpN300/Gq0KrCxqMpi8=
+		QzQGNVpfZJeCJp5oSKdIqjtmjxw=
 		</data>
 		<key>DwellTimeVis.storyboardc/UIViewController-R9F-Ui-MKt.nib</key>
 		<data>
-		o3k3h4QGHCWkzKM/hQzFjEG38Ms=
+		Hi85NJl6VztK6Ba3aNiqI5e90CM=
 		</data>
 		<key>EmptyChartCell.nib</key>
 		<data>
@@ -143,6 +147,13 @@
 			vT29Z4HzSlDCVaBk4S9P8kl4Pzyz/Nx785qQMepjYhM=
 			</data>
 		</dict>
+		<key>ChartViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hGwwx8pEQVSRmtNPqr2Hr9SahJkzl2H4WM8/i9stMQc=
+			</data>
+		</dict>
 		<key>DateCell.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -168,14 +179,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U1NLqT/mhf74dTJOT4ibpaMBM2zTp9fYmGB59KF+aBo=
+			y6ZMF1QMRcAkaXe/3Tvw0OYwfBLRyYukbzACAaKAJIs=
 			</data>
 		</dict>
 		<key>DwellTimeVis.storyboardc/UIViewController-R9F-Ui-MKt.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SILWZRu6uOVLD9qGZtF0mplY5uVYsWJ1EJ9DSsPDUe4=
+			BP7/a2yngFh6tKjtLoH0vUTQEH/293NoIZS3Ac7n1JM=
 			</data>
 		</dict>
 		<key>EmptyChartCell.nib</key>

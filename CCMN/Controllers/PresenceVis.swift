@@ -27,27 +27,44 @@ class PresenceVisualizationVC : UIViewController {
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
+        
+        
         setupVC()
+        reqWithParams()
        // getDwell()
-        getHourlyConnected()
+       // getHourlyConnected()
         getProximityUsers()
         print("start-", startDate, "end-", endDate)
         
     }
+    
+    func reqWithParams(){
+        if let siteId = Client.sharedInstance.siteID?.aesUId {
+            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today", params: ["siteId":siteId], method: .get, completion: {
+                data, error in
+                if let d = data{
+                    print("connected/hourly/yesterday \n\n")
+
+                    if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+
+                        print(json)
+                    }
+                }
+            })
+        }
+                
+    }
+
     func setupVC() {
-
-        
-        
         tableView.register(UINib(nibName: EmptyChartCell.nibName(), bundle: nil), forCellReuseIdentifier: EmptyChartCell.reuseIdentifier())
-
         self.tableView.rowHeight = 400.0
 
     }
     
     func getHourlyConnected(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        let siteId = Client.sharedInstance.siteID?.aesUId ?? 1513804707441
 
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today", params: ["siteId":siteId], method: .get, completion: {
             data, error in
             if let d = data{
                 print("connected/hourly/yesterday \n\n")
@@ -99,6 +116,9 @@ class PresenceVisualizationVC : UIViewController {
         
     }
     //visitor
+    func getDwellTime(){
+        
+    }
     
     func getProximityUsers(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
@@ -130,7 +150,6 @@ class PresenceVisualizationVC : UIViewController {
                         var secondSet : [Double] = []
                         for one in self.HoursForDic {
                             if let value = t[one]{
-                                
                                 secondSet.append(Double(value))
                             }
                         }
