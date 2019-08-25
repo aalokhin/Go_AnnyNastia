@@ -27,10 +27,7 @@ class PresenceVisualizationVC : UIViewController {
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
-        
-        
         setupVC()
-        reqWithParams()
        // getDwell()
        // getHourlyConnected()
         getProximityUsers()
@@ -40,7 +37,7 @@ class PresenceVisualizationVC : UIViewController {
     
     func reqWithParams(){
         if let siteId = Client.sharedInstance.siteID?.aesUId {
-            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today", params: ["siteId":siteId], method: .get, completion: {
+            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
                 data, error in
                 if let d = data{
                     print("connected/hourly/yesterday \n\n")
@@ -62,9 +59,9 @@ class PresenceVisualizationVC : UIViewController {
     }
     
     func getHourlyConnected(){
-        let siteId = Client.sharedInstance.siteID?.aesUId ?? 1513804707441
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
 
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today", params: ["siteId":siteId], method: .get, completion: {
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 print("connected/hourly/yesterday \n\n")

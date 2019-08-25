@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "79525ff2acf7ac2963bb0c4d6c5fe033"
-build_time: [1566722783, 3791000]
+build_time: [1566723764, 262394000]
 inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/EmptyChartCell.swift": [1566643490, 721745974]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/ViewController.swift": [1566642410, 411761487]
@@ -9,7 +9,7 @@ inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/Singletons/NetworkManagerExtension.swift": [1566665433, 852312368]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1566668302, 291556558]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/AppDelegate.swift": [1564467810, 314592072]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/Singletons/NetworkManager.swift": [1566665433, 852150223]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/Singletons/NetworkManager.swift": [1566723710, 863284766]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/MapJSON.swift": [1565774441, 469465683]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/Campus.swift": [1565857275, 49522929]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/SiteID.swift": [1565774441, 469979835]
@@ -22,6 +22,6 @@ inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/UICellExt.swift": [1566665433, 851370748]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/DateTextCell.swift": [1565774441, 471944422]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Utilities/LocationRequestEndpoints.swift": [1565774441, 470969507]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/PresenceVis.swift": [1566722782, 380431902]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/PresenceVis.swift": [1566723763, 664436466]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/ViewControllerExtensions.swift": [1565774441, 467914600]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/SeachSetUpVC.swift": [1565774441, 467116955]
