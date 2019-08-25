@@ -11,7 +11,7 @@ import UIKit
 
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (allUsers.count == 0){
+        if (allUsers.count == 0 || setAllDwell.count == 0){
             return 0
         } else {
             return 5
@@ -29,7 +29,8 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            cell.createLinearChart(dataPoints: hours, values: values)
+            
+            cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }))
         } else if indexPath.row == 2{
             for v in cell.subviews{
                 v.removeFromSuperview()

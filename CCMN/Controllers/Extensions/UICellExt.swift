@@ -11,6 +11,7 @@ import UIKit
 import Charts
 //https://stackoverflow.com/questions/35294076/how-to-make-a-grouped-barchart-with-ios-charts
 extension UITableViewCell{
+    
     func createBarChart(dataPoints: [String], values: [Double]) {
         print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
@@ -152,25 +153,67 @@ extension UITableViewCell{
      
     }
     
-    func createLinearChart(dataPoints: [String], values: [Double]){
+    func createLinearChart(hours: [String], allDwell : [(key: Int, value: AnyObject)]){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
-        var dataEntries: [ChartDataEntry] = []
+        print(allDwell)
+        let data = LineChartData()
         
-        for i in 0..<values.count {
-            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
-            //(value: values[i], xIndex: i)
+        let HoursDwell = ["FIVE_TO_THIRTY_MINUTES", "ONE_TO_FIVE_HOURS", "EIGHT_PLUS_HOURS", "FIVE_TO_EIGHT_HOURS", "THIRTY_TO_SIXTY_MINUTES"]
+        
+       // var dataEntryArr : [[ChartDataEntry]] = []
+        //print("keys>>>",allDwell)
+        for i in 0..<HoursDwell.count{
+            var lineChartEntry = [ChartDataEntry]()
             
-            dataEntries.append(dataEntry)
+            for j in 0..<allDwell.count{
+                if let val = allDwell[j].value[HoursDwell[i]]{
+                    print(val as! Double)
+                    lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
+                }
+            }
+//            print(allDwell[i].key)
+//
+//            let val = allDwell[i].value
+//
+//            if let value = val["EIGHT_PLUS_HOURS"]{
+//                print(">>>>>>>>>>>>>>>>>>>> EIGHT_PLUS_HOURS", value ?? 0)
+//            }
+//            for i in 0..<allDwell[i] {
+//                let dataEntry = ChartDataEntry(x: Double(i), y: Double(x1[i]) ?? 0.0)
+//                lineChartEntry.append(dataEntry)
+//            }
+            let line = LineChartDataSet(entries: lineChartEntry, label: HoursDwell[i])
+            data.addDataSet(line)
         }
-        
-        let chartDataSet = LineChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
-        let chartData = LineChartData()
-        chartData.addDataSet(chartDataSet)
-        lineChart.data = chartData
-        
-        
-        
+       
+//
+//        let data = LineChartData()
+//        var lineChartEntry1 = [ChartDataEntry]()
+//
+//        for i in 0..<x1.count {
+//            lineChartEntry1.append(ChartDataEntry(x: Double(i), y: Double(x1[i]) ?? 0.0))
+//        }
+//        let line1 = LineChartDataSet(values: lineChartEntry1, label: "First Dataset")
+//        data.addDataSet(line1)
+//        if (x2.count > 0) {
+//            var lineChartEntry2 = [ChartDataEntry]()
+//            for i in 0..<x2.count {
+//                lineChartEntry2.append(ChartDataEntry(x: Double(i), y: Double(x2[i]) ?? 0.0))
+//            }
+//            let line2 = LineChartDataSet(values: lineChartEntry2, label: "Second Dataset")
+//            data.addDataSet(line2)
+//        }
+//        if (x3.count > 0) {
+//            var lineChartEntry3 = [ChartDataEntry]()
+//            for i in 0..<x3.count {
+//                lineChartEntry3.append(ChartDataEntry(x: Double(i), y: Double(x3[i]) ?? 0.0))
+//            }
+//            let line3 = LineChartDataSet(values: lineChartEntry3, label: "Third Dataset")
+//            data.addDataSet(line3)
+//        }
+//        self.myChartView.data = data
+        lineChart.data = data
         self.addSubview(lineChart)
         
     }

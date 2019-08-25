@@ -15,6 +15,8 @@ class PresenceVisualizationVC : UIViewController {
     var endDate = ""
     var YValues : [Double] = []
     var allUsers : [[Double]] = []
+    var setAllDwell : [Int:AnyObject] = [:]
+
     var HoursYValues : [String:Double]?
     let HoursForDic = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
     let HoursForDicInt : [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
@@ -56,7 +58,6 @@ class PresenceVisualizationVC : UIViewController {
                     return
                 }
                 print(t)
-                var setAllDwell : [Int:AnyObject] = [:]
                 var setForDwellPeriods : [String:AnyObject] = [:]
                 // var firstSet = [String : [String : Double]]()
                 for one in self.HoursForDicInt {
@@ -70,13 +71,14 @@ class PresenceVisualizationVC : UIViewController {
                             }
                         }
                        // print(setForDwellPeriods)
-                        setAllDwell[one] = setForDwellPeriods as AnyObject?
+                        self.setAllDwell[one] = setForDwellPeriods as AnyObject?
                     }
                 }
-                print("-----------------------------------------------------")
-                print(setAllDwell, setAllDwell.keys.count)
-                let dictValInc = setAllDwell.sorted(by: { $0.key < $1.key })
-                print(dictValInc)
+                // print("-----------------------------------------------------")
+               // print(self.setAllDwell, self.setAllDwell.keys.count)
+                
+                let dictValInc = self.setAllDwell.sorted(by: { $0.key < $1.key })
+                //print(dictValInc)
                 print("-----------------------------------------------------")
             }
             
