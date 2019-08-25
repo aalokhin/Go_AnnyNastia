@@ -172,51 +172,37 @@ extension UITableViewCell{
                     lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
                 }
             }
-//            print(allDwell[i].key)
-//
-//            let val = allDwell[i].value
-//
-//            if let value = val["EIGHT_PLUS_HOURS"]{
-//                print(">>>>>>>>>>>>>>>>>>>> EIGHT_PLUS_HOURS", value ?? 0)
-//            }
-//            for i in 0..<allDwell[i] {
-//                let dataEntry = ChartDataEntry(x: Double(i), y: Double(x1[i]) ?? 0.0)
-//                lineChartEntry.append(dataEntry)
-//            }
             let line = LineChartDataSet(entries: lineChartEntry, label: HoursDwell[i])
+            line.colors = [getColor(int: i)]
+            line.drawValuesEnabled = false
+            
+            self.setGradient(colorFrom: getColor(int: i).cgColor, colorTo: getColor(int: i).cgColor, line: line)
+            
             data.addDataSet(line)
         }
-       
-//
-//        let data = LineChartData()
-//        var lineChartEntry1 = [ChartDataEntry]()
-//
-//        for i in 0..<x1.count {
-//            lineChartEntry1.append(ChartDataEntry(x: Double(i), y: Double(x1[i]) ?? 0.0))
-//        }
-//        let line1 = LineChartDataSet(values: lineChartEntry1, label: "First Dataset")
-//        data.addDataSet(line1)
-//        if (x2.count > 0) {
-//            var lineChartEntry2 = [ChartDataEntry]()
-//            for i in 0..<x2.count {
-//                lineChartEntry2.append(ChartDataEntry(x: Double(i), y: Double(x2[i]) ?? 0.0))
-//            }
-//            let line2 = LineChartDataSet(values: lineChartEntry2, label: "Second Dataset")
-//            data.addDataSet(line2)
-//        }
-//        if (x3.count > 0) {
-//            var lineChartEntry3 = [ChartDataEntry]()
-//            for i in 0..<x3.count {
-//                lineChartEntry3.append(ChartDataEntry(x: Double(i), y: Double(x3[i]) ?? 0.0))
-//            }
-//            let line3 = LineChartDataSet(values: lineChartEntry3, label: "Third Dataset")
-//            data.addDataSet(line3)
-//        }
-//        self.myChartView.data = data
         lineChart.data = data
+        
+        lineChart.xAxis.labelRotationAngle = -90
+     
+        lineChart.xAxis.labelCount = hours.count
+        lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
+        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:hours)
         self.addSubview(lineChart)
         
     }
+    ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    func setGradient(colorFrom : CGColor, colorTo : CGColor, line: LineChartDataSet ){
+        
+        let gradientColors = [colorFrom, colorTo] as CFArray // Colors of the gradient
+        let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
+        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
+        line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+        line.drawFilledEnabled =  true// Draw the Gradient
+        line.circleRadius = 2.0
+        line.circleHoleRadius = 1.0
+        
+    }
+    ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!refactor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     func createPieChart(dataPoints: [String], values: [Double]){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
@@ -248,6 +234,10 @@ extension UITableViewCell{
             return UIColor(hue: 0.2, saturation: 0.92, brightness: 1, alpha: 1.0) /* #d0ff14 */
         case 3:
             return UIColor(red: 0.7843, green: 0.7843, blue: 0.7843, alpha: 1.0) /* #c8c8c8 */
+        case 4:
+            return UIColor(hue: 0.0778, saturation: 1, brightness: 0.94, alpha: 1.0) /* #ef6f00 */
+        case 5:
+            return UIColor(hue: 0.9333, saturation: 1, brightness: 0.66, alpha: 1.0) /* #a80043 */
         default:
             return UIColor(red: 1, green: 0.0784, blue: 0.5765, alpha: 1.0) /* #ff1493 */
         }
