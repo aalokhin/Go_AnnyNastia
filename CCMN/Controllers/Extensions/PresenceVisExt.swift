@@ -49,7 +49,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 dataPoints.append(one.key)
                 values.append(Double(one.value))
             }
-            cell.createPieChart(dataPoints: dataPoints, values: values)
+            cell.createPieChart(dataPoints: dataPoints, values: values, chartName: "Repeat visitors Distribution")
             
         } else if indexPath.row == 4 {
             for v in cell.subviews{
@@ -61,7 +61,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 dataPoints.append(one.key)
                 values.append(Double(one.value))
             }
-            cell.createPieChart(dataPoints: dataPoints, values: values)
+            cell.createPieChart(dataPoints: dataPoints, values: values, chartName : "Dwell Time Distribution")
         } else {
             for v in cell.subviews{
                 v.removeFromSuperview()

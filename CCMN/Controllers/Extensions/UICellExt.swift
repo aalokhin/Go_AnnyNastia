@@ -13,9 +13,9 @@ import Charts
 extension UITableViewCell{
     
     func createBarChart(dataPoints: [String], values: [Double]) {
-        print(self.frame.height, self.frame.width)
+       // print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
+        //print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
         barChart.noDataText = "please enter data"
         
         var dataEntries: [BarChartDataEntry] = []
@@ -73,9 +73,9 @@ extension UITableViewCell{
         
         var dataEntryArr : [[BarChartDataEntry]] = []
         
-        print(self.frame.height, self.frame.width)
+     //   print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
+        //print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
         barChart.noDataText = "please enter data"
         
         for one in 0..<values.count{
@@ -119,7 +119,7 @@ extension UITableViewCell{
         chartData.barWidth = barWidth;
         barChart.xAxis.axisMinimum = Double(startYear)
         let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
-        print("Groupspace: \(gg)")
+      //  print("Groupspace: \(gg)")
         barChart.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
         
         chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
@@ -156,7 +156,7 @@ extension UITableViewCell{
     func createLinearChart(hours: [String], allDwell : [(key: Int, value: AnyObject)], timeLabels : [String], addGradient : Bool){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
-        print(allDwell)
+       // print(allDwell)
         let data = LineChartData()
         
         //let HoursDwell = ["FIVE_TO_THIRTY_MINUTES", "ONE_TO_FIVE_HOURS", "EIGHT_PLUS_HOURS", "FIVE_TO_EIGHT_HOURS", "THIRTY_TO_SIXTY_MINUTES"]
@@ -168,7 +168,7 @@ extension UITableViewCell{
             
             for j in 0..<allDwell.count{
                 if let val = allDwell[j].value[timeLabels[i]]{
-                    print(val as! Double)
+                   // print(val as! Double)
                     lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
                 }
             }
@@ -203,16 +203,26 @@ extension UITableViewCell{
         
     }
     
-    func createPieChart(dataPoints: [String], values: [Double]){
+    func createPieChart(dataPoints: [String], values: [Double], chartName : String){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         pieChart.noDataText = "please enter data"
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<values.count {
-            let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
+           // let dataEntry = ChartDataEntry(x: Double(i),  y: values[i])
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+            
+//            let dataEntry = PieChartDataEntry(v
+
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Pie chart connected  visitors hourly")
+        let chartDataSet = PieChartDataSet(entries: dataEntries, label: chartName)
         //append color values
+        let legend = pieChart.legend
+        legend.enabled = true
+        legend.verticalAlignment = .top
+        
+        
+        
         var  colors: [UIColor] = []
         for _ in 0..<dataPoints.count {
             let red = Double(arc4random_uniform(256))
