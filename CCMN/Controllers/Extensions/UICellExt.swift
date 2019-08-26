@@ -210,7 +210,6 @@ extension UITableViewCell{
         for i in 0..<values.count {
            // let dataEntry = ChartDataEntry(x: Double(i),  y: values[i])
             let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
-            
 //            let dataEntry = PieChartDataEntry(v
 
             dataEntries.append(dataEntry)
