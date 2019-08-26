@@ -212,7 +212,19 @@ extension UITableViewCell{
             dataEntries.append(dataEntry)
         }
         let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Pie chart connected  visitors hourly")
-        chartDataSet.colors = [getColor(int: 1), getColor(int: 2), getColor(int: 0), getColor(int: 3)]
+        //append color values
+        var  colors: [UIColor] = []
+        for _ in 0..<dataPoints.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        chartDataSet.colors = colors
+        
+        
+        //chartDataSet.colors = [getColor(int: 1), getColor(int: 2), getColor(int: 0), getColor(int: 3)]
         let chartData = PieChartData()
         
         chartData.addDataSet(chartDataSet)

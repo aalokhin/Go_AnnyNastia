@@ -20,6 +20,7 @@ class PresenceVisualizationVC : UIViewController {
     var setAllDwell : [Int:AnyObject] = [:]
     var setAllRepeat = [Int : AnyObject]()
     var repeatDistribution : [String : Int] = [:]
+    var dwellDistribution : [String : Int] = [:]
     
     let HoursForDic = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
     let HoursForDicInt : [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
@@ -34,20 +35,15 @@ class PresenceVisualizationVC : UIViewController {
         print("1111111start-", startDate, "222222end-", endDate)
         repeatDistribution.removeAll()
         getRepeatDistribution()
+        getDwellTimeDistribution()
       //  getAllData()
     }
     
     func getAllData(){
-//        YValues.removeAll()
-//        allUsers.removeAll()
-//        setAllDwell.removeAll()
-//        setAllRepeat.removeAll()
-//        repeatDistribution.removeAll()
-        
- //       getProximityUsers()
-   //     getDwellTime()
-     //   getRepeatVis()
-       // getRepeatDistribution()
+        getProximityUsers()
+        getDwellTime()
+        getRepeatVis()
+        getRepeatDistribution()
         
     }
     
@@ -57,11 +53,8 @@ class PresenceVisualizationVC : UIViewController {
         let setUpButton = UIBarButtonItem(title: "SetUp", style: .done, target: self, action: #selector(setUpPeriod))
         self.navigationItem.rightBarButtonItem  = setUpButton
         setupVC()
-        getProximityUsers()
-        getDwellTime()
-        getRepeatVis()
-        getRepeatDistribution()
-        //getAllData()
+        getAllData()
+       // getRepeatDistribution()
         print("start-", startDate, "end-", endDate)
         
         
@@ -93,7 +86,7 @@ class PresenceVisualizationVC : UIViewController {
                 }
                 self.repeatDistribution = t
                 self.tableView.reloadData()
-                print(self.repeatDistribution)
+               // print(self.repeatDistribution)
             }
             
         })
@@ -133,6 +126,25 @@ class PresenceVisualizationVC : UIViewController {
         })
     }
     
+    func getDwellTimeDistribution(){
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441" //"api/presence/v1/repeatvisitors/count/yesterday?siteId=\(siteId)"
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/count?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                guard let t = try? JSONDecoder().decode([String : Int].self, from: d) else {
+                    print("error decoding json")
+                    return
+                }
+                
+                self.dwellDistribution = t
+                self.tableView.reloadData()
+                print(self.dwellDistribution)
+            }
+            
+        })
+        
+    }
+    
     func getDwellTime(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
@@ -149,30 +161,20 @@ class PresenceVisualizationVC : UIViewController {
                     print("error decoding json")
                     return
                 }
-                //print(t)
                 var setForDwellPeriods : [String:AnyObject] = [:]
-                // var firstSet = [String : [String : Double]]()
                 for one in self.HoursForDicInt {
                     if let value = t[one]{
-                       // print(one, ">>>")
                         for two in self.HoursDwell{
                             if let value2 = value[two]
                             {
                                 setForDwellPeriods[two] = value2 as AnyObject?
-                                //print(two, value2)
                             }
                         }
-                       // print(setForDwellPeriods)
                         self.setAllDwell[one] = setForDwellPeriods as AnyObject?
                     }
                 }
-                // print("-----------------------------------------------------")
-               // print(self.setAllDwell, self.setAllDwell.keys.count)
-                
-               // let dictValInc = self.setAllDwell.sorted(by: { $0.key < $1.key })
-                //print(dictValInc)
                 self.tableView.reloadData()
-               // print("-----------------------------------------------------")
+               
             }
             
         })
@@ -187,10 +189,10 @@ class PresenceVisualizationVC : UIViewController {
                 if let d = data{
                     print("connected/hourly/yesterday \n\n")
                     
-                    if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                        
-                        //print(json)
-                    }
+//                    if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//
+//                        //print(json)
+//                    }
                 }
             })
         }
@@ -209,9 +211,9 @@ class PresenceVisualizationVC : UIViewController {
             if let d = data{
                 print("kpisummary/today\n\n")
                 
-                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                   // print(json)
-                }
+//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//                   // print(json)
+//                }
                 let decoder = JSONDecoder()
                 guard let t = try? decoder.decode(kpiSummaryJSON.self, from: d) else {
                     print("error decoding json")
