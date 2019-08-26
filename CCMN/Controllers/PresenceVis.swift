@@ -55,7 +55,7 @@ class PresenceVisualizationVC : UIViewController {
         print("clicked")
 
         let storyboard = UIStoryboard.init(name: "SearchSetUpVC", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier : "SeachSetUpVC") as! SearchSetUpVC
+        let vc = storyboard.instantiateViewController(withIdentifier : "SearchSetUpVC") as! SearchSetUpVC
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
         //let destination =

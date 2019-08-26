@@ -18,23 +18,19 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		BWyHBDFzajTy7DzMynIBOQPlwDk=
+		FAjnfJwM3jG9TrDkeqxT20LcGmU=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		o+AA4LUSRNvmAYpPu1M+h33+kbA=
-		</data>
-		<key>Base.lproj/Main.storyboardc/SearchSetUpVC.nib</key>
-		<data>
-		+bORrWrODgDRtTMSTBjZAQR+Nsw=
+		t86qrJNJgb5CWVcTABKmAs5+ehY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<data>
-		E1lJmw6kjtmkyu4Zi/VWvLTuoB8=
+		lCLwTq6fviYSanEtHI03GkYBtyY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<data>
-		O9jEtEaZyhiBKrrtCVXLkKxkVx0=
+		zhcczFQVcvljvTeZZNtrtBlhDUo=
 		</data>
 		<key>DateCell.nib</key>
 		<data>
@@ -70,15 +66,15 @@
 		</data>
 		<key>SearchSetUpVC.storyboardc/6tm-vU-I6q-view-4sZ-GY-ADy.nib</key>
 		<data>
-		Ur+HOO4GMAPuUf3E4TErLUs39xE=
+		XXBODvxwcFBl9BGmOcl4AXnsid4=
 		</data>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
 		<data>
-		RH/YAJQczqauaTnBpmfYnIocbD8=
+		CHrnpJBlXF+K59sNIO/cvZaUBIA=
 		</data>
-		<key>SearchSetUpVC.storyboardc/SeachSetUpVC.nib</key>
+		<key>SearchSetUpVC.storyboardc/SearchSetUpVC.nib</key>
 		<data>
-		9DBWlF4YspEsPR4xvWw+FbnksS8=
+		YdHMRiCtPCX82xlYrRb798ejzcU=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -112,35 +108,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AWGfWqDn4CTUBZEllyBQ2qYezHeHW2OKG2r4BGtB4PA=
+			A+n1vY6TN6g/Wx3PfoWLMr0CKl2/91p80LZJvXbKnGU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iJ5j273asuaXV06ahiFKpfo1ZERVgVeMpF8oNx2aDSw=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/SearchSetUpVC.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			CmYzQdfsSNiiw4lh4shE4Ei/zFkr2QAUCFsPGIsdhb0=
+			h9uNXgVOooozlkyynLwCjtIQbnFn228kkxXfBRT9zHM=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3IbX1z3Nf9phwdlznBAj38Fn4sIxRv19pTcvggmFq9A=
+			RTY8Zj9N+nos3p2RSwHYlK6txKK8OLn4AMd6APhEfSg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			itXFUkouE1/yz0HVzVwOdjTNYWB4RGwJRmyjc3C9bgI=
+			UbOONlMUjD4Sf1jbsRAFsDHUy6XcT+NoN+3CMQmJ0Jo=
 			</data>
 		</dict>
 		<key>DateCell.nib</key>
@@ -189,21 +178,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wugJW2w66zyFYWdGSkniaVNkoiBoCAUk9oZ8gKtyY7s=
+			/m8gwvKNdJudySMy90AK5cWOPBpUADJb6RrHLjSM3Kk=
 			</data>
 		</dict>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qOk4NZCPesmlqe6XNmg7hyJ1+X8YrxPHu7qKSBA561w=
+			eQ/Mvwh4SvWldOF+D1yZ3czun2OyTBTQC4C1UIy4P0E=
 			</data>
 		</dict>
-		<key>SearchSetUpVC.storyboardc/SeachSetUpVC.nib</key>
+		<key>SearchSetUpVC.storyboardc/SearchSetUpVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xb6t9kN1Wz/Qi5MdYUUowBXQ0a9sDX+O1lwieKfXEHc=
+			q3mP1QfkABQiRxNjagom3quuY6C5kbNjauShCffKtzY=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

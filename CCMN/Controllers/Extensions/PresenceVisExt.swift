@@ -48,3 +48,14 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     //https://medium.com/@felicity.johnson.mail/lets-make-some-charts-ios-charts-5b8e42c20bc9
 }
 
+extension PresenceVisualizationVC : SetUpDelegate {
+    func specifyDates(from: Date, to: Date, detailed : Bool) {
+        self.startDate = from.toStringDefault()
+        self.endDate = to.toStringDefault()
+        print("hey from delegat here are our dates \(from) and \(to)")
+    }
+    
+    
+}
+
+

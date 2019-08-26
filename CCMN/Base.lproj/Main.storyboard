@@ -35,13 +35,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZU1-0o-9BD">
-                        <barButtonItem key="rightBarButtonItem" title="Set Up" id="pMB-A9-gjX">
-                            <connections>
-                                <segue destination="1vn-vw-TVT" kind="show" identifier="SetUp" id="n6n-YR-eHu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ZU1-0o-9BD"/>
                     <connections>
                         <outlet property="imageMap" destination="VJ9-CW-d64" id="D65-Zh-2Cd"/>
                     </connections>
@@ -57,14 +51,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yad-vx-b86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1566" y="145"/>
-        </scene>
-        <!--SearchSetUpVC-->
-        <scene sceneID="Rbh-PA-oEw">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SearchSetUpVC" storyboardName="SearchSetUpVC" id="1vn-vw-TVT" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xW3-KZ-N4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1645" y="-160"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o7p-uD-Xbi">

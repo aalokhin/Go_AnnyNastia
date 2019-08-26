@@ -263,13 +263,6 @@ class ViewController: UIViewController {
         
         switch identifier {
             /*not using right now but lets leave it for now*/
-        case "SetUp":
-            print("Set up Segue clicked")
-            let destination = segue.destination as! SearchSetUpVC
-            destination.str = "hi there we reached out to here"
-            //destination.delegate = self
-            
-            /*not using right now but lets leave it for now*/
         case "testVis":
            // let destination = segue.destination as! PresenceVisualizationVC
            // destination.startDate = self.startDate
