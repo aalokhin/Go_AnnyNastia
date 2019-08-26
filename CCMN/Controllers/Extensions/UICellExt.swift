@@ -184,9 +184,14 @@ extension UITableViewCell{
             line.circleHoleRadius = 1.3
             data.addDataSet(line)
         }
+        let legend = lineChart.legend
+        legend.enabled = true
+        legend.verticalAlignment = .top
+        
         lineChart.data = data
         lineChart.xAxis.labelRotationAngle = -90
-     
+        lineChart.xAxis.labelPosition = .bottom
+    
         lineChart.xAxis.labelCount = hours.count
         lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:hours)

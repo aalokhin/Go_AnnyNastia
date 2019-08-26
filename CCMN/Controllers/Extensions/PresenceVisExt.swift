@@ -25,7 +25,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
         let values = YValues
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
         
-        if indexPath.row == 1{
+        if indexPath.row == 1 ||  indexPath.row == 4{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }

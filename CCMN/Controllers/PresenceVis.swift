@@ -11,8 +11,12 @@ import UIKit
 import Charts
 
 class PresenceVisualizationVC : UIViewController {
-    var startDate = ""
-    var endDate = ""
+    
+    var startDate : String = Date().toStringDefault()
+    var endDate : String =  Date().toStringDefault()
+    
+    //var startDate = ""
+    //var endDate = ""
     var YValues : [Double] = []
     var allUsers : [[Double]] = []
     var setAllDwell : [Int:AnyObject] = [:]
@@ -27,20 +31,36 @@ class PresenceVisualizationVC : UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        print("1111111start-", startDate, "222222end-", endDate)
+
         
     }
     override func viewDidLoad() {
         print("hi from vis vc")
-        
         super.viewDidLoad()
+        let setUpButton = UIBarButtonItem(title: "SetUp", style: .done, target: self, action: #selector(setUpPeriod))
+        self.navigationItem.rightBarButtonItem  = setUpButton
         
         setupVC()
-       getProximityUsers()
+        getProximityUsers()
         getDwellTime()
+        getRepeatVis()
+        //reqWithParams()
         print("start-", startDate, "end-", endDate)
         
         
     }
+    
+    @objc func setUpPeriod(){
+        print("clicked")
+
+        let storyboard = UIStoryboard.init(name: "SearchSetUpVC", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier : "SeachSetUpVC") as! SearchSetUpVC
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+        //let destination =
+    }
+    
     func getDwellTime(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/today?siteId=\(siteId)", params: [:], method: .get, completion: {
@@ -77,7 +97,7 @@ class PresenceVisualizationVC : UIViewController {
                 // print("-----------------------------------------------------")
                // print(self.setAllDwell, self.setAllDwell.keys.count)
                 
-                let dictValInc = self.setAllDwell.sorted(by: { $0.key < $1.key })
+               // let dictValInc = self.setAllDwell.sorted(by: { $0.key < $1.key })
                 //print(dictValInc)
                 print("-----------------------------------------------------")
             }
@@ -85,9 +105,13 @@ class PresenceVisualizationVC : UIViewController {
         })
     }
     
+    func getRepeatVis(){
+        print("Let's get repeat visitors")
+    }
+    
     func reqWithParams(){
         if let siteId = Client.sharedInstance.siteID?.aesUId {
-            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/3days?siteId=\(siteId)", params: [:], method: .get, completion: {
                 data, error in
                 if let d = data{
                     print("connected/hourly/yesterday \n\n")

@@ -9,11 +9,11 @@
 import Foundation
 
 
-extension ViewController : SetUpDelegate {
+extension PresenceVisualizationVC : SetUpDelegate {
     func specifyDates(from: Date, to: Date, detailed : Bool) {
         self.startDate = from.toStringDefault()
         self.endDate = to.toStringDefault()
-        print("hey frpm delegat here are our dates \(from) and \(to)")
+        print("hey from delegat here are our dates \(from) and \(to)")
     }
     
     

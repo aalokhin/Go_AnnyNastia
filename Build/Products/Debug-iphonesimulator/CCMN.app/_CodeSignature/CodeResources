@@ -70,15 +70,15 @@
 		</data>
 		<key>SearchSetUpVC.storyboardc/6tm-vU-I6q-view-4sZ-GY-ADy.nib</key>
 		<data>
-		CxoO4lKhD7s4Sn/m70vJnM2RtCc=
+		Ur+HOO4GMAPuUf3E4TErLUs39xE=
 		</data>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
 		<data>
-		KcR87I8E8G3Mn1j+2XJ2zRTEhFc=
+		RH/YAJQczqauaTnBpmfYnIocbD8=
 		</data>
-		<key>SearchSetUpVC.storyboardc/UIViewController-6tm-vU-I6q.nib</key>
+		<key>SearchSetUpVC.storyboardc/SeachSetUpVC.nib</key>
 		<data>
-		ZcrOnByYkLrCpPRuCjJ4TZ2yL4g=
+		9DBWlF4YspEsPR4xvWw+FbnksS8=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -189,21 +189,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5nq+lguuNEGBOOGrwhSsKe4BD3I+ssYNH5wZ4kwTvN8=
+			wugJW2w66zyFYWdGSkniaVNkoiBoCAUk9oZ8gKtyY7s=
 			</data>
 		</dict>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UQet/3fSX7ZWzTgLvB4YHDrME2EHslhOXJXzwPWVpME=
+			qOk4NZCPesmlqe6XNmg7hyJ1+X8YrxPHu7qKSBA561w=
 			</data>
 		</dict>
-		<key>SearchSetUpVC.storyboardc/UIViewController-6tm-vU-I6q.nib</key>
+		<key>SearchSetUpVC.storyboardc/SeachSetUpVC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1Lnrdt3Nk0hJS7l/Gx60wgN3xDLgttwB7AOlTPNg38M=
+			xb6t9kN1Wz/Qi5MdYUUowBXQ0a9sDX+O1lwieKfXEHc=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

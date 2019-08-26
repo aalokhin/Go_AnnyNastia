@@ -11,7 +11,7 @@ import Alamofire
 import UIKit
 
 
-extension SeachSetUpVC: UITableViewDataSource {
+extension SearchSetUpVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if datePickerIndexPath != nil {
@@ -36,7 +36,7 @@ extension SeachSetUpVC: UITableViewDataSource {
     
 }
 
-extension SeachSetUpVC: UITableViewDelegate {
+extension SearchSetUpVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.beginUpdates()
@@ -64,7 +64,7 @@ extension SeachSetUpVC: UITableViewDelegate {
     
 }
 
-extension SeachSetUpVC: DatePickerDelegate {
+extension SearchSetUpVC: DatePickerDelegate {
     
     func didChangeDate(date: Date, indexPath: IndexPath) {
         inputDates[indexPath.row] = date

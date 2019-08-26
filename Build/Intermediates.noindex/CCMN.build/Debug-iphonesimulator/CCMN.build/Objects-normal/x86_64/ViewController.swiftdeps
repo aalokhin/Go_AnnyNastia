@@ -21,19 +21,15 @@ depends-top-level:
 - "CastingPrecedence"
 - !private "Client"
 - "Date"
-- "FloatLiteralType"
 - !private "Int"
-- "IntegerLiteralType"
 - !private "JSONDecoder"
 - !private "JSONSerialization"
 - !private "NetworkManager"
 - !private "Parameters"
 - !private "PresenceEndpoints"
-- !private "PresenceVisualizationVC"
-- !private "SeachSetUpVC"
+- !private "SearchSetUpVC"
 - !private "SiteID"
 - "String"
-- "StringLiteralType"
 - "UIButton"
 - "UIImageView"
 - "UIStoryboardSegue"
@@ -62,7 +58,6 @@ depends-member:
 - !private ["s7CVarArgP", "String"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "append"]
-- !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "destination"]
 - !private ["s7CVarArgP", "endDate"]
 - !private ["s7CVarArgP", "getSiteID"]
@@ -105,7 +100,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "String"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
-- !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "destination"]
 - !private ["s28CustomDebugStringConvertibleP", "endDate"]
 - !private ["s28CustomDebugStringConvertibleP", "getSiteID"]
@@ -144,7 +138,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "appendInterpolation"]
 - !private ["s23CustomStringConvertibleP", "appendLiteral"]
-- !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "destination"]
 - !private ["s23CustomStringConvertibleP", "endDate"]
 - !private ["s23CustomStringConvertibleP", "getSiteID"]
@@ -170,7 +163,6 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "subscript"]
 - ["10Foundation4DateV", "init"]
 - ["10Foundation4DateV", "toStringDefault"]
-- !private ["4CCMN18DatePickerDelegateP", "delegate"]
 - !private ["4CCMN18DatePickerDelegateP", "str"]
 - !private ["Se", "aesUidString"]
 - !private ["Se", "append"]
@@ -201,7 +193,6 @@ depends-member:
 - !private ["SQ", "append"]
 - !private ["SQ", "clientsCount"]
 - !private ["SQ", "connectedDevicesUntilNow"]
-- !private ["SQ", "delegate"]
 - !private ["SQ", "destination"]
 - !private ["SQ", "endDate"]
 - !private ["SQ", "get"]
@@ -251,7 +242,6 @@ depends-member:
 - !private ["SH", "append"]
 - !private ["SH", "clientsCount"]
 - !private ["SH", "connectedDevicesUntilNow"]
-- !private ["SH", "delegate"]
 - !private ["SH", "destination"]
 - !private ["SH", "endDate"]
 - !private ["SH", "get"]
@@ -295,7 +285,6 @@ depends-member:
 - !private ["So8NSCodingP", "SiteID"]
 - !private ["So8NSCodingP", "String"]
 - ["So8NSCodingP", ""]
-- !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "endDate"]
 - !private ["So8NSCodingP", "getSiteID"]
 - !private ["So8NSCodingP", "image"]
@@ -321,7 +310,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "SiteID"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
 - ["So26NSExtensionRequestHandlingP", ""]
-- !private ["So26NSExtensionRequestHandlingP", "delegate"]
 - !private ["So26NSExtensionRequestHandlingP", "endDate"]
 - !private ["So26NSExtensionRequestHandlingP", "getSiteID"]
 - !private ["So26NSExtensionRequestHandlingP", "imageMap"]
@@ -347,14 +335,12 @@ depends-member:
 - !private ["So8NSObjectC", "NetworkManager"]
 - !private ["So8NSObjectC", "Parameters"]
 - !private ["So8NSObjectC", "PresenceEndpoints"]
-- !private ["So8NSObjectC", "PresenceVisualizationVC"]
-- !private ["So8NSObjectC", "SeachSetUpVC"]
+- !private ["So8NSObjectC", "SearchSetUpVC"]
 - !private ["So8NSObjectC", "SiteID"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
-- !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "destination"]
 - ["So8NSObjectC", "endDate"]
 - ["So8NSObjectC", "forToday"]
@@ -389,7 +375,6 @@ depends-member:
 - !private ["So8NSObjectP", "SiteID"]
 - !private ["So8NSObjectP", "String"]
 - ["So8NSObjectP", ""]
-- !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "destination"]
 - !private ["So8NSObjectP", "endDate"]
 - !private ["So8NSObjectP", "getSiteID"]
@@ -416,8 +401,6 @@ depends-member:
 - !private ["4CCMN17PresenceEndpointsO", "connectedDevicesUntilNow"]
 - !private ["4CCMN17PresenceEndpointsO", "deinit"]
 - !private ["4CCMN17PresenceEndpointsO", "rawValue"]
-- !private ["4CCMN23PresenceVisualizationVCC", "endDate"]
-- !private ["4CCMN23PresenceVisualizationVCC", "startDate"]
 - !private ["Sk", "append"]
 - !private ["Sk", "subscript"]
 - !private ["Sm", "append"]
@@ -432,30 +415,11 @@ depends-member:
 - !private ["SY", "utf8"]
 - ["10Foundation20ReferenceConvertibleP", "init"]
 - ["10Foundation20ReferenceConvertibleP", "toStringDefault"]
-- !private ["4CCMN12SeachSetUpVCC", "delegate"]
-- !private ["4CCMN12SeachSetUpVCC", "str"]
+- !private ["4CCMN13SearchSetUpVCC", "str"]
 - !private ["ST", "append"]
 - !private ["ST", "init"]
 - !private ["ST", "subscript"]
 - !private ["ST", "toInt"]
-- !private ["4CCMN13SetUpDelegateP", "Client"]
-- ["4CCMN13SetUpDelegateP", "Date"]
-- !private ["4CCMN13SetUpDelegateP", "JSONDecoder"]
-- !private ["4CCMN13SetUpDelegateP", "JSONSerialization"]
-- !private ["4CCMN13SetUpDelegateP", "NetworkManager"]
-- !private ["4CCMN13SetUpDelegateP", "PresenceEndpoints"]
-- !private ["4CCMN13SetUpDelegateP", "SiteID"]
-- !private ["4CCMN13SetUpDelegateP", "String"]
-- !private ["4CCMN13SetUpDelegateP", "endDate"]
-- !private ["4CCMN13SetUpDelegateP", "getSiteID"]
-- !private ["4CCMN13SetUpDelegateP", "imageMap"]
-- !private ["4CCMN13SetUpDelegateP", "locationEndpoints"]
-- !private ["4CCMN13SetUpDelegateP", "mapJSON"]
-- !private ["4CCMN13SetUpDelegateP", "periods"]
-- !private ["4CCMN13SetUpDelegateP", "print"]
-- !private ["4CCMN13SetUpDelegateP", "setFloorImgs"]
-- !private ["4CCMN13SetUpDelegateP", "startDate"]
-- !private ["4CCMN13SetUpDelegateP", "testPresenceConnect"]
 - !private ["4CCMN6SiteIDC", "aesUidString"]
 - !private ["4CCMN6SiteIDC", "deinit"]
 - !private ["SS", "init"]
@@ -482,7 +446,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "SiteID"]
 - !private ["So21UIAppearanceContainerP", "String"]
 - ["So21UIAppearanceContainerP", ""]
-- !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "endDate"]
 - !private ["So21UIAppearanceContainerP", "getSiteID"]
 - !private ["So21UIAppearanceContainerP", "image"]
@@ -506,7 +469,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "SiteID"]
 - !private ["So18UIContentContainerP", "String"]
 - ["So18UIContentContainerP", ""]
-- !private ["So18UIContentContainerP", "delegate"]
 - !private ["So18UIContentContainerP", "endDate"]
 - !private ["So18UIContentContainerP", "getSiteID"]
 - !private ["So18UIContentContainerP", "imageMap"]
@@ -531,7 +493,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "SiteID"]
 - !private ["So18UIFocusEnvironmentP", "String"]
 - ["So18UIFocusEnvironmentP", ""]
-- !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "endDate"]
 - !private ["So18UIFocusEnvironmentP", "getSiteID"]
 - !private ["So18UIFocusEnvironmentP", "image"]
@@ -558,7 +519,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "SiteID"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
 - ["So30UIPasteConfigurationSupportingP", ""]
-- !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "endDate"]
 - !private ["So30UIPasteConfigurationSupportingP", "getSiteID"]
 - !private ["So30UIPasteConfigurationSupportingP", "image"]
@@ -582,14 +542,12 @@ depends-member:
 - !private ["So11UIResponderC", "NetworkManager"]
 - !private ["So11UIResponderC", "Parameters"]
 - !private ["So11UIResponderC", "PresenceEndpoints"]
-- !private ["So11UIResponderC", "PresenceVisualizationVC"]
-- !private ["So11UIResponderC", "SeachSetUpVC"]
+- !private ["So11UIResponderC", "SearchSetUpVC"]
 - !private ["So11UIResponderC", "SiteID"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
-- !private ["So11UIResponderC", "delegate"]
 - ["So11UIResponderC", "endDate"]
 - ["So11UIResponderC", "forToday"]
 - ["So11UIResponderC", "getConnectedDevices"]
@@ -620,7 +578,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "SiteID"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
 - ["So30UIResponderStandardEditActionsP", ""]
-- !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "endDate"]
 - !private ["So30UIResponderStandardEditActionsP", "getSiteID"]
 - !private ["So30UIResponderStandardEditActionsP", "image"]
@@ -635,9 +592,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "str"]
 - !private ["So30UIResponderStandardEditActionsP", "testPresenceConnect"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
-- !private ["So20UIScrollViewDelegateP", "delegate"]
-- !private ["So20UIScrollViewDelegateP", "endDate"]
-- !private ["So20UIScrollViewDelegateP", "startDate"]
 - !private ["So20UIScrollViewDelegateP", "str"]
 - !private ["So16UIStateRestoringP", "Client"]
 - ["So16UIStateRestoringP", "Date"]
@@ -648,7 +602,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "SiteID"]
 - !private ["So16UIStateRestoringP", "String"]
 - ["So16UIStateRestoringP", ""]
-- !private ["So16UIStateRestoringP", "delegate"]
 - !private ["So16UIStateRestoringP", "endDate"]
 - !private ["So16UIStateRestoringP", "getSiteID"]
 - !private ["So16UIStateRestoringP", "imageMap"]
@@ -664,13 +617,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So17UIStoryboardSegueC", "destination"]
 - !private ["So17UIStoryboardSegueC", "identifier"]
-- !private ["So21UITableViewDataSourceP", "delegate"]
-- !private ["So21UITableViewDataSourceP", "endDate"]
-- !private ["So21UITableViewDataSourceP", "startDate"]
 - !private ["So21UITableViewDataSourceP", "str"]
-- !private ["So19UITableViewDelegateP", "delegate"]
-- !private ["So19UITableViewDelegateP", "endDate"]
-- !private ["So19UITableViewDelegateP", "startDate"]
 - !private ["So19UITableViewDelegateP", "str"]
 - !private ["So18UITraitEnvironmentP", "Client"]
 - ["So18UITraitEnvironmentP", "Date"]
@@ -681,7 +628,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "SiteID"]
 - !private ["So18UITraitEnvironmentP", "String"]
 - ["So18UITraitEnvironmentP", ""]
-- !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "endDate"]
 - !private ["So18UITraitEnvironmentP", "getSiteID"]
 - !private ["So18UITraitEnvironmentP", "image"]
@@ -705,7 +651,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "SiteID"]
 - !private ["So23UIUserActivityRestoringP", "String"]
 - ["So23UIUserActivityRestoringP", ""]
-- !private ["So23UIUserActivityRestoringP", "delegate"]
 - !private ["So23UIUserActivityRestoringP", "endDate"]
 - !private ["So23UIUserActivityRestoringP", "getSiteID"]
 - !private ["So23UIUserActivityRestoringP", "image"]
@@ -730,15 +675,13 @@ depends-member:
 - !private ["So16UIViewControllerC", "NetworkManager"]
 - !private ["So16UIViewControllerC", "Parameters"]
 - !private ["So16UIViewControllerC", "PresenceEndpoints"]
-- !private ["So16UIViewControllerC", "PresenceVisualizationVC"]
-- !private ["So16UIViewControllerC", "SeachSetUpVC"]
+- !private ["So16UIViewControllerC", "SearchSetUpVC"]
 - !private ["So16UIViewControllerC", "SiteID"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", ""]
-- !private ["So16UIViewControllerC", "delegate"]
 - ["So16UIViewControllerC", "endDate"]
 - ["So16UIViewControllerC", "forToday"]
 - ["So16UIViewControllerC", "getConnectedDevices"]
@@ -770,8 +713,7 @@ depends-member:
 - !private ["4CCMN14ViewControllerC", "NetworkManager"]
 - !private ["4CCMN14ViewControllerC", "Parameters"]
 - !private ["4CCMN14ViewControllerC", "PresenceEndpoints"]
-- !private ["4CCMN14ViewControllerC", "PresenceVisualizationVC"]
-- !private ["4CCMN14ViewControllerC", "SeachSetUpVC"]
+- !private ["4CCMN14ViewControllerC", "SearchSetUpVC"]
 - !private ["4CCMN14ViewControllerC", "SiteID"]
 - ["4CCMN14ViewControllerC", "String"]
 - ["4CCMN14ViewControllerC", "UIButton"]
@@ -826,7 +768,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SiteID"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "destination"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "getSiteID"]
@@ -905,14 +846,12 @@ depends-nominal:
 - !private "4CCMN14NetworkManagerC"
 - !private "Sq"
 - !private "4CCMN17PresenceEndpointsO"
-- !private "4CCMN23PresenceVisualizationVCC"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
 - "10Foundation20ReferenceConvertibleP"
-- !private "4CCMN12SeachSetUpVCC"
+- !private "4CCMN13SearchSetUpVCC"
 - !private "ST"
-- "4CCMN13SetUpDelegateP"
 - !private "4CCMN6SiteIDC"
 - !private "SS"
 - !private "s27StringInterpolationProtocolP"

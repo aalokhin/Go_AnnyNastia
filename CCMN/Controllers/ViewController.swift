@@ -265,15 +265,15 @@ class ViewController: UIViewController {
             /*not using right now but lets leave it for now*/
         case "SetUp":
             print("Set up Segue clicked")
-            let destination = segue.destination as! SeachSetUpVC
+            let destination = segue.destination as! SearchSetUpVC
             destination.str = "hi there we reached out to here"
-            destination.delegate = self
+            //destination.delegate = self
             
             /*not using right now but lets leave it for now*/
         case "testVis":
-            let destination = segue.destination as! PresenceVisualizationVC
-            destination.startDate = self.startDate
-            destination.endDate = self.endDate
+           // let destination = segue.destination as! PresenceVisualizationVC
+           // destination.startDate = self.startDate
+            //destination.endDate = self.endDate
             print("testVis")
         default:
             print("unexpected segue identifier")

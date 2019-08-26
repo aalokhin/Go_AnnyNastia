@@ -244,9 +244,12 @@ SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewDidLoad;
+- (void)setUpPeriod;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 @interface PresenceVisualizationVC (SWIFT_EXTENSION(CCMN)) <UITableViewDataSource, UITableViewDelegate>
@@ -257,8 +260,8 @@ SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 @class UISegmentedControl;
 @class UIView;
 
-SWIFT_CLASS("_TtC4CCMN12SeachSetUpVC")
-@interface SeachSetUpVC : UIViewController
+SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
+@interface SearchSetUpVC : UIViewController
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
@@ -271,13 +274,13 @@ SWIFT_CLASS("_TtC4CCMN12SeachSetUpVC")
 
 
 
-@interface SeachSetUpVC (SWIFT_EXTENSION(CCMN)) <UITableViewDataSource>
+@interface SearchSetUpVC (SWIFT_EXTENSION(CCMN)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
-@interface SeachSetUpVC (SWIFT_EXTENSION(CCMN)) <UITableViewDelegate>
+@interface SearchSetUpVC (SWIFT_EXTENSION(CCMN)) <UITableViewDelegate>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -300,8 +303,6 @@ SWIFT_CLASS("_TtC4CCMN14ViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
 
 
 

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Seach Set UpVC-->
+        <!--Search Set UpVC-->
         <scene sceneID="d0E-f9-HbT">
             <objects>
-                <viewController id="6tm-vU-I6q" customClass="SeachSetUpVC" customModule="CCMN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchSetUpVC" id="6tm-vU-I6q" customClass="SearchSetUpVC" customModule="CCMN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4sZ-GY-ADy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

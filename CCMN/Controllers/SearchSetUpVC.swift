@@ -15,12 +15,13 @@ protocol SetUpDelegate {
 
 
 
-class SeachSetUpVC: UIViewController {
+class SearchSetUpVC: UIViewController {
     var str : String?
     var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
     var inputDates: [Date] = []
     var delegate: SetUpDelegate?
+    
     var detailed = false
     
     
