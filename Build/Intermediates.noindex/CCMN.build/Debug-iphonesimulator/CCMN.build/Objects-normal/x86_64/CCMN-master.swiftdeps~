@@ -1,12 +1,12 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "79525ff2acf7ac2963bb0c4d6c5fe033"
-build_time: [1566814204, 7139000]
+build_time: [1566819840, 32708000]
 inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/EmptyChartCell.swift": [1566643490, 721745974]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/ViewController.swift": [1566812407, 998513332]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/DateCell.swift": [1566659754, 749444657]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Utilities/PresenceEndpoints.swift": [1565855587, 492415003]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1566814203, 220371475]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1566819839, 247006616]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/AppDelegate.swift": [1564467810, 314592072]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/Singletons/NetworkManager.swift": [1566723710, 863284766]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/MapJSON.swift": [1565774441, 469465683]
@@ -18,8 +18,8 @@ inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Requests/ConnectedVisitorsFuncs.swift": [1566036843, 169203023]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/KPISummary.swift": [1566040494, 281383370]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/SetUpVCExtnsn.swift": [1566811821, 999695717]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/UICellExt.swift": [1566813911, 505883999]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/UICellExt.swift": [1566817846, 773067155]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/DateTextCell.swift": [1565774441, 471944422]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Utilities/LocationRequestEndpoints.swift": [1565774441, 470969507]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/PresenceVis.swift": [1566814084, 6116132]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/PresenceVis.swift": [1566819483, 767089707]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/SearchSetUpVC.swift": [1566812445, 269539077]

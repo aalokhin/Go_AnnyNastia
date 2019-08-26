@@ -206,20 +206,18 @@ extension UITableViewCell{
     func createPieChart(dataPoints: [String], values: [Double]){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         pieChart.noDataText = "please enter data"
-        
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<values.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
         let chartDataSet = PieChartDataSet(entries: dataEntries, label: "Pie chart connected  visitors hourly")
+        chartDataSet.colors = [getColor(int: 1), getColor(int: 2), getColor(int: 0), getColor(int: 3)]
         let chartData = PieChartData()
         
         chartData.addDataSet(chartDataSet)
         pieChart.data = chartData
-        
         self.addSubview(pieChart)
-        
         
     }
     

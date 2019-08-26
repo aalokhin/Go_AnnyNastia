@@ -11,7 +11,7 @@ import UIKit
 
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (setAllRepeat.count == 0 || allUsers.count == 0 || setAllDwell.count == 0){
+        if (repeatDistribution.count == 0 || setAllRepeat.count == 0 || allUsers.count == 0 || setAllDwell.count == 0){
             return 0
         } else {
             return 5
@@ -36,6 +36,21 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             }
             
             cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
+        }else if indexPath.row == 2 {
+            for v in cell.subviews{
+                v.removeFromSuperview()
+            }
+            var dataPoints : [String] = []
+            var values : [Double] = []
+            for one in repeatDistribution{
+                if one.key == "YESTERDAY"{
+                    continue
+                }
+                dataPoints.append(one.key)
+                values.append(Double(one.value))
+            }
+            cell.createPieChart(dataPoints: dataPoints, values: values)
+            
         } else {
             for v in cell.subviews{
                 v.removeFromSuperview()
