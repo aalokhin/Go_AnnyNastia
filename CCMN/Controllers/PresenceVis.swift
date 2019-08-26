@@ -15,15 +15,12 @@ class PresenceVisualizationVC : UIViewController {
     var startDate : String = Date().toStringDefault()
     var endDate : String =  Date().toStringDefault()
     
-    //var startDate = ""
-    //var endDate = ""
     var YValues : [Double] = []
     var allUsers : [[Double]] = []
     var setAllDwell : [Int:AnyObject] = [:]
     var setAllRepeat = [Int : AnyObject]()
     var repeatDistribution : [String : Int] = [:]
     
-    var HoursYValues : [String:Double]?
     let HoursForDic = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
     let HoursForDicInt : [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
     let hours = ["12am-01am", "01am-02am", "02am-03am", "03am-04am", "04am-05am",  "05am-06am", "06am-07am", "07am-08am", "08am-09am", "09am-10am", "10am-11am", "11am-12pm", "12pm-01pm", "01pm-02pm", "02pm-03pm", "03pm-04pm", "04pm-05pm", "05pm-06pm", "06pm-07pm", "07pm-08pm", "08pm-09pm", "09pm-10pm", "10pm-11pm", "11pm-12am"]
@@ -35,23 +32,36 @@ class PresenceVisualizationVC : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
         print("1111111start-", startDate, "222222end-", endDate)
+        repeatDistribution.removeAll()
         getRepeatDistribution()
-
-
+      //  getAllData()
+    }
+    
+    func getAllData(){
+//        YValues.removeAll()
+//        allUsers.removeAll()
+//        setAllDwell.removeAll()
+//        setAllRepeat.removeAll()
+//        repeatDistribution.removeAll()
+        
+ //       getProximityUsers()
+   //     getDwellTime()
+     //   getRepeatVis()
+       // getRepeatDistribution()
         
     }
+    
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
         let setUpButton = UIBarButtonItem(title: "SetUp", style: .done, target: self, action: #selector(setUpPeriod))
         self.navigationItem.rightBarButtonItem  = setUpButton
-        
         setupVC()
-       getProximityUsers()
+        getProximityUsers()
         getDwellTime()
         getRepeatVis()
-        //reqWithParams()
         getRepeatDistribution()
+        //getAllData()
         print("start-", startDate, "end-", endDate)
         
         
@@ -82,6 +92,7 @@ class PresenceVisualizationVC : UIViewController {
                     return
                 }
                 self.repeatDistribution = t
+                self.tableView.reloadData()
                 print(self.repeatDistribution)
             }
             
