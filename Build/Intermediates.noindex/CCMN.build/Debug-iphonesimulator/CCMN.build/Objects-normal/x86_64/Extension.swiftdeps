@@ -28,6 +28,8 @@ depends-top-level:
 - "Int"
 - !private "NSString"
 - "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
 - !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]

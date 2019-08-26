@@ -11,31 +11,31 @@ import UIKit
 
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (allUsers.count == 0 || setAllDwell.count == 0){
+        if (setAllRepeat.count == 0 || allUsers.count == 0 || setAllDwell.count == 0){
             return 0
         } else {
             return 5
         }
+        
     }
     //http://www.thomashanning.com/the-most-common-mistake-in-using-uitableview/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         // getHourlyConnected()
-        let values = YValues
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
-        
-        if indexPath.row == 1 ||  indexPath.row == 4{
+        if indexPath.row == 0{
+            for v in cell.subviews{
+                v.removeFromSuperview()
+            }
+            cell.createLinearChart(hours: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeLabels: RepeatVisitorsDwell, addGradient: false)
+        } else if indexPath.row == 1{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
             
-            cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }))
-        } else if indexPath.row == 2{
-            for v in cell.subviews{
-                v.removeFromSuperview()
-            }
-            cell.createPieChart(dataPoints: hours, values: values)
+            cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
         } else {
             for v in cell.subviews{
                 v.removeFromSuperview()

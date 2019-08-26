@@ -264,9 +264,7 @@ class ViewController: UIViewController {
         switch identifier {
             /*not using right now but lets leave it for now*/
         case "testVis":
-           // let destination = segue.destination as! PresenceVisualizationVC
-           // destination.startDate = self.startDate
-            //destination.endDate = self.endDate
+
             print("testVis")
         default:
             print("unexpected segue identifier")

@@ -1,5 +1,5 @@
 //
-//  SeachSetUpVC.swift
+//  SearchSetUpVC.swift
 //  CCMN
 //
 //  Created by Anastasiia ALOKHINA on 8/10/19.

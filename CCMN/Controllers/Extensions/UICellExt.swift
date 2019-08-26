@@ -153,36 +153,38 @@ extension UITableViewCell{
      
     }
     
-    func createLinearChart(hours: [String], allDwell : [(key: Int, value: AnyObject)]){
+    func createLinearChart(hours: [String], allDwell : [(key: Int, value: AnyObject)], timeLabels : [String], addGradient : Bool){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
         print(allDwell)
         let data = LineChartData()
         
-        let HoursDwell = ["FIVE_TO_THIRTY_MINUTES", "ONE_TO_FIVE_HOURS", "EIGHT_PLUS_HOURS", "FIVE_TO_EIGHT_HOURS", "THIRTY_TO_SIXTY_MINUTES"]
+        //let HoursDwell = ["FIVE_TO_THIRTY_MINUTES", "ONE_TO_FIVE_HOURS", "EIGHT_PLUS_HOURS", "FIVE_TO_EIGHT_HOURS", "THIRTY_TO_SIXTY_MINUTES"]
         
        // var dataEntryArr : [[ChartDataEntry]] = []
         //print("keys>>>",allDwell)
-        for i in 0..<HoursDwell.count{
+        for i in 0..<timeLabels.count{
             var lineChartEntry = [ChartDataEntry]()
             
             for j in 0..<allDwell.count{
-                if let val = allDwell[j].value[HoursDwell[i]]{
+                if let val = allDwell[j].value[timeLabels[i]]{
                     print(val as! Double)
                     lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
                 }
             }
-            let line = LineChartDataSet(entries: lineChartEntry, label: HoursDwell[i])
+            let line = LineChartDataSet(entries: lineChartEntry, label: timeLabels[i])
             line.colors = [getColor(int: i)]
-            
             line.drawValuesEnabled = false
-            let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
-            line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
-            line.drawFilledEnabled =  true// Draw the Gradient
-            line.circleRadius = 2.5
-            line.circleColors = [getColor(int: i), getColor(int: i)]
-            line.circleHoleRadius = 1.3
-            data.addDataSet(line)
+
+            if (addGradient){
+                let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
+                line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+                line.drawFilledEnabled =  true// Draw the Gradient
+            }
+                line.circleRadius = 2.5
+                line.circleColors = [getColor(int: i), getColor(int: i)]
+                line.circleHoleRadius = 1.3
+                data.addDataSet(line)
         }
         let legend = lineChart.legend
         legend.enabled = true
