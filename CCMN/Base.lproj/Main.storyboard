@@ -37,7 +37,7 @@
                                 <state key="normal" title="Check location Services"/>
                                 <connections>
                                     <action selector="locationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGy-y0-krO"/>
-                                    <segue destination="CyT-B3-uYj" kind="show" id="HSj-Aw-8iI"/>
+                                    <segue destination="CyT-B3-uYj" kind="show" identifier="locationVCSegue" id="HSj-Aw-8iI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="1550" y="-76"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--LocationVisVC-->
         <scene sceneID="xyE-wf-JOY">
             <objects>
-                <viewControllerPlaceholder id="CyT-B3-uYj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="LocationVisVC" id="CyT-B3-uYj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7s-gS-6PA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1588" y="224"/>

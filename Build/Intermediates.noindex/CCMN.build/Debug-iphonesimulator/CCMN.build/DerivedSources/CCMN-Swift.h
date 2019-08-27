@@ -236,8 +236,16 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
 @class NSBundle;
+
+SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
+@interface LocationVisVC : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
 
 SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 @interface PresenceVisualizationVC : UIViewController

@@ -271,8 +271,9 @@ class ViewController: UIViewController {
         switch identifier {
             /*not using right now but lets leave it for now*/
         case "testVis":
-
             print("testVis")
+        case "locationVCSegue":
+            print("locationVCSegue")
         default:
             print("unexpected segue identifier")
         }

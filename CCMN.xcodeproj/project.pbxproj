@@ -13,6 +13,9 @@
 		5D24B7B6230FFC4A002CC7F5 /* PresenceVisExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */; };
 		5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */; };
 		5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */; };
+		5DA036F5231542F00002A352 /* LocationVisVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA036F4231542F00002A352 /* LocationVisVC.storyboard */; };
+		5DA036F7231542FC0002A352 /* LocationVisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA036F6231542FC0002A352 /* LocationVisVC.swift */; };
+		5DA036F92315575C0002A352 /* ClientJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA036F82315575C0002A352 /* ClientJSON.swift */; };
 		5DADCE6823054BBB006AC5AD /* KPISummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCE6723054BBB006AC5AD /* KPISummary.swift */; };
 		E681F1597218C2E5B388E937 /* libPods-CCMN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CA80B19D2056069FEEDD66 /* libPods-CCMN.a */; };
 		EF06EA4C22F9D91700681741 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF06EA4B22F9D91700681741 /* Campus.swift */; };
@@ -69,6 +72,9 @@
 		5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceVisExt.swift; sourceTree = "<group>"; };
 		5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChartCell.xib; sourceTree = "<group>"; };
 		5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChartCell.swift; sourceTree = "<group>"; };
+		5DA036F4231542F00002A352 /* LocationVisVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationVisVC.storyboard; sourceTree = "<group>"; };
+		5DA036F6231542FC0002A352 /* LocationVisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVisVC.swift; sourceTree = "<group>"; };
+		5DA036F82315575C0002A352 /* ClientJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientJSON.swift; sourceTree = "<group>"; };
 		5DADCE6723054BBB006AC5AD /* KPISummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPISummary.swift; sourceTree = "<group>"; };
 		9D4D708305E139255BA3059C /* Pods-CCMNUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADCEC84424141817F5B6830B /* Pods-CCMN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.debug.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 				EFE5DDD022FC558E00F1287B /* SiteID.swift */,
 				EF06EA4B22F9D91700681741 /* Campus.swift */,
 				5DADCE6723054BBB006AC5AD /* KPISummary.swift */,
+				5DA036F82315575C0002A352 /* ClientJSON.swift */,
 			);
 			path = Decoders;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 				EF48C4FB22EDE92F00980012 /* ViewController.swift */,
 				EFDF3CB122FEFBE800A86B3E /* SearchSetUpVC.swift */,
 				EF2E0603230439BD0034C418 /* PresenceVis.swift */,
+				5DA036F6231542FC0002A352 /* LocationVisVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				EF374EF32300010900D6C64A /* cells */,
 				EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */,
 				EF2E0601230439900034C418 /* DwellTimeVis.storyboard */,
+				5DA036F4231542F00002A352 /* LocationVisVC.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,6 +439,7 @@
 				EF48C50122EDE93100980012 /* Assets.xcassets in Resources */,
 				EF374EF72300016E00D6C64A /* DateCell.xib in Resources */,
 				EF48C4FF22EDE92F00980012 /* Main.storyboard in Resources */,
+				5DA036F5231542F00002A352 /* LocationVisVC.storyboard in Resources */,
 				EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */,
 				EF2E0602230439900034C418 /* DwellTimeVis.storyboard in Resources */,
 			);
@@ -543,9 +553,11 @@
 				EF374EF222FFFFA500D6C64A /* SetUpVCExtnsn.swift in Sources */,
 				5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */,
 				EF374EF9230001E200D6C64A /* DateTextCell.swift in Sources */,
+				5DA036F7231542FC0002A352 /* LocationVisVC.swift in Sources */,
 				EF6E844A22F33AE100136C6B /* LocationRequestEndpoints.swift in Sources */,
 				EF2E0604230439BD0034C418 /* PresenceVis.swift in Sources */,
 				EFDF3CB222FEFBE800A86B3E /* SearchSetUpVC.swift in Sources */,
+				5DA036F92315575C0002A352 /* ClientJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

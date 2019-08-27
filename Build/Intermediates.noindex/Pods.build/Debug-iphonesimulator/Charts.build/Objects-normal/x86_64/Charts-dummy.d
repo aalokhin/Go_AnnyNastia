@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/anastasia/Swift/Go_AnnyNastia/Pods/Target\ Support\ Files/Charts/Charts-dummy.m \
-  /Users/anastasia/Swift/Go_AnnyNastia/Pods/Target\ Support\ Files/Charts/Charts-prefix.pch
+  /Users/anastasia/Swift/go_Me2/Pods/Target\ Support\ Files/Charts/Charts-dummy.m \
+  /Users/anastasia/Swift/go_Me2/Pods/Target\ Support\ Files/Charts/Charts-prefix.pch

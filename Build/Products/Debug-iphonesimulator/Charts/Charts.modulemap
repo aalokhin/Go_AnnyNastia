@@ -7,6 +7,6 @@ module Charts {
 
 
 module Charts.Swift {
-  header "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
+  header "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
   requires objc
 }

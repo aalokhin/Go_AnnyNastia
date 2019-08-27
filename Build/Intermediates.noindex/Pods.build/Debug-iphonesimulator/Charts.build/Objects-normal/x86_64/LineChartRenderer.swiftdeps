@@ -56,7 +56,6 @@ depends-top-level:
 - !private "NSUIColor"
 - "TernaryPrecedence"
 - "Transformer"
-- !private "UnicodeScalarType"
 - "ViewPortHandler"
 - !private "accessibilityPostLayoutChangedNotification"
 - !private "fatalError"
@@ -204,7 +203,7 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_lineSegments"]
 - !private ["s7CVarArgP", "_xBounds"]
-- ["s7CVarArgP", "accessibilityCreateEmptyOrderedElements"]
+- !private ["s7CVarArgP", "accessibilityCreateEmptyOrderedElements"]
 - !private ["s7CVarArgP", "accessibilityFrame"]
 - !private ["s7CVarArgP", "accessibilityLabel"]
 - !private ["s7CVarArgP", "accessibilityOrderedElements"]
@@ -313,7 +312,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "_lineSegments"]
 - !private ["s28CustomDebugStringConvertibleP", "_xBounds"]
-- ["s28CustomDebugStringConvertibleP", "accessibilityCreateEmptyOrderedElements"]
+- !private ["s28CustomDebugStringConvertibleP", "accessibilityCreateEmptyOrderedElements"]
 - !private ["s28CustomDebugStringConvertibleP", "accessibilityFrame"]
 - !private ["s28CustomDebugStringConvertibleP", "accessibilityLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "accessibilityOrderedElements"]
@@ -404,7 +403,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_lineSegments"]
 - !private ["s23CustomStringConvertibleP", "_xBounds"]
-- ["s23CustomStringConvertibleP", "accessibilityCreateEmptyOrderedElements"]
+- !private ["s23CustomStringConvertibleP", "accessibilityCreateEmptyOrderedElements"]
 - !private ["s23CustomStringConvertibleP", "accessibilityFrame"]
 - !private ["s23CustomStringConvertibleP", "accessibilityLabel"]
 - !private ["s23CustomStringConvertibleP", "accessibilityOrderedElements"]
@@ -575,7 +574,7 @@ depends-member:
 - ["SQ", ""]
 - !private ["SQ", "_lineSegments"]
 - !private ["SQ", "_xBounds"]
-- ["SQ", "accessibilityCreateEmptyOrderedElements"]
+- !private ["SQ", "accessibilityCreateEmptyOrderedElements"]
 - !private ["SQ", "accessibilityFrame"]
 - !private ["SQ", "accessibilityLabel"]
 - !private ["SQ", "accessibilityOrderedElements"]
@@ -694,7 +693,7 @@ depends-member:
 - ["SH", ""]
 - !private ["SH", "_lineSegments"]
 - !private ["SH", "_xBounds"]
-- ["SH", "accessibilityCreateEmptyOrderedElements"]
+- !private ["SH", "accessibilityCreateEmptyOrderedElements"]
 - !private ["SH", "accessibilityFrame"]
 - !private ["SH", "accessibilityLabel"]
 - !private ["SH", "accessibilityOrderedElements"]
@@ -1003,7 +1002,7 @@ depends-member:
 - ["6Charts17LineChartRendererC", "XBounds"]
 - !private ["6Charts17LineChartRendererC", "_lineSegments"]
 - !private ["6Charts17LineChartRendererC", "_xBounds"]
-- ["6Charts17LineChartRendererC", "accessibilityCreateEmptyOrderedElements"]
+- !private ["6Charts17LineChartRendererC", "accessibilityCreateEmptyOrderedElements"]
 - !private ["6Charts17LineChartRendererC", "accessibilityOrderedElements"]
 - !private ["6Charts17LineChartRendererC", "accessibilityOrderedElements.storage"]
 - !private ["6Charts17LineChartRendererC", "accessibilityPostLayoutChangedNotification"]
@@ -1293,7 +1292,7 @@ depends-member:
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "_lineSegments"]
 - !private ["So8NSObjectP", "_xBounds"]
-- ["So8NSObjectP", "accessibilityCreateEmptyOrderedElements"]
+- !private ["So8NSObjectP", "accessibilityCreateEmptyOrderedElements"]
 - !private ["So8NSObjectP", "accessibilityFrame"]
 - !private ["So8NSObjectP", "accessibilityLabel"]
 - !private ["So8NSObjectP", "accessibilityOrderedElements"]
@@ -1601,7 +1600,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_lineSegments"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "_xBounds"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityCreateEmptyOrderedElements"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityCreateEmptyOrderedElements"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityFrame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "accessibilityOrderedElements"]
@@ -1828,9 +1827,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Headers/Public/Charts/Charts-umbrella.h"
-- "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Headers/Public/Alamofire/Alamofire.modulemap"
-- "/Users/anastasia/Swift/Go_AnnyNastia/Pods/Headers/Public/Charts/Charts.modulemap"
+- "/Users/anastasia/Swift/go_Me2/Pods/Headers/Public/Charts/Charts-umbrella.h"
+- "/Users/anastasia/Swift/go_Me2/Pods/Headers/Public/Alamofire/Alamofire.modulemap"
+- "/Users/anastasia/Swift/go_Me2/Pods/Headers/Public/Charts/Charts.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

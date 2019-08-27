@@ -7,6 +7,6 @@ module Alamofire {
 
 
 module Alamofire.Swift {
-  header "/Users/anastasia/Swift/Go_AnnyNastia/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
+  header "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
   requires objc
 }
