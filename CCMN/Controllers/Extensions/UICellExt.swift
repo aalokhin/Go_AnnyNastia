@@ -232,6 +232,7 @@ extension UITableViewCell{
         }
         chartDataSet.colors = colors
         
+        pieChart.drawEntryLabelsEnabled = false       // pieChart.setDrawSliceText(false)
         
         //chartDataSet.colors = [getColor(int: 1), getColor(int: 2), getColor(int: 0), getColor(int: 3)]
         let chartData = PieChartData()

@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "79525ff2acf7ac2963bb0c4d6c5fe033"
-build_time: [1566832797, 436030000]
+build_time: [1566898377, 835233000]
 inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/EmptyChartCell.swift": [1566643490, 721745974]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/ViewController.swift": [1566812407, 998513332]
@@ -18,7 +18,7 @@ inputs:
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Requests/ConnectedVisitorsFuncs.swift": [1566036843, 169203023]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Model/Decoders/KPISummary.swift": [1566040494, 281383370]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/SetUpVCExtnsn.swift": [1566811821, 999695717]
-  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/UICellExt.swift": [1566832796, 693705398]
+  "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/Extensions/UICellExt.swift": [1566898377, 251851764]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/View/cells/DateTextCell.swift": [1565774441, 471944422]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Utilities/LocationRequestEndpoints.swift": [1565774441, 470969507]
   "/Users/anastasia/Swift/Go_AnnyNastia/CCMN/Controllers/PresenceVis.swift": [1566830473, 241680969]
