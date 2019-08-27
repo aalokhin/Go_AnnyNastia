@@ -169,6 +169,13 @@
 			path = Singletons;
 			sourceTree = "<group>";
 		};
+		5D46F8AA23153D68009E03E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5DADCE6623054B91006AC5AD /* Decoders */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +289,7 @@
 		EF8580C522EF568E00F6B58D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D46F8AA23153D68009E03E1 /* Storyboards */,
 				5D24B7B723100065002CC7F5 /* Singletons */,
 				EF374EF32300010900D6C64A /* cells */,
 				EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */,

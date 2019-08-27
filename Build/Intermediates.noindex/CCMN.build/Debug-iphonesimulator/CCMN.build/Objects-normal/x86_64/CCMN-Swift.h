@@ -297,6 +297,7 @@ SWIFT_CLASS("_TtC4CCMN14ViewController")
 @interface ViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageMap;
 - (void)viewDidLoad;
+- (IBAction)locationButtonTapped:(UIButton * _Nonnull)sender;
 - (IBAction)goToVisualization:(UIButton * _Nonnull)sender;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;

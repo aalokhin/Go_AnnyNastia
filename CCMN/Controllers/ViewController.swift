@@ -46,6 +46,13 @@ class ViewController: UIViewController {
     
     }
     
+    
+    
+    
+    @IBAction func locationButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     func forToday(){
         
         

@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 - "goToVisualization"
 - "imageMap"
+- "locationButtonTapped"
 - "prepare"
 - "viewDidAppear"
 - "viewDidLoad"
@@ -339,6 +340,7 @@ depends-member:
 - ["So8NSObjectC", "imageMap"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "jsonObject"]
+- ["So8NSObjectC", "locationButtonTapped"]
 - !private ["So8NSObjectC", "locationEndpoints"]
 - !private ["So8NSObjectC", "mapJSON"]
 - ["So8NSObjectC", "periods"]
@@ -534,6 +536,7 @@ depends-member:
 - !private ["So11UIResponderC", "image"]
 - ["So11UIResponderC", "imageMap"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "locationButtonTapped"]
 - !private ["So11UIResponderC", "locationEndpoints"]
 - !private ["So11UIResponderC", "mapJSON"]
 - ["So11UIResponderC", "periods"]
@@ -657,6 +660,7 @@ depends-member:
 - ["So16UIViewControllerC", "goToVisualization"]
 - ["So16UIViewControllerC", "imageMap"]
 - ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "locationButtonTapped"]
 - !private ["So16UIViewControllerC", "locationEndpoints"]
 - !private ["So16UIViewControllerC", "mapJSON"]
 - ["So16UIViewControllerC", "periods"]
@@ -693,6 +697,7 @@ depends-member:
 - ["4CCMN14ViewControllerC", "goToVisualization"]
 - ["4CCMN14ViewControllerC", "imageMap"]
 - ["4CCMN14ViewControllerC", "init"]
+- ["4CCMN14ViewControllerC", "locationButtonTapped"]
 - !private ["4CCMN14ViewControllerC", "locationEndpoints"]
 - !private ["4CCMN14ViewControllerC", "mapJSON"]
 - ["4CCMN14ViewControllerC", "periods"]
@@ -888,4 +893,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3684f16a8e863ad1186e483c4cd759c3"
+interface-hash: "cfc4bf9c55872e334f09968d2a150d07"
