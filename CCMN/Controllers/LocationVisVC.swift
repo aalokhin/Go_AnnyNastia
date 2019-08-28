@@ -74,8 +74,10 @@ class  LocationVisVC: UIViewController {
         NetworkManager.getImage(imgURL, [:] , completion: { image, error in
             if let img = image {
                 print("we've got an image")
-                Client.sharedInstance.floorImgs?.append(img)
-                self.floorMapImageView.image = img
+                //Client.sharedInstance.floorImgs?.append(img)
+                let test2 = UIImage(named: "dot")!
+                let imageTest = img.imageOverlayingImages([test2])
+                self.floorMapImageView.image = imageTest
             }
         })
     }

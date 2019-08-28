@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "264077c376471b8b3a7b16d8a2139c9e"
-build_time: [1566990207, 695851000]
+build_time: [1566991396, 900129000]
 inputs:
   "/Users/anastasia/Swift/go_Me2/CCMN/View/cells/EmptyChartCell.swift": [1566902731, 14236563]
   "/Users/anastasia/Swift/go_Me2/CCMN/View/cells/MacListCell.swift": [1566977042, 163944744]
@@ -15,14 +15,14 @@ inputs:
   "/Users/anastasia/Swift/go_Me2/CCMN/Model/Decoders/Campus.swift": [1566902731, 11729666]
   "/Users/anastasia/Swift/go_Me2/CCMN/Model/Decoders/SiteID.swift": [1566902731, 12264632]
   "/Users/anastasia/Swift/go_Me2/CCMN/View/Singletons/Client.swift": [1566902731, 13363020]
-  "/Users/anastasia/Swift/go_Me2/CCMN/Utilities/Extension.swift": [1566902731, 12769886]
+  "/Users/anastasia/Swift/go_Me2/CCMN/Utilities/Extension.swift": [1566991173, 975795889]
   "/Users/anastasia/Swift/go_Me2/CCMN/Utilities/UIVCExtensions.swift": [1566902731, 13090322]
   "/Users/anastasia/Swift/go_Me2/CCMN/Requests/ConnectedVisitorsFuncs.swift": [1566902731, 12505600]
   "/Users/anastasia/Swift/go_Me2/CCMN/Model/Decoders/KPISummary.swift": [1566902731, 12014695]
   "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/Extensions/SetUpVCExtnsn.swift": [1566902731, 10898975]
   "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/Extensions/UICellExt.swift": [1566902731, 11017175]
   "/Users/anastasia/Swift/go_Me2/CCMN/View/cells/DateTextCell.swift": [1566902731, 13968317]
-  "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/LocationVisVC.swift": [1566988304, 55187089]
+  "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/LocationVisVC.swift": !private [1566991396, 191678801]
   "/Users/anastasia/Swift/go_Me2/CCMN/Utilities/LocationRequestEndpoints.swift": [1566902731, 12893216]
   "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/PresenceVis.swift": [1566977620, 23649960]
   "/Users/anastasia/Swift/go_Me2/CCMN/Controllers/SearchSetUpVC.swift": [1566902731, 11226475]

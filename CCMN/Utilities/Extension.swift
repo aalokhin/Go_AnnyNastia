@@ -70,6 +70,49 @@ extension Date{
 
 }
 
+extension UIImage {
+    
+    func imageOverlayingImages(_ images: [UIImage], scalingBy factors: [CGFloat]? = nil) -> UIImage {
+        let size = self.size
+        let container = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 2.0)
+        UIGraphicsGetCurrentContext()!.interpolationQuality = .high
+        
+        self.draw(in: container)
+        
+        let scaleFactors = factors ?? [CGFloat](repeating: 1.0, count: images.count)
+        
+        for (image, scaleFactor) in zip(images, scaleFactors) {
+            let topWidth = size.width / scaleFactor
+            let topHeight = size.height / scaleFactor
+            let topX = (size.width / 2.0) - (topWidth / 2.0)
+            let topY = (size.height / 2.0) - (topHeight / 2.0)
+            
+            image.draw(in: CGRect(x: topX, y: topY, width: topWidth, height: topHeight), blendMode: .normal, alpha: 1.0)
+        }
+        return UIGraphicsGetImageFromCurrentImageContext()!
+    }
+    
+    static func imageByMergingImages(topImage: UIImage, bottomImage: UIImage, scaleForTop: CGFloat = 1.0) -> UIImage {
+        let size = bottomImage.size
+        let container = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 2.0)
+        UIGraphicsGetCurrentContext()!.interpolationQuality = .high
+        bottomImage.draw(in: container)
+        
+        let topWidth = size.width / scaleForTop
+        let topHeight = size.height / scaleForTop
+        let topX = (size.width / 2.0) - (topWidth / 2.0)
+        let topY = (size.height / 2.0) - (topHeight / 2.0)
+        
+        topImage.draw(in: CGRect(x: topX, y: topY, width: topWidth, height: topHeight), blendMode: .normal, alpha: 1.0)
+        
+        return UIGraphicsGetImageFromCurrentImageContext()!
+    }
+
+    
+}
+
 
 
 

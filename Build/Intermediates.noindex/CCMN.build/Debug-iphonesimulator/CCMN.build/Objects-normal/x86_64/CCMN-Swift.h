@@ -325,6 +325,8 @@ SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
 
 
 
+
+
 @class UIButton;
 @class UIStoryboardSegue;
 
