@@ -42,7 +42,8 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             }
             var dataPoints : [String] = []
             var values : [Double] = []
-            for one in repeatDistribution{
+            let sorted = repeatDistribution.sorted(by: { $0.value < $1.value })
+            for one in sorted {
                 if one.key == "YESTERDAY"{
                     continue
                 }
@@ -57,7 +58,8 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             }
             var dataPoints : [String] = []
             var values : [Double] = []
-            for one in dwellDistribution{
+            let sorted = dwellDistribution.sorted(by: { $0.value < $1.value })
+            for one in sorted{
                 dataPoints.append(one.key)
                 values.append(Double(one.value))
             }
