@@ -13,6 +13,7 @@ class  LocationVisVC: UIViewController {
     var shouldShowSearchResults = false
     var unFilteredMacs : [String] = []
     var filteredMacs : [String] = []
+    var currentFloor : String = "735495909441273878"
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +21,35 @@ class  LocationVisVC: UIViewController {
     
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+           currentFloor = "735495909441273878"
+           unFilteredMacs.removeAll()
+           shouldShowSearchResults = false
+           searchBar.text = ""
+           getAllClients()
+          // self.tableView.reloadData()
+           print("case 1st floor ")
+        case 1:
+            print("case 2: second floor")
+            unFilteredMacs.removeAll()
+            shouldShowSearchResults = false
+            searchBar.text = ""
+            currentFloor = "735495909441273979"
+            getAllClients()
+           // self.tableView.reloadData()
+        case 2:
+            print("case 3: third floor")
+            searchBar.text = ""
+            shouldShowSearchResults = false
+            unFilteredMacs.removeAll()
+            currentFloor = "735495909441273980"
+            getAllClients()
+           // self.tableView.reloadData()
+        default:
+            break;
+        }
     }
     
     override func viewDidLoad() {
@@ -30,7 +60,7 @@ class  LocationVisVC: UIViewController {
         print("HELLO FROM LOCATION VIS VC")
         
         getAllClients()
-        getActive()
+       // getActive()
     }
     
     func getAllClients(){
@@ -45,14 +75,25 @@ class  LocationVisVC: UIViewController {
                     print("error decoding json")
                     return
                 }
+               // var floors : [String] = []
                 for one in t{
+                    print(one.mapInfo.floorRefId, one.mapInfo.mapHierarchyString)
+//                    if (!floors.contains((one.mapInfo.floorRefId)!)){
+//                        floors.append((one.mapInfo.floorRefId)!)
+//                    }
                     if let addr = one.macAddress{
-                        self.unFilteredMacs.append(addr)
+                        if let refId = one.mapInfo.floorRefId {
+                            if refId == self.currentFloor{
+                                self.unFilteredMacs.append(addr)
+                            }
+                            
+                        }
                         
                     }
                     //one.printAll()
                 }
                 self.tableView.reloadData()
+               // print("all floors", floors.count, "\n", floors)
                 print("all clients>>>> ", self.unFilteredMacs.count)
                 
             }

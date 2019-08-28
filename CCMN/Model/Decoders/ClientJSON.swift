@@ -14,6 +14,7 @@ class ClientJSON : Decodable {
     let manufacturer : String?
     let mapCoordinate : MapCoordinate?
     let userName : String?
+    let mapInfo : MapInfo
     
     enum CodingKeys: String, CodingKey {
         case apMacAddress = "apMacAddress"
@@ -21,6 +22,7 @@ class ClientJSON : Decodable {
         case manufacturer = "manufacturer"
         case mapCoordinate = "mapCoordinate"
         case userName = "userName"
+        case mapInfo = "mapInfo"
     }
     
     required init(from decoder: Decoder) throws {
@@ -30,8 +32,54 @@ class ClientJSON : Decodable {
         self.manufacturer = (try? values.decode(String.self, forKey: .manufacturer))
         self.userName = (try? values.decode(String.self, forKey: .userName))
         self.mapCoordinate = (try? values.decode(MapCoordinate.self, forKey: .mapCoordinate))
+        self.mapInfo = (try! values.decode(MapInfo.self, forKey: .mapInfo))
+
     }
 }
+
+class MapInfo : Decodable {
+    //let floorDimension
+    let floorRefId : String?
+    let mapHierarchyString : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case floorRefId = "floorRefId"
+        case mapHierarchyString = "mapHierarchyString"
+    }
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.floorRefId = (try? values.decode(String.self, forKey: .floorRefId))
+        self.mapHierarchyString = (try? values.decode(String.self, forKey: .mapHierarchyString))
+        
+    }
+}
+
+
+/*
+mapInfo =         {
+    floorDimension = {
+        height = 10;
+        length = 771;
+        offsetX = 0;
+        offsetY = 0;
+        unit = FEET;
+        width = 1551;
+    };
+    floorRefId = 735495909441273979;
+    image =             {
+        colorDepth = 8;
+        height = 1126;
+        imageName = "domain_4_1513769867616.png";
+        maxResolution = 16;
+        size = 2216;
+        width = 2216;
+        zoomLevel = 5;
+    };
+    mapHierarchyString = "System Campus>UNIT.Factory>2nd_Floor>Coverage Area_2nd_Floor";
+};
+
+*/
+
 
 
 class  MapCoordinate : Decodable {
@@ -55,7 +103,7 @@ class  MapCoordinate : Decodable {
         self.y = (try? values.decode(Double.self, forKey: .y))
         self.z = (try? values.decode(Double.self, forKey: .z))
     }
-
+    
 }
 
 extension ClientJSON {
@@ -66,6 +114,7 @@ extension ClientJSON {
         print("----------------------------------------------")
     }
 }
+
 /* {
         apMacAddress = "a0:23:9f:1b:d9:20";
         areaGlobalIdList =         (
