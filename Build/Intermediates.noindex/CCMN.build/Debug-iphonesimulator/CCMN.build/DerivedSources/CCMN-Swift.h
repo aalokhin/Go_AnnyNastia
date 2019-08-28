@@ -239,6 +239,7 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 @class UISearchBar;
 @class UITableView;
 @class UISegmentedControl;
+@class UIImageView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
@@ -246,6 +247,7 @@ SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
 @property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified floorMapImageView;
 - (IBAction)SegmentedControlChanged:(UISegmentedControl * _Nonnull)sender;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -323,7 +325,6 @@ SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
 
 
 
-@class UIImageView;
 @class UIButton;
 @class UIStoryboardSegue;
 
