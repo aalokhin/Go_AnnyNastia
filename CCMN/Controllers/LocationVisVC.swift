@@ -14,10 +14,13 @@ class  LocationVisVC: UIViewController {
     var unFilteredMacs : [String] = []
     var filteredMacs : [String] = []
     var currentFloor : String = "735495909441273878"
+     let floorsImgs = ["api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var floorMapImageView: UIImageView!
     
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
@@ -28,6 +31,7 @@ class  LocationVisVC: UIViewController {
            unFilteredMacs.removeAll()
            shouldShowSearchResults = false
            searchBar.text = ""
+           updateFloorImg(floorsImgs[0])
            getAllClients()
           // self.tableView.reloadData()
            print("case 1st floor ")
@@ -37,6 +41,7 @@ class  LocationVisVC: UIViewController {
             shouldShowSearchResults = false
             searchBar.text = ""
             currentFloor = "735495909441273979"
+            updateFloorImg(floorsImgs[1])
             getAllClients()
            // self.tableView.reloadData()
         case 2:
@@ -45,6 +50,7 @@ class  LocationVisVC: UIViewController {
             shouldShowSearchResults = false
             unFilteredMacs.removeAll()
             currentFloor = "735495909441273980"
+            updateFloorImg(floorsImgs[2])
             getAllClients()
            // self.tableView.reloadData()
         default:
@@ -61,6 +67,17 @@ class  LocationVisVC: UIViewController {
         
         getAllClients()
        // getActive()
+    }
+    
+    func updateFloorImg(_ imgURL : String){
+       
+        NetworkManager.getImage(imgURL, [:] , completion: { image, error in
+            if let img = image {
+                print("we've got an image")
+                Client.sharedInstance.floorImgs?.append(img)
+                self.floorMapImageView.image = img
+            }
+        })
     }
     
     func getAllClients(){

@@ -36,20 +36,68 @@ class ClientJSON : Decodable {
 
     }
 }
-
+class ImageJSON : Decodable{
+    let colorDepth : Int?
+    let height : Int?
+    let imageName : String?
+    let maxResolution : Int?
+    let size : Int?
+    let width : Int?
+    let zoomLevel : Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case colorDepth = "colorDepth"
+        case height = "height"
+        case imageName = "imageName"
+        case maxResolution = "maxResolution"
+        case size = "size"
+        case width = "width"
+        case zoomLevel = "zoomLevel"
+        
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.imageName = (try? values.decode(String.self, forKey: .imageName))
+        self.colorDepth = (try? values.decode(Int.self, forKey: .colorDepth))
+        self.height = (try? values.decode(Int.self, forKey: .height))
+        self.size = (try? values.decode(Int.self, forKey: .size))
+        self.width = (try? values.decode(Int.self, forKey: .width))
+        self.zoomLevel = (try? values.decode(Int.self, forKey: .zoomLevel))
+        self.maxResolution = (try? values.decode(Int.self, forKey: .maxResolution))
+        
+    }
+    
+}
+/*
+image =             {
+    colorDepth = 8;
+    height = 897;
+    imageName = "domain_4_1511041548007.png";
+    maxResolution = 8;
+    size = 1765;
+    width = 1765;
+    zoomLevel = 4;
+};
+*/
 class MapInfo : Decodable {
     //let floorDimension
     let floorRefId : String?
+    let image : ImageJSON
     let mapHierarchyString : String?
     
     enum CodingKeys: String, CodingKey {
         case floorRefId = "floorRefId"
         case mapHierarchyString = "mapHierarchyString"
+        case image = "image"
+
     }
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.floorRefId = (try? values.decode(String.self, forKey: .floorRefId))
         self.mapHierarchyString = (try? values.decode(String.self, forKey: .mapHierarchyString))
+        self.image =  (try! values.decode(ImageJSON.self, forKey: .image))
+
         
     }
 }

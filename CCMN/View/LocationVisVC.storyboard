@@ -79,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="pxo-qK-wdm"/>
                     </view>
                     <connections>
+                        <outlet property="floorMapImageView" destination="fzx-UE-fu0" id="qBz-Tu-yxJ"/>
                         <outlet property="searchBar" destination="s8u-2u-8pO" id="HoY-2G-YX5"/>
                         <outlet property="segmentedControl" destination="p2d-qL-kTF" id="Ls7-If-R0W"/>
                         <outlet property="tableView" destination="us4-1h-SSp" id="nWq-iy-Z2l"/>
