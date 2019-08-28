@@ -74,11 +74,15 @@
 		</data>
 		<key>LocationVisVC.storyboardc/Oxn-9b-YuX-view-tyi-JJ-JcJ.nib</key>
 		<data>
-		ulJfeUgVWMWzoEAIYPH4stKY2Gw=
+		Tr4gdRLt+V+oontBrpp8AXtTgRM=
 		</data>
 		<key>LocationVisVC.storyboardc/UIViewController-Oxn-9b-YuX.nib</key>
 		<data>
-		1v0LygNi/fnKz8MVrW45hxoYhks=
+		fTvX/RbNAF1mHc6NmZCn1vdUFU0=
+		</data>
+		<key>MacListCell.nib</key>
+		<data>
+		wa3axAq4LIURpe67gvNFokPeHaU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -219,14 +223,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nPnrNwMFtyZTIVLPMMOW1cpXlcVp7ATOm0s9iRO9LBo=
+			ItC90sbfgOO5QPtVaO46vT/SNC9eE7rmmNQMPYsxnuU=
 			</data>
 		</dict>
 		<key>LocationVisVC.storyboardc/UIViewController-Oxn-9b-YuX.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jCXPo4QbwbFFx/1MVRWciQiXbH/P04Xuhlg4VtxOda4=
+			XzyGOD/ZAwmG+C/m7Yqh1vL66iyRQO+AWFveyU55Q08=
+			</data>
+		</dict>
+		<key>MacListCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MN+yDz0MriM6NEGz4iTBZGOBhIjcKIEAHsuydQFY/fU=
 			</data>
 		</dict>
 		<key>SearchSetUpVC.storyboardc/6tm-vU-I6q-view-4sZ-GY-ADy.nib</key>

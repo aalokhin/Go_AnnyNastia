@@ -236,16 +236,43 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UISearchBar;
+@class UITableView;
+@class UISegmentedControl;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
 @interface LocationVisVC : UIViewController
+@property (nonatomic, weak) IBOutlet UISearchBar * _Null_unspecified searchBar;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
+- (IBAction)SegmentedControlChanged:(UISegmentedControl * _Nonnull)sender;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
+
+@interface LocationVisVC (SWIFT_EXTENSION(CCMN)) <UITableViewDataSource, UITableViewDelegate>
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface LocationVisVC (SWIFT_EXTENSION(CCMN)) <UISearchBarDelegate>
+- (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
+@end
+
+
+SWIFT_CLASS("_TtC4CCMN11MacListCell")
+@interface MacListCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)layoutSubviews;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 @interface PresenceVisualizationVC : UIViewController
@@ -265,7 +292,6 @@ SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class UISegmentedControl;
 @class UIView;
 
 SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
