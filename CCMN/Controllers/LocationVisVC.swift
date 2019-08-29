@@ -13,8 +13,12 @@ class  LocationVisVC: UIViewController {
     var shouldShowSearchResults = false
     var unFilteredMacs : [String] = []
     var filteredMacs : [String] = []
+    
+    var allMacs : [Mac] = []
+    
     var currentFloor : String = "735495909441273878"
-     let floorsImgs = ["api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
+    let floorsImgs : [String : String] = ["735495909441273878" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor",
+                                          "735495909441273979" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "735495909441273980" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -28,29 +32,29 @@ class  LocationVisVC: UIViewController {
         {
         case 0:
            currentFloor = "735495909441273878"
+           allMacs.removeAll()
            unFilteredMacs.removeAll()
            shouldShowSearchResults = false
            searchBar.text = ""
-           updateFloorImg(floorsImgs[0])
            getAllClients()
           // self.tableView.reloadData()
            print("case 1st floor ")
         case 1:
             print("case 2: second floor")
+            allMacs.removeAll()
             unFilteredMacs.removeAll()
             shouldShowSearchResults = false
             searchBar.text = ""
             currentFloor = "735495909441273979"
-            updateFloorImg(floorsImgs[1])
             getAllClients()
            // self.tableView.reloadData()
         case 2:
             print("case 3: third floor")
             searchBar.text = ""
             shouldShowSearchResults = false
+            allMacs.removeAll()
             unFilteredMacs.removeAll()
             currentFloor = "735495909441273980"
-            updateFloorImg(floorsImgs[2])
             getAllClients()
            // self.tableView.reloadData()
         default:
@@ -75,8 +79,10 @@ class  LocationVisVC: UIViewController {
             if let img = image {
                 print("we've got an image")
                 //Client.sharedInstance.floorImgs?.append(img)
-                let test2 = UIImage(named: "dot")!
-                let imageTest = img.imageOverlayingImages([test2])
+               // let test2 = UIImage(named: "dot")!
+//                let test3 = test2.resizeImage(targetSize: CGSize(width: 100.0, height: 100.0))
+               // let imageTest = img.imageOverlayingImages([test2])
+                let imageTest = img.addDots(macs: self.allMacs)
                 self.floorMapImageView.image = imageTest
             }
         })
@@ -94,15 +100,19 @@ class  LocationVisVC: UIViewController {
                     print("error decoding json")
                     return
                 }
+                
                // var floors : [String] = []
                 for one in t{
-                    print(one.mapInfo.floorRefId, one.mapInfo.mapHierarchyString)
+                    
+                    //print(one.mapInfo.floorRefId, one.mapInfo.mapHierarchyString)
 //                    if (!floors.contains((one.mapInfo.floorRefId)!)){
 //                        floors.append((one.mapInfo.floorRefId)!)
 //                    }
-                    if let addr = one.macAddress{
+                    if let addr = one.macAddress, let x = one.mapCoordinate?.x, let y = one.mapCoordinate?.y {
+                        
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
+                                self.allMacs.append(Mac(x: x, y: y, macAddr: addr))
                                 self.unFilteredMacs.append(addr)
                             }
                             
@@ -112,8 +122,11 @@ class  LocationVisVC: UIViewController {
                     //one.printAll()
                 }
                 self.tableView.reloadData()
+                if let floor = self.floorsImgs[self.currentFloor]{
+                    self.updateFloorImg(floor)
+                }
                // print("all floors", floors.count, "\n", floors)
-                print("all clients>>>> ", self.unFilteredMacs.count)
+                print("all clients>>>> ", self.unFilteredMacs.count, " all macs>>>>> ", self.allMacs.count)
                 
             }
             
@@ -140,4 +153,16 @@ class  LocationVisVC: UIViewController {
 
     }
 
+}
+
+class Mac {
+    let x : Double
+    let y : Double
+    let macAddr : String
+    
+    init(x: Double, y:Double, macAddr : String) {
+        self.x = x
+        self.y = y
+        self.macAddr = macAddr
+    }
 }
