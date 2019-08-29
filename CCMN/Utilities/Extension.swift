@@ -118,6 +118,7 @@ extension UIImage {
     }
     
     
+    
     static func imageByMergingImages(topImage: UIImage, bottomImage: UIImage, scaleForTop: CGFloat = 1.0) -> UIImage {
         let size = bottomImage.size
         let container = CGRect(x: 0, y: 0, width: size.width, height: size.height)

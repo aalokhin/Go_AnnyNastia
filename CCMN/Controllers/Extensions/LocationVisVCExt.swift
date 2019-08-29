@@ -41,9 +41,13 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
         }
         print(macName)
         if let index = allMacs.firstIndex(where: { (item) -> Bool in
-            item.macAddr == macName   
+            item.macAddr == macName
         }){
-             self.floorMapImageView.image = self.floorMapImageView.image?.addImageOverlay(x: allMacs[index].x, y: allMacs[index].y, image: UIImage(named: "redLoc")!)
+            if let floor = self.floorsImgs[self.currentFloor]{
+                self.updateFloorImg(floor)
+                self.floorMapImageView.image = self.floorMapImageView.image?.addImageOverlay(x: allMacs[index].x, y: allMacs[index].y, image: UIImage(named: "redLoc")!)
+            }
+            
         }
         
         
