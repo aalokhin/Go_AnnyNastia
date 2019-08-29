@@ -16,6 +16,7 @@ provides-member:
 - ["10Foundation4DateV", "convertToString"]
 - ["So7UIImageC", "imageOverlayingImages"]
 - ["So7UIImageC", "addDots"]
+- ["So7UIImageC", "addImageOverlay"]
 - ["So7UIImageC", "imageByMergingImages"]
 - ["So7UIImageC", "resizeImage"]
 provides-dynamic-lookup:
@@ -531,6 +532,7 @@ depends-member:
 - ["So8NSObjectC", "CGFloat"]
 - !private ["So8NSObjectC", "CGRect"]
 - ["So8NSObjectC", "CGSize"]
+- ["So8NSObjectC", "Double"]
 - ["So8NSObjectC", "Mac"]
 - !private ["So8NSObjectC", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So8NSObjectC", "UIGraphicsEndImageContext"]
@@ -538,6 +540,7 @@ depends-member:
 - !private ["So8NSObjectC", "UIGraphicsGetImageFromCurrentImageContext"]
 - ["So8NSObjectC", "UIImage"]
 - ["So8NSObjectC", "addDots"]
+- ["So8NSObjectC", "addImageOverlay"]
 - !private ["So8NSObjectC", "components"]
 - !private ["So8NSObjectC", "date"]
 - !private ["So8NSObjectC", "dateFormat"]
@@ -719,6 +722,7 @@ depends-member:
 - ["So7UIImageC", "CGFloat"]
 - !private ["So7UIImageC", "CGRect"]
 - ["So7UIImageC", "CGSize"]
+- ["So7UIImageC", "Double"]
 - ["So7UIImageC", "Mac"]
 - !private ["So7UIImageC", "UIGraphicsBeginImageContextWithOptions"]
 - !private ["So7UIImageC", "UIGraphicsEndImageContext"]
@@ -726,6 +730,7 @@ depends-member:
 - !private ["So7UIImageC", "UIGraphicsGetImageFromCurrentImageContext"]
 - ["So7UIImageC", "UIImage"]
 - ["So7UIImageC", "addDots"]
+- ["So7UIImageC", "addImageOverlay"]
 - !private ["So7UIImageC", "draw"]
 - ["So7UIImageC", "imageByMergingImages"]
 - ["So7UIImageC", "imageOverlayingImages"]
@@ -1000,4 +1005,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5ff44b6f110da971592963c7990f9069"
+interface-hash: "5d62448507668c2076a25d70c9214c84"

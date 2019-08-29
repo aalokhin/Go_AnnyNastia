@@ -30,12 +30,40 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
         }
         return unFilteredMacs.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print(indexPath.row)
+        var macName : String
+        if shouldShowSearchResults == true {
+            macName = filteredMacs[indexPath.row]
+        } else {
+            macName = unFilteredMacs[indexPath.row]
+        }
+        print(macName)
+        if let index = allMacs.firstIndex(where: { (item) -> Bool in
+            item.macAddr == macName   
+        }){
+             self.floorMapImageView.image = self.floorMapImageView.image?.addImageOverlay(x: allMacs[index].x, y: allMacs[index].y, image: UIImage(named: "redLoc")!)
+        }
+        
+        
+        /*
+         guard let indexPath = tableView.indexPathForSelectedRow else { return }
+         let protein : String
+         if shouldShowSearchResults == true {
+         protein = filteredProteins[indexPath.row]
+         } else {
+         protein = unFilteredProteins[indexPath.row]
+         }
+         let destination = segue.destination as! ProteinVisVC
+         destination.protein = protein
+         */
+        //    self.performSegue(withIdentifier: "FromTableView", sender: self)
+    }
 }
 
 
-//func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//    self.performSegue(withIdentifier: "FromTableView", sender: self)
-//}
+
 
 
 extension LocationVisVC: UISearchBarDelegate {

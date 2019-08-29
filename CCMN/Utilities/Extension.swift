@@ -112,6 +112,11 @@ extension UIImage {
         return UIGraphicsGetImageFromCurrentImageContext()!
     }
     
+    func addImageOverlay(x : Double, y : Double, image : UIImage)-> UIImage{
+        image.draw(in: CGRect(x: x, y: y, width: 130, height: 130), blendMode: .normal, alpha: 1.0)
+        return UIGraphicsGetImageFromCurrentImageContext()!
+    }
+    
     
     static func imageByMergingImages(topImage: UIImage, bottomImage: UIImage, scaleForTop: CGFloat = 1.0) -> UIImage {
         let size = bottomImage.size
