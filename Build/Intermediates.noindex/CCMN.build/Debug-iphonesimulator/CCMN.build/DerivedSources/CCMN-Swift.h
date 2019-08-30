@@ -250,6 +250,8 @@ SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified floorMapImageView;
 - (IBAction)SegmentedControlChanged:(UISegmentedControl * _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)checkAll;
+- (void)willMoveToParentViewController:(UIViewController * _Nullable)parent;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

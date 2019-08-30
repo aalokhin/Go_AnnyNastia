@@ -19,6 +19,8 @@ class  LocationVisVC: UIViewController {
 
     
     var allMacs : [Mac] = []
+    var timer: Timer?
+    
     
     var currentFloor : String = "735495909441273878"
     let floorsImgs : [String : String] = ["735495909441273878" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor",
@@ -32,7 +34,7 @@ class  LocationVisVC: UIViewController {
     
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
-        PopUp()
+        showPopUp()
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
@@ -75,11 +77,27 @@ class  LocationVisVC: UIViewController {
         print("HELLO FROM LOCATION VIS VC")
         
         getAllClients()
+        
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
     
 
 
 
        // getActive()
+    }
+    
+    @objc func checkAll(){
+        showPopUp()
+        getAllClients()
+    }
+    
+    override func willMove(toParent parent: UIViewController?)
+    {
+        timer?.invalidate()
+        allMacs.removeAll()
+        unFilteredMacs.removeAll()
+        filteredMacs.removeAll()
+        
     }
     
     func updateFloorImg(_ imgURL : String){
@@ -164,7 +182,7 @@ class  LocationVisVC: UIViewController {
     
     
     
-    func PopUp(){
+    func showPopUp(){
         var attributes = EKAttributes.topToast
         
         // Set its background to black
@@ -173,8 +191,9 @@ class  LocationVisVC: UIViewController {
         // Animate in and out using default translation
         attributes.entranceAnimation = .translation
         attributes.exitAnimation = .translation
-        attributes.displayDuration = 6
-        let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 600))
+        attributes.displayDuration = 2
+        let customView = UIView(frame: CGRect(x: 100, y: 100, width: view.frame.width, height: 600))
+        customView.backgroundColor = .yellow
         SwiftEntryKit.display(entry: customView, using: attributes)
     }
     
