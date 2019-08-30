@@ -29,7 +29,6 @@ class PresenceVisualizationVC : UIViewController {
     let RepeatVisitorsDwell = ["DAILY", "FIRST_TIME", "OCCASIONAL", "WEEKLY", "YESTERDAY"]
     
     @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
         print("1111111start-", startDate, "222222end-", endDate)

@@ -13,8 +13,7 @@ import SwiftEntryKit
 
 class  LocationVisVC: UIViewController {
     var shouldShowSearchResults = false
-    var unFilteredMacs : [String] = []
-    var filteredMacs : [String] = []
+    var filteredMacs : [Mac] = []
     private var customView: UIView!
 
     
@@ -38,55 +37,40 @@ class  LocationVisVC: UIViewController {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-           currentFloor = "735495909441273878"
-           allMacs.removeAll()
-           unFilteredMacs.removeAll()
-           shouldShowSearchResults = false
-           searchBar.text = ""
-           getAllClients()
-          // self.tableView.reloadData()
+           updateTV("735495909441273878")
            print("case 1st floor ")
         case 1:
             print("case 2: second floor")
-            allMacs.removeAll()
-            unFilteredMacs.removeAll()
-            shouldShowSearchResults = false
-            searchBar.text = ""
-            currentFloor = "735495909441273979"
-            getAllClients()
-           // self.tableView.reloadData()
+            updateTV("735495909441273979")
         case 2:
+            updateTV("735495909441273980")
             print("case 3: third floor")
-            searchBar.text = ""
-            shouldShowSearchResults = false
-            allMacs.removeAll()
-            unFilteredMacs.removeAll()
-            currentFloor = "735495909441273980"
-            getAllClients()
-           // self.tableView.reloadData()
         default:
             break;
         }
+    }
+    
+    func updateTV(_ curFloor : String){
+        searchBar.text = ""
+        shouldShowSearchResults = false
+        allMacs.removeAll()
+        currentFloor = curFloor
+        getAllClients()
     }
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
         tableView?.register(UINib(nibName: MacListCell.nibName(), bundle: nil), forCellReuseIdentifier: MacListCell.reuseIdentifier())
-
         print("HELLO FROM LOCATION VIS VC")
-        
         getAllClients()
-        
         timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
-    
-
-
-
-       // getActive()
+        getActive()
     }
     
     @objc func checkAll(){
+        allMacs.removeAll()
+        filteredMacs.removeAll()
         showPopUp()
         getAllClients()
     }
@@ -95,13 +79,11 @@ class  LocationVisVC: UIViewController {
     {
         timer?.invalidate()
         allMacs.removeAll()
-        unFilteredMacs.removeAll()
         filteredMacs.removeAll()
         
     }
     
     func updateFloorImg(_ imgURL : String){
-       
         NetworkManager.getImage(imgURL, [:] , completion: { image, error in
             if let img = image {
                 print("we've got an image")
@@ -140,7 +122,6 @@ class  LocationVisVC: UIViewController {
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
                                 self.allMacs.append(Mac(x: x, y: y, macAddr: addr))
-                                self.unFilteredMacs.append(addr)
                             }
                             
                         }
@@ -153,7 +134,7 @@ class  LocationVisVC: UIViewController {
                     self.updateFloorImg(floor)
                 }
                // print("all floors", floors.count, "\n", floors)
-                print("all clients>>>> ", self.unFilteredMacs.count, " all macs>>>>> ", self.allMacs.count)
+                print(" all macs>>>>> ", self.allMacs.count)
                 
             }
             
@@ -201,7 +182,11 @@ class  LocationVisVC: UIViewController {
 
 }
 
-class Mac {
+class Mac : Equatable {
+    static func == (lhs: Mac, rhs: Mac) -> Bool {
+       return lhs.macAddr == rhs.macAddr  && lhs.x == rhs.x && lhs.y == rhs.y
+    }
+    
     let x : Double
     let y : Double
     let macAddr : String
@@ -212,6 +197,7 @@ class Mac {
         self.macAddr = macAddr
     }
 }
+
 
 
 

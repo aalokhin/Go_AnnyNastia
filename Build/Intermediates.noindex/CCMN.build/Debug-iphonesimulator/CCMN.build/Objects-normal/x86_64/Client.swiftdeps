@@ -75,6 +75,7 @@ depends-member:
 - ["4CCMN6ClientC", "URLSessionConfiguration"]
 - ["4CCMN6ClientC", "campus"]
 - ["4CCMN6ClientC", "campusInformation"]
+- ["4CCMN6ClientC", "deinit"]
 - ["4CCMN6ClientC", "floorImgs"]
 - ["4CCMN6ClientC", "init"]
 - ["4CCMN6ClientC", "locateAuthHeader"]

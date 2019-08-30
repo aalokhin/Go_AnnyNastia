@@ -15,9 +15,9 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
         
         let mac : String
         if shouldShowSearchResults == true {
-            mac = filteredMacs[indexPath.row]
+            mac = filteredMacs[indexPath.row].macAddr
         } else {
-            mac = unFilteredMacs[indexPath.row]
+            mac = allMacs[indexPath.row].macAddr
         }
         cell.textLabel?.text = mac
        // cell.textLabel?.text = "some tjosn"
@@ -28,16 +28,16 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
         if shouldShowSearchResults == true  {
             return filteredMacs.count
         }
-        return unFilteredMacs.count
+        return allMacs.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print(indexPath.row)
         var macName : String
         if shouldShowSearchResults == true {
-            macName = filteredMacs[indexPath.row]
+            macName = allMacs[indexPath.row].macAddr
         } else {
-            macName = unFilteredMacs[indexPath.row]
+            macName = allMacs[indexPath.row].macAddr
         }
         print(macName)
         if let index = allMacs.firstIndex(where: { (item) -> Bool in
@@ -78,9 +78,10 @@ extension LocationVisVC: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredMacs = unFilteredMacs.filter({( protein : String) -> Bool in
-            return protein.lowercased().contains(searchText.lowercased())
+        filteredMacs = allMacs.filter({( protein : Mac) -> Bool in
+            return protein.macAddr.lowercased().contains(searchText.lowercased())
         })
+
         shouldShowSearchResults = searchText != "" ? true : false
         tableView.reloadData()
     }

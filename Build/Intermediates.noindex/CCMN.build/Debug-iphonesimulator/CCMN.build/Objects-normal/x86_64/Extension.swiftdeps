@@ -28,7 +28,6 @@ depends-top-level:
 - !private ">"
 - !private "??"
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - "CGFloat"
 - !private "CGRect"
 - "CGSize"
@@ -40,13 +39,10 @@ depends-top-level:
 - !private "DateFormatter"
 - "Double"
 - "Float"
-- !private "FloatLiteralType"
 - "Int"
-- !private "IntegerLiteralType"
 - "Mac"
 - !private "NSString"
 - "String"
-- !private "StringLiteralType"
 - !private "UIGraphicsBeginImageContextWithOptions"
 - !private "UIGraphicsEndImageContext"
 - !private "UIGraphicsGetCurrentContext"
@@ -316,6 +312,8 @@ depends-member:
 - !private ["SQ", "subscript"]
 - !private ["SQ", "utf8"]
 - !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
 - !private ["SQ", "zip"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "filter"]
