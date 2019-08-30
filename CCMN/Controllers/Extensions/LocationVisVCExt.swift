@@ -33,12 +33,18 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print(indexPath.row)
-        var macName : String
+        var macName = ""
+        
+        //need to fix out of range here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if shouldShowSearchResults == true {
-            macName = allMacs[indexPath.row].macAddr
+            macName = filteredMacs[indexPath.row].macAddr
         } else {
-            macName = allMacs[indexPath.row].macAddr
+
+                macName = allMacs[indexPath.row].macAddr
+    
         }
+        
+        
         print(macName)
         if let index = allMacs.firstIndex(where: { (item) -> Bool in
             item.macAddr == macName

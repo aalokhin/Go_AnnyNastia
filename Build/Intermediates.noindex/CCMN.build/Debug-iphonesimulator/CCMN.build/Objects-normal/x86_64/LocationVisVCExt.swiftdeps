@@ -519,6 +519,7 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "contains"]
 - !private ["s25LosslessStringConvertibleP", "isEmpty"]
 - !private ["s25LosslessStringConvertibleP", "lowercased"]
+- !private ["4CCMN3MacC", "deinit"]
 - !private ["4CCMN3MacC", "macAddr"]
 - !private ["4CCMN3MacC", "x"]
 - !private ["4CCMN3MacC", "y"]
