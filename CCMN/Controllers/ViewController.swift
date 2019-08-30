@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Charts
+import SwiftEntryKit
 
 
 class ViewController: UIViewController {
@@ -22,9 +23,17 @@ class ViewController: UIViewController {
     
     
 
-    @IBOutlet weak var imageMap: UIImageView!
     override func viewDidLoad() {
+
         super.viewDidLoad()
+        
+        /*
+         ... Customize the view as you like ...
+         */
+        
+        // Display the view with the configuration
+
+        
         //getInit()
         getSiteID()
         //forToday()
@@ -33,11 +42,10 @@ class ViewController: UIViewController {
          cisco-presence.unit.ua/api/presence/v1/visitor/count/today?siteId=1513804707441
          cisco-presence.unit.ua/api/presence/v1/dwell/average/today?siteId=1513804707441
          cisco-presence.unit.ua/api/presence/v1/kpisummary/today?siteId=1513804707441
+         */
  
  
- */
-       // testPresenceConnect()
-//        testPresenceRepeat()
+
         setFloorImgs()
       //  getConnectedDevices()
        
@@ -258,7 +266,7 @@ class ViewController: UIViewController {
                 if let img = image {
                     print("we've got an image")
                     Client.sharedInstance.floorImgs?.append(img)
-                    self.imageMap.image = img
+                    
                 }
             })
         }

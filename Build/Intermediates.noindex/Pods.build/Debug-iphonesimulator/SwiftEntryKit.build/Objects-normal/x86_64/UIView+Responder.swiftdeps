@@ -1,0 +1,194 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So6UIViewC", ""]
+- ["So6UIViewC", "containsFirstResponder"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- "AssignmentPrecedence"
+- "Bool"
+- "UIView"
+depends-member:
+- !private ["Sa", "reversed"]
+- !private ["SK", "reversed"]
+- !private ["So15CALayerDelegateP", "containsFirstResponder"]
+- !private ["So15CALayerDelegateP", "isFirstResponder"]
+- !private ["So15CALayerDelegateP", "subviews"]
+- !private ["s7CVarArgP", "containsFirstResponder"]
+- !private ["s7CVarArgP", "isFirstResponder"]
+- !private ["s7CVarArgP", "reversed"]
+- !private ["s7CVarArgP", "subviews"]
+- !private ["Sl", "reversed"]
+- !private ["10Foundation15ContiguousBytesP", "reversed"]
+- !private ["s28CustomDebugStringConvertibleP", "containsFirstResponder"]
+- !private ["s28CustomDebugStringConvertibleP", "isFirstResponder"]
+- !private ["s28CustomDebugStringConvertibleP", "reversed"]
+- !private ["s28CustomDebugStringConvertibleP", "subviews"]
+- !private ["s17CustomReflectableP", "reversed"]
+- !private ["s23CustomStringConvertibleP", "containsFirstResponder"]
+- !private ["s23CustomStringConvertibleP", "isFirstResponder"]
+- !private ["s23CustomStringConvertibleP", "reversed"]
+- !private ["s23CustomStringConvertibleP", "subviews"]
+- !private ["10Foundation12DataProtocolP", "reversed"]
+- !private ["Se", "reversed"]
+- !private ["SE", "reversed"]
+- !private ["SQ", "containsFirstResponder"]
+- !private ["SQ", "isFirstResponder"]
+- !private ["SQ", "reversed"]
+- !private ["SQ", "subviews"]
+- !private ["s25ExpressibleByArrayLiteralP", "reversed"]
+- !private ["SH", "containsFirstResponder"]
+- !private ["SH", "isFirstResponder"]
+- !private ["SH", "reversed"]
+- !private ["SH", "subviews"]
+- !private ["SM", "reversed"]
+- !private ["10Foundation19MutableDataProtocolP", "reversed"]
+- !private ["So8NSCodingP", "containsFirstResponder"]
+- !private ["So8NSCodingP", "isFirstResponder"]
+- !private ["So8NSCodingP", "subviews"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "containsFirstResponder"]
+- !private ["So8NSObjectC", "isFirstResponder"]
+- !private ["So8NSObjectC", "subviews"]
+- !private ["So8NSObjectP", "containsFirstResponder"]
+- !private ["So8NSObjectP", "isFirstResponder"]
+- !private ["So8NSObjectP", "subviews"]
+- !private ["Sk", "reversed"]
+- !private ["Sm", "reversed"]
+- !private ["ST", "reversed"]
+- !private ["So29UIAccessibilityIdentificationP", "containsFirstResponder"]
+- !private ["So29UIAccessibilityIdentificationP", "isFirstResponder"]
+- !private ["So29UIAccessibilityIdentificationP", "subviews"]
+- !private ["So12UIAppearanceP", "containsFirstResponder"]
+- !private ["So12UIAppearanceP", "isFirstResponder"]
+- !private ["So12UIAppearanceP", "subviews"]
+- !private ["So21UIAppearanceContainerP", "containsFirstResponder"]
+- !private ["So21UIAppearanceContainerP", "isFirstResponder"]
+- !private ["So21UIAppearanceContainerP", "subviews"]
+- !private ["So17UICoordinateSpaceP", "containsFirstResponder"]
+- !private ["So17UICoordinateSpaceP", "isFirstResponder"]
+- !private ["So17UICoordinateSpaceP", "subviews"]
+- !private ["So13UIDynamicItemP", "containsFirstResponder"]
+- !private ["So13UIDynamicItemP", "isFirstResponder"]
+- !private ["So13UIDynamicItemP", "subviews"]
+- !private ["So18UIFocusEnvironmentP", "containsFirstResponder"]
+- !private ["So18UIFocusEnvironmentP", "isFirstResponder"]
+- !private ["So18UIFocusEnvironmentP", "subviews"]
+- !private ["So11UIFocusItemP", "containsFirstResponder"]
+- !private ["So11UIFocusItemP", "isFirstResponder"]
+- !private ["So11UIFocusItemP", "subviews"]
+- !private ["So20UIFocusItemContainerP", "containsFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "isFirstResponder"]
+- !private ["So20UIFocusItemContainerP", "subviews"]
+- !private ["So30UIPasteConfigurationSupportingP", "containsFirstResponder"]
+- !private ["So30UIPasteConfigurationSupportingP", "isFirstResponder"]
+- !private ["So30UIPasteConfigurationSupportingP", "subviews"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "containsFirstResponder"]
+- !private ["So11UIResponderC", "isFirstResponder"]
+- !private ["So11UIResponderC", "subviews"]
+- !private ["So30UIResponderStandardEditActionsP", "containsFirstResponder"]
+- !private ["So30UIResponderStandardEditActionsP", "isFirstResponder"]
+- !private ["So30UIResponderStandardEditActionsP", "subviews"]
+- !private ["So18UITraitEnvironmentP", "containsFirstResponder"]
+- !private ["So18UITraitEnvironmentP", "isFirstResponder"]
+- !private ["So18UITraitEnvironmentP", "subviews"]
+- !private ["So23UIUserActivityRestoringP", "containsFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "isFirstResponder"]
+- !private ["So23UIUserActivityRestoringP", "subviews"]
+- ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "containsFirstResponder"]
+- !private ["So6UIViewC", "isFirstResponder"]
+- !private ["So6UIViewC", "subviews"]
+- !private ["s14_ArrayProtocolP", "reversed"]
+- !private ["s24_DestructorSafeContainerP", "reversed"]
+- !private ["s19_HasContiguousBytesP", "reversed"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "reversed"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "containsFirstResponder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isFirstResponder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subviews"]
+- !private ["s21_ObjectiveCBridgeableP", "reversed"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "containsFirstResponder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isFirstResponder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "subviews"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "Sk"
+- !private "Sm"
+- !private "ST"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a00b96bcd96bd40dfd42bcf881425346"

@@ -1,0 +1,141 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "EKAttributes"
+provides-nominal:
+- "13SwiftEntryKit12EKAttributesV"
+provides-member:
+- ["13SwiftEntryKit12EKAttributesV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "BooleanLiteralType"
+- "EKAttributes"
+- "String"
+depends-member:
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "translation"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "clear"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "none"]
+- ["SL", "normal"]
+- ["13SwiftEntryKit12EKAttributesV11DisplayModeO", "inferred"]
+- ["13SwiftEntryKit12EKAttributesV", "Animation"]
+- ["13SwiftEntryKit12EKAttributesV", "BackgroundStyle"]
+- ["13SwiftEntryKit12EKAttributesV", "Border"]
+- ["13SwiftEntryKit12EKAttributesV", "DisplayDuration"]
+- ["13SwiftEntryKit12EKAttributesV", "DisplayMode"]
+- ["13SwiftEntryKit12EKAttributesV", "LifecycleEvents"]
+- ["13SwiftEntryKit12EKAttributesV", "NotificationHapticFeedback"]
+- ["13SwiftEntryKit12EKAttributesV", "PopBehavior"]
+- ["13SwiftEntryKit12EKAttributesV", "Position"]
+- ["13SwiftEntryKit12EKAttributesV", "PositionConstraints"]
+- ["13SwiftEntryKit12EKAttributesV", "Precedence"]
+- ["13SwiftEntryKit12EKAttributesV", "RoundCorners"]
+- ["13SwiftEntryKit12EKAttributesV", "Scroll"]
+- ["13SwiftEntryKit12EKAttributesV", "Shadow"]
+- ["13SwiftEntryKit12EKAttributesV", "StatusBar"]
+- ["13SwiftEntryKit12EKAttributesV", "String"]
+- ["13SwiftEntryKit12EKAttributesV", "UserInteraction"]
+- ["13SwiftEntryKit12EKAttributesV", "WindowLevel"]
+- ["13SwiftEntryKit12EKAttributesV", "border"]
+- ["13SwiftEntryKit12EKAttributesV", "displayDuration"]
+- ["13SwiftEntryKit12EKAttributesV", "displayMode"]
+- ["13SwiftEntryKit12EKAttributesV", "entranceAnimation"]
+- ["13SwiftEntryKit12EKAttributesV", "entryBackground"]
+- ["13SwiftEntryKit12EKAttributesV", "entryInteraction"]
+- ["13SwiftEntryKit12EKAttributesV", "exitAnimation"]
+- ["13SwiftEntryKit12EKAttributesV", "hapticFeedbackType"]
+- ["13SwiftEntryKit12EKAttributesV", "init"]
+- ["13SwiftEntryKit12EKAttributesV", "lifecycleEvents"]
+- ["13SwiftEntryKit12EKAttributesV", "name"]
+- ["13SwiftEntryKit12EKAttributesV", "popBehavior"]
+- ["13SwiftEntryKit12EKAttributesV", "position"]
+- ["13SwiftEntryKit12EKAttributesV", "positionConstraints"]
+- ["13SwiftEntryKit12EKAttributesV", "precedence"]
+- ["13SwiftEntryKit12EKAttributesV", "roundCorners"]
+- ["13SwiftEntryKit12EKAttributesV", "screenBackground"]
+- ["13SwiftEntryKit12EKAttributesV", "screenInteraction"]
+- ["13SwiftEntryKit12EKAttributesV", "scroll"]
+- ["13SwiftEntryKit12EKAttributesV", "shadow"]
+- ["13SwiftEntryKit12EKAttributesV", "statusBar"]
+- ["13SwiftEntryKit12EKAttributesV", "windowLevel"]
+- ["SQ", "clear"]
+- ["SQ", "inferred"]
+- ["SQ", "none"]
+- ["SQ", "normal"]
+- ["SQ", "top"]
+- ["SH", "inferred"]
+- ["SH", "none"]
+- ["SH", "normal"]
+- ["SH", "top"]
+- ["13SwiftEntryKit12EKAttributesV15LifecycleEventsV", "init"]
+- ["13SwiftEntryKit12EKAttributesV26NotificationHapticFeedbackO", "none"]
+- ["13SwiftEntryKit12EKAttributesV11PopBehaviorO", "animated"]
+- ["13SwiftEntryKit12EKAttributesV8PositionO", "top"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "init"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "override"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "normal"]
+- ["13SwiftEntryKit12EKAttributesV6ScrollO17PullbackAnimationV", "jolt"]
+- ["SY", "normal"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "none"]
+- ["13SwiftEntryKit12EKAttributesV6ScrollO", "enabled"]
+- ["13SwiftEntryKit12EKAttributesV6ShadowO", "none"]
+- ["13SwiftEntryKit12EKAttributesV9StatusBarO", "inferred"]
+- ["13SwiftEntryKit12EKAttributesV15UserInteractionV", "dismiss"]
+- ["13SwiftEntryKit12EKAttributesV15UserInteractionV", "forward"]
+- ["13SwiftEntryKit12EKAttributesV11WindowLevelO", "statusBar"]
+depends-nominal:
+- "13SwiftEntryKit12EKAttributesV9AnimationV"
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO"
+- "13SwiftEntryKit12EKAttributesV6BorderO"
+- "SL"
+- "13SwiftEntryKit12EKAttributesV11DisplayModeO"
+- "13SwiftEntryKit12EKAttributesV"
+- "SQ"
+- "SH"
+- "13SwiftEntryKit12EKAttributesV15LifecycleEventsV"
+- "13SwiftEntryKit12EKAttributesV26NotificationHapticFeedbackO"
+- "13SwiftEntryKit12EKAttributesV11PopBehaviorO"
+- "13SwiftEntryKit12EKAttributesV8PositionO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV"
+- "13SwiftEntryKit12EKAttributesV6ScrollO17PullbackAnimationV"
+- "SY"
+- "13SwiftEntryKit12EKAttributesV12RoundCornersO"
+- "13SwiftEntryKit12EKAttributesV6ScrollO"
+- "13SwiftEntryKit12EKAttributesV6ShadowO"
+- "13SwiftEntryKit12EKAttributesV9StatusBarO"
+- "13SwiftEntryKit12EKAttributesV15UserInteractionV"
+- "13SwiftEntryKit12EKAttributesV11WindowLevelO"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "27813112ce0fa0e9cda90d50c7c13d29"

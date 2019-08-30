@@ -1,0 +1,189 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "EKAnimation"
+- "EKRangeAnimation"
+provides-nominal:
+- "13SwiftEntryKit11EKAnimationP"
+- "13SwiftEntryKit16EKRangeAnimationP"
+- "13SwiftEntryKit12EKAttributesV9AnimationV"
+- "13SwiftEntryKit12EKAttributesV9AnimationV6SpringV"
+- "13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V"
+- "13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV"
+- "13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO"
+provides-member:
+- ["13SwiftEntryKit11EKAnimationP", ""]
+- ["13SwiftEntryKit16EKRangeAnimationP", ""]
+- ["13SwiftEntryKit12EKAttributesV", ""]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", ""]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV6SpringV", ""]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", ""]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", ""]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", ""]
+- ["13SwiftEntryKit12EKAttributesV", "Animation"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "+"
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- "CGFloat"
+- "EKAnimation"
+- "EKAttributes"
+- "EKRangeAnimation"
+- "TimeInterval"
+- !private "max"
+- !private "||"
+depends-member:
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "=="]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "__derived_enum_equals"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "_rawHashValue"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "automatic"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "bottom"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "hash"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "hashValue"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO", "top"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "Animation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "EKAnimation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "EKRangeAnimation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "RangeAnimation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "Spring"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "TimeInterval"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "Translate"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "containsAnimation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "containsFade"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "containsScale"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "containsTranslation"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "fade"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "init"]
+- !private ["13SwiftEntryKit12EKAttributesV9AnimationV", "max"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "maxDelay"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "maxDuration"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "none"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "scale"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "totalDuration"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "translate"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV", "translation"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["Se", "init"]
+- ["13SwiftEntryKit11EKAnimationP", "CGFloat"]
+- ["13SwiftEntryKit11EKAnimationP", "EKAttributes"]
+- ["13SwiftEntryKit11EKAnimationP", "TimeInterval"]
+- ["13SwiftEntryKit11EKAnimationP", ""]
+- !private ["13SwiftEntryKit11EKAnimationP", "anchorPosition"]
+- ["13SwiftEntryKit11EKAnimationP", "delay"]
+- ["13SwiftEntryKit11EKAnimationP", "duration"]
+- ["13SwiftEntryKit11EKAnimationP", "end"]
+- !private ["13SwiftEntryKit11EKAnimationP", "init"]
+- ["13SwiftEntryKit11EKAnimationP", "spring"]
+- ["13SwiftEntryKit11EKAnimationP", "start"]
+- ["13SwiftEntryKit12EKAttributesV", "Animation"]
+- ["13SwiftEntryKit12EKAttributesV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV", "EKAnimation"]
+- ["13SwiftEntryKit12EKAttributesV", "EKRangeAnimation"]
+- ["13SwiftEntryKit12EKAttributesV", "TimeInterval"]
+- !private ["13SwiftEntryKit12EKAttributesV", "max"]
+- ["13SwiftEntryKit16EKRangeAnimationP", "CGFloat"]
+- ["13SwiftEntryKit16EKRangeAnimationP", ""]
+- ["13SwiftEntryKit16EKRangeAnimationP", "delay"]
+- ["13SwiftEntryKit16EKRangeAnimationP", "duration"]
+- ["13SwiftEntryKit16EKRangeAnimationP", "end"]
+- ["13SwiftEntryKit16EKRangeAnimationP", "spring"]
+- ["13SwiftEntryKit16EKRangeAnimationP", "start"]
+- !private ["SE", "init"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "automatic"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "automatic"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "init"]
+- !private ["s6HasherV", "combine"]
+- !private ["Sq", "init"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "Spring"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "TimeInterval"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "delay"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "duration"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "end"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "init"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "spring"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V", "start"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV6SpringV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV6SpringV", "damping"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV6SpringV", "init"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV6SpringV", "initialVelocity"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "AnchorPosition"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "Spring"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "TimeInterval"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "anchorPosition"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "delay"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "duration"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "init"]
+- ["13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV", "spring"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+depends-nominal:
+- "13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV14AnchorPositionO"
+- "13SwiftEntryKit12EKAttributesV9AnimationV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "Se"
+- "13SwiftEntryKit11EKAnimationP"
+- "13SwiftEntryKit12EKAttributesV"
+- "13SwiftEntryKit16EKRangeAnimationP"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- !private "s6HasherV"
+- !private "Sq"
+- "13SwiftEntryKit12EKAttributesV9AnimationV05RangeE0V"
+- "13SwiftEntryKit12EKAttributesV9AnimationV6SpringV"
+- "13SwiftEntryKit12EKAttributesV9AnimationV9TranslateV"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "37950ce60f58131e51e71ee0bc46a90f"

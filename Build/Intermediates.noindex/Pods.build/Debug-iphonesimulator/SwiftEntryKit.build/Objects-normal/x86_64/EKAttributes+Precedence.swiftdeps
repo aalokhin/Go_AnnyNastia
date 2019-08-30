@@ -1,0 +1,341 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "=="
+- "<"
+provides-nominal:
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO"
+provides-member:
+- ["13SwiftEntryKit12EKAttributesV", ""]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", ""]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", ""]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", ""]
+- ["13SwiftEntryKit12EKAttributesV", "Precedence"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "maxRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "highRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "normalRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "lowRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "minRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "max"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "high"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "normal"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "low"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "min"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "&&"
+- "<"
+- "<="
+- "=="
+- ">"
+- ">="
+- "AssignmentPrecedence"
+- "Bool"
+- "Comparable"
+- "EKAttributes"
+- !private "EKEntryChronologicalQueue"
+- !private "EKEntryPriorityQueue"
+- "EntryCachingHeuristic"
+- "Equatable"
+- "Hashable"
+- "Int"
+- "RawRepresentable"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "assert"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "EKAttributes"]
+- !private ["s18AdditiveArithmeticP", "isValidDisplayPriority"]
+- !private ["Sz", "EKAttributes"]
+- !private ["Sz", "isValidDisplayPriority"]
+- !private ["s7CVarArgP", "EKAttributes"]
+- !private ["s7CVarArgP", "isValidDisplayPriority"]
+- ["SL", "<"]
+- ["SL", "<="]
+- ["SL", "=="]
+- ["SL", ">"]
+- ["SL", ">="]
+- ["SL", "EKAttributes"]
+- !private ["SL", "Priority"]
+- ["SL", "RawValue"]
+- ["SL", ""]
+- ["SL", "_Default_RawValue"]
+- ["SL", "_rawHashValue"]
+- !private ["SL", "assert"]
+- ["SL", "hash"]
+- ["SL", "hashValue"]
+- ["SL", "highRawValue"]
+- ["SL", "init"]
+- !private ["SL", "isValidDisplayPriority"]
+- ["SL", "lowRawValue"]
+- ["SL", "maxRawValue"]
+- ["SL", "minRawValue"]
+- ["SL", "normalRawValue"]
+- ["SL", "rawValue"]
+- !private ["s17CustomReflectableP", "EKAttributes"]
+- !private ["s17CustomReflectableP", "isValidDisplayPriority"]
+- !private ["s23CustomStringConvertibleP", "EKAttributes"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
+- !private ["s23CustomStringConvertibleP", "isValidDisplayPriority"]
+- !private ["Se", "EKAttributes"]
+- !private ["Se", "isValidDisplayPriority"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
+- ["13SwiftEntryKit12EKAttributesV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV", "Comparable"]
+- !private ["13SwiftEntryKit12EKAttributesV", "EKEntryChronologicalQueue"]
+- !private ["13SwiftEntryKit12EKAttributesV", "EKEntryPriorityQueue"]
+- ["13SwiftEntryKit12EKAttributesV", "EntryCachingHeuristic"]
+- ["13SwiftEntryKit12EKAttributesV", "Equatable"]
+- ["13SwiftEntryKit12EKAttributesV", "Hashable"]
+- ["13SwiftEntryKit12EKAttributesV", "Int"]
+- ["13SwiftEntryKit12EKAttributesV", "Precedence"]
+- ["13SwiftEntryKit12EKAttributesV", "RawRepresentable"]
+- !private ["13SwiftEntryKit12EKAttributesV", "assert"]
+- !private ["13SwiftEntryKit25EKEntryChronologicalQueueC", "deinit"]
+- !private ["13SwiftEntryKit25EKEntryChronologicalQueueC", "init"]
+- !private ["13SwiftEntryKit20EKEntryPriorityQueueC", "deinit"]
+- !private ["13SwiftEntryKit20EKEntryPriorityQueueC", "init"]
+- !private ["SE", "EKAttributes"]
+- !private ["SE", "isValidDisplayPriority"]
+- !private ["13SwiftEntryKit0B16CachingHeuristicP", "init"]
+- ["SQ", "<"]
+- ["SQ", "<="]
+- ["SQ", "=="]
+- ["SQ", ">"]
+- ["SQ", ">="]
+- ["SQ", "EKAttributes"]
+- !private ["SQ", "EKEntryChronologicalQueue"]
+- !private ["SQ", "EKEntryPriorityQueue"]
+- !private ["SQ", "Priority"]
+- ["SQ", "QueueingHeuristic"]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "assert"]
+- ["SQ", "chronological"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "highRawValue"]
+- ["SQ", "init"]
+- !private ["SQ", "isValidDisplayPriority"]
+- ["SQ", "lowRawValue"]
+- ["SQ", "maxRawValue"]
+- ["SQ", "minRawValue"]
+- ["SQ", "normalRawValue"]
+- ["SQ", "priority"]
+- ["SQ", "rawValue"]
+- !private ["s27ExpressibleByIntegerLiteralP", "EKAttributes"]
+- !private ["s27ExpressibleByIntegerLiteralP", "isValidDisplayPriority"]
+- !private ["s17FixedWidthIntegerP", "EKAttributes"]
+- !private ["s17FixedWidthIntegerP", "isValidDisplayPriority"]
+- ["SH", "<"]
+- ["SH", "<="]
+- ["SH", "=="]
+- ["SH", ">"]
+- ["SH", ">="]
+- ["SH", "EKAttributes"]
+- !private ["SH", "EKEntryChronologicalQueue"]
+- !private ["SH", "EKEntryPriorityQueue"]
+- !private ["SH", "Priority"]
+- ["SH", "QueueingHeuristic"]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "assert"]
+- ["SH", "chronological"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "highRawValue"]
+- ["SH", "init"]
+- !private ["SH", "isValidDisplayPriority"]
+- ["SH", "lowRawValue"]
+- ["SH", "maxRawValue"]
+- ["SH", "minRawValue"]
+- ["SH", "normalRawValue"]
+- ["SH", "priority"]
+- ["SH", "rawValue"]
+- !private ["s6HasherV", "combine"]
+- ["Si", "Bool"]
+- !private ["Si", "EKAttributes"]
+- !private ["Si", "isValidDisplayPriority"]
+- !private ["s25LosslessStringConvertibleP", "EKAttributes"]
+- !private ["s25LosslessStringConvertibleP", "isValidDisplayPriority"]
+- !private ["s10MirrorPathP", "EKAttributes"]
+- !private ["s10MirrorPathP", "isValidDisplayPriority"]
+- !private ["Sj", "EKAttributes"]
+- !private ["Sj", "isValidDisplayPriority"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Comparable"]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "EKEntryChronologicalQueue"]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "EKEntryPriorityQueue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "EntryCachingHeuristic"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Equatable"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Hashable"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Int"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Priority"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "QueueingHeuristic"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "RawRepresentable"]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "assert"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "enqueue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "isEnqueue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "override"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "priority"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "<"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "<="]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "=="]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", ">"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", ">="]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "EKAttributes"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "Int"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "Priority"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "RawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "_Default_RawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "_rawHashValue"]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "assert"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "hash"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "hashValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "high"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "highRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "init"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "low"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "lowRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "max"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "maxRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "min"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "minRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "normal"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "normalRawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV", "rawValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "=="]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "EKEntryChronologicalQueue"]
+- !private ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "EKEntryPriorityQueue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "EntryCachingHeuristic"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "QueueingHeuristic"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "__derived_enum_equals"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "_rawHashValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "chronological"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "hash"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "hashValue"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "heuristic"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "priority"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO", "value"]
+- ["SY", "<"]
+- ["SY", "<="]
+- ["SY", "=="]
+- ["SY", ">"]
+- ["SY", ">="]
+- ["SY", "EKAttributes"]
+- !private ["SY", "Priority"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "assert"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "highRawValue"]
+- ["SY", "init"]
+- ["SY", "lowRawValue"]
+- ["SY", "maxRawValue"]
+- ["SY", "minRawValue"]
+- ["SY", "normalRawValue"]
+- ["SY", "rawValue"]
+- !private ["s10SIMDScalarP", "EKAttributes"]
+- !private ["s10SIMDScalarP", "isValidDisplayPriority"]
+- !private ["SZ", "EKAttributes"]
+- !private ["SZ", "isValidDisplayPriority"]
+- !private ["s13SignedNumericP", "EKAttributes"]
+- !private ["s13SignedNumericP", "isValidDisplayPriority"]
+- !private ["Sx", "EKAttributes"]
+- !private ["Sx", "isValidDisplayPriority"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "EKAttributes"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "isValidDisplayPriority"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "EKAttributes"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "isValidDisplayPriority"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "EKAttributes"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isValidDisplayPriority"]
+- !private ["s21_ObjectiveCBridgeableP", "EKAttributes"]
+- !private ["s21_ObjectiveCBridgeableP", "isValidDisplayPriority"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sz"
+- !private "s7CVarArgP"
+- "SL"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
+- "13SwiftEntryKit12EKAttributesV"
+- !private "13SwiftEntryKit25EKEntryChronologicalQueueC"
+- !private "13SwiftEntryKit20EKEntryPriorityQueueC"
+- !private "SE"
+- !private "13SwiftEntryKit0B16CachingHeuristicP"
+- "SQ"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "s6HasherV"
+- "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "Sj"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO8PriorityV"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO17QueueingHeuristicO"
+- "SY"
+- !private "s10SIMDScalarP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "acc29eb6e18bb5e2f2021acb7deb160a"

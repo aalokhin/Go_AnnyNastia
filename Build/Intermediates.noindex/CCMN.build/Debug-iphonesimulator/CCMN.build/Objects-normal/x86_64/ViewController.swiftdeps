@@ -7,7 +7,6 @@ provides-member:
 - ["4CCMN14ViewControllerC", ""]
 provides-dynamic-lookup:
 - "goToVisualization"
-- "imageMap"
 - "locationButtonTapped"
 - "prepare"
 - "viewDidAppear"
@@ -33,7 +32,6 @@ depends-top-level:
 - "String"
 - "StringLiteralType"
 - "UIButton"
-- "UIImageView"
 - "UIStoryboardSegue"
 - "UIViewController"
 - "UnicodeScalarType"
@@ -49,7 +47,6 @@ depends-member:
 - !private ["SK", "init"]
 - !private ["SK", "subscript"]
 - !private ["SK", "toInt"]
-- !private ["So15CALayerDelegateP", "image"]
 - !private ["s7CVarArgP", "Client"]
 - ["s7CVarArgP", "Date"]
 - !private ["s7CVarArgP", "JSONDecoder"]
@@ -63,8 +60,6 @@ depends-member:
 - !private ["s7CVarArgP", "endDate"]
 - !private ["s7CVarArgP", "getSiteID"]
 - !private ["s7CVarArgP", "identifier"]
-- !private ["s7CVarArgP", "image"]
-- !private ["s7CVarArgP", "imageMap"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "jsonObject"]
 - !private ["s7CVarArgP", "locationEndpoints"]
@@ -103,8 +98,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "endDate"]
 - !private ["s28CustomDebugStringConvertibleP", "getSiteID"]
 - !private ["s28CustomDebugStringConvertibleP", "identifier"]
-- !private ["s28CustomDebugStringConvertibleP", "image"]
-- !private ["s28CustomDebugStringConvertibleP", "imageMap"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
 - !private ["s28CustomDebugStringConvertibleP", "locationEndpoints"]
@@ -119,7 +112,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "toStringDefault"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s17CustomReflectableP", "append"]
-- !private ["s17CustomReflectableP", "image"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s17CustomReflectableP", "toInt"]
@@ -139,8 +131,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "endDate"]
 - !private ["s23CustomStringConvertibleP", "getSiteID"]
 - !private ["s23CustomStringConvertibleP", "identifier"]
-- !private ["s23CustomStringConvertibleP", "image"]
-- !private ["s23CustomStringConvertibleP", "imageMap"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "jsonObject"]
 - !private ["s23CustomStringConvertibleP", "locationEndpoints"]
@@ -161,7 +151,6 @@ depends-member:
 - ["10Foundation4DateV", "toStringDefault"]
 - !private ["Se", "aesUidString"]
 - !private ["Se", "append"]
-- !private ["Se", "image"]
 - ["Se", "init"]
 - !private ["Se", "subscript"]
 - !private ["Se", "toInt"]
@@ -169,7 +158,6 @@ depends-member:
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SE", "append"]
-- !private ["SE", "image"]
 - ["SE", "init"]
 - !private ["SE", "subscript"]
 - !private ["SE", "toInt"]
@@ -192,8 +180,6 @@ depends-member:
 - !private ["SQ", "get"]
 - !private ["SQ", "getSiteID"]
 - !private ["SQ", "identifier"]
-- !private ["SQ", "image"]
-- !private ["SQ", "imageMap"]
 - ["SQ", "init"]
 - !private ["SQ", "jsonObject"]
 - !private ["SQ", "locationEndpoints"]
@@ -214,7 +200,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "toInt"]
-- !private ["s23ExpressibleByNilLiteralP", "image"]
 - !private ["s32ExpressibleByStringInterpolationP", "init"]
 - !private ["s32ExpressibleByStringInterpolationP", "toInt"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
@@ -239,8 +224,6 @@ depends-member:
 - !private ["SH", "get"]
 - !private ["SH", "getSiteID"]
 - !private ["SH", "identifier"]
-- !private ["SH", "image"]
-- !private ["SH", "imageMap"]
 - ["SH", "init"]
 - !private ["SH", "jsonObject"]
 - !private ["SH", "locationEndpoints"]
@@ -278,8 +261,6 @@ depends-member:
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "endDate"]
 - !private ["So8NSCodingP", "getSiteID"]
-- !private ["So8NSCodingP", "image"]
-- !private ["So8NSCodingP", "imageMap"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "locationEndpoints"]
 - !private ["So8NSCodingP", "mapJSON"]
@@ -302,7 +283,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "endDate"]
 - !private ["So26NSExtensionRequestHandlingP", "getSiteID"]
-- !private ["So26NSExtensionRequestHandlingP", "imageMap"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "locationEndpoints"]
 - !private ["So26NSExtensionRequestHandlingP", "mapJSON"]
@@ -327,7 +307,6 @@ depends-member:
 - !private ["So8NSObjectC", "SiteID"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIButton"]
-- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UIStoryboardSegue"]
 - ["So8NSObjectC", "endDate"]
 - ["So8NSObjectC", "forToday"]
@@ -336,8 +315,6 @@ depends-member:
 - ["So8NSObjectC", "getSiteID"]
 - ["So8NSObjectC", "goToVisualization"]
 - !private ["So8NSObjectC", "identifier"]
-- !private ["So8NSObjectC", "image"]
-- ["So8NSObjectC", "imageMap"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "jsonObject"]
 - ["So8NSObjectC", "locationButtonTapped"]
@@ -365,8 +342,6 @@ depends-member:
 - !private ["So8NSObjectP", "endDate"]
 - !private ["So8NSObjectP", "getSiteID"]
 - !private ["So8NSObjectP", "identifier"]
-- !private ["So8NSObjectP", "image"]
-- !private ["So8NSObjectP", "imageMap"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "jsonObject"]
 - !private ["So8NSObjectP", "locationEndpoints"]
@@ -382,7 +357,6 @@ depends-member:
 - !private ["So8NSStringC", "toInt"]
 - !private ["4CCMN14NetworkManagerC", "getImage"]
 - !private ["4CCMN14NetworkManagerC", "getRequestData"]
-- !private ["Sq", "image"]
 - !private ["4CCMN17PresenceEndpointsO", "connectedDevicesUntilNow"]
 - !private ["4CCMN17PresenceEndpointsO", "deinit"]
 - !private ["4CCMN17PresenceEndpointsO", "rawValue"]
@@ -418,9 +392,6 @@ depends-member:
 - !private ["s16TextOutputStreamP", "toInt"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "toInt"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
-- !private ["So29UIAccessibilityIdentificationP", "image"]
-- !private ["So12UIAppearanceP", "image"]
 - !private ["So21UIAppearanceContainerP", "Client"]
 - ["So21UIAppearanceContainerP", "Date"]
 - !private ["So21UIAppearanceContainerP", "JSONDecoder"]
@@ -432,8 +403,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "endDate"]
 - !private ["So21UIAppearanceContainerP", "getSiteID"]
-- !private ["So21UIAppearanceContainerP", "image"]
-- !private ["So21UIAppearanceContainerP", "imageMap"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "locationEndpoints"]
 - !private ["So21UIAppearanceContainerP", "mapJSON"]
@@ -454,7 +423,6 @@ depends-member:
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "endDate"]
 - !private ["So18UIContentContainerP", "getSiteID"]
-- !private ["So18UIContentContainerP", "imageMap"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "locationEndpoints"]
 - !private ["So18UIContentContainerP", "mapJSON"]
@@ -464,8 +432,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "startDate"]
 - !private ["So18UIContentContainerP", "testPresenceConnect"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
-- !private ["So17UICoordinateSpaceP", "image"]
-- !private ["So13UIDynamicItemP", "image"]
 - !private ["So18UIFocusEnvironmentP", "Client"]
 - ["So18UIFocusEnvironmentP", "Date"]
 - !private ["So18UIFocusEnvironmentP", "JSONDecoder"]
@@ -477,8 +443,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "endDate"]
 - !private ["So18UIFocusEnvironmentP", "getSiteID"]
-- !private ["So18UIFocusEnvironmentP", "image"]
-- !private ["So18UIFocusEnvironmentP", "imageMap"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "locationEndpoints"]
 - !private ["So18UIFocusEnvironmentP", "mapJSON"]
@@ -488,9 +452,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "startDate"]
 - !private ["So18UIFocusEnvironmentP", "testPresenceConnect"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
-- !private ["So11UIFocusItemP", "image"]
-- !private ["So20UIFocusItemContainerP", "image"]
-- !private ["So11UIImageViewC", "image"]
 - !private ["So30UIPasteConfigurationSupportingP", "Client"]
 - ["So30UIPasteConfigurationSupportingP", "Date"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONDecoder"]
@@ -502,8 +463,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "endDate"]
 - !private ["So30UIPasteConfigurationSupportingP", "getSiteID"]
-- !private ["So30UIPasteConfigurationSupportingP", "image"]
-- !private ["So30UIPasteConfigurationSupportingP", "imageMap"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "locationEndpoints"]
 - !private ["So30UIPasteConfigurationSupportingP", "mapJSON"]
@@ -525,7 +484,6 @@ depends-member:
 - !private ["So11UIResponderC", "SiteID"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIButton"]
-- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UIStoryboardSegue"]
 - ["So11UIResponderC", "endDate"]
 - ["So11UIResponderC", "forToday"]
@@ -533,8 +491,6 @@ depends-member:
 - ["So11UIResponderC", "getInit"]
 - ["So11UIResponderC", "getSiteID"]
 - ["So11UIResponderC", "goToVisualization"]
-- !private ["So11UIResponderC", "image"]
-- ["So11UIResponderC", "imageMap"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "locationButtonTapped"]
 - !private ["So11UIResponderC", "locationEndpoints"]
@@ -559,8 +515,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "endDate"]
 - !private ["So30UIResponderStandardEditActionsP", "getSiteID"]
-- !private ["So30UIResponderStandardEditActionsP", "image"]
-- !private ["So30UIResponderStandardEditActionsP", "imageMap"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "locationEndpoints"]
 - !private ["So30UIResponderStandardEditActionsP", "mapJSON"]
@@ -581,7 +535,6 @@ depends-member:
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "endDate"]
 - !private ["So16UIStateRestoringP", "getSiteID"]
-- !private ["So16UIStateRestoringP", "imageMap"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "locationEndpoints"]
 - !private ["So16UIStateRestoringP", "mapJSON"]
@@ -603,8 +556,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "endDate"]
 - !private ["So18UITraitEnvironmentP", "getSiteID"]
-- !private ["So18UITraitEnvironmentP", "image"]
-- !private ["So18UITraitEnvironmentP", "imageMap"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "locationEndpoints"]
 - !private ["So18UITraitEnvironmentP", "mapJSON"]
@@ -625,8 +576,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "endDate"]
 - !private ["So23UIUserActivityRestoringP", "getSiteID"]
-- !private ["So23UIUserActivityRestoringP", "image"]
-- !private ["So23UIUserActivityRestoringP", "imageMap"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "locationEndpoints"]
 - !private ["So23UIUserActivityRestoringP", "mapJSON"]
@@ -636,7 +585,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "startDate"]
 - !private ["So23UIUserActivityRestoringP", "testPresenceConnect"]
 - !private ["So23UIUserActivityRestoringP", "viewDidLoad"]
-- !private ["So6UIViewC", "image"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "Client"]
 - ["So16UIViewControllerC", "Date"]
@@ -649,7 +597,6 @@ depends-member:
 - !private ["So16UIViewControllerC", "SiteID"]
 - ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UIButton"]
-- ["So16UIViewControllerC", "UIImageView"]
 - ["So16UIViewControllerC", "UIStoryboardSegue"]
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "endDate"]
@@ -658,7 +605,6 @@ depends-member:
 - ["So16UIViewControllerC", "getInit"]
 - ["So16UIViewControllerC", "getSiteID"]
 - ["So16UIViewControllerC", "goToVisualization"]
-- ["So16UIViewControllerC", "imageMap"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "locationButtonTapped"]
 - !private ["So16UIViewControllerC", "locationEndpoints"]
@@ -686,7 +632,6 @@ depends-member:
 - !private ["4CCMN14ViewControllerC", "SiteID"]
 - ["4CCMN14ViewControllerC", "String"]
 - ["4CCMN14ViewControllerC", "UIButton"]
-- ["4CCMN14ViewControllerC", "UIImageView"]
 - ["4CCMN14ViewControllerC", "UIStoryboardSegue"]
 - ["4CCMN14ViewControllerC", "deinit"]
 - ["4CCMN14ViewControllerC", "endDate"]
@@ -695,7 +640,6 @@ depends-member:
 - ["4CCMN14ViewControllerC", "getInit"]
 - ["4CCMN14ViewControllerC", "getSiteID"]
 - ["4CCMN14ViewControllerC", "goToVisualization"]
-- ["4CCMN14ViewControllerC", "imageMap"]
 - ["4CCMN14ViewControllerC", "init"]
 - ["4CCMN14ViewControllerC", "locationButtonTapped"]
 - !private ["4CCMN14ViewControllerC", "locationEndpoints"]
@@ -741,8 +685,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "getSiteID"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "image"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "imageMap"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "locationEndpoints"]
@@ -755,12 +697,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "toInt"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
-- !private ["s21_ObjectiveCBridgeableP", "image"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "toInt"]
 - ["s21_ObjectiveCBridgeableP", "toStringDefault"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
 - !private ["4CCMN17locationEndpointsO", "allFloors"]
 - !private ["4CCMN17locationEndpointsO", "clientsCount"]
 - !private ["4CCMN17locationEndpointsO", "deinit"]
@@ -769,7 +709,6 @@ depends-member:
 depends-nominal:
 - !private "Sa"
 - !private "SK"
-- !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "4CCMN6ClientC"
 - !private "Sl"
@@ -788,7 +727,6 @@ depends-nominal:
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s23ExpressibleByNilLiteralP"
 - !private "s32ExpressibleByStringInterpolationP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
@@ -811,7 +749,6 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "4CCMN14NetworkManagerC"
-- !private "Sq"
 - !private "4CCMN17PresenceEndpointsO"
 - !private "Sk"
 - !private "Sm"
@@ -824,17 +761,9 @@ depends-nominal:
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
-- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
-- !private "So29UIAccessibilityIdentificationP"
-- !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
-- !private "So17UICoordinateSpaceP"
-- !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
-- !private "So11UIFocusItemP"
-- !private "So20UIFocusItemContainerP"
-- !private "So11UIImageViewC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -842,7 +771,6 @@ depends-nominal:
 - !private "So17UIStoryboardSegueC"
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
-- !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "9Alamofire14URLConvertibleP"
 - "4CCMN14ViewControllerC"
@@ -856,13 +784,14 @@ depends-nominal:
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
-- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 - !private "4CCMN17locationEndpointsO"
 - !private "4CCMN7mapJSONC"
 depends-dynamic-lookup:
 depends-external:
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64.swiftmodule"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/SwiftEntryKit.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
@@ -875,12 +804,20 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire-umbrella.h"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Charts-umbrella.h"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/Swift Compatibility Header/SwiftEntryKit-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
 - "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
@@ -893,4 +830,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "cfc4bf9c55872e334f09968d2a150d07"
+interface-hash: "16d628e44134a4fede82f7005b050a6a"

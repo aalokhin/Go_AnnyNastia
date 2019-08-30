@@ -1,0 +1,99 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "13SwiftEntryKit12EKAttributesV12RoundCornersO"
+- "13SwiftEntryKit12EKAttributesV6BorderO"
+provides-member:
+- ["13SwiftEntryKit12EKAttributesV", ""]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", ""]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", ""]
+- ["13SwiftEntryKit12EKAttributesV", "RoundCorners"]
+- ["13SwiftEntryKit12EKAttributesV", "Border"]
+provides-dynamic-lookup:
+depends-top-level:
+- "Bool"
+- "CGFloat"
+- "EKAttributes"
+- "UIColor"
+- "UIRectCorner"
+depends-member:
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "UIColor"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "borderValues"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "hasBorder"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "none"]
+- ["13SwiftEntryKit12EKAttributesV6BorderO", "value"]
+- ["13SwiftEntryKit12EKAttributesV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV", "Border"]
+- ["13SwiftEntryKit12EKAttributesV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV", "RoundCorners"]
+- ["13SwiftEntryKit12EKAttributesV", "UIColor"]
+- ["13SwiftEntryKit12EKAttributesV", "UIRectCorner"]
+- !private ["SQ", "allCorners"]
+- !private ["SQ", "bottom"]
+- !private ["SQ", "top"]
+- !private ["s25ExpressibleByArrayLiteralP", "allCorners"]
+- !private ["s25ExpressibleByArrayLiteralP", "bottom"]
+- !private ["s25ExpressibleByArrayLiteralP", "top"]
+- !private ["s9OptionSetP", "allCorners"]
+- !private ["s9OptionSetP", "bottom"]
+- !private ["s9OptionSetP", "top"]
+- !private ["SY", "allCorners"]
+- !private ["SY", "bottom"]
+- !private ["SY", "top"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "UIRectCorner"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "all"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "bottom"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "cornerValues"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "hasRoundCorners"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "none"]
+- ["13SwiftEntryKit12EKAttributesV12RoundCornersO", "top"]
+- !private ["s10SetAlgebraP", "allCorners"]
+- !private ["s10SetAlgebraP", "bottom"]
+- !private ["s10SetAlgebraP", "top"]
+- !private ["So12UIRectCornerV", "allCorners"]
+- !private ["So12UIRectCornerV", "bottom"]
+- !private ["So12UIRectCornerV", "top"]
+depends-nominal:
+- "13SwiftEntryKit12EKAttributesV6BorderO"
+- "13SwiftEntryKit12EKAttributesV"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s9OptionSetP"
+- !private "SY"
+- "13SwiftEntryKit12EKAttributesV12RoundCornersO"
+- !private "s10SetAlgebraP"
+- !private "So12UIRectCornerV"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f4c134531903a0559ef26da8c22bda83"

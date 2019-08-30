@@ -1,0 +1,535 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ClientJSON"
+- "ImageJSON"
+- "MapInfo"
+- "MapCoordinate"
+provides-nominal:
+- "4CCMN10ClientJSONC"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN9ImageJSONC"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN7MapInfoC"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN13MapCoordinateC"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+provides-member:
+- ["4CCMN10ClientJSONC", ""]
+- ["4CCMN10ClientJSONC10CodingKeysO", ""]
+- ["4CCMN9ImageJSONC", ""]
+- ["4CCMN9ImageJSONC10CodingKeysO", ""]
+- ["4CCMN7MapInfoC", ""]
+- ["4CCMN7MapInfoC10CodingKeysO", ""]
+- ["4CCMN13MapCoordinateC", ""]
+- ["4CCMN13MapCoordinateC10CodingKeysO", ""]
+- ["4CCMN10ClientJSONC", "printAll"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- !private "??"
+- "AssignmentPrecedence"
+- "ClientJSON"
+- "CodingKey"
+- "Decodable"
+- "Decoder"
+- "Double"
+- "ImageJSON"
+- "Int"
+- "MapCoordinate"
+- "MapInfo"
+- "String"
+- !private "_findStringSwitchCase"
+- !private "print"
+- !private "~="
+depends-member:
+- ["4CCMN10ClientJSONC", "CodingKey"]
+- ["4CCMN10ClientJSONC", "CodingKeys"]
+- ["4CCMN10ClientJSONC", "Decoder"]
+- ["4CCMN10ClientJSONC", "MapCoordinate"]
+- ["4CCMN10ClientJSONC", "MapInfo"]
+- ["4CCMN10ClientJSONC", "String"]
+- !private ["4CCMN10ClientJSONC", "_findStringSwitchCase"]
+- ["4CCMN10ClientJSONC", "apMacAddress"]
+- ["4CCMN10ClientJSONC", "deinit"]
+- ["4CCMN10ClientJSONC", "init"]
+- ["4CCMN10ClientJSONC", "macAddress"]
+- ["4CCMN10ClientJSONC", "manufacturer"]
+- ["4CCMN10ClientJSONC", "mapCoordinate"]
+- ["4CCMN10ClientJSONC", "mapInfo"]
+- !private ["4CCMN10ClientJSONC", "print"]
+- ["4CCMN10ClientJSONC", "printAll"]
+- ["4CCMN10ClientJSONC", "userName"]
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- !private ["s9CodingKeyP", "apMacAddress"]
+- !private ["s9CodingKeyP", "colorDepth"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- !private ["s9CodingKeyP", "floorRefId"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- !private ["s9CodingKeyP", "height"]
+- !private ["s9CodingKeyP", "image"]
+- !private ["s9CodingKeyP", "imageName"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- !private ["s9CodingKeyP", "macAddress"]
+- !private ["s9CodingKeyP", "manufacturer"]
+- !private ["s9CodingKeyP", "mapCoordinate"]
+- !private ["s9CodingKeyP", "mapHierarchyString"]
+- !private ["s9CodingKeyP", "mapInfo"]
+- !private ["s9CodingKeyP", "maxResolution"]
+- ["s9CodingKeyP", "rawValue"]
+- !private ["s9CodingKeyP", "size"]
+- ["s9CodingKeyP", "stringValue"]
+- !private ["s9CodingKeyP", "unit"]
+- !private ["s9CodingKeyP", "userName"]
+- !private ["s9CodingKeyP", "width"]
+- !private ["s9CodingKeyP", "x"]
+- !private ["s9CodingKeyP", "y"]
+- !private ["s9CodingKeyP", "z"]
+- !private ["s9CodingKeyP", "zoomLevel"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "=="]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "=="]
+- ["4CCMN7MapInfoC10CodingKeysO", "=="]
+- ["4CCMN9ImageJSONC10CodingKeysO", "=="]
+- ["4CCMN10ClientJSONC10CodingKeysO", "RawValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "RawValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "RawValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "RawValue"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "_Default_RawValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "_Default_RawValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "_Default_RawValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "_Default_RawValue"]
+- !private ["4CCMN10ClientJSONC10CodingKeysO", "_findStringSwitchCase"]
+- !private ["4CCMN13MapCoordinateC10CodingKeysO", "_findStringSwitchCase"]
+- !private ["4CCMN7MapInfoC10CodingKeysO", "_findStringSwitchCase"]
+- !private ["4CCMN9ImageJSONC10CodingKeysO", "_findStringSwitchCase"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "_rawHashValue"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "apMacAddress"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "colorDepth"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "debugDescription"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "debugDescription"]
+- ["4CCMN7MapInfoC10CodingKeysO", "debugDescription"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "debugDescription"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "deinit"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "deinit"]
+- ["4CCMN7MapInfoC10CodingKeysO", "deinit"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "deinit"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "description"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "description"]
+- ["4CCMN7MapInfoC10CodingKeysO", "description"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "description"]
+- ["4CCMN7MapInfoC10CodingKeysO", "floorRefId"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "hash"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "hash"]
+- ["4CCMN7MapInfoC10CodingKeysO", "hash"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "hash"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "hashValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "hashValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "hashValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "hashValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "height"]
+- ["4CCMN7MapInfoC10CodingKeysO", "image"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "imageName"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "init"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "init"]
+- ["4CCMN7MapInfoC10CodingKeysO", "init"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "init"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "intValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "intValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "intValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "intValue"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "macAddress"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "manufacturer"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "mapCoordinate"]
+- ["4CCMN7MapInfoC10CodingKeysO", "mapHierarchyString"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "mapInfo"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "maxResolution"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "rawValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "rawValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "rawValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "rawValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "size"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "stringValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "stringValue"]
+- ["4CCMN7MapInfoC10CodingKeysO", "stringValue"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "stringValue"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "unit"]
+- ["4CCMN10ClientJSONC10CodingKeysO", "userName"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "width"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "x"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "y"]
+- ["4CCMN13MapCoordinateC10CodingKeysO", "z"]
+- ["4CCMN9ImageJSONC10CodingKeysO", "zoomLevel"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "apMacAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "colorDepth"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "floorRefId"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "image"]
+- !private ["s28CustomDebugStringConvertibleP", "imageName"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "macAddress"]
+- !private ["s28CustomDebugStringConvertibleP", "manufacturer"]
+- !private ["s28CustomDebugStringConvertibleP", "mapCoordinate"]
+- !private ["s28CustomDebugStringConvertibleP", "mapHierarchyString"]
+- !private ["s28CustomDebugStringConvertibleP", "mapInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "maxResolution"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "unit"]
+- !private ["s28CustomDebugStringConvertibleP", "userName"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s28CustomDebugStringConvertibleP", "z"]
+- !private ["s28CustomDebugStringConvertibleP", "zoomLevel"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "apMacAddress"]
+- !private ["s23CustomStringConvertibleP", "colorDepth"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "floorRefId"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- !private ["s23CustomStringConvertibleP", "height"]
+- !private ["s23CustomStringConvertibleP", "image"]
+- !private ["s23CustomStringConvertibleP", "imageName"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "macAddress"]
+- !private ["s23CustomStringConvertibleP", "manufacturer"]
+- !private ["s23CustomStringConvertibleP", "mapCoordinate"]
+- !private ["s23CustomStringConvertibleP", "mapHierarchyString"]
+- !private ["s23CustomStringConvertibleP", "mapInfo"]
+- !private ["s23CustomStringConvertibleP", "maxResolution"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- !private ["s23CustomStringConvertibleP", "size"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "unit"]
+- !private ["s23CustomStringConvertibleP", "userName"]
+- !private ["s23CustomStringConvertibleP", "width"]
+- !private ["s23CustomStringConvertibleP", "x"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- !private ["s23CustomStringConvertibleP", "z"]
+- !private ["s23CustomStringConvertibleP", "zoomLevel"]
+- !private ["Se", "CodingKeys"]
+- !private ["Se", "Double"]
+- !private ["Se", "ImageJSON"]
+- !private ["Se", "Int"]
+- !private ["Se", "MapCoordinate"]
+- !private ["Se", "MapInfo"]
+- !private ["Se", "String"]
+- ["Se", ""]
+- !private ["Se", "_findStringSwitchCase"]
+- !private ["Se", "apMacAddress"]
+- !private ["Se", "colorDepth"]
+- !private ["Se", "floorRefId"]
+- !private ["Se", "height"]
+- !private ["Se", "image"]
+- !private ["Se", "imageName"]
+- ["Se", "init"]
+- !private ["Se", "macAddress"]
+- !private ["Se", "manufacturer"]
+- !private ["Se", "mapCoordinate"]
+- !private ["Se", "mapHierarchyString"]
+- !private ["Se", "mapInfo"]
+- !private ["Se", "maxResolution"]
+- !private ["Se", "print"]
+- !private ["Se", "size"]
+- !private ["Se", "unit"]
+- !private ["Se", "userName"]
+- !private ["Se", "width"]
+- !private ["Se", "x"]
+- !private ["Se", "y"]
+- !private ["Se", "z"]
+- !private ["Se", "zoomLevel"]
+- !private ["s7DecoderP", "container"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "apMacAddress"]
+- !private ["SQ", "colorDepth"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- !private ["SQ", "floorRefId"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "height"]
+- !private ["SQ", "image"]
+- !private ["SQ", "imageName"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- !private ["SQ", "macAddress"]
+- !private ["SQ", "manufacturer"]
+- !private ["SQ", "mapCoordinate"]
+- !private ["SQ", "mapHierarchyString"]
+- !private ["SQ", "mapInfo"]
+- !private ["SQ", "maxResolution"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "size"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "unit"]
+- !private ["SQ", "userName"]
+- !private ["SQ", "width"]
+- !private ["SQ", "x"]
+- !private ["SQ", "y"]
+- !private ["SQ", "z"]
+- !private ["SQ", "zoomLevel"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "apMacAddress"]
+- !private ["SH", "colorDepth"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- !private ["SH", "floorRefId"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "height"]
+- !private ["SH", "image"]
+- !private ["SH", "imageName"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- !private ["SH", "macAddress"]
+- !private ["SH", "manufacturer"]
+- !private ["SH", "mapCoordinate"]
+- !private ["SH", "mapHierarchyString"]
+- !private ["SH", "mapInfo"]
+- !private ["SH", "maxResolution"]
+- ["SH", "rawValue"]
+- !private ["SH", "size"]
+- ["SH", "stringValue"]
+- !private ["SH", "unit"]
+- !private ["SH", "userName"]
+- !private ["SH", "width"]
+- !private ["SH", "x"]
+- !private ["SH", "y"]
+- !private ["SH", "z"]
+- !private ["SH", "zoomLevel"]
+- ["4CCMN9ImageJSONC", "CodingKey"]
+- ["4CCMN9ImageJSONC", "CodingKeys"]
+- ["4CCMN9ImageJSONC", "Decoder"]
+- ["4CCMN9ImageJSONC", "Int"]
+- ["4CCMN9ImageJSONC", "String"]
+- !private ["4CCMN9ImageJSONC", "_findStringSwitchCase"]
+- ["4CCMN9ImageJSONC", "colorDepth"]
+- ["4CCMN9ImageJSONC", "deinit"]
+- ["4CCMN9ImageJSONC", "height"]
+- ["4CCMN9ImageJSONC", "imageName"]
+- ["4CCMN9ImageJSONC", "init"]
+- ["4CCMN9ImageJSONC", "maxResolution"]
+- ["4CCMN9ImageJSONC", "size"]
+- ["4CCMN9ImageJSONC", "width"]
+- ["4CCMN9ImageJSONC", "zoomLevel"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- ["4CCMN13MapCoordinateC", "CodingKey"]
+- ["4CCMN13MapCoordinateC", "CodingKeys"]
+- ["4CCMN13MapCoordinateC", "Decoder"]
+- ["4CCMN13MapCoordinateC", "Double"]
+- ["4CCMN13MapCoordinateC", "String"]
+- !private ["4CCMN13MapCoordinateC", "_findStringSwitchCase"]
+- ["4CCMN13MapCoordinateC", "deinit"]
+- ["4CCMN13MapCoordinateC", "init"]
+- ["4CCMN13MapCoordinateC", "unit"]
+- ["4CCMN13MapCoordinateC", "x"]
+- ["4CCMN13MapCoordinateC", "y"]
+- ["4CCMN13MapCoordinateC", "z"]
+- ["4CCMN7MapInfoC", "CodingKey"]
+- ["4CCMN7MapInfoC", "CodingKeys"]
+- ["4CCMN7MapInfoC", "Decoder"]
+- ["4CCMN7MapInfoC", "ImageJSON"]
+- ["4CCMN7MapInfoC", "String"]
+- !private ["4CCMN7MapInfoC", "_findStringSwitchCase"]
+- ["4CCMN7MapInfoC", "deinit"]
+- ["4CCMN7MapInfoC", "floorRefId"]
+- ["4CCMN7MapInfoC", "image"]
+- ["4CCMN7MapInfoC", "init"]
+- ["4CCMN7MapInfoC", "mapHierarchyString"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "apMacAddress"]
+- !private ["SY", "colorDepth"]
+- ["SY", "debugDescription"]
+- ["SY", "description"]
+- !private ["SY", "floorRefId"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- !private ["SY", "height"]
+- !private ["SY", "image"]
+- !private ["SY", "imageName"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- !private ["SY", "macAddress"]
+- !private ["SY", "manufacturer"]
+- !private ["SY", "mapCoordinate"]
+- !private ["SY", "mapHierarchyString"]
+- !private ["SY", "mapInfo"]
+- !private ["SY", "maxResolution"]
+- ["SY", "rawValue"]
+- !private ["SY", "size"]
+- ["SY", "stringValue"]
+- !private ["SY", "unit"]
+- !private ["SY", "userName"]
+- !private ["SY", "width"]
+- !private ["SY", "x"]
+- !private ["SY", "y"]
+- !private ["SY", "z"]
+- !private ["SY", "zoomLevel"]
+depends-nominal:
+- "4CCMN10ClientJSONC"
+- "s9CodingKeyP"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- !private "4CCMN10ClientJSONC10CodingKeysO"
+- !private "4CCMN13MapCoordinateC10CodingKeysO"
+- !private "4CCMN7MapInfoC10CodingKeysO"
+- !private "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN7MapInfoC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN10ClientJSONC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "4CCMN13MapCoordinateC10CodingKeysO"
+- "4CCMN9ImageJSONC10CodingKeysO"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s7DecoderP"
+- "SQ"
+- "SH"
+- "4CCMN9ImageJSONC"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- "4CCMN13MapCoordinateC"
+- "4CCMN7MapInfoC"
+- "SY"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Swift Compatibility Header/Alamofire-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
+- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
+- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "252b8eb6269ce84e8c1b09de12ba7dc4"

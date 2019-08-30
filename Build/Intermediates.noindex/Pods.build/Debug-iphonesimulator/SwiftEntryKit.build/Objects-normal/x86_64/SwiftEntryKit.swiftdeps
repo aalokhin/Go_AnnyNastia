@@ -1,0 +1,159 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SwiftEntryKit"
+provides-nominal:
+- "13SwiftEntryKitAAC"
+- "13SwiftEntryKitAAC0B19DismissalDescriptorO"
+- "13SwiftEntryKitAAC14RollbackWindowO"
+provides-member:
+- ["13SwiftEntryKitAAC", ""]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", ""]
+- ["13SwiftEntryKitAAC14RollbackWindowO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- "Bool"
+- !private "DispatchQueue"
+- "EKAttributes"
+- !private "EKWindowProvider"
+- "String"
+- "SwiftEntryKit"
+- !private "Thread"
+- "UIView"
+- "UIViewController"
+- "UIWindow"
+- "Void"
+depends-member:
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "isMainThread"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "isMainThread"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "isMainThread"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- ["13SwiftEntryKit12EKAttributesV", "Precedence"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "dismiss"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "display"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "isCurrentlyDisplaying"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "layoutIfNeeded"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "queueContains"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "shared"]
+- !private ["13SwiftEntryKit16EKWindowProviderC", "transform"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "EKAttributes"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "String"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "all"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "displayed"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "enqueued"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "prioritizedLowerOrEqualTo"]
+- ["13SwiftEntryKitAAC0B19DismissalDescriptorO", "specific"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "dismiss"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "display"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "isCurrentlyDisplaying"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "layoutIfNeeded"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "queueContains"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "shared"]
+- !private ["13SwiftEntryKit0B17PresenterDelegateP", "transform"]
+- !private ["SQ", "async"]
+- !private ["SQ", "isMainThread"]
+- !private ["SQ", "main"]
+- !private ["SH", "async"]
+- !private ["SH", "isMainThread"]
+- !private ["SH", "main"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "isMainThread"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "isMainThread"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- ["13SwiftEntryKit12EKAttributesV10PrecedenceO", "Priority"]
+- ["13SwiftEntryKitAAC14RollbackWindowO", "UIWindow"]
+- ["13SwiftEntryKitAAC14RollbackWindowO", "custom"]
+- ["13SwiftEntryKitAAC14RollbackWindowO", "main"]
+- ["13SwiftEntryKitAAC", "Bool"]
+- ["13SwiftEntryKitAAC", "DismissCompletionHandler"]
+- !private ["13SwiftEntryKitAAC", "DispatchQueue"]
+- ["13SwiftEntryKitAAC", "EKAttributes"]
+- !private ["13SwiftEntryKitAAC", "EKWindowProvider"]
+- ["13SwiftEntryKitAAC", "EntryDismissalDescriptor"]
+- ["13SwiftEntryKitAAC", "RollbackWindow"]
+- ["13SwiftEntryKitAAC", "String"]
+- !private ["13SwiftEntryKitAAC", "Thread"]
+- ["13SwiftEntryKitAAC", "UIView"]
+- ["13SwiftEntryKitAAC", "UIViewController"]
+- ["13SwiftEntryKitAAC", "UIWindow"]
+- ["13SwiftEntryKitAAC", "Void"]
+- ["13SwiftEntryKitAAC", "deinit"]
+- ["13SwiftEntryKitAAC", "dismiss"]
+- ["13SwiftEntryKitAAC", "display"]
+- !private ["13SwiftEntryKitAAC", "init"]
+- ["13SwiftEntryKitAAC", "isCurrentlyDisplaying"]
+- ["13SwiftEntryKitAAC", "isQueueEmpty"]
+- ["13SwiftEntryKitAAC", "layoutIfNeeded"]
+- ["13SwiftEntryKitAAC", "queueContains"]
+- ["13SwiftEntryKitAAC", "transform"]
+- !private ["So8NSThreadC", "isMainThread"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isMainThread"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+depends-nominal:
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- "13SwiftEntryKit12EKAttributesV"
+- !private "13SwiftEntryKit16EKWindowProviderC"
+- "13SwiftEntryKitAAC0B19DismissalDescriptorO"
+- !private "13SwiftEntryKit0B17PresenterDelegateP"
+- !private "SQ"
+- !private "SH"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So9OS_objectC"
+- "13SwiftEntryKit12EKAttributesV10PrecedenceO"
+- "13SwiftEntryKitAAC14RollbackWindowO"
+- "13SwiftEntryKitAAC"
+- !private "So8NSThreadC"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c005d839f87284b3aa45f304a28cee10"

@@ -8,11 +8,15 @@
 
 import Foundation
 import UIKit
+import SwiftEntryKit
+
 
 class  LocationVisVC: UIViewController {
     var shouldShowSearchResults = false
     var unFilteredMacs : [String] = []
     var filteredMacs : [String] = []
+    private var customView: UIView!
+
     
     var allMacs : [Mac] = []
     
@@ -28,6 +32,7 @@ class  LocationVisVC: UIViewController {
     
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
+        PopUp()
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
@@ -70,6 +75,10 @@ class  LocationVisVC: UIViewController {
         print("HELLO FROM LOCATION VIS VC")
         
         getAllClients()
+    
+
+
+
        // getActive()
     }
     
@@ -152,6 +161,24 @@ class  LocationVisVC: UIViewController {
         })
 
     }
+    
+    
+    
+    func PopUp(){
+        var attributes = EKAttributes.topToast
+        
+        // Set its background to black
+        attributes.entryBackground = .color(color: .black)
+        
+        // Animate in and out using default translation
+        attributes.entranceAnimation = .translation
+        attributes.exitAnimation = .translation
+        attributes.displayDuration = 6
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 600))
+        SwiftEntryKit.display(entry: customView, using: attributes)
+    }
+    
+    
 
 }
 
@@ -166,3 +193,6 @@ class Mac {
         self.macAddr = macAddr
     }
 }
+
+
+

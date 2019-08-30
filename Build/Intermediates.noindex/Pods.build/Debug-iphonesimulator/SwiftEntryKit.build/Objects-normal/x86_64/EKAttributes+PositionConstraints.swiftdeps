@@ -1,0 +1,156 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO"
+provides-member:
+- ["13SwiftEntryKit12EKAttributesV", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV", ""]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", ""]
+- ["13SwiftEntryKit12EKAttributesV", "PositionConstraints"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- !private ">"
+- "AssignmentPrecedence"
+- "Bool"
+- "CGFloat"
+- "EKAttributes"
+depends-member:
+- ["13SwiftEntryKit12EKAttributesV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV", "PositionConstraints"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "Edge"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "constant"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "fill"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "intrinsic"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "offset"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO", "ratio"]
+- ["SQ", "=="]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "standard"]
+- ["SH", "=="]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "standard"]
+- !private ["s6HasherV", "combine"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "Offset"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "bind"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "isBound"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO", "unbind"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "Offset"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "bottom"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "init"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "none"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV", "screenEdgeResistance"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "CGFloat"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "Edge"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "KeyboardRelation"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "PositionConstraints"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "Rotation"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "SafeArea"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "Size"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "float"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "fullScreen"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "fullWidth"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "hasVerticalOffset"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "init"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "keyboardRelation"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "maxSize"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "rotation"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "safeArea"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "size"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV", "verticalOffset"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV", "SupportedInterfaceOrientation"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV", "init"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV", "isEnabled"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV", "supportedInterfaceOrientations"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO", "empty"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO", "isOverridden"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO", "overridden"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "Edge"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "Size"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "height"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "init"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "intrinsic"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "screen"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "sizeToWidth"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV", "width"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "=="]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "__derived_enum_equals"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "_rawHashValue"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "all"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "hash"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "hashValue"]
+- ["13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO", "standard"]
+depends-nominal:
+- "13SwiftEntryKit12EKAttributesV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV4EdgeO"
+- "SQ"
+- "SH"
+- !private "s6HasherV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV16KeyboardRelationO6OffsetV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8SafeAreaO"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV4SizeV"
+- "13SwiftEntryKit12EKAttributesV19PositionConstraintsV8RotationV29SupportedInterfaceOrientationO"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "9944cbef99e33cb623ca8e75c93e8401"

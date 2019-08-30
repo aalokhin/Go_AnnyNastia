@@ -1,0 +1,213 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "=="
+provides-nominal:
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO"
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V"
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV"
+provides-member:
+- ["13SwiftEntryKit12EKAttributesV", ""]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", ""]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", ""]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", ""]
+- ["13SwiftEntryKit12EKAttributesV", "BackgroundStyle"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "&&"
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "CGPoint"
+- "EKAttributes"
+- "EKColor"
+- "Equatable"
+- "UIBlurEffect"
+- "UIImage"
+- "UITraitCollection"
+- !private "zip"
+depends-member:
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "=="]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "BlurStyle"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "CGPoint"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "EKAttributes"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "EKColor"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "Equatable"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "Gradient"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "UIBlurEffect"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "UIImage"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "UITraitCollection"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "clear"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "color"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "gradient"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "image"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "visualEffect"]
+- !private ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO", "zip"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "=="]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "BlurStyle"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "EKAttributes"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "UIBlurEffect"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "UITraitCollection"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "__derived_struct_equals"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "blurEffect"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "blurStyle"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "dark"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "deinit"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "extra"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "init"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "light"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "prominent"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V", "standard"]
+- ["s7CVarArgP", "Style"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "userInterfaceStyle"]
+- ["s28CustomDebugStringConvertibleP", "Style"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "userInterfaceStyle"]
+- ["s23CustomStringConvertibleP", "Style"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "userInterfaceStyle"]
+- ["13SwiftEntryKit12EKAttributesV11DisplayModeO", "dark"]
+- ["13SwiftEntryKit12EKAttributesV11DisplayModeO", "inferred"]
+- ["13SwiftEntryKit12EKAttributesV11DisplayModeO", "light"]
+- ["13SwiftEntryKit12EKAttributesV", "BackgroundStyle"]
+- ["13SwiftEntryKit12EKAttributesV", "Bool"]
+- ["13SwiftEntryKit12EKAttributesV", "CGPoint"]
+- ["13SwiftEntryKit12EKAttributesV", "DisplayMode"]
+- ["13SwiftEntryKit12EKAttributesV", "EKAttributes"]
+- ["13SwiftEntryKit12EKAttributesV", "EKColor"]
+- ["13SwiftEntryKit12EKAttributesV", "Equatable"]
+- ["13SwiftEntryKit12EKAttributesV", "UIBlurEffect"]
+- ["13SwiftEntryKit12EKAttributesV", "UIImage"]
+- ["13SwiftEntryKit12EKAttributesV", "UITraitCollection"]
+- !private ["13SwiftEntryKit12EKAttributesV", "zip"]
+- ["13SwiftEntryKit7EKColorV", "deinit"]
+- ["SQ", "=="]
+- !private ["SQ", "BlurStyle"]
+- ["SQ", "Style"]
+- !private ["SQ", "UIBlurEffect"]
+- ["SQ", ""]
+- !private ["SQ", "blurStyle"]
+- !private ["SQ", "clear"]
+- !private ["SQ", "color"]
+- ["SQ", "dark"]
+- !private ["SQ", "extraLight"]
+- !private ["SQ", "gradient"]
+- !private ["SQ", "image"]
+- ["SQ", "inferred"]
+- !private ["SQ", "init"]
+- ["SQ", "light"]
+- !private ["SQ", "prominent"]
+- ["SQ", "unspecified"]
+- !private ["SQ", "userInterfaceStyle"]
+- !private ["SQ", "visualEffect"]
+- !private ["SQ", "zip"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "CGPoint"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "EKColor"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "colors"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "endPoint"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "init"]
+- ["13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV", "startPoint"]
+- ["SH", "Style"]
+- ["SH", "dark"]
+- !private ["SH", "extraLight"]
+- ["SH", "inferred"]
+- !private ["SH", "init"]
+- ["SH", "light"]
+- !private ["SH", "prominent"]
+- ["SH", "unspecified"]
+- !private ["SH", "userInterfaceStyle"]
+- ["So8NSCodingP", "Style"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "userInterfaceStyle"]
+- ["So9NSCopyingP", "Style"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "userInterfaceStyle"]
+- ["So8NSObjectC", "Style"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "userInterfaceStyle"]
+- ["So8NSObjectP", "Style"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "userInterfaceStyle"]
+- ["So14NSSecureCodingP", "Style"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "userInterfaceStyle"]
+- ["SY", "dark"]
+- !private ["SY", "extraLight"]
+- ["SY", "light"]
+- !private ["SY", "prominent"]
+- ["SY", "unspecified"]
+- !private ["So17UIBlurEffectStyleV", "dark"]
+- !private ["So17UIBlurEffectStyleV", "extraLight"]
+- !private ["So17UIBlurEffectStyleV", "light"]
+- !private ["So17UIBlurEffectStyleV", "prominent"]
+- ["So12UIBlurEffectC", "Style"]
+- !private ["So12UIBlurEffectC", "init"]
+- !private ["So17UITraitCollectionC", "userInterfaceStyle"]
+- ["So20UIUserInterfaceStyleV", "dark"]
+- ["So20UIUserInterfaceStyleV", "light"]
+- ["So20UIUserInterfaceStyleV", "unspecified"]
+- ["So14UIVisualEffectC", "Style"]
+- !private ["So14UIVisualEffectC", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Style"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInterfaceStyle"]
+depends-nominal:
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO"
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO04BlurF0V"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "13SwiftEntryKit12EKAttributesV11DisplayModeO"
+- "13SwiftEntryKit12EKAttributesV"
+- "13SwiftEntryKit7EKColorV"
+- "SQ"
+- "13SwiftEntryKit12EKAttributesV15BackgroundStyleO8GradientV"
+- "SH"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- "SY"
+- !private "So17UIBlurEffectStyleV"
+- "So12UIBlurEffectC"
+- !private "So17UITraitCollectionC"
+- "So20UIUserInterfaceStyleV"
+- "So14UIVisualEffectC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "cf4914f45e867f6c60338316a97a4be1"

@@ -333,7 +333,6 @@ SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
 
 SWIFT_CLASS("_TtC4CCMN14ViewController")
 @interface ViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified imageMap;
 - (void)viewDidLoad;
 - (IBAction)locationButtonTapped:(UIButton * _Nonnull)sender;
 - (IBAction)goToVisualization:(UIButton * _Nonnull)sender;

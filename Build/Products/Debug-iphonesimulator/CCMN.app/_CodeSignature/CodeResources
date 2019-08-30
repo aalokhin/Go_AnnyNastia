@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		mtynRY7oCN1Mky3o9MWwyj73Gh8=
+		8ILo0wImJRqvx85VgBrMtfS8Yes=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		VttYZXZEZaNgLSGtFLSTF1cqOeI=
+		JTrTrN9d8aBIIl/GTR8eiO49iuw=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,27 +18,27 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		ZThXt0cTZ/d/pJgXyVsV++p1+7g=
+		f2AXH2ZIJfvy6TvG+y/hVR+WBQM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		gLkBmi8b4haS/hDwuKQ96GXvWm4=
+		6Is3ePghODfxcuZAEoq2BUH4Rls=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		XIi/LJUKrD5RE+KlT62Ma8V5DSc=
+		S8F3fHfxuG9gp+57OHFHs957lgQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<data>
-		ObY1pQ2B1WBiWjrOqrqTYVAdIuA=
+		8VvozaLNesmqAM9bjDBMnU3L03Q=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CyT-B3-uYj.nib</key>
 		<data>
-		bqWe33idTeqn59JZSAS1ut9A9mk=
+		A8YTErlvPqg6SVcToYJsUxxjBVE=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<data>
-		3UKQv6S5rUP0ChdeGhuzjmihqEI=
+		/bYcTl2yTqEHRUhpiGnxXEU29As=
 		</data>
 		<key>ChartViewCell.nib</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>DateCell.nib</key>
 		<data>
-		34mTZ6ACLd30a5QQDD1dfGAo7D8=
+		bJC+Yh/C3qPKDvAz6r8Fz9PIIJY=
 		</data>
 		<key>DateTextCell.nib</key>
 		<data>
-		4XIIsHL1GUJg5SNnTkHUySgE1dY=
+		43zSBNnEvLUZ+x7Z74WGj8CGrNY=
 		</data>
 		<key>DwellTimeVis.storyboardc/Info.plist</key>
 		<data>
@@ -58,15 +58,15 @@
 		</data>
 		<key>DwellTimeVis.storyboardc/R9F-Ui-MKt-view-0O7-uv-7vB.nib</key>
 		<data>
-		v+tH6DeO2hbWrHX4ISizdt7mNJc=
+		PnM1oewf5F50Qck9HkujM/L/yzQ=
 		</data>
 		<key>DwellTimeVis.storyboardc/UIViewController-R9F-Ui-MKt.nib</key>
 		<data>
-		peDJ4VPCgXEz2hyNak76EoP6CyA=
+		wzgcU57dpOtL/1l75X8T63xpclw=
 		</data>
 		<key>EmptyChartCell.nib</key>
 		<data>
-		/XCMGnLOUPqPzsJV2ip0xRvPuoY=
+		RrRtSZkGZyFgp58JQWwhExc0I30=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -78,15 +78,15 @@
 		</data>
 		<key>LocationVisVC.storyboardc/Oxn-9b-YuX-view-tyi-JJ-JcJ.nib</key>
 		<data>
-		9pWpqdASue1L8ncwZ6Xr2/708YM=
+		B4gQB/fzJyNALA6oEc2EVISGjRQ=
 		</data>
 		<key>LocationVisVC.storyboardc/UIViewController-Oxn-9b-YuX.nib</key>
 		<data>
-		tJ3GUJP4PjW5gplaCh4djREZ2bY=
+		kavnm/GoWyEPsbTpn+OYBkQ0+WU=
 		</data>
 		<key>MacListCell.nib</key>
 		<data>
-		wa3axAq4LIURpe67gvNFokPeHaU=
+		ayAWQSgRf8PXUDuwWS6gWPebwiE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>SearchSetUpVC.storyboardc/6tm-vU-I6q-view-4sZ-GY-ADy.nib</key>
 		<data>
-		NMuJEGrlKu5/ixubxhWFiAR1jaI=
+		xzoJIPIyN4GC8/B7ZB3uhrnDfNQ=
 		</data>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>SearchSetUpVC.storyboardc/SearchSetUpVC.nib</key>
 		<data>
-		l8XnIncdb2ibtDWsi2sxW0KPr7Y=
+		4l9HeKkUJPnlAXSkPhhEguOUu5s=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -115,14 +115,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bfPIe8qSwIrQtENBj//QsmZKT6IoA3zjYKiY52WLzz0=
+			tpFi8+IrO5A7LEMOBWzvC80nei+KNzrAsXY8C5bgaRw=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t7jBNIeto66iGeS7Ueh8wqXXNQc3smfOC+9c1BlS56k=
+			0P0Hqu+2rvtbVte0+6E29fAyxzC2YnzgtTXd4FP/uyk=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -136,42 +136,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nRkKBOQGrDea7ind3FDP2zyh00w3X3r1L6xng3Feis0=
+			f1VX5fde+6y/75fp3g6D9wsBgEyf4c1LrR8ArVcjT3k=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nw0psgtB+hjiAulMaUyYpSum0NHfxOySgz4VojU1RVg=
+			RmUarBmR//sG6W0Rfmhjvu0aFyr5AjeEz8Ivp1v1SpU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zI/H9kTCb4ThnJqSB72PN4FprFCg/cquBAEkbZc0Wic=
+			WjS7Br08MB8dV+23hK3FZmI/NnaiRJmtLNZ5su+2fvw=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GMcNEr8aAhSZIHBEPbHcfrB70+4s6rbdYJcdaDik7Lw=
+			GlXDBGHtJlppbvS/BMuaqAuqDSamEXLIhCk3UJiespI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CyT-B3-uYj.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gJ96PMRd5JaeuXVqzwp+ChRos8fXug7y8fcuKqwAyMk=
+			7RkgYHRQQJVmHWPeW+G4cdduM+PBZYs1QaVNCDhgqs8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t55EXVpI/TNWqq9kBJ+vNYgYh2R3I6wJX/mw3XFfxIY=
+			nXXaLMgu3VsOw4r0aVwrooCPnnhXTHXSkevcdmU2/vY=
 			</data>
 		</dict>
 		<key>ChartViewCell.nib</key>
@@ -185,14 +185,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TFp3+S2w4tfnaDTcpfimcZQ06q9JIlbP7UYffv0BpxQ=
+			Mm/sGMyrwGuT2CU0x+U97ZiSyz7KcnFpH0FVouE4N/Y=
 			</data>
 		</dict>
 		<key>DateTextCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Nm7eYjWp9r/qRZnjtgOlm+628sl6in8x8McIVG1A8k=
+			JmzepytnRZScIpdapYn8SNVa3RM6MlR6TFhJI0CZPSY=
 			</data>
 		</dict>
 		<key>DwellTimeVis.storyboardc/Info.plist</key>
@@ -206,21 +206,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udNzW80RHb0Sr9bKPyBi144JozYEVBn1whTu5xAwTj4=
+			Fq+qGrv8CuAHbE/+G1/Kbye1bM1TP9+0ISU5gUcTiUY=
 			</data>
 		</dict>
 		<key>DwellTimeVis.storyboardc/UIViewController-R9F-Ui-MKt.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+541Uq/q3A4M3wmSYcYLUFTo9ju0pP0GiHe7DOLRmTM=
+			nAV8GQsU7xtjnrhunV70B7zoZIz18/uk/S9ytIfzjDA=
 			</data>
 		</dict>
 		<key>EmptyChartCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/tXG8QyIpPgbtXXXoUEGhUE+FbblYdIACGPcmcp89/M=
+			bxHfCjN071Lugb3FTwgu0XXcU9H23dOxz51pHT31/zc=
 			</data>
 		</dict>
 		<key>LocationVisVC.storyboardc/Info.plist</key>
@@ -234,28 +234,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U9GN32szHww6WUzBLo83M4m67JOVUCuOEVGWTxDirvo=
+			/X/+G659opUSNm9l/lSBuKn/2BYV3ooD50hlI3hlI1U=
 			</data>
 		</dict>
 		<key>LocationVisVC.storyboardc/UIViewController-Oxn-9b-YuX.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mzPeAIPjV9MeGne7yLwyDI35L3pgDYYh0f99PAbNw4=
+			SQ7QkqKvzkDlE4VgQtvy2rqdshNjggGhUkvh+Nb3riE=
 			</data>
 		</dict>
 		<key>MacListCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MN+yDz0MriM6NEGz4iTBZGOBhIjcKIEAHsuydQFY/fU=
+			f9djaab4D4F2WdcLN7qkkb/ovzo7FQHX571NGf3CvlE=
 			</data>
 		</dict>
 		<key>SearchSetUpVC.storyboardc/6tm-vU-I6q-view-4sZ-GY-ADy.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BwNSo4ylQDm88BxAW6TYmyIpBsB6MnFtslcy62LPbr4=
+			WxHFA1MXheHuPIJZwzpctPjFun9FzXv5juxiYWg8gts=
 			</data>
 		</dict>
 		<key>SearchSetUpVC.storyboardc/Info.plist</key>
@@ -269,7 +269,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qAiPxWlTF5VtISHRfC1JQgv7Lfdn+5CTBGgrek9WHt8=
+			XVeb6yFpnyDKos5+nOfQU6qE7p8V5R9CGGT8IzEJYwc=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>
