@@ -95,6 +95,7 @@ extension LocationVisVC: UISearchBarDelegate {
     
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("invalidating timer")
         timer?.invalidate()
         filteredMacs = allMacs.filter({( protein : Mac) -> Bool in
             return protein.macAddr.lowercased().contains(searchText.lowercased())
@@ -102,6 +103,7 @@ extension LocationVisVC: UISearchBarDelegate {
 
         shouldShowSearchResults = searchText != "" ? true : false
         if (shouldShowSearchResults == false){
+            print("timer restarted")
             timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
         }
         tableView.reloadData()
