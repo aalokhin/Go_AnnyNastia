@@ -9,6 +9,7 @@ provides-dynamic-lookup:
 - "tableView"
 depends-top-level:
 - !private "!="
+- !private "<"
 - !private "=="
 - !private "??"
 - "AssignmentPrecedence"
@@ -74,6 +75,7 @@ depends-member:
 - ["s7CVarArgP", "indexPathForPreferredFocusedView"]
 - ["s7CVarArgP", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "invalidate"]
 - !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "lowercased"]
 - ["s7CVarArgP", "numberOfSections"]
@@ -112,6 +114,7 @@ depends-member:
 - ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "textLabel"]
+- !private ["s7CVarArgP", "timer"]
 - !private ["s7CVarArgP", "updateFloorImg"]
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
@@ -155,6 +158,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s28CustomDebugStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "invalidate"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "lowercased"]
 - !private ["s28CustomDebugStringConvertibleP", "macAddr"]
@@ -195,6 +199,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "textLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "timer"]
 - !private ["s28CustomDebugStringConvertibleP", "updateFloorImg"]
 - ["s28CustomDebugStringConvertibleP", "viewForZooming"]
 - ["s28CustomDebugStringConvertibleP", "viewForZoomingInScrollView"]
@@ -233,6 +238,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedView"]
 - ["s23CustomStringConvertibleP", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "invalidate"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "lowercased"]
 - !private ["s23CustomStringConvertibleP", "macAddr"]
@@ -273,6 +279,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "textLabel"]
+- !private ["s23CustomStringConvertibleP", "timer"]
 - !private ["s23CustomStringConvertibleP", "updateFloorImg"]
 - ["s23CustomStringConvertibleP", "viewForZooming"]
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
@@ -328,6 +335,7 @@ depends-member:
 - ["SQ", "indexPathForPreferredFocusedView"]
 - ["SQ", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["SQ", "init"]
+- !private ["SQ", "invalidate"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "lowercased"]
 - !private ["SQ", "macAddr"]
@@ -368,6 +376,7 @@ depends-member:
 - ["SQ", "tableView"]
 - !private ["SQ", "text"]
 - !private ["SQ", "textLabel"]
+- !private ["SQ", "timer"]
 - !private ["SQ", "updateFloorImg"]
 - ["SQ", "viewForZooming"]
 - ["SQ", "viewForZoomingInScrollView"]
@@ -416,6 +425,7 @@ depends-member:
 - ["SH", "indexPathForPreferredFocusedView"]
 - ["SH", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["SH", "init"]
+- !private ["SH", "invalidate"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "lowercased"]
 - !private ["SH", "macAddr"]
@@ -456,6 +466,7 @@ depends-member:
 - ["SH", "tableView"]
 - !private ["SH", "text"]
 - !private ["SH", "textLabel"]
+- !private ["SH", "timer"]
 - !private ["SH", "updateFloorImg"]
 - ["SH", "viewForZooming"]
 - ["SH", "viewForZoomingInScrollView"]
@@ -513,6 +524,7 @@ depends-member:
 - ["4CCMN13LocationVisVCC", "setUpSearchBar"]
 - !private ["4CCMN13LocationVisVCC", "shouldShowSearchResults"]
 - ["4CCMN13LocationVisVCC", "tableView"]
+- !private ["4CCMN13LocationVisVCC", "timer"]
 - !private ["4CCMN13LocationVisVCC", "updateFloorImg"]
 - ["4CCMN13LocationVisVCC", "viewForZooming"]
 - ["4CCMN13LocationVisVCC", "viewForZoomingInScrollView"]
@@ -591,6 +603,7 @@ depends-member:
 - ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textLabel"]
+- !private ["So8NSCodingP", "timer"]
 - !private ["So8NSCodingP", "updateFloorImg"]
 - ["So8NSCodingP", "viewForZooming"]
 - ["So8NSCodingP", "viewForZoomingInScrollView"]
@@ -637,6 +650,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "sectionIndexTitlesForTableView"]
 - !private ["So26NSExtensionRequestHandlingP", "shouldShowSearchResults"]
 - ["So26NSExtensionRequestHandlingP", "tableView"]
+- !private ["So26NSExtensionRequestHandlingP", "timer"]
 - !private ["So26NSExtensionRequestHandlingP", "updateFloorImg"]
 - ["So26NSExtensionRequestHandlingP", "viewForZooming"]
 - ["So26NSExtensionRequestHandlingP", "viewForZoomingInScrollView"]
@@ -676,6 +690,7 @@ depends-member:
 - ["So8NSObjectC", "indexPathForPreferredFocusedView"]
 - ["So8NSObjectC", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "invalidate"]
 - !private ["So8NSObjectC", "isEmpty"]
 - !private ["So8NSObjectC", "lowercased"]
 - ["So8NSObjectC", "numberOfSections"]
@@ -715,6 +730,7 @@ depends-member:
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "textLabel"]
+- !private ["So8NSObjectC", "timer"]
 - !private ["So8NSObjectC", "updateFloorImg"]
 - ["So8NSObjectC", "viewForZooming"]
 - ["So8NSObjectC", "viewForZoomingInScrollView"]
@@ -733,6 +749,7 @@ depends-member:
 - ["So8NSObjectP", "indexPathForPreferredFocusedView"]
 - ["So8NSObjectP", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "invalidate"]
 - !private ["So8NSObjectP", "isEmpty"]
 - !private ["So8NSObjectP", "lowercased"]
 - ["So8NSObjectP", "numberOfSections"]
@@ -770,6 +787,7 @@ depends-member:
 - ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "textLabel"]
+- !private ["So8NSObjectP", "timer"]
 - !private ["So8NSObjectP", "updateFloorImg"]
 - ["So8NSObjectP", "viewForZooming"]
 - ["So8NSObjectP", "viewForZoomingInScrollView"]
@@ -827,6 +845,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "contains"]
 - !private ["s20TextOutputStreamableP", "isEmpty"]
 - !private ["s20TextOutputStreamableP", "lowercased"]
+- !private ["So7NSTimerC", "invalidate"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "image"]
 - !private ["So29UIAccessibilityIdentificationP", "addImageOverlay"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
@@ -891,6 +910,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textLabel"]
+- !private ["So21UIAppearanceContainerP", "timer"]
 - !private ["So21UIAppearanceContainerP", "updateFloorImg"]
 - ["So21UIAppearanceContainerP", "viewForZooming"]
 - ["So21UIAppearanceContainerP", "viewForZoomingInScrollView"]
@@ -937,6 +957,7 @@ depends-member:
 - ["So24UIBarPositioningDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So24UIBarPositioningDelegateP", "shouldShowSearchResults"]
 - ["So24UIBarPositioningDelegateP", "tableView"]
+- !private ["So24UIBarPositioningDelegateP", "timer"]
 - !private ["So24UIBarPositioningDelegateP", "updateFloorImg"]
 - ["So24UIBarPositioningDelegateP", "viewForZooming"]
 - ["So24UIBarPositioningDelegateP", "viewForZoomingInScrollView"]
@@ -980,6 +1001,7 @@ depends-member:
 - ["So18UIContentContainerP", "sectionIndexTitlesForTableView"]
 - !private ["So18UIContentContainerP", "shouldShowSearchResults"]
 - ["So18UIContentContainerP", "tableView"]
+- !private ["So18UIContentContainerP", "timer"]
 - !private ["So18UIContentContainerP", "updateFloorImg"]
 - ["So18UIContentContainerP", "viewForZooming"]
 - ["So18UIContentContainerP", "viewForZoomingInScrollView"]
@@ -1047,6 +1069,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textLabel"]
+- !private ["So18UIFocusEnvironmentP", "timer"]
 - !private ["So18UIFocusEnvironmentP", "updateFloorImg"]
 - ["So18UIFocusEnvironmentP", "viewForZooming"]
 - ["So18UIFocusEnvironmentP", "viewForZoomingInScrollView"]
@@ -1121,6 +1144,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "timer"]
 - !private ["So30UIPasteConfigurationSupportingP", "updateFloorImg"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZooming"]
 - ["So30UIPasteConfigurationSupportingP", "viewForZoomingInScrollView"]
@@ -1181,6 +1205,7 @@ depends-member:
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "textLabel"]
+- !private ["So11UIResponderC", "timer"]
 - !private ["So11UIResponderC", "updateFloorImg"]
 - ["So11UIResponderC", "viewForZooming"]
 - ["So11UIResponderC", "viewForZoomingInScrollView"]
@@ -1231,6 +1256,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "timer"]
 - !private ["So30UIResponderStandardEditActionsP", "updateFloorImg"]
 - ["So30UIResponderStandardEditActionsP", "viewForZooming"]
 - ["So30UIResponderStandardEditActionsP", "viewForZoomingInScrollView"]
@@ -1277,6 +1303,7 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So20UIScrollViewDelegateP", "shouldShowSearchResults"]
 - ["So20UIScrollViewDelegateP", "tableView"]
+- !private ["So20UIScrollViewDelegateP", "timer"]
 - !private ["So20UIScrollViewDelegateP", "updateFloorImg"]
 - ["So20UIScrollViewDelegateP", "viewForZooming"]
 - ["So20UIScrollViewDelegateP", "viewForZoomingInScrollView"]
@@ -1323,6 +1350,7 @@ depends-member:
 - ["So19UISearchBarDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So19UISearchBarDelegateP", "shouldShowSearchResults"]
 - ["So19UISearchBarDelegateP", "tableView"]
+- !private ["So19UISearchBarDelegateP", "timer"]
 - !private ["So19UISearchBarDelegateP", "updateFloorImg"]
 - ["So19UISearchBarDelegateP", "viewForZooming"]
 - ["So19UISearchBarDelegateP", "viewForZoomingInScrollView"]
@@ -1368,6 +1396,7 @@ depends-member:
 - ["So16UIStateRestoringP", "sectionIndexTitlesForTableView"]
 - !private ["So16UIStateRestoringP", "shouldShowSearchResults"]
 - ["So16UIStateRestoringP", "tableView"]
+- !private ["So16UIStateRestoringP", "timer"]
 - !private ["So16UIStateRestoringP", "updateFloorImg"]
 - ["So16UIStateRestoringP", "viewForZooming"]
 - ["So16UIStateRestoringP", "viewForZoomingInScrollView"]
@@ -1416,6 +1445,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "sectionIndexTitlesForTableView"]
 - !private ["So21UITableViewDataSourceP", "shouldShowSearchResults"]
 - ["So21UITableViewDataSourceP", "tableView"]
+- !private ["So21UITableViewDataSourceP", "timer"]
 - !private ["So21UITableViewDataSourceP", "updateFloorImg"]
 - ["So21UITableViewDataSourceP", "viewForZooming"]
 - ["So21UITableViewDataSourceP", "viewForZoomingInScrollView"]
@@ -1460,6 +1490,7 @@ depends-member:
 - ["So19UITableViewDelegateP", "sectionIndexTitlesForTableView"]
 - !private ["So19UITableViewDelegateP", "shouldShowSearchResults"]
 - ["So19UITableViewDelegateP", "tableView"]
+- !private ["So19UITableViewDelegateP", "timer"]
 - !private ["So19UITableViewDelegateP", "updateFloorImg"]
 - ["So19UITableViewDelegateP", "viewForZooming"]
 - ["So19UITableViewDelegateP", "viewForZoomingInScrollView"]
@@ -1512,6 +1543,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textLabel"]
+- !private ["So18UITraitEnvironmentP", "timer"]
 - !private ["So18UITraitEnvironmentP", "updateFloorImg"]
 - ["So18UITraitEnvironmentP", "viewForZooming"]
 - ["So18UITraitEnvironmentP", "viewForZoomingInScrollView"]
@@ -1562,6 +1594,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "tableView"]
 - !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "textLabel"]
+- !private ["So23UIUserActivityRestoringP", "timer"]
 - !private ["So23UIUserActivityRestoringP", "updateFloorImg"]
 - ["So23UIUserActivityRestoringP", "viewForZooming"]
 - ["So23UIUserActivityRestoringP", "viewForZoomingInScrollView"]
@@ -1622,6 +1655,7 @@ depends-member:
 - ["So16UIViewControllerC", "setUpSearchBar"]
 - !private ["So16UIViewControllerC", "shouldShowSearchResults"]
 - ["So16UIViewControllerC", "tableView"]
+- !private ["So16UIViewControllerC", "timer"]
 - !private ["So16UIViewControllerC", "updateFloorImg"]
 - ["So16UIViewControllerC", "viewForZooming"]
 - ["So16UIViewControllerC", "viewForZoomingInScrollView"]
@@ -1685,6 +1719,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexPathForPreferredFocusedView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "invalidate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lowercased"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSections"]
@@ -1722,6 +1757,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateFloorImg"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
@@ -1796,6 +1832,7 @@ depends-nominal:
 - !private "Sy"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- !private "So7NSTimerC"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
@@ -1873,9 +1910,7 @@ depends-external:
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Swift Compatibility Header/Charts-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/Swift Compatibility Header/SwiftEntryKit-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.modulemap"
-- "/Users/anastasia/Swift/go_Me2/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Charts/Charts.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"

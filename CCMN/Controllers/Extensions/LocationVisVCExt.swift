@@ -20,7 +20,6 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
             mac = allMacs[indexPath.row].macAddr
         }
         cell.textLabel?.text = mac
-       // cell.textLabel?.text = "some tjosn"
         return cell
     }
     
@@ -32,20 +31,31 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print(indexPath.row)
+      
         var macName = ""
         
         //need to fix out of range here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if shouldShowSearchResults == true {
-            macName = filteredMacs[indexPath.row].macAddr
+            if (indexPath.row < allMacs.count){
+                macName = filteredMacs[indexPath.row].macAddr
+            }
+            else {
+                    print("index out of range here")
+                    print("filtered macs : ", self.filteredMacs.count, "   <->   ", indexPath.row )
+                    return
+            }
         } else {
-
-                macName = allMacs[indexPath.row].macAddr
-    
+            if (indexPath.row < self.allMacs.count){
+                macName = self.allMacs[indexPath.row].macAddr
+            }
+            else {
+                print("index out of range here")
+                print("all macs : ", self.allMacs.count, "   <->   ", indexPath.row )
+                return
+                
+            }
         }
         
-        
-        print(macName)
         if let index = allMacs.firstIndex(where: { (item) -> Bool in
             item.macAddr == macName
         }){
@@ -83,17 +93,30 @@ extension LocationVisVC: UISearchBarDelegate {
         return searchBar.text?.isEmpty ?? true
     }
     
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        timer?.invalidate()
         filteredMacs = allMacs.filter({( protein : Mac) -> Bool in
             return protein.macAddr.lowercased().contains(searchText.lowercased())
         })
 
         shouldShowSearchResults = searchText != "" ? true : false
+        if (shouldShowSearchResults == false){
+            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
+        }
         tableView.reloadData()
     }
+    
     
     func setUpSearchBar(){
         searchBar.delegate = self
     }
+    
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        print("searchBarCancelButtonClicked")
+//        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
+//        searchBar.text = ""
+//        self.shouldShowSearchResults = false
+//    }
 }
 
