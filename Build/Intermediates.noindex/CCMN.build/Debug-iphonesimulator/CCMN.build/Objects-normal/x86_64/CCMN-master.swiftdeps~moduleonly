@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "e70ec041a7e66617a40331cfc1e3c4fe"
-build_time: [1567255623, 483737000]
+build_time: [1567274923, 559975000]
 inputs:
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/EmptyChartCell.swift": [1567167578, 286064753]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/MacListCell.swift": [1567167578, 286282069]
@@ -22,7 +22,7 @@ inputs:
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/SetUpVCExtnsn.swift": [1567167578, 282470897]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/UICellExt.swift": [1567167578, 282590316]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/DateTextCell.swift": [1567167578, 285811894]
-  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/LocationVisVC.swift": [1567255622, 721302494]
+  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/LocationVisVC.swift": [1567274922, 691342413]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Utilities/LocationRequestEndpoints.swift": [1567167578, 284543335]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/PresenceVis.swift": [1567182598, 571722981]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/SearchSetUpVC.swift": [1567167578, 283007645]

@@ -16,6 +16,12 @@ class  LocationVisVC: UIViewController {
     
     var filteredMacs : [Mac] = []
     var allMacs : [Mac] = []
+    //var macsAllFloors : [Mac] = []
+    
+   // var currUserSet  = Set<String>()
+    var oldUserSet  = Set<String>()
+    
+    
 
     private var customView: UIView!
 
@@ -100,13 +106,15 @@ class  LocationVisVC: UIViewController {
     }
     
     func getAllClients(){
+      //  showPopUp()
+        var currUserSet  = Set<String>()
          //https://cisco-cmx.unit.ua/api/location/v2/clients
         NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//                    print(json)
-//                }
+//          if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//             print(json)
+//          }
                guard let t = try? JSONDecoder().decode([ClientJSON].self, from: d) else {
                     print("error decoding json")
                     return
@@ -114,9 +122,12 @@ class  LocationVisVC: UIViewController {
                 var tempMacs = [Mac]()
                 
                 
+                
                 for one in t{
+                    
+                    currUserSet.insert(one.macAddress!)
+                    
                     if let addr = one.macAddress, let x = one.mapCoordinate?.x, let y = one.mapCoordinate?.y {
-                        
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
                                 tempMacs.append(Mac(x: x, y: y, macAddr: addr))
@@ -125,24 +136,37 @@ class  LocationVisVC: UIViewController {
 
                     }
                 }
-                let lhsArray = tempMacs.sorted(by: { $0.macAddr < $1.macAddr })
-                let rhsArray = self.allMacs.sorted(by: { $0.macAddr < $1.macAddr })
+                
+                //print("here we go ", currUserSet)
+                let newUser = currUserSet.subtracting(self.oldUserSet)
+                print("cur ->",  currUserSet.count, "old ->",  self.oldUserSet.count, "new ->", newUser.count)
+                //print("here we go ", newUser)
+
+                if self.oldUserSet.count > 0{
+                    for one in newUser{
+                        print("new user appeared", one)
+                    }
+                }
+                self.oldUserSet = currUserSet
+                //let lhsArray = tempMacs.sorted(by: { $0.macAddr < $1.macAddr })
+                //let rhsArray = self.allMacs.sorted(by: { $0.macAddr < $1.macAddr })
+                
 //
 //                for i in 0 ..< tempMacs.count {
 //                    if !tempMacs[i]
 //                }
                 
+               
+                
+                
                 self.allMacs = tempMacs
+//                print(tempMacs.count, self.allMacs.count)
+//                if (lhsArray != rhsArray){
+//                    print("arfays are different")
+//                    //print("New user appeared", tempMacs.count, "<- new -- old ->", self.allMacs.count)
+//                    self.showPopUp()
+//                }
                 
-                
-                
-                print(tempMacs.count, self.allMacs.count)
-                if (lhsArray != rhsArray){
-                    print("arfays are different")
-                    //print("New user appeared", tempMacs.count, "<- new -- old ->", self.allMacs.count)
-                    self.showPopUp()
-                }
-                return
 //                for one in lhsArray{
 //                    print(one.macAddr)
 //                }
@@ -151,17 +175,12 @@ class  LocationVisVC: UIViewController {
 //                    print(one.macAddr)
 //                    
 //                }
-//                
-               
-                
-                
-                
-                
+//
                 if let floor = self.floorsImgs[self.currentFloor]{
                     self.updateFloorImg(floor)
                 }
                 self.tableView.reloadData()
-                print(" all macs>>>>> ", self.allMacs.count)
+               // print(" all macs>>>>> ", self.allMacs.count)
             }
             
         })
@@ -183,11 +202,32 @@ class  LocationVisVC: UIViewController {
         SwiftEntryKit.display(entry: customView, using: attributes)
     }
     
+    func areEqual(mac1:[Mac], mac2: [Mac]) -> Bool {
+        // Don't equal size => false
+     
+        // sort two arrays
+        let array1 = mac1.sorted(by: { $0.macAddr < $1.macAddr })
+        let array2 = mac2.sorted(by: { $0.macAddr < $1.macAddr })
+        if array1.count != array2.count {
+            return false
+        }
+        // get count of the matched items
+        let result = zip(array1, array2).enumerated().filter() {
+            $1.0.macAddr == $1.1.macAddr
+            }.count
+        
+        if result == array1.count {
+            return true
+        }
+        
+        return false
+    }
+    
     
 
 }
 
-class Mac : Equatable {
+class Mac : Equatable, Hashable {
     static func == (lhs: Mac, rhs: Mac) -> Bool {
        return lhs.macAddr == rhs.macAddr  && lhs.x == rhs.x && lhs.y == rhs.y
     }
@@ -196,12 +236,19 @@ class Mac : Equatable {
     let y : Double
     let macAddr : String
     
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(macAddr)
+        hasher.combine(x)
+        hasher.combine(y)
+    }
+    
     init(x: Double, y:Double, macAddr : String) {
         self.x = x
         self.y = y
         self.macAddr = macAddr
     }
 }
+
 
 
 

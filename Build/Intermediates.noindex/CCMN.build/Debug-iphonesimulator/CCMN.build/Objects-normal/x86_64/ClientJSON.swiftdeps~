@@ -38,6 +38,7 @@ depends-top-level:
 - "MapCoordinate"
 - "MapInfo"
 - "String"
+- "UnicodeScalarType"
 - !private "_findStringSwitchCase"
 - !private "print"
 - !private "~="

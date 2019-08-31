@@ -409,6 +409,8 @@ depends-member:
 - !private ["SH", "string"]
 - !private ["SH", "subscript"]
 - !private ["SH", "utf8"]
+- !private ["SH", "x"]
+- !private ["SH", "y"]
 - !private ["SH", "zip"]
 - !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "Data"]

@@ -36,7 +36,6 @@ depends-top-level:
 - "FloorCounts"
 - "Int"
 - "String"
-- !private "UnicodeScalarType"
 - !private "_findStringSwitchCase"
 - "mapJSON"
 - !private "print"
