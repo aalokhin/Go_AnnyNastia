@@ -113,6 +113,7 @@ class  LocationVisVC: UIViewController {
                 }
                 var tempMacs = [Mac]()
                 
+                
                 for one in t{
                     if let addr = one.macAddress, let x = one.mapCoordinate?.x, let y = one.mapCoordinate?.y {
                         
@@ -124,11 +125,24 @@ class  LocationVisVC: UIViewController {
 
                     }
                 }
-               
-                
                 let lhsArray = tempMacs.sorted(by: { $0.macAddr < $1.macAddr })
                 let rhsArray = self.allMacs.sorted(by: { $0.macAddr < $1.macAddr })
+//
+//                for i in 0 ..< tempMacs.count {
+//                    if !tempMacs[i]
+//                }
                 
+                self.allMacs = tempMacs
+                
+                
+                
+                print(tempMacs.count, self.allMacs.count)
+                if (lhsArray != rhsArray){
+                    print("arfays are different")
+                    //print("New user appeared", tempMacs.count, "<- new -- old ->", self.allMacs.count)
+                    self.showPopUp()
+                }
+                return
 //                for one in lhsArray{
 //                    print(one.macAddr)
 //                }
@@ -138,14 +152,11 @@ class  LocationVisVC: UIViewController {
 //                    
 //                }
 //                
-                if (lhsArray != rhsArray){
-                    print("New user appeared", tempMacs.count, "<- new -- old ->", self.allMacs.count)
-                    self.showPopUp()
-                }
+               
                 
                 
                 
-                self.allMacs = tempMacs
+                
                 if let floor = self.floorsImgs[self.currentFloor]{
                     self.updateFloorImg(floor)
                 }
