@@ -53,16 +53,9 @@ class  LocationVisVC: UIViewController {
         }
     }
     
-    func updateTV(_ curFloor : String){
-        searchBar.text = ""
-        shouldShowSearchResults = false
-        allMacs.removeAll()
-        currentFloor = curFloor
-        getAllClients()
-    }
+    
     
     override func viewDidLoad() {
-
         super.viewDidLoad()
         tableView?.register(UINib(nibName: MacListCell.nibName(), bundle: nil), forCellReuseIdentifier: MacListCell.reuseIdentifier())
         print("HELLO FROM LOCATION VIS VC")
@@ -72,9 +65,16 @@ class  LocationVisVC: UIViewController {
     }
     
     @objc func checkAll(){
-       // allMacs.removeAll()
         filteredMacs.removeAll()
-        //showPopUp()
+        getAllClients()
+    }
+    
+    func updateTV(_ curFloor : String){
+        usersSaved.removeAll()
+        searchBar.text = ""
+        shouldShowSearchResults = false
+        allMacs.removeAll()
+        currentFloor = curFloor
         getAllClients()
     }
     
@@ -126,7 +126,7 @@ class  LocationVisVC: UIViewController {
                    
 
                     for one in newUser{
-                        self.showPopUp()
+                        self.showPopUp(newClientMAC : one)
                         print("New: ", one)
                     }
                 }
@@ -143,7 +143,7 @@ class  LocationVisVC: UIViewController {
     }
     
    
-    func showPopUp(){
+    func showPopUp(newClientMAC : String){
         var attributes = EKAttributes.topToast
         
         EKAttributes.Precedence.QueueingHeuristic.value = .chronological
@@ -231,4 +231,4 @@ func getActive(){
     
 }
 
- */
+*/
