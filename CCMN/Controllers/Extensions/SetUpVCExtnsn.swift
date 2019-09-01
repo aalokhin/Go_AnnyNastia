@@ -14,11 +14,17 @@ import UIKit
 extension SearchSetUpVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if datePickerIndexPath != nil {
-            return inputTexts.count + 1
-        } else {
-            return inputTexts.count
+        if (hourly == false){
+            if datePickerIndexPath != nil {
+                return inputTexts.count + 1
+            } else {
+                return inputTexts.count
+            }
         }
+        else {
+            return 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

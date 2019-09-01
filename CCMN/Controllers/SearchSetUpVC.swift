@@ -22,34 +22,48 @@ class SearchSetUpVC: UIViewController {
     var inputDates: [Date] = []
     var delegate: SetUpDelegate?
     
-    var detailed = false
+    var hourly = true
     
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello here")
-        addInitailValues()
-        setupVC()
+       
+
+        if (hourly == false){
+            addInitailValues()
+            setupVCForDatePickUp()
+        }
     }
+    
     
     @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            print("we want a default date range ")
-            detailed = true
+            print("we want a hourly date range ")
+            hourly = true
+            self.tableView.reloadData()
+           // self.tableView.isHidden = true
         case 1:
-            detailed = false
-            print("we want a detailed date range")
+            hourly = false
+            addInitailValues()
+            setupVCForDatePickUp()
+            print("we want a daily date range")
+            self.tableView.reloadData()
+            //self.tableView.isHidden = false
+
         default:
             break;
         }
     }
     
-    func setupVC() {
+    func setupVCForDatePickUp() {
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save(sender:)))
         tableView.register(UINib(nibName: DateTextCell.nibName(), bundle: nil), forCellReuseIdentifier: DateTextCell.reuseIdentifier())
         tableView.register(UINib(nibName: DateCell.nibName(), bundle: nil), forCellReuseIdentifier: DateCell.reuseIdentifier())
@@ -69,7 +83,7 @@ class SearchSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        delegate?.specifyDates(from: inputDates[0], to: inputDates[1], detailed : self.detailed)
+        delegate?.specifyDates(from: inputDates[0], to: inputDates[1], detailed : self.hourly)
         navigationController?.popViewController(animated: true)
         
     }
