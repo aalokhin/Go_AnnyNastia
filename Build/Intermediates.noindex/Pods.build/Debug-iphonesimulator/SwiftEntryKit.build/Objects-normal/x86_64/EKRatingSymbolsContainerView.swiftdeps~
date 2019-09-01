@@ -12,7 +12,7 @@ depends-top-level:
 - !private "<="
 - !private "=="
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
+- !private "BooleanLiteralType"
 - !private "CGAffineTransform"
 - !private "DispatchQueue"
 - "EKRatingMessage"
@@ -30,6 +30,8 @@ depends-member:
 - !private ["Sa", "enumerated"]
 - !private ["Sa", "layoutToSuperview"]
 - !private ["Sa", "spread"]
+- !private ["So17NSLayoutAttributeV", "height"]
+- !private ["So17NSLayoutAttributeV", "width"]
 - !private ["SK", "append"]
 - !private ["SK", "enumerated"]
 - !private ["SK", "layoutToSuperview"]
@@ -76,6 +78,7 @@ depends-member:
 - !private ["Sl", "enumerated"]
 - !private ["Sl", "layoutToSuperview"]
 - !private ["Sl", "spread"]
+- !private ["SL", "must"]
 - !private ["SL", "now"]
 - !private ["10Foundation15ContiguousBytesP", "append"]
 - !private ["10Foundation15ContiguousBytesP", "enumerated"]
@@ -183,12 +186,15 @@ depends-member:
 - !private ["SQ", "append"]
 - !private ["SQ", "asyncAfter"]
 - !private ["SQ", "enumerated"]
+- !private ["SQ", "height"]
+- !private ["SQ", "horizontally"]
 - !private ["SQ", "identity"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isSelected"]
 - !private ["SQ", "layoutToSuperview"]
 - !private ["SQ", "main"]
 - !private ["SQ", "message"]
+- !private ["SQ", "must"]
 - !private ["SQ", "now"]
 - !private ["SQ", "select"]
 - !private ["SQ", "set"]
@@ -196,6 +202,8 @@ depends-member:
 - !private ["SQ", "symbolsArray"]
 - !private ["SQ", "tag"]
 - !private ["SQ", "transform"]
+- !private ["SQ", "vertically"]
+- !private ["SQ", "width"]
 - !private ["s25ExpressibleByArrayLiteralP", "allowUserInteraction"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
@@ -211,17 +219,22 @@ depends-member:
 - !private ["SH", "append"]
 - !private ["SH", "asyncAfter"]
 - !private ["SH", "enumerated"]
+- !private ["SH", "height"]
+- !private ["SH", "horizontally"]
 - !private ["SH", "init"]
 - !private ["SH", "isSelected"]
 - !private ["SH", "layoutToSuperview"]
 - !private ["SH", "main"]
 - !private ["SH", "message"]
+- !private ["SH", "must"]
 - !private ["SH", "select"]
 - !private ["SH", "set"]
 - !private ["SH", "spread"]
 - !private ["SH", "symbolsArray"]
 - !private ["SH", "tag"]
 - !private ["SH", "transform"]
+- !private ["SH", "vertically"]
+- !private ["SH", "width"]
 - !private ["SM", "append"]
 - !private ["SM", "enumerated"]
 - !private ["SM", "layoutToSuperview"]
@@ -285,6 +298,8 @@ depends-member:
 - !private ["So9OS_objectC", "asyncAfter"]
 - !private ["So9OS_objectC", "main"]
 - !private ["s9OptionSetP", "allowUserInteraction"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
 - !private ["Sk", "append"]
 - !private ["Sk", "enumerated"]
 - !private ["Sk", "layoutToSuperview"]
@@ -294,6 +309,9 @@ depends-member:
 - !private ["Sm", "layoutToSuperview"]
 - !private ["Sm", "spread"]
 - !private ["SY", "allowUserInteraction"]
+- !private ["SY", "height"]
+- !private ["SY", "must"]
+- !private ["SY", "width"]
 - !private ["ST", "append"]
 - !private ["ST", "enumerated"]
 - !private ["ST", "layoutToSuperview"]
@@ -419,6 +437,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "symbolsArray"]
 - !private ["So20UIFocusItemContainerP", "tag"]
 - !private ["So20UIFocusItemContainerP", "transform"]
+- !private ["So16UILayoutPrioritya", "must"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGAffineTransform"]
 - !private ["So30UIPasteConfigurationSupportingP", "DispatchQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "EKRatingSymbolView"]
@@ -531,6 +550,7 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "layoutToSuperview"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "must"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "spread"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGAffineTransform"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
@@ -554,7 +574,10 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "identity"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "layoutToSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "must"]
 - !private ["s21_ObjectiveCBridgeableP", "spread"]
+- !private ["s20_SwiftNewtypeWrapperP", "must"]
+- !private ["5UIKit01_A23NumericRawRepresentableP", "must"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CGAffineTransform"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "DispatchQueue"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "EKRatingSymbolView"]
@@ -573,6 +596,7 @@ depends-member:
 depends-nominal:
 - !private "So22UIViewAnimationOptionsV"
 - !private "Sa"
+- !private "So17NSLayoutAttributeV"
 - !private "SK"
 - "So15CALayerDelegateP"
 - !private "So17CGAffineTransformV"
@@ -603,6 +627,7 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So9OS_objectC"
 - !private "s9OptionSetP"
+- !private "11QuickLayout6QLAxisO"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
@@ -616,6 +641,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
+- !private "So16UILayoutPrioritya"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -628,6 +654,8 @@ depends-nominal:
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "5UIKit01_A23NumericRawRepresentableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -644,8 +672,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

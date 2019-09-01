@@ -11,6 +11,7 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - "Date"
 - !private "Double"

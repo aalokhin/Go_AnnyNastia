@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "f986a2bc59589a4b20156856c507df07"
-build_time: [1567167810, 86478000]
+build_time: [1567328331, 445909000]
 inputs:
   "/Users/anastasia/Swift/Go_Aloha/Pods/SwiftEntryKit/Source/MessageViews/Notes/EKAccessoryNoteMessageView.swift": [1567167755, 482871185]
   "/Users/anastasia/Swift/Go_Aloha/Pods/SwiftEntryKit/Source/Model/EKAlertMessage.swift": [1567167755, 475103818]

@@ -16,6 +16,14 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - "UIView"
 depends-member:
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "centerX"]
+- !private ["So17NSLayoutAttributeV", "centerY"]
+- !private ["So17NSLayoutAttributeV", "leading"]
+- !private ["So17NSLayoutAttributeV", "left"]
+- !private ["So17NSLayoutAttributeV", "right"]
+- !private ["So17NSLayoutAttributeV", "top"]
+- !private ["So17NSLayoutAttributeV", "trailing"]
 - !private ["So15CALayerDelegateP", "EKNoteMessageView"]
 - ["So15CALayerDelegateP", "UIView"]
 - ["So15CALayerDelegateP", ""]
@@ -54,10 +62,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layout"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "noteMessageView"]
+- !private ["s28CustomDebugStringConvertibleP", "trailing"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalOffset"]
 - !private ["s17CustomReflectableP", "horizontalOffset"]
 - !private ["s17CustomReflectableP", "layout"]
 - !private ["s17CustomReflectableP", "layoutToSuperview"]
+- !private ["s17CustomReflectableP", "trailing"]
 - !private ["s17CustomReflectableP", "verticalOffset"]
 - !private ["s23CustomStringConvertibleP", "EKNoteMessageView"]
 - ["s23CustomStringConvertibleP", "UIView"]
@@ -75,6 +85,7 @@ depends-member:
 - !private ["Se", "horizontalOffset"]
 - !private ["Se", "layout"]
 - !private ["Se", "layoutToSuperview"]
+- !private ["Se", "trailing"]
 - !private ["Se", "verticalOffset"]
 - ["13SwiftEntryKit26EKAccessoryNoteMessageViewC", "EKNoteMessageView"]
 - ["13SwiftEntryKit26EKAccessoryNoteMessageViewC", "EKProperty"]
@@ -96,36 +107,58 @@ depends-member:
 - !private ["SE", "horizontalOffset"]
 - !private ["SE", "layout"]
 - !private ["SE", "layoutToSuperview"]
+- !private ["SE", "trailing"]
 - !private ["SE", "verticalOffset"]
 - !private ["SQ", "EKNoteMessageView"]
 - ["SQ", "UIView"]
 - ["SQ", ""]
 - !private ["SQ", "accessoryView"]
 - !private ["SQ", "addSubview"]
+- !private ["SQ", "bottom"]
+- !private ["SQ", "centerX"]
+- !private ["SQ", "centerY"]
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "contentView"]
+- !private ["SQ", "greaterThanOrEqual"]
 - !private ["SQ", "horizontalOffset"]
 - ["SQ", "init"]
 - !private ["SQ", "layout"]
 - !private ["SQ", "layoutToSuperview"]
+- !private ["SQ", "leading"]
+- !private ["SQ", "left"]
+- !private ["SQ", "lessThanOrEqual"]
 - !private ["SQ", "noteMessageView"]
+- !private ["SQ", "right"]
+- !private ["SQ", "top"]
+- !private ["SQ", "trailing"]
 - !private ["SQ", "verticalOffset"]
 - !private ["s23ExpressibleByNilLiteralP", "horizontalOffset"]
 - !private ["s23ExpressibleByNilLiteralP", "layout"]
 - !private ["s23ExpressibleByNilLiteralP", "layoutToSuperview"]
+- !private ["s23ExpressibleByNilLiteralP", "trailing"]
 - !private ["s23ExpressibleByNilLiteralP", "verticalOffset"]
 - !private ["SH", "EKNoteMessageView"]
 - ["SH", "UIView"]
 - ["SH", ""]
 - !private ["SH", "accessoryView"]
 - !private ["SH", "addSubview"]
+- !private ["SH", "bottom"]
+- !private ["SH", "centerX"]
+- !private ["SH", "centerY"]
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "contentView"]
+- !private ["SH", "greaterThanOrEqual"]
 - !private ["SH", "horizontalOffset"]
 - ["SH", "init"]
 - !private ["SH", "layout"]
 - !private ["SH", "layoutToSuperview"]
+- !private ["SH", "leading"]
+- !private ["SH", "left"]
+- !private ["SH", "lessThanOrEqual"]
 - !private ["SH", "noteMessageView"]
+- !private ["SH", "right"]
+- !private ["SH", "top"]
+- !private ["SH", "trailing"]
 - !private ["SH", "verticalOffset"]
 - !private ["So8NSCodingP", "EKNoteMessageView"]
 - ["So8NSCodingP", "UIView"]
@@ -170,7 +203,20 @@ depends-member:
 - !private ["Sq", "horizontalOffset"]
 - !private ["Sq", "layout"]
 - !private ["Sq", "layoutToSuperview"]
+- !private ["Sq", "trailing"]
 - !private ["Sq", "verticalOffset"]
+- !private ["SY", "bottom"]
+- !private ["SY", "centerX"]
+- !private ["SY", "centerY"]
+- !private ["SY", "greaterThanOrEqual"]
+- !private ["SY", "leading"]
+- !private ["SY", "left"]
+- !private ["SY", "lessThanOrEqual"]
+- !private ["SY", "right"]
+- !private ["SY", "top"]
+- !private ["SY", "trailing"]
+- !private ["So16NSLayoutRelationV", "greaterThanOrEqual"]
+- !private ["So16NSLayoutRelationV", "lessThanOrEqual"]
 - !private ["So29UIAccessibilityIdentificationP", "EKNoteMessageView"]
 - ["So29UIAccessibilityIdentificationP", "UIView"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -372,6 +418,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "horizontalOffset"]
 - !private ["s21_ObjectiveCBridgeableP", "layout"]
 - !private ["s21_ObjectiveCBridgeableP", "layoutToSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "trailing"]
 - !private ["s21_ObjectiveCBridgeableP", "verticalOffset"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "EKNoteMessageView"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UIView"]
@@ -387,6 +434,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "noteMessageView"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "verticalOffset"]
 depends-nominal:
+- !private "So17NSLayoutAttributeV"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
@@ -404,6 +452,8 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "Sq"
+- !private "SY"
+- !private "So16NSLayoutRelationV"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -436,8 +486,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

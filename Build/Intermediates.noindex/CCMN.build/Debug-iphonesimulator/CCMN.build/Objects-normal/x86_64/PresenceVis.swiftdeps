@@ -15,7 +15,6 @@ depends-top-level:
 - "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - !private "Client"
 - "Date"

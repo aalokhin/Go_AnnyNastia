@@ -11,9 +11,12 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "=="
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "PresenceEndpoint"
 - "PresenceEndpoints"
 - "String"
+- "StringLiteralType"
 - !private "_findStringSwitchCase"
 - !private "~="
 depends-member:

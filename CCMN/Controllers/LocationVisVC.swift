@@ -6,6 +6,11 @@
 //  Copyright © 2019 Anastasiia ALOKHINA. All rights reserved.
 //
 
+
+//          if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//             print(json)
+//          }
+
 import Foundation
 import UIKit
 import SwiftEntryKit
@@ -16,19 +21,10 @@ class  LocationVisVC: UIViewController {
     
     var filteredMacs : [Mac] = []
     var allMacs : [Mac] = []
-    //var macsAllFloors : [Mac] = []
+    var usersSaved  = Set<String>()
     
-   // var currUserSet  = Set<String>()
-    var oldUserSet  = Set<String>()
-    
-    
-
     private var customView: UIView!
-
-    
     var timer: Timer?
-    
-    
     var currentFloor : String = "735495909441273878"
     let floorsImgs : [String : String] = ["735495909441273878" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor",
                                           "735495909441273979" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "735495909441273980" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
@@ -36,9 +32,7 @@ class  LocationVisVC: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var floorMapImageView: UIImageView!
-    
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
     
@@ -94,11 +88,6 @@ class  LocationVisVC: UIViewController {
     func updateFloorImg(_ imgURL : String){
         NetworkManager.getImage(imgURL, [:] , completion: { image, error in
             if let img = image {
-                //print("we've got an image")
-                //Client.sharedInstance.floorImgs?.append(img)
-               // let test2 = UIImage(named: "dot")!
-//                let test3 = test2.resizeImage(targetSize: CGSize(width: 100.0, height: 100.0))
-               // let imageTest = img.imageOverlayingImages([test2])
                 let imageTest = img.addDots(macs: self.allMacs)
                 self.floorMapImageView.image = imageTest
             }
@@ -106,27 +95,18 @@ class  LocationVisVC: UIViewController {
     }
     
     func getAllClients(){
-      //  showPopUp()
+        
         var currUserSet  = Set<String>()
-         //https://cisco-cmx.unit.ua/api/location/v2/clients
         NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-//          if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//             print(json)
-//          }
                guard let t = try? JSONDecoder().decode([ClientJSON].self, from: d) else {
                     print("error decoding json")
                     return
                 }
                 var tempMacs = [Mac]()
-                
-                
-                
                 for one in t{
-                    
                     currUserSet.insert(one.macAddress!)
-                    
                     if let addr = one.macAddress, let x = one.mapCoordinate?.x, let y = one.mapCoordinate?.y {
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
@@ -137,50 +117,22 @@ class  LocationVisVC: UIViewController {
                     }
                 }
                 
-                //print("here we go ", currUserSet)
-                let newUser = currUserSet.subtracting(self.oldUserSet)
-                print("cur ->",  currUserSet.count, "old ->",  self.oldUserSet.count, "new ->", newUser.count)
-                //print("here we go ", newUser)
-
-                if self.oldUserSet.count > 0{
+                let newUser = currUserSet.subtracting(self.usersSaved)
+                
+                //print("cur ->",  currUserSet.count, "old ->",  self.usersSaved.count, "new ->", newUser.count)
+                if self.usersSaved.count > 0{
                     for one in newUser{
-                        print("new user appeared", one)
+                        self.showPopUp()
+                        print("New: ", one)
                     }
                 }
-                self.oldUserSet = currUserSet
-                //let lhsArray = tempMacs.sorted(by: { $0.macAddr < $1.macAddr })
-                //let rhsArray = self.allMacs.sorted(by: { $0.macAddr < $1.macAddr })
                 
-//
-//                for i in 0 ..< tempMacs.count {
-//                    if !tempMacs[i]
-//                }
-                
-               
-                
-                
+                self.usersSaved = currUserSet
                 self.allMacs = tempMacs
-//                print(tempMacs.count, self.allMacs.count)
-//                if (lhsArray != rhsArray){
-//                    print("arfays are different")
-//                    //print("New user appeared", tempMacs.count, "<- new -- old ->", self.allMacs.count)
-//                    self.showPopUp()
-//                }
-                
-//                for one in lhsArray{
-//                    print(one.macAddr)
-//                }
-//                print("--------------")
-//                for one  in rhsArray{
-//                    print(one.macAddr)
-//                    
-//                }
-//
                 if let floor = self.floorsImgs[self.currentFloor]{
                     self.updateFloorImg(floor)
                 }
                 self.tableView.reloadData()
-               // print(" all macs>>>>> ", self.allMacs.count)
             }
             
         })
@@ -190,10 +142,12 @@ class  LocationVisVC: UIViewController {
     func showPopUp(){
         var attributes = EKAttributes.topToast
         
-        // Set its background to black
+        EKAttributes.Precedence.QueueingHeuristic.value = .chronological
+        attributes.precedence = .enqueue(priority: .normal)
+
+        attributes.positionConstraints.safeArea = .empty(fillSafeArea: true)
         attributes.entryBackground = .color(color: .black)
-        
-        // Animate in and out using default translation
+        attributes.windowLevel = .normal
         attributes.entranceAnimation = .translation
         attributes.exitAnimation = .translation
         attributes.displayDuration = 1
@@ -208,6 +162,7 @@ class  LocationVisVC: UIViewController {
         // sort two arrays
         let array1 = mac1.sorted(by: { $0.macAddr < $1.macAddr })
         let array2 = mac2.sorted(by: { $0.macAddr < $1.macAddr })
+        
         if array1.count != array2.count {
             return false
         }
@@ -215,11 +170,9 @@ class  LocationVisVC: UIViewController {
         let result = zip(array1, array2).enumerated().filter() {
             $1.0.macAddr == $1.1.macAddr
             }.count
-        
         if result == array1.count {
             return true
         }
-        
         return false
     }
     

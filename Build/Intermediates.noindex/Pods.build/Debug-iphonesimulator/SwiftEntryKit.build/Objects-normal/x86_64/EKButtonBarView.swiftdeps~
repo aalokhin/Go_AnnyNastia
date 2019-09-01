@@ -31,7 +31,6 @@ depends-top-level:
 - "UITraitCollection"
 - "UIView"
 - !private "fatalError"
-- "set"
 - !private "~="
 depends-member:
 - ["s18AdditiveArithmeticP", "init"]
@@ -52,8 +51,10 @@ depends-member:
 - !private ["So17NSLayoutAttributeV", "bottom"]
 - !private ["So17NSLayoutAttributeV", "centerX"]
 - !private ["So17NSLayoutAttributeV", "centerY"]
-- !private ["So17NSLayoutAttributeV", "height"]
+- ["So17NSLayoutAttributeV", "height"]
+- !private ["So17NSLayoutAttributeV", "left"]
 - !private ["So17NSLayoutAttributeV", "right"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - !private ["So17NSLayoutAttributeV", "width"]
 - !private ["SK", "append"]
 - ["SK", "count"]
@@ -79,7 +80,6 @@ depends-member:
 - ["So15CALayerDelegateP", "CGFloat"]
 - !private ["So15CALayerDelegateP", "CGSize"]
 - !private ["So15CALayerDelegateP", "EKButtonView"]
-- ["So15CALayerDelegateP", "QLAxis"]
 - !private ["So15CALayerDelegateP", "SwiftEntryKit"]
 - !private ["So15CALayerDelegateP", "UIBezierPath"]
 - !private ["So15CALayerDelegateP", "UIView"]
@@ -129,7 +129,6 @@ depends-member:
 - ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "CGSize"]
 - !private ["s7CVarArgP", "EKButtonView"]
-- ["s7CVarArgP", "QLAxis"]
 - !private ["s7CVarArgP", "SwiftEntryKit"]
 - !private ["s7CVarArgP", "UIBezierPath"]
 - !private ["s7CVarArgP", "UIView"]
@@ -186,7 +185,7 @@ depends-member:
 - !private ["Sl", "layout"]
 - !private ["Sl", "layoutToSuperview"]
 - !private ["Sl", "spread"]
-- !private ["SL", "defaultLow"]
+- ["SL", "defaultLow"]
 - ["SL", "init"]
 - !private ["SL", "must"]
 - !private ["10Foundation15ContiguousBytesP", "append"]
@@ -205,7 +204,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
 - !private ["s28CustomDebugStringConvertibleP", "EKButtonView"]
-- ["s28CustomDebugStringConvertibleP", "QLAxis"]
 - !private ["s28CustomDebugStringConvertibleP", "SwiftEntryKit"]
 - !private ["s28CustomDebugStringConvertibleP", "UIBezierPath"]
 - !private ["s28CustomDebugStringConvertibleP", "UIView"]
@@ -271,7 +269,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "CGFloat"]
 - !private ["s23CustomStringConvertibleP", "CGSize"]
 - !private ["s23CustomStringConvertibleP", "EKButtonView"]
-- ["s23CustomStringConvertibleP", "QLAxis"]
 - !private ["s23CustomStringConvertibleP", "SwiftEntryKit"]
 - !private ["s23CustomStringConvertibleP", "UIBezierPath"]
 - !private ["s23CustomStringConvertibleP", "UIView"]
@@ -408,7 +405,6 @@ depends-member:
 - ["SQ", "CGFloat"]
 - !private ["SQ", "CGSize"]
 - !private ["SQ", "EKButtonView"]
-- ["SQ", "QLAxis"]
 - !private ["SQ", "SwiftEntryKit"]
 - !private ["SQ", "UIBezierPath"]
 - !private ["SQ", "UIView"]
@@ -433,13 +429,14 @@ depends-member:
 - !private ["SQ", "cgPath"]
 - !private ["SQ", "compressedConstraint"]
 - ["SQ", "count"]
-- !private ["SQ", "defaultLow"]
+- ["SQ", "defaultLow"]
 - !private ["SQ", "dropFirst"]
 - !private ["SQ", "dropLast"]
 - !private ["SQ", "expandedConstraint"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "first"]
-- !private ["SQ", "height"]
+- ["SQ", "height"]
+- ["SQ", "horizontally"]
 - ["SQ", "init"]
 - ["SQ", "intrinsicHeight"]
 - !private ["SQ", "isEmpty"]
@@ -448,6 +445,7 @@ depends-member:
 - !private ["SQ", "layoutButtons"]
 - !private ["SQ", "layoutSubviews"]
 - !private ["SQ", "layoutToSuperview"]
+- !private ["SQ", "left"]
 - !private ["SQ", "mask"]
 - !private ["SQ", "must"]
 - !private ["SQ", "oppositeAxis"]
@@ -464,7 +462,9 @@ depends-member:
 - !private ["SQ", "setupTopSeperatorView"]
 - !private ["SQ", "spread"]
 - !private ["SQ", "spreadAxis"]
+- !private ["SQ", "top"]
 - !private ["SQ", "traitCollection"]
+- ["SQ", "vertically"]
 - !private ["SQ", "width"]
 - !private ["SQ", "zero"]
 - !private ["s25ExpressibleByArrayLiteralP", "allowAnimatedContent"]
@@ -492,7 +492,6 @@ depends-member:
 - ["SH", "CGFloat"]
 - !private ["SH", "CGSize"]
 - !private ["SH", "EKButtonView"]
-- ["SH", "QLAxis"]
 - !private ["SH", "SwiftEntryKit"]
 - !private ["SH", "UIBezierPath"]
 - !private ["SH", "UIView"]
@@ -514,13 +513,14 @@ depends-member:
 - !private ["SH", "cgPath"]
 - !private ["SH", "compressedConstraint"]
 - ["SH", "count"]
-- !private ["SH", "defaultLow"]
+- ["SH", "defaultLow"]
 - !private ["SH", "dropFirst"]
 - !private ["SH", "dropLast"]
 - !private ["SH", "expandedConstraint"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "first"]
-- !private ["SH", "height"]
+- ["SH", "height"]
+- ["SH", "horizontally"]
 - ["SH", "init"]
 - ["SH", "intrinsicHeight"]
 - !private ["SH", "isEmpty"]
@@ -529,6 +529,7 @@ depends-member:
 - !private ["SH", "layoutButtons"]
 - !private ["SH", "layoutSubviews"]
 - !private ["SH", "layoutToSuperview"]
+- !private ["SH", "left"]
 - !private ["SH", "mask"]
 - !private ["SH", "must"]
 - !private ["SH", "oppositeAxis"]
@@ -545,7 +546,9 @@ depends-member:
 - !private ["SH", "setupTopSeperatorView"]
 - !private ["SH", "spread"]
 - !private ["SH", "spreadAxis"]
+- !private ["SH", "top"]
 - !private ["SH", "traitCollection"]
+- ["SH", "vertically"]
 - !private ["SH", "width"]
 - !private ["SM", "append"]
 - ["SM", "count"]
@@ -572,7 +575,6 @@ depends-member:
 - ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "CGSize"]
 - !private ["So8NSCodingP", "EKButtonView"]
-- ["So8NSCodingP", "QLAxis"]
 - !private ["So8NSCodingP", "SwiftEntryKit"]
 - !private ["So8NSCodingP", "UIBezierPath"]
 - !private ["So8NSCodingP", "UIView"]
@@ -656,7 +658,7 @@ depends-member:
 - ["So8NSObjectC", "layoutSubviews"]
 - !private ["So8NSObjectC", "layoutToSuperview"]
 - !private ["So8NSObjectC", "mask"]
-- !private ["So8NSObjectC", "oppositeAxis"]
+- ["So8NSObjectC", "oppositeAxis"]
 - !private ["So8NSObjectC", "path"]
 - !private ["So8NSObjectC", "priority"]
 - ["So8NSObjectC", "relativeEdge"]
@@ -667,7 +669,7 @@ depends-member:
 - ["So8NSObjectC", "setupSeparatorViews"]
 - ["So8NSObjectC", "setupSeperatorView"]
 - ["So8NSObjectC", "setupTopSeperatorView"]
-- !private ["So8NSObjectC", "spreadAxis"]
+- ["So8NSObjectC", "spreadAxis"]
 - !private ["So8NSObjectC", "traitCollection"]
 - ["So8NSObjectC", "traitCollectionDidChange"]
 - !private ["So8NSObjectP", "Array"]
@@ -676,7 +678,6 @@ depends-member:
 - ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "CGSize"]
 - !private ["So8NSObjectP", "EKButtonView"]
-- ["So8NSObjectP", "QLAxis"]
 - !private ["So8NSObjectP", "SwiftEntryKit"]
 - !private ["So8NSObjectP", "UIBezierPath"]
 - !private ["So8NSObjectP", "UIView"]
@@ -727,6 +728,8 @@ depends-member:
 - !private ["s9OptionSetP", "bottom"]
 - !private ["s9OptionSetP", "layoutSubviews"]
 - !private ["Sq", "priority"]
+- ["11QuickLayout6QLAxisO", "horizontally"]
+- ["11QuickLayout6QLAxisO", "vertically"]
 - !private ["Sk", "append"]
 - ["Sk", "count"]
 - !private ["Sk", "dropFirst"]
@@ -753,11 +756,13 @@ depends-member:
 - !private ["SY", "bottom"]
 - !private ["SY", "centerX"]
 - !private ["SY", "centerY"]
-- !private ["SY", "defaultLow"]
-- !private ["SY", "height"]
+- ["SY", "defaultLow"]
+- ["SY", "height"]
 - !private ["SY", "layoutSubviews"]
+- !private ["SY", "left"]
 - !private ["SY", "must"]
 - !private ["SY", "right"]
+- !private ["SY", "top"]
 - !private ["SY", "width"]
 - !private ["ST", "append"]
 - ["ST", "count"]
@@ -782,7 +787,6 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "CGFloat"]
 - !private ["So29UIAccessibilityIdentificationP", "CGSize"]
 - !private ["So29UIAccessibilityIdentificationP", "EKButtonView"]
-- ["So29UIAccessibilityIdentificationP", "QLAxis"]
 - !private ["So29UIAccessibilityIdentificationP", "SwiftEntryKit"]
 - !private ["So29UIAccessibilityIdentificationP", "UIBezierPath"]
 - !private ["So29UIAccessibilityIdentificationP", "UIView"]
@@ -823,7 +827,6 @@ depends-member:
 - ["So12UIAppearanceP", "CGFloat"]
 - !private ["So12UIAppearanceP", "CGSize"]
 - !private ["So12UIAppearanceP", "EKButtonView"]
-- ["So12UIAppearanceP", "QLAxis"]
 - !private ["So12UIAppearanceP", "SwiftEntryKit"]
 - !private ["So12UIAppearanceP", "UIBezierPath"]
 - !private ["So12UIAppearanceP", "UIView"]
@@ -864,7 +867,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "CGFloat"]
 - !private ["So21UIAppearanceContainerP", "CGSize"]
 - !private ["So21UIAppearanceContainerP", "EKButtonView"]
-- ["So21UIAppearanceContainerP", "QLAxis"]
 - !private ["So21UIAppearanceContainerP", "SwiftEntryKit"]
 - !private ["So21UIAppearanceContainerP", "UIBezierPath"]
 - !private ["So21UIAppearanceContainerP", "UIView"]
@@ -907,7 +909,6 @@ depends-member:
 - ["So17UICoordinateSpaceP", "CGFloat"]
 - !private ["So17UICoordinateSpaceP", "CGSize"]
 - !private ["So17UICoordinateSpaceP", "EKButtonView"]
-- ["So17UICoordinateSpaceP", "QLAxis"]
 - !private ["So17UICoordinateSpaceP", "SwiftEntryKit"]
 - !private ["So17UICoordinateSpaceP", "UIBezierPath"]
 - !private ["So17UICoordinateSpaceP", "UIView"]
@@ -948,7 +949,6 @@ depends-member:
 - ["So13UIDynamicItemP", "CGFloat"]
 - !private ["So13UIDynamicItemP", "CGSize"]
 - !private ["So13UIDynamicItemP", "EKButtonView"]
-- ["So13UIDynamicItemP", "QLAxis"]
 - !private ["So13UIDynamicItemP", "SwiftEntryKit"]
 - !private ["So13UIDynamicItemP", "UIBezierPath"]
 - !private ["So13UIDynamicItemP", "UIView"]
@@ -989,7 +989,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "CGFloat"]
 - !private ["So18UIFocusEnvironmentP", "CGSize"]
 - !private ["So18UIFocusEnvironmentP", "EKButtonView"]
-- ["So18UIFocusEnvironmentP", "QLAxis"]
 - !private ["So18UIFocusEnvironmentP", "SwiftEntryKit"]
 - !private ["So18UIFocusEnvironmentP", "UIBezierPath"]
 - !private ["So18UIFocusEnvironmentP", "UIView"]
@@ -1030,7 +1029,6 @@ depends-member:
 - ["So11UIFocusItemP", "CGFloat"]
 - !private ["So11UIFocusItemP", "CGSize"]
 - !private ["So11UIFocusItemP", "EKButtonView"]
-- ["So11UIFocusItemP", "QLAxis"]
 - !private ["So11UIFocusItemP", "SwiftEntryKit"]
 - !private ["So11UIFocusItemP", "UIBezierPath"]
 - !private ["So11UIFocusItemP", "UIView"]
@@ -1071,7 +1069,6 @@ depends-member:
 - ["So20UIFocusItemContainerP", "CGFloat"]
 - !private ["So20UIFocusItemContainerP", "CGSize"]
 - !private ["So20UIFocusItemContainerP", "EKButtonView"]
-- ["So20UIFocusItemContainerP", "QLAxis"]
 - !private ["So20UIFocusItemContainerP", "SwiftEntryKit"]
 - !private ["So20UIFocusItemContainerP", "UIBezierPath"]
 - !private ["So20UIFocusItemContainerP", "UIView"]
@@ -1107,14 +1104,13 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "setupTopSeperatorView"]
 - !private ["So20UIFocusItemContainerP", "spreadAxis"]
 - !private ["So20UIFocusItemContainerP", "traitCollection"]
-- !private ["So16UILayoutPrioritya", "defaultLow"]
+- ["So16UILayoutPrioritya", "defaultLow"]
 - !private ["So16UILayoutPrioritya", "must"]
 - !private ["So30UIPasteConfigurationSupportingP", "Array"]
 - !private ["So30UIPasteConfigurationSupportingP", "CAShapeLayer"]
 - ["So30UIPasteConfigurationSupportingP", "CGFloat"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGSize"]
 - !private ["So30UIPasteConfigurationSupportingP", "EKButtonView"]
-- ["So30UIPasteConfigurationSupportingP", "QLAxis"]
 - !private ["So30UIPasteConfigurationSupportingP", "SwiftEntryKit"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBezierPath"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIView"]
@@ -1189,7 +1185,7 @@ depends-member:
 - ["So11UIResponderC", "layoutButtons"]
 - ["So11UIResponderC", "layoutSubviews"]
 - !private ["So11UIResponderC", "layoutToSuperview"]
-- !private ["So11UIResponderC", "oppositeAxis"]
+- ["So11UIResponderC", "oppositeAxis"]
 - ["So11UIResponderC", "relativeEdge"]
 - ["So11UIResponderC", "separatorViews"]
 - ["So11UIResponderC", "set"]
@@ -1198,7 +1194,7 @@ depends-member:
 - ["So11UIResponderC", "setupSeparatorViews"]
 - ["So11UIResponderC", "setupSeperatorView"]
 - ["So11UIResponderC", "setupTopSeperatorView"]
-- !private ["So11UIResponderC", "spreadAxis"]
+- ["So11UIResponderC", "spreadAxis"]
 - !private ["So11UIResponderC", "traitCollection"]
 - ["So11UIResponderC", "traitCollectionDidChange"]
 - !private ["So30UIResponderStandardEditActionsP", "Array"]
@@ -1206,7 +1202,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "CGFloat"]
 - !private ["So30UIResponderStandardEditActionsP", "CGSize"]
 - !private ["So30UIResponderStandardEditActionsP", "EKButtonView"]
-- ["So30UIResponderStandardEditActionsP", "QLAxis"]
 - !private ["So30UIResponderStandardEditActionsP", "SwiftEntryKit"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBezierPath"]
 - !private ["So30UIResponderStandardEditActionsP", "UIView"]
@@ -1247,7 +1242,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "CGFloat"]
 - !private ["So18UITraitEnvironmentP", "CGSize"]
 - !private ["So18UITraitEnvironmentP", "EKButtonView"]
-- ["So18UITraitEnvironmentP", "QLAxis"]
 - !private ["So18UITraitEnvironmentP", "SwiftEntryKit"]
 - !private ["So18UITraitEnvironmentP", "UIBezierPath"]
 - !private ["So18UITraitEnvironmentP", "UIView"]
@@ -1288,7 +1282,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "CGFloat"]
 - !private ["So23UIUserActivityRestoringP", "CGSize"]
 - !private ["So23UIUserActivityRestoringP", "EKButtonView"]
-- ["So23UIUserActivityRestoringP", "QLAxis"]
 - !private ["So23UIUserActivityRestoringP", "SwiftEntryKit"]
 - !private ["So23UIUserActivityRestoringP", "UIBezierPath"]
 - !private ["So23UIUserActivityRestoringP", "UIView"]
@@ -1363,7 +1356,7 @@ depends-member:
 - ["So6UIViewC", "layoutButtons"]
 - ["So6UIViewC", "layoutSubviews"]
 - !private ["So6UIViewC", "layoutToSuperview"]
-- !private ["So6UIViewC", "oppositeAxis"]
+- ["So6UIViewC", "oppositeAxis"]
 - ["So6UIViewC", "relativeEdge"]
 - ["So6UIViewC", "separatorViews"]
 - ["So6UIViewC", "set"]
@@ -1372,7 +1365,7 @@ depends-member:
 - ["So6UIViewC", "setupSeparatorViews"]
 - ["So6UIViewC", "setupSeperatorView"]
 - ["So6UIViewC", "setupTopSeperatorView"]
-- !private ["So6UIViewC", "spreadAxis"]
+- ["So6UIViewC", "spreadAxis"]
 - !private ["So6UIViewC", "traitCollection"]
 - ["So6UIViewC", "traitCollectionDidChange"]
 - !private ["s14_ArrayProtocolP", "append"]
@@ -1411,7 +1404,7 @@ depends-member:
 - !private ["s19_HasContiguousBytesP", "spread"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - ["s35_HasCustomAnyHashableRepresentationP", "count"]
-- !private ["s35_HasCustomAnyHashableRepresentationP", "defaultLow"]
+- ["s35_HasCustomAnyHashableRepresentationP", "defaultLow"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "dropFirst"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "dropLast"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
@@ -1427,7 +1420,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "EKButtonView"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "QLAxis"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "SwiftEntryKit"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBezierPath"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
@@ -1469,7 +1461,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "traitCollection"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - ["s21_ObjectiveCBridgeableP", "count"]
-- !private ["s21_ObjectiveCBridgeableP", "defaultLow"]
+- ["s21_ObjectiveCBridgeableP", "defaultLow"]
 - !private ["s21_ObjectiveCBridgeableP", "dropFirst"]
 - !private ["s21_ObjectiveCBridgeableP", "dropLast"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
@@ -1481,16 +1473,15 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "priority"]
 - !private ["s21_ObjectiveCBridgeableP", "spread"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
-- !private ["s20_SwiftNewtypeWrapperP", "defaultLow"]
+- ["s20_SwiftNewtypeWrapperP", "defaultLow"]
 - !private ["s20_SwiftNewtypeWrapperP", "must"]
-- !private ["5UIKit01_A23NumericRawRepresentableP", "defaultLow"]
+- ["5UIKit01_A23NumericRawRepresentableP", "defaultLow"]
 - !private ["5UIKit01_A23NumericRawRepresentableP", "must"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "Array"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CAShapeLayer"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CGSize"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "EKButtonView"]
-- ["s38__DefaultCustomPlaygroundQuickLookableP", "QLAxis"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "SwiftEntryKit"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIBezierPath"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIView"]
@@ -1530,7 +1521,7 @@ depends-nominal:
 - "s18AdditiveArithmeticP"
 - !private "So22UIViewAnimationOptionsV"
 - "Sa"
-- !private "So17NSLayoutAttributeV"
+- "So17NSLayoutAttributeV"
 - "SK"
 - "SB"
 - "13SwiftEntryKit10EKPropertyV16ButtonBarContentV"
@@ -1572,9 +1563,10 @@ depends-nominal:
 - "Sj"
 - !private "s9OptionSetP"
 - !private "Sq"
+- "11QuickLayout6QLAxisO"
 - "Sk"
 - "Sm"
-- !private "SY"
+- "SY"
 - "ST"
 - !private "s10SetAlgebraP"
 - "s13SignedNumericP"
@@ -1589,7 +1581,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
-- !private "So16UILayoutPrioritya"
+- "So16UILayoutPrioritya"
 - "So30UIPasteConfigurationSupportingP"
 - !private "So12UIRectCornerV"
 - "So11UIResponderC"
@@ -1606,8 +1598,8 @@ depends-nominal:
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
-- !private "s20_SwiftNewtypeWrapperP"
-- !private "5UIKit01_A23NumericRawRepresentableP"
+- "s20_SwiftNewtypeWrapperP"
+- "5UIKit01_A23NumericRawRepresentableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -1624,8 +1616,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

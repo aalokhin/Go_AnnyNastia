@@ -19,7 +19,6 @@ depends-top-level:
 - "UIView"
 - !private "fatalError"
 depends-member:
-- ["So15CALayerDelegateP", "QLAxisConstraints"]
 - ["So15CALayerDelegateP", "UILabel"]
 - !private ["So15CALayerDelegateP", "UIScreen"]
 - ["So15CALayerDelegateP", ""]
@@ -36,13 +35,13 @@ depends-member:
 - !private ["So15CALayerDelegateP", "setup"]
 - !private ["So15CALayerDelegateP", "verticalConstrainsts"]
 - !private ["So15CALayerDelegateP", "verticalOffset"]
-- ["s7CVarArgP", "QLAxisConstraints"]
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UIScreen"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "bounds"]
 - !private ["s7CVarArgP", "clipsToBounds"]
+- !private ["s7CVarArgP", "constant"]
 - !private ["s7CVarArgP", "content"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "horizontalConstrainsts"]
@@ -55,15 +54,17 @@ depends-member:
 - !private ["s7CVarArgP", "setup"]
 - !private ["s7CVarArgP", "verticalConstrainsts"]
 - !private ["s7CVarArgP", "verticalOffset"]
-- ["s28CustomDebugStringConvertibleP", "QLAxisConstraints"]
+- !private ["SL", "must"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "clipsToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "constant"]
 - !private ["s28CustomDebugStringConvertibleP", "content"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "horizontalConstrainsts"]
 - !private ["s28CustomDebugStringConvertibleP", "horizontalOffset"]
 - ["s28CustomDebugStringConvertibleP", "init"]
@@ -71,16 +72,19 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layoutIfNeeded"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "second"]
 - !private ["s28CustomDebugStringConvertibleP", "setup"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalConstrainsts"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalOffset"]
-- ["s23CustomStringConvertibleP", "QLAxisConstraints"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "second"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "bounds"]
 - !private ["s23CustomStringConvertibleP", "clipsToBounds"]
+- !private ["s23CustomStringConvertibleP", "constant"]
 - !private ["s23CustomStringConvertibleP", "content"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "horizontalConstrainsts"]
@@ -93,6 +97,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "setup"]
 - !private ["s23CustomStringConvertibleP", "verticalConstrainsts"]
 - !private ["s23CustomStringConvertibleP", "verticalOffset"]
+- !private ["Se", "first"]
+- !private ["Se", "second"]
 - ["13SwiftEntryKit17EKNoteMessageViewC", "CGFloat"]
 - ["13SwiftEntryKit17EKNoteMessageViewC", "EKProperty"]
 - ["13SwiftEntryKit17EKNoteMessageViewC", "NSCoder"]
@@ -112,45 +118,58 @@ depends-member:
 - !private ["13SwiftEntryKit17EKNoteMessageViewC", "verticalConstrainsts"]
 - ["13SwiftEntryKit17EKNoteMessageViewC", "verticalOffset"]
 - ["13SwiftEntryKit10EKPropertyV", "LabelContent"]
-- ["SQ", "QLAxisConstraints"]
+- !private ["SE", "first"]
+- !private ["SE", "second"]
 - ["SQ", "UILabel"]
 - !private ["SQ", "UIScreen"]
 - ["SQ", ""]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "clipsToBounds"]
+- !private ["SQ", "constant"]
 - !private ["SQ", "content"]
 - !private ["SQ", "fatalError"]
+- !private ["SQ", "first"]
 - !private ["SQ", "horizontalConstrainsts"]
 - !private ["SQ", "horizontalOffset"]
+- !private ["SQ", "horizontally"]
 - ["SQ", "init"]
 - !private ["SQ", "label"]
 - !private ["SQ", "layoutIfNeeded"]
 - !private ["SQ", "layoutToSuperview"]
 - !private ["SQ", "main"]
+- !private ["SQ", "must"]
+- !private ["SQ", "second"]
 - !private ["SQ", "setup"]
 - !private ["SQ", "verticalConstrainsts"]
 - !private ["SQ", "verticalOffset"]
-- ["SH", "QLAxisConstraints"]
+- !private ["SQ", "vertically"]
+- !private ["s23ExpressibleByNilLiteralP", "first"]
+- !private ["s23ExpressibleByNilLiteralP", "second"]
 - ["SH", "UILabel"]
 - !private ["SH", "UIScreen"]
 - ["SH", ""]
 - !private ["SH", "addSubview"]
 - !private ["SH", "bounds"]
 - !private ["SH", "clipsToBounds"]
+- !private ["SH", "constant"]
 - !private ["SH", "content"]
 - !private ["SH", "fatalError"]
+- !private ["SH", "first"]
 - !private ["SH", "horizontalConstrainsts"]
 - !private ["SH", "horizontalOffset"]
+- !private ["SH", "horizontally"]
 - ["SH", "init"]
 - !private ["SH", "label"]
 - !private ["SH", "layoutIfNeeded"]
 - !private ["SH", "layoutToSuperview"]
 - !private ["SH", "main"]
+- !private ["SH", "must"]
+- !private ["SH", "second"]
 - !private ["SH", "setup"]
 - !private ["SH", "verticalConstrainsts"]
 - !private ["SH", "verticalOffset"]
-- ["So8NSCodingP", "QLAxisConstraints"]
+- !private ["SH", "vertically"]
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UIScreen"]
 - ["So8NSCodingP", ""]
@@ -167,6 +186,7 @@ depends-member:
 - !private ["So8NSCodingP", "setup"]
 - !private ["So8NSCodingP", "verticalConstrainsts"]
 - !private ["So8NSCodingP", "verticalOffset"]
+- !private ["So18NSLayoutConstraintC", "constant"]
 - ["So8NSObjectC", "CGFloat"]
 - ["So8NSObjectC", "EKProperty"]
 - ["So8NSObjectC", "NSCoder"]
@@ -176,9 +196,10 @@ depends-member:
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "bounds"]
 - !private ["So8NSObjectC", "clipsToBounds"]
+- !private ["So8NSObjectC", "constant"]
 - !private ["So8NSObjectC", "content"]
 - !private ["So8NSObjectC", "fatalError"]
-- !private ["So8NSObjectC", "horizontalConstrainsts"]
+- ["So8NSObjectC", "horizontalConstrainsts"]
 - ["So8NSObjectC", "horizontalOffset"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "label"]
@@ -186,15 +207,15 @@ depends-member:
 - !private ["So8NSObjectC", "layoutToSuperview"]
 - !private ["So8NSObjectC", "main"]
 - ["So8NSObjectC", "setup"]
-- !private ["So8NSObjectC", "verticalConstrainsts"]
+- ["So8NSObjectC", "verticalConstrainsts"]
 - ["So8NSObjectC", "verticalOffset"]
-- ["So8NSObjectP", "QLAxisConstraints"]
 - ["So8NSObjectP", "UILabel"]
 - !private ["So8NSObjectP", "UIScreen"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "bounds"]
 - !private ["So8NSObjectP", "clipsToBounds"]
+- !private ["So8NSObjectP", "constant"]
 - !private ["So8NSObjectP", "content"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "horizontalConstrainsts"]
@@ -207,7 +228,13 @@ depends-member:
 - !private ["So8NSObjectP", "setup"]
 - !private ["So8NSObjectP", "verticalConstrainsts"]
 - !private ["So8NSObjectP", "verticalOffset"]
-- ["So29UIAccessibilityIdentificationP", "QLAxisConstraints"]
+- !private ["Sq", "first"]
+- !private ["Sq", "second"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
+- !private ["11QuickLayout17QLAxisConstraintsV", "first"]
+- !private ["11QuickLayout17QLAxisConstraintsV", "second"]
+- !private ["SY", "must"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - !private ["So29UIAccessibilityIdentificationP", "UIScreen"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -224,7 +251,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "setup"]
 - !private ["So29UIAccessibilityIdentificationP", "verticalConstrainsts"]
 - !private ["So29UIAccessibilityIdentificationP", "verticalOffset"]
-- ["So12UIAppearanceP", "QLAxisConstraints"]
 - ["So12UIAppearanceP", "UILabel"]
 - !private ["So12UIAppearanceP", "UIScreen"]
 - ["So12UIAppearanceP", ""]
@@ -241,7 +267,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "setup"]
 - !private ["So12UIAppearanceP", "verticalConstrainsts"]
 - !private ["So12UIAppearanceP", "verticalOffset"]
-- ["So21UIAppearanceContainerP", "QLAxisConstraints"]
 - ["So21UIAppearanceContainerP", "UILabel"]
 - !private ["So21UIAppearanceContainerP", "UIScreen"]
 - ["So21UIAppearanceContainerP", ""]
@@ -261,7 +286,6 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "content"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "layoutToSuperview"]
-- ["So17UICoordinateSpaceP", "QLAxisConstraints"]
 - ["So17UICoordinateSpaceP", "UILabel"]
 - !private ["So17UICoordinateSpaceP", "UIScreen"]
 - ["So17UICoordinateSpaceP", ""]
@@ -278,7 +302,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "setup"]
 - !private ["So17UICoordinateSpaceP", "verticalConstrainsts"]
 - !private ["So17UICoordinateSpaceP", "verticalOffset"]
-- ["So13UIDynamicItemP", "QLAxisConstraints"]
 - ["So13UIDynamicItemP", "UILabel"]
 - !private ["So13UIDynamicItemP", "UIScreen"]
 - ["So13UIDynamicItemP", ""]
@@ -295,7 +318,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "setup"]
 - !private ["So13UIDynamicItemP", "verticalConstrainsts"]
 - !private ["So13UIDynamicItemP", "verticalOffset"]
-- ["So18UIFocusEnvironmentP", "QLAxisConstraints"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - !private ["So18UIFocusEnvironmentP", "UIScreen"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -312,7 +334,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "setup"]
 - !private ["So18UIFocusEnvironmentP", "verticalConstrainsts"]
 - !private ["So18UIFocusEnvironmentP", "verticalOffset"]
-- ["So11UIFocusItemP", "QLAxisConstraints"]
 - ["So11UIFocusItemP", "UILabel"]
 - !private ["So11UIFocusItemP", "UIScreen"]
 - ["So11UIFocusItemP", ""]
@@ -329,7 +350,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "setup"]
 - !private ["So11UIFocusItemP", "verticalConstrainsts"]
 - !private ["So11UIFocusItemP", "verticalOffset"]
-- ["So20UIFocusItemContainerP", "QLAxisConstraints"]
 - ["So20UIFocusItemContainerP", "UILabel"]
 - !private ["So20UIFocusItemContainerP", "UIScreen"]
 - ["So20UIFocusItemContainerP", ""]
@@ -349,7 +369,7 @@ depends-member:
 - !private ["So7UILabelC", "content"]
 - ["So7UILabelC", "init"]
 - !private ["So7UILabelC", "layoutToSuperview"]
-- ["So30UIPasteConfigurationSupportingP", "QLAxisConstraints"]
+- !private ["So16UILayoutPrioritya", "must"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -376,16 +396,15 @@ depends-member:
 - !private ["So11UIResponderC", "clipsToBounds"]
 - !private ["So11UIResponderC", "content"]
 - !private ["So11UIResponderC", "fatalError"]
-- !private ["So11UIResponderC", "horizontalConstrainsts"]
+- ["So11UIResponderC", "horizontalConstrainsts"]
 - ["So11UIResponderC", "horizontalOffset"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "label"]
 - !private ["So11UIResponderC", "layoutIfNeeded"]
 - !private ["So11UIResponderC", "layoutToSuperview"]
 - ["So11UIResponderC", "setup"]
-- !private ["So11UIResponderC", "verticalConstrainsts"]
+- ["So11UIResponderC", "verticalConstrainsts"]
 - ["So11UIResponderC", "verticalOffset"]
-- ["So30UIResponderStandardEditActionsP", "QLAxisConstraints"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -404,7 +423,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "verticalOffset"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
-- ["So18UITraitEnvironmentP", "QLAxisConstraints"]
 - ["So18UITraitEnvironmentP", "UILabel"]
 - !private ["So18UITraitEnvironmentP", "UIScreen"]
 - ["So18UITraitEnvironmentP", ""]
@@ -423,7 +441,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setup"]
 - !private ["So18UITraitEnvironmentP", "verticalConstrainsts"]
 - !private ["So18UITraitEnvironmentP", "verticalOffset"]
-- ["So23UIUserActivityRestoringP", "QLAxisConstraints"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -451,22 +468,23 @@ depends-member:
 - !private ["So6UIViewC", "clipsToBounds"]
 - !private ["So6UIViewC", "content"]
 - !private ["So6UIViewC", "fatalError"]
-- !private ["So6UIViewC", "horizontalConstrainsts"]
+- ["So6UIViewC", "horizontalConstrainsts"]
 - ["So6UIViewC", "horizontalOffset"]
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "label"]
 - !private ["So6UIViewC", "layoutIfNeeded"]
 - !private ["So6UIViewC", "layoutToSuperview"]
 - ["So6UIViewC", "setup"]
-- !private ["So6UIViewC", "verticalConstrainsts"]
+- ["So6UIViewC", "verticalConstrainsts"]
 - ["So6UIViewC", "verticalOffset"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "QLAxisConstraints"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "must"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clipsToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "constant"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "horizontalConstrainsts"]
@@ -479,7 +497,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setup"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "verticalConstrainsts"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "verticalOffset"]
-- ["s38__DefaultCustomPlaygroundQuickLookableP", "QLAxisConstraints"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "must"]
+- !private ["s21_ObjectiveCBridgeableP", "second"]
+- !private ["s20_SwiftNewtypeWrapperP", "must"]
+- !private ["5UIKit01_A23NumericRawRepresentableP", "must"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIScreen"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
@@ -499,15 +521,25 @@ depends-member:
 depends-nominal:
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "Se"
 - "13SwiftEntryKit17EKNoteMessageViewC"
 - "13SwiftEntryKit10EKPropertyV"
+- !private "SE"
 - "SQ"
+- !private "s23ExpressibleByNilLiteralP"
 - "SH"
 - "So8NSCodingP"
+- !private "So18NSLayoutConstraintC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "Sq"
+- !private "11QuickLayout6QLAxisO"
+- !private "11QuickLayout17QLAxisConstraintsV"
+- !private "SY"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -518,6 +550,7 @@ depends-nominal:
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
 - "So7UILabelC"
+- !private "So16UILayoutPrioritya"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -525,7 +558,11 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "5UIKit01_A23NumericRawRepresentableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -542,8 +579,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

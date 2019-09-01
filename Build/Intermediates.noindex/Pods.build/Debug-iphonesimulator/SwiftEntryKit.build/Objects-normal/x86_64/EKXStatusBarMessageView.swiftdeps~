@@ -17,8 +17,11 @@ depends-top-level:
 - !private "UIScreen"
 - "UIView"
 - !private "fatalError"
-- !private "set"
 depends-member:
+- !private ["So17NSLayoutAttributeV", "height"]
+- !private ["So17NSLayoutAttributeV", "leading"]
+- !private ["So17NSLayoutAttributeV", "trailing"]
+- !private ["So17NSLayoutAttributeV", "width"]
 - !private ["So15CALayerDelegateP", "UIApplication"]
 - ["So15CALayerDelegateP", "UILabel"]
 - !private ["So15CALayerDelegateP", "UIScreen"]
@@ -33,6 +36,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "set"]
 - !private ["So15CALayerDelegateP", "setup"]
 - !private ["So15CALayerDelegateP", "trailingLabel"]
+- !private ["So6CGRectV", "maxY"]
 - !private ["s7CVarArgP", "UIApplication"]
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UIScreen"]
@@ -49,6 +53,7 @@ depends-member:
 - !private ["s7CVarArgP", "set"]
 - !private ["s7CVarArgP", "setup"]
 - !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "statusBarFrame"]
 - !private ["s7CVarArgP", "trailingLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
@@ -63,10 +68,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "maxY"]
 - !private ["s28CustomDebugStringConvertibleP", "set"]
 - !private ["s28CustomDebugStringConvertibleP", "setup"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "statusBarFrame"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingLabel"]
+- !private ["s17CustomReflectableP", "maxY"]
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
@@ -83,7 +91,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "set"]
 - !private ["s23CustomStringConvertibleP", "setup"]
 - !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "statusBarFrame"]
 - !private ["s23CustomStringConvertibleP", "trailingLabel"]
+- !private ["Se", "maxY"]
 - ["13SwiftEntryKit10EKPropertyV", "LabelContent"]
 - ["13SwiftEntryKit23EKXStatusBarMessageViewC", "EKProperty"]
 - ["13SwiftEntryKit23EKXStatusBarMessageViewC", "NSCoder"]
@@ -99,6 +109,7 @@ depends-member:
 - !private ["13SwiftEntryKit23EKXStatusBarMessageViewC", "set"]
 - !private ["13SwiftEntryKit23EKXStatusBarMessageViewC", "setup"]
 - !private ["13SwiftEntryKit23EKXStatusBarMessageViewC", "trailingLabel"]
+- !private ["SE", "maxY"]
 - !private ["SQ", "UIApplication"]
 - ["SQ", "UILabel"]
 - !private ["SQ", "UIScreen"]
@@ -108,14 +119,21 @@ depends-member:
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "content"]
 - !private ["SQ", "fatalError"]
+- !private ["SQ", "height"]
 - ["SQ", "init"]
 - !private ["SQ", "layoutToSuperview"]
+- !private ["SQ", "leading"]
 - !private ["SQ", "leadingLabel"]
 - !private ["SQ", "main"]
+- !private ["SQ", "maxY"]
 - !private ["SQ", "set"]
 - !private ["SQ", "setup"]
 - !private ["SQ", "shared"]
+- !private ["SQ", "statusBarFrame"]
+- !private ["SQ", "trailing"]
 - !private ["SQ", "trailingLabel"]
+- !private ["SQ", "vertically"]
+- !private ["SQ", "width"]
 - !private ["SH", "UIApplication"]
 - ["SH", "UILabel"]
 - !private ["SH", "UIScreen"]
@@ -125,14 +143,20 @@ depends-member:
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "content"]
 - !private ["SH", "fatalError"]
+- !private ["SH", "height"]
 - ["SH", "init"]
 - !private ["SH", "layoutToSuperview"]
+- !private ["SH", "leading"]
 - !private ["SH", "leadingLabel"]
 - !private ["SH", "main"]
 - !private ["SH", "set"]
 - !private ["SH", "setup"]
 - !private ["SH", "shared"]
+- !private ["SH", "statusBarFrame"]
+- !private ["SH", "trailing"]
 - !private ["SH", "trailingLabel"]
+- !private ["SH", "vertically"]
+- !private ["SH", "width"]
 - !private ["So8NSCodingP", "UIApplication"]
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UIScreen"]
@@ -164,6 +188,7 @@ depends-member:
 - !private ["So8NSObjectC", "set"]
 - ["So8NSObjectC", "setup"]
 - !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "statusBarFrame"]
 - ["So8NSObjectC", "trailingLabel"]
 - !private ["So8NSObjectP", "UIApplication"]
 - ["So8NSObjectP", "UILabel"]
@@ -181,7 +206,13 @@ depends-member:
 - !private ["So8NSObjectP", "set"]
 - !private ["So8NSObjectP", "setup"]
 - !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "statusBarFrame"]
 - !private ["So8NSObjectP", "trailingLabel"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
+- !private ["SY", "height"]
+- !private ["SY", "leading"]
+- !private ["SY", "trailing"]
+- !private ["SY", "width"]
 - !private ["So29UIAccessibilityIdentificationP", "UIApplication"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - !private ["So29UIAccessibilityIdentificationP", "UIScreen"]
@@ -225,6 +256,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "setup"]
 - !private ["So21UIAppearanceContainerP", "trailingLabel"]
 - !private ["So13UIApplicationC", "shared"]
+- !private ["So13UIApplicationC", "statusBarFrame"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "content"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "layoutToSuperview"]
@@ -315,6 +347,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "set"]
 - !private ["So30UIPasteConfigurationSupportingP", "setup"]
 - !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So30UIPasteConfigurationSupportingP", "statusBarFrame"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingLabel"]
 - ["So11UIResponderC", "EKProperty"]
 - ["So11UIResponderC", "NSCoder"]
@@ -331,6 +364,7 @@ depends-member:
 - !private ["So11UIResponderC", "set"]
 - ["So11UIResponderC", "setup"]
 - !private ["So11UIResponderC", "shared"]
+- !private ["So11UIResponderC", "statusBarFrame"]
 - ["So11UIResponderC", "trailingLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
@@ -346,6 +380,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "set"]
 - !private ["So30UIResponderStandardEditActionsP", "setup"]
 - !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "statusBarFrame"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingLabel"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
@@ -379,6 +414,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "set"]
 - !private ["So23UIUserActivityRestoringP", "setup"]
 - !private ["So23UIUserActivityRestoringP", "shared"]
+- !private ["So23UIUserActivityRestoringP", "statusBarFrame"]
 - !private ["So23UIUserActivityRestoringP", "trailingLabel"]
 - ["So6UIViewC", "EKProperty"]
 - ["So6UIViewC", "NSCoder"]
@@ -396,6 +432,7 @@ depends-member:
 - !private ["So6UIViewC", "set"]
 - ["So6UIViewC", "setup"]
 - ["So6UIViewC", "trailingLabel"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "maxY"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
@@ -412,7 +449,9 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "set"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setup"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "statusBarFrame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingLabel"]
+- !private ["s21_ObjectiveCBridgeableP", "maxY"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIApplication"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIScreen"]
@@ -428,17 +467,24 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setup"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingLabel"]
 depends-nominal:
+- !private "So17NSLayoutAttributeV"
 - "So15CALayerDelegateP"
+- !private "So6CGRectV"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "Se"
 - "13SwiftEntryKit10EKPropertyV"
 - "13SwiftEntryKit23EKXStatusBarMessageViewC"
+- !private "SE"
 - "SQ"
 - "SH"
 - "So8NSCodingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "11QuickLayout6QLAxisO"
+- !private "SY"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -457,7 +503,9 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -474,8 +522,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

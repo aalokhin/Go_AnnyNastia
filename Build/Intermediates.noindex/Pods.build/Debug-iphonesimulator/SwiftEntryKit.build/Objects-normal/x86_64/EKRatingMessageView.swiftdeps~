@@ -25,6 +25,9 @@ depends-top-level:
 depends-member:
 - !private ["So22UIViewAnimationOptionsV", "transitionCrossDissolve"]
 - !private ["Sa", "subscript"]
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "centerX"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - !private ["SK", "subscript"]
 - !private ["So15CALayerDelegateP", "EKButtonBarView"]
 - ["So15CALayerDelegateP", "EKMessageContentView"]
@@ -96,6 +99,7 @@ depends-member:
 - !private ["s7CVarArgP", "titleContent"]
 - !private ["s7CVarArgP", "verticalMargins"]
 - !private ["Sl", "subscript"]
+- !private ["SL", "must"]
 - !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "EKButtonBarView"]
 - ["s28CustomDebugStringConvertibleP", "EKMessageContentView"]
@@ -132,6 +136,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "subtitleContent"]
 - !private ["s28CustomDebugStringConvertibleP", "symbolsView"]
 - !private ["s28CustomDebugStringConvertibleP", "titleContent"]
+- !private ["s28CustomDebugStringConvertibleP", "top"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalMargins"]
 - !private ["s17CustomReflectableP", "alpha"]
 - !private ["s17CustomReflectableP", "bottomCornerRadius"]
@@ -140,6 +145,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "layout"]
 - !private ["s17CustomReflectableP", "layoutToSuperview"]
 - !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "top"]
 - !private ["s23CustomStringConvertibleP", "EKButtonBarView"]
 - ["s23CustomStringConvertibleP", "EKMessageContentView"]
 - ["s23CustomStringConvertibleP", "EKRatingSymbolsContainerView"]
@@ -184,6 +190,7 @@ depends-member:
 - !private ["Se", "layout"]
 - !private ["Se", "layoutToSuperview"]
 - !private ["Se", "subscript"]
+- !private ["Se", "top"]
 - !private ["13SwiftEntryKit15EKButtonBarViewC", "alpha"]
 - !private ["13SwiftEntryKit15EKButtonBarViewC", "bottomCornerRadius"]
 - !private ["13SwiftEntryKit15EKButtonBarViewC", "clipsToBounds"]
@@ -247,6 +254,7 @@ depends-member:
 - !private ["SE", "layout"]
 - !private ["SE", "layoutToSuperview"]
 - !private ["SE", "subscript"]
+- !private ["SE", "top"]
 - !private ["13SwiftEntryKit0B20AppearanceDescriptorP", "EKButtonBarView"]
 - ["13SwiftEntryKit0B20AppearanceDescriptorP", "EKMessageContentView"]
 - ["13SwiftEntryKit0B20AppearanceDescriptorP", "EKRatingSymbolsContainerView"]
@@ -279,13 +287,16 @@ depends-member:
 - !private ["SQ", "alpha"]
 - !private ["SQ", "animate"]
 - !private ["SQ", "animateIn"]
+- !private ["SQ", "bottom"]
 - ["SQ", "bottomCornerRadius"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "buttonBarView"]
+- !private ["SQ", "centerX"]
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "expand"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "horizontalMargins"]
+- !private ["SQ", "horizontally"]
 - ["SQ", "init"]
 - !private ["SQ", "layout"]
 - !private ["SQ", "layoutIfNeeded"]
@@ -293,6 +304,7 @@ depends-member:
 - !private ["SQ", "main"]
 - !private ["SQ", "message"]
 - !private ["SQ", "messageContentView"]
+- !private ["SQ", "must"]
 - !private ["SQ", "selectedIndex"]
 - !private ["SQ", "set"]
 - !private ["SQ", "setup"]
@@ -303,6 +315,7 @@ depends-member:
 - !private ["SQ", "subtitleContent"]
 - !private ["SQ", "symbolsView"]
 - !private ["SQ", "titleContent"]
+- !private ["SQ", "top"]
 - !private ["SQ", "transitionCrossDissolve"]
 - !private ["SQ", "verticalMargins"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
@@ -313,6 +326,7 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "expand"]
 - !private ["s23ExpressibleByNilLiteralP", "layout"]
 - !private ["s23ExpressibleByNilLiteralP", "layoutToSuperview"]
+- !private ["s23ExpressibleByNilLiteralP", "top"]
 - !private ["SH", "EKButtonBarView"]
 - ["SH", "EKMessageContentView"]
 - ["SH", "EKRatingSymbolsContainerView"]
@@ -324,13 +338,16 @@ depends-member:
 - !private ["SH", "alpha"]
 - !private ["SH", "animate"]
 - !private ["SH", "animateIn"]
+- !private ["SH", "bottom"]
 - ["SH", "bottomCornerRadius"]
 - !private ["SH", "bounds"]
 - !private ["SH", "buttonBarView"]
+- !private ["SH", "centerX"]
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "expand"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "horizontalMargins"]
+- !private ["SH", "horizontally"]
 - ["SH", "init"]
 - !private ["SH", "layout"]
 - !private ["SH", "layoutIfNeeded"]
@@ -338,6 +355,7 @@ depends-member:
 - !private ["SH", "main"]
 - !private ["SH", "message"]
 - !private ["SH", "messageContentView"]
+- !private ["SH", "must"]
 - !private ["SH", "selectedIndex"]
 - !private ["SH", "set"]
 - !private ["SH", "setup"]
@@ -348,6 +366,7 @@ depends-member:
 - !private ["SH", "subtitleContent"]
 - !private ["SH", "symbolsView"]
 - !private ["SH", "titleContent"]
+- !private ["SH", "top"]
 - !private ["SH", "verticalMargins"]
 - !private ["SM", "subscript"]
 - !private ["10Foundation19MutableDataProtocolP", "subscript"]
@@ -465,8 +484,14 @@ depends-member:
 - !private ["Sq", "expand"]
 - !private ["Sq", "layout"]
 - !private ["Sq", "layoutToSuperview"]
+- !private ["Sq", "top"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
 - !private ["Sk", "subscript"]
 - !private ["Sm", "subscript"]
+- !private ["SY", "bottom"]
+- !private ["SY", "centerX"]
+- !private ["SY", "must"]
+- !private ["SY", "top"]
 - !private ["SY", "transitionCrossDissolve"]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", "transitionCrossDissolve"]
@@ -735,6 +760,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "symbolsView"]
 - !private ["So20UIFocusItemContainerP", "titleContent"]
 - !private ["So20UIFocusItemContainerP", "verticalMargins"]
+- !private ["So16UILayoutPrioritya", "must"]
 - !private ["So30UIPasteConfigurationSupportingP", "EKButtonBarView"]
 - ["So30UIPasteConfigurationSupportingP", "EKMessageContentView"]
 - ["So30UIPasteConfigurationSupportingP", "EKRatingSymbolsContainerView"]
@@ -949,6 +975,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
 - !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "must"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "EKButtonBarView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "EKMessageContentView"]
@@ -991,7 +1018,11 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "expand"]
 - !private ["s21_ObjectiveCBridgeableP", "layout"]
 - !private ["s21_ObjectiveCBridgeableP", "layoutToSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "must"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "top"]
+- !private ["s20_SwiftNewtypeWrapperP", "must"]
+- !private ["5UIKit01_A23NumericRawRepresentableP", "must"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "EKButtonBarView"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "EKMessageContentView"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "EKRatingSymbolsContainerView"]
@@ -1028,10 +1059,12 @@ depends-member:
 depends-nominal:
 - !private "So22UIViewAnimationOptionsV"
 - !private "Sa"
+- !private "So17NSLayoutAttributeV"
 - !private "SK"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "Sl"
+- !private "SL"
 - !private "10Foundation15ContiguousBytesP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
@@ -1058,6 +1091,7 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "s9OptionSetP"
 - !private "Sq"
+- !private "11QuickLayout6QLAxisO"
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
@@ -1072,6 +1106,7 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
+- !private "So16UILayoutPrioritya"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -1085,6 +1120,8 @@ depends-nominal:
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "5UIKit01_A23NumericRawRepresentableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -1101,8 +1138,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

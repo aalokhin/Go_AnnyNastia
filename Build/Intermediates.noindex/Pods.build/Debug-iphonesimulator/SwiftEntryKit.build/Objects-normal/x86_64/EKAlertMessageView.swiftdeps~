@@ -24,6 +24,11 @@ depends-top-level:
 - !private "fatalError"
 depends-member:
 - !private ["Sa", "isEmpty"]
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "centerX"]
+- !private ["So17NSLayoutAttributeV", "left"]
+- !private ["So17NSLayoutAttributeV", "right"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - !private ["SK", "isEmpty"]
 - !private ["13SwiftEntryKit10EKPropertyV16ButtonBarContentV", "content"]
 - !private ["13SwiftEntryKit10EKPropertyV16ButtonBarContentV", "expandAnimatedly"]
@@ -91,10 +96,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layout"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutContent"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
+- !private ["s28CustomDebugStringConvertibleP", "left"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "messageContentView"]
 - !private ["s28CustomDebugStringConvertibleP", "setupButtonBarView"]
 - !private ["s28CustomDebugStringConvertibleP", "thumbImageView"]
+- !private ["s28CustomDebugStringConvertibleP", "top"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalMargins"]
 - !private ["s17CustomReflectableP", "alpha"]
 - !private ["s17CustomReflectableP", "bottomCornerRadius"]
@@ -103,6 +110,8 @@ depends-member:
 - !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "layout"]
 - !private ["s17CustomReflectableP", "layoutToSuperview"]
+- !private ["s17CustomReflectableP", "left"]
+- !private ["s17CustomReflectableP", "top"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "EKButtonBarView"]
 - ["s23CustomStringConvertibleP", ""]
@@ -134,6 +143,8 @@ depends-member:
 - !private ["Se", "isEmpty"]
 - !private ["Se", "layout"]
 - !private ["Se", "layoutToSuperview"]
+- !private ["Se", "left"]
+- !private ["Se", "top"]
 - !private ["So18OS_dispatch_objectC", "asyncAfter"]
 - !private ["So18OS_dispatch_objectC", "main"]
 - !private ["So17OS_dispatch_queueC", "asyncAfter"]
@@ -202,6 +213,8 @@ depends-member:
 - !private ["SE", "isEmpty"]
 - !private ["SE", "layout"]
 - !private ["SE", "layoutToSuperview"]
+- !private ["SE", "left"]
+- !private ["SE", "top"]
 - !private ["13SwiftEntryKit0B20AppearanceDescriptorP", "DispatchQueue"]
 - !private ["13SwiftEntryKit0B20AppearanceDescriptorP", "EKButtonBarView"]
 - ["13SwiftEntryKit0B20AppearanceDescriptorP", ""]
@@ -219,12 +232,15 @@ depends-member:
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "alpha"]
 - !private ["SQ", "asyncAfter"]
+- !private ["SQ", "bottom"]
 - ["SQ", "bottomCornerRadius"]
 - !private ["SQ", "buttonBarView"]
+- !private ["SQ", "centerX"]
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "expand"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "horizontalMargins"]
+- !private ["SQ", "horizontally"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "labelsOffset"]
@@ -235,6 +251,7 @@ depends-member:
 - !private ["SQ", "main"]
 - !private ["SQ", "messageContentView"]
 - !private ["SQ", "now"]
+- !private ["SQ", "right"]
 - !private ["SQ", "setupButtonBarView"]
 - !private ["SQ", "thumbImageView"]
 - ["SQ", "top"]
@@ -246,18 +263,23 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "expand"]
 - !private ["s23ExpressibleByNilLiteralP", "layout"]
 - !private ["s23ExpressibleByNilLiteralP", "layoutToSuperview"]
+- !private ["s23ExpressibleByNilLiteralP", "left"]
+- !private ["s23ExpressibleByNilLiteralP", "top"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "EKButtonBarView"]
 - ["SH", ""]
 - !private ["SH", "addSubview"]
 - !private ["SH", "alpha"]
 - !private ["SH", "asyncAfter"]
+- !private ["SH", "bottom"]
 - ["SH", "bottomCornerRadius"]
 - !private ["SH", "buttonBarView"]
+- !private ["SH", "centerX"]
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "expand"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "horizontalMargins"]
+- !private ["SH", "horizontally"]
 - !private ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - !private ["SH", "labelsOffset"]
@@ -267,6 +289,7 @@ depends-member:
 - ["SH", "left"]
 - !private ["SH", "main"]
 - !private ["SH", "messageContentView"]
+- !private ["SH", "right"]
 - !private ["SH", "setupButtonBarView"]
 - !private ["SH", "thumbImageView"]
 - ["SH", "top"]
@@ -352,8 +375,16 @@ depends-member:
 - !private ["Sq", "expand"]
 - !private ["Sq", "layout"]
 - !private ["Sq", "layoutToSuperview"]
+- !private ["Sq", "left"]
+- !private ["Sq", "top"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
 - !private ["Sk", "isEmpty"]
 - !private ["Sm", "isEmpty"]
+- !private ["SY", "bottom"]
+- !private ["SY", "centerX"]
+- !private ["SY", "left"]
+- !private ["SY", "right"]
+- !private ["SY", "top"]
 - !private ["ST", "isEmpty"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layoutToSuperview"]
 - !private ["So29UIAccessibilityIdentificationP", "DispatchQueue"]
@@ -680,6 +711,8 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "layout"]
 - !private ["s21_ObjectiveCBridgeableP", "layoutToSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "left"]
+- !private ["s21_ObjectiveCBridgeableP", "top"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "DispatchQueue"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "EKButtonBarView"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
@@ -702,6 +735,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "verticalMargins"]
 depends-nominal:
 - !private "Sa"
+- !private "So17NSLayoutAttributeV"
 - !private "SK"
 - !private "13SwiftEntryKit10EKPropertyV16ButtonBarContentV"
 - "So15CALayerDelegateP"
@@ -737,8 +771,10 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So9OS_objectC"
 - !private "Sq"
+- !private "11QuickLayout6QLAxisO"
 - !private "Sk"
 - !private "Sm"
+- !private "SY"
 - !private "ST"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
@@ -778,8 +814,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

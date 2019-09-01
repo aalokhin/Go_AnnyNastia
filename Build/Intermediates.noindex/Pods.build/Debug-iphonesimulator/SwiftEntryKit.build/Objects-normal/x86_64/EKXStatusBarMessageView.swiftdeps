@@ -11,7 +11,6 @@ depends-top-level:
 - "EKProperty"
 - "EKXStatusBarMessageView"
 - "NSCoder"
-- !private "StringLiteralType"
 - !private "UIApplication"
 - "UILabel"
 - !private "UIScreen"

@@ -213,6 +213,7 @@ depends-member:
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "fillSuperview"]
 - !private ["SQ", "font"]
+- !private ["SQ", "horizontally"]
 - ["SQ", "init"]
 - !private ["SQ", "isAccessibilityElement"]
 - !private ["SQ", "layoutToSuperview"]
@@ -232,6 +233,7 @@ depends-member:
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "touchUpOutside"]
 - !private ["SQ", "traitCollection"]
+- !private ["SQ", "vertically"]
 - !private ["SQ", "zero"]
 - !private ["So15UIControlEventsV", "touchCancel"]
 - !private ["So15UIControlEventsV", "touchDown"]
@@ -261,6 +263,7 @@ depends-member:
 - !private ["SH", "fatalError"]
 - !private ["SH", "fillSuperview"]
 - !private ["SH", "font"]
+- !private ["SH", "horizontally"]
 - ["SH", "init"]
 - !private ["SH", "isAccessibilityElement"]
 - !private ["SH", "layoutToSuperview"]
@@ -276,6 +279,7 @@ depends-member:
 - !private ["SH", "textColor"]
 - !private ["SH", "titleLabel"]
 - !private ["SH", "traitCollection"]
+- !private ["SH", "vertically"]
 - !private ["13SwiftEntryKit10EKPropertyV12LabelContentV", "style"]
 - !private ["13SwiftEntryKit10EKPropertyV12LabelContentV", "text"]
 - !private ["13SwiftEntryKit10EKPropertyV10LabelStyleV", "color"]
@@ -388,6 +392,8 @@ depends-member:
 - !private ["s9OptionSetP", "touchDown"]
 - !private ["s9OptionSetP", "touchUpInside"]
 - !private ["s9OptionSetP", "touchUpOutside"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
 - !private ["SY", "button"]
 - !private ["SY", "byWordWrapping"]
 - !private ["SY", "center"]
@@ -979,6 +985,7 @@ depends-nominal:
 - "So8NSObjectP"
 - !private "So15NSTextAlignmentV"
 - !private "s9OptionSetP"
+- !private "11QuickLayout6QLAxisO"
 - !private "SY"
 - !private "s10SetAlgebraP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
@@ -1023,8 +1030,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

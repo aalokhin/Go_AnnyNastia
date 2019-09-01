@@ -21,6 +21,10 @@ depends-top-level:
 - "UITraitCollection"
 - !private "fatalError"
 depends-member:
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "left"]
+- !private ["So17NSLayoutAttributeV", "right"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - !private ["So15CALayerDelegateP", "UILabel"]
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -79,8 +83,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layout"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutContent"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
+- !private ["s28CustomDebugStringConvertibleP", "left"]
 - !private ["s28CustomDebugStringConvertibleP", "message"]
 - !private ["s28CustomDebugStringConvertibleP", "messageContentView"]
+- !private ["s28CustomDebugStringConvertibleP", "right"]
 - !private ["s28CustomDebugStringConvertibleP", "setupAuxLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "thumbImageView"]
@@ -88,6 +94,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "traitCollectionDidChange"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalMargins"]
 - !private ["s17CustomReflectableP", "content"]
+- !private ["s17CustomReflectableP", "left"]
+- !private ["s17CustomReflectableP", "right"]
 - !private ["s23CustomStringConvertibleP", "UILabel"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
@@ -194,11 +202,14 @@ depends-member:
 - !private ["SQ", "traitCollectionDidChange"]
 - !private ["SQ", "verticalMargins"]
 - !private ["s23ExpressibleByNilLiteralP", "content"]
+- !private ["s23ExpressibleByNilLiteralP", "left"]
+- !private ["s23ExpressibleByNilLiteralP", "right"]
 - !private ["SH", "UILabel"]
 - ["SH", ""]
 - !private ["SH", "addSubview"]
 - !private ["SH", "auxLabel"]
 - !private ["SH", "auxiliaryContent"]
+- !private ["SH", "bottom"]
 - !private ["SH", "content"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "forceContentWrap"]
@@ -208,11 +219,14 @@ depends-member:
 - !private ["SH", "layout"]
 - !private ["SH", "layoutContent"]
 - !private ["SH", "layoutToSuperview"]
+- !private ["SH", "left"]
 - !private ["SH", "message"]
 - !private ["SH", "messageContentView"]
+- !private ["SH", "right"]
 - !private ["SH", "setupAuxLabel"]
 - !private ["SH", "textColor"]
 - !private ["SH", "thumbImageView"]
+- !private ["SH", "top"]
 - !private ["SH", "traitCollection"]
 - !private ["SH", "traitCollectionDidChange"]
 - !private ["SH", "verticalMargins"]
@@ -290,6 +304,12 @@ depends-member:
 - !private ["So8NSObjectP", "traitCollectionDidChange"]
 - !private ["So8NSObjectP", "verticalMargins"]
 - !private ["Sq", "content"]
+- !private ["Sq", "left"]
+- !private ["Sq", "right"]
+- !private ["SY", "bottom"]
+- !private ["SY", "left"]
+- !private ["SY", "right"]
+- !private ["SY", "top"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layoutToSuperview"]
 - !private ["So29UIAccessibilityIdentificationP", "UILabel"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -670,6 +690,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "traitCollectionDidChange"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "verticalMargins"]
 depends-nominal:
+- !private "So17NSLayoutAttributeV"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
@@ -692,6 +713,7 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "Sq"
+- !private "SY"
 - !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -729,8 +751,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

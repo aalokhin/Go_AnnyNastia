@@ -23,7 +23,10 @@ depends-top-level:
 - "UIView"
 - !private "fatalError"
 depends-member:
-- ["So15CALayerDelegateP", "QLAxisConstraints"]
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "left"]
+- !private ["So17NSLayoutAttributeV", "right"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - ["So15CALayerDelegateP", "UILabel"]
 - !private ["So15CALayerDelegateP", "UIScreen"]
 - ["So15CALayerDelegateP", ""]
@@ -58,7 +61,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "topConstraint"]
 - !private ["So15CALayerDelegateP", "traitCollection"]
 - !private ["So15CALayerDelegateP", "verticalMargins"]
-- ["s7CVarArgP", "QLAxisConstraints"]
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UIScreen"]
 - ["s7CVarArgP", ""]
@@ -96,7 +98,7 @@ depends-member:
 - !private ["s7CVarArgP", "topConstraint"]
 - !private ["s7CVarArgP", "traitCollection"]
 - !private ["s7CVarArgP", "verticalMargins"]
-- ["s28CustomDebugStringConvertibleP", "QLAxisConstraints"]
+- !private ["SL", "must"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - !private ["s28CustomDebugStringConvertibleP", "UIScreen"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -107,6 +109,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "constant"]
 - !private ["s28CustomDebugStringConvertibleP", "content"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "forceContentWrap"]
 - !private ["s28CustomDebugStringConvertibleP", "horizontalConstraints"]
 - !private ["s28CustomDebugStringConvertibleP", "horizontalMargins"]
@@ -117,6 +120,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "layoutIfNeeded"]
 - !private ["s28CustomDebugStringConvertibleP", "layoutToSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "second"]
 - !private ["s28CustomDebugStringConvertibleP", "setupInterfaceStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "setupSubtitleLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "setupTitleLabel"]
@@ -131,12 +135,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "titleAttributes"]
 - !private ["s28CustomDebugStringConvertibleP", "titleContent"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "top"]
 - !private ["s28CustomDebugStringConvertibleP", "topConstraint"]
 - !private ["s28CustomDebugStringConvertibleP", "traitCollection"]
 - !private ["s28CustomDebugStringConvertibleP", "verticalMargins"]
 - !private ["s17CustomReflectableP", "constant"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "second"]
 - !private ["s17CustomReflectableP", "style"]
-- ["s23CustomStringConvertibleP", "QLAxisConstraints"]
+- !private ["s17CustomReflectableP", "top"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - ["s23CustomStringConvertibleP", ""]
@@ -175,7 +182,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "traitCollection"]
 - !private ["s23CustomStringConvertibleP", "verticalMargins"]
 - !private ["Se", "constant"]
+- !private ["Se", "first"]
+- !private ["Se", "second"]
 - !private ["Se", "style"]
+- !private ["Se", "top"]
 - ["13SwiftEntryKit20EKMessageContentViewC", "CGFloat"]
 - ["13SwiftEntryKit20EKMessageContentViewC", "EKProperty"]
 - ["13SwiftEntryKit20EKMessageContentViewC", "NSCoder"]
@@ -214,28 +224,37 @@ depends-member:
 - ["13SwiftEntryKit10EKPropertyV", "LabelContent"]
 - ["13SwiftEntryKit10EKPropertyV", "LabelStyle"]
 - !private ["SE", "constant"]
+- !private ["SE", "first"]
+- !private ["SE", "second"]
 - !private ["SE", "style"]
-- ["SQ", "QLAxisConstraints"]
+- !private ["SE", "top"]
 - ["SQ", "UILabel"]
 - !private ["SQ", "UIScreen"]
 - ["SQ", ""]
 - !private ["SQ", "addSubview"]
+- !private ["SQ", "bottom"]
 - !private ["SQ", "bottomConstraint"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "clipsToBounds"]
 - !private ["SQ", "constant"]
 - !private ["SQ", "content"]
 - !private ["SQ", "fatalError"]
+- !private ["SQ", "first"]
 - !private ["SQ", "forceContentWrap"]
 - !private ["SQ", "horizontalConstraints"]
 - !private ["SQ", "horizontalMargins"]
+- !private ["SQ", "horizontally"]
 - ["SQ", "init"]
 - !private ["SQ", "labelsOffset"]
 - !private ["SQ", "labelsOffsetConstraint"]
 - !private ["SQ", "layout"]
 - !private ["SQ", "layoutIfNeeded"]
 - !private ["SQ", "layoutToSuperview"]
+- !private ["SQ", "left"]
 - !private ["SQ", "main"]
+- !private ["SQ", "must"]
+- !private ["SQ", "right"]
+- !private ["SQ", "second"]
 - !private ["SQ", "setupInterfaceStyle"]
 - !private ["SQ", "setupSubtitleLabel"]
 - !private ["SQ", "setupTitleLabel"]
@@ -250,32 +269,43 @@ depends-member:
 - !private ["SQ", "titleAttributes"]
 - !private ["SQ", "titleContent"]
 - !private ["SQ", "titleLabel"]
+- !private ["SQ", "top"]
 - !private ["SQ", "topConstraint"]
 - !private ["SQ", "traitCollection"]
 - !private ["SQ", "verticalMargins"]
+- !private ["SQ", "vertically"]
 - !private ["s23ExpressibleByNilLiteralP", "constant"]
+- !private ["s23ExpressibleByNilLiteralP", "first"]
+- !private ["s23ExpressibleByNilLiteralP", "second"]
 - !private ["s23ExpressibleByNilLiteralP", "style"]
-- ["SH", "QLAxisConstraints"]
+- !private ["s23ExpressibleByNilLiteralP", "top"]
 - ["SH", "UILabel"]
 - !private ["SH", "UIScreen"]
 - ["SH", ""]
 - !private ["SH", "addSubview"]
+- !private ["SH", "bottom"]
 - !private ["SH", "bottomConstraint"]
 - !private ["SH", "bounds"]
 - !private ["SH", "clipsToBounds"]
 - !private ["SH", "constant"]
 - !private ["SH", "content"]
 - !private ["SH", "fatalError"]
+- !private ["SH", "first"]
 - !private ["SH", "forceContentWrap"]
 - !private ["SH", "horizontalConstraints"]
 - !private ["SH", "horizontalMargins"]
+- !private ["SH", "horizontally"]
 - ["SH", "init"]
 - !private ["SH", "labelsOffset"]
 - !private ["SH", "labelsOffsetConstraint"]
 - !private ["SH", "layout"]
 - !private ["SH", "layoutIfNeeded"]
 - !private ["SH", "layoutToSuperview"]
+- !private ["SH", "left"]
 - !private ["SH", "main"]
+- !private ["SH", "must"]
+- !private ["SH", "right"]
+- !private ["SH", "second"]
 - !private ["SH", "setupInterfaceStyle"]
 - !private ["SH", "setupSubtitleLabel"]
 - !private ["SH", "setupTitleLabel"]
@@ -290,12 +320,13 @@ depends-member:
 - !private ["SH", "titleAttributes"]
 - !private ["SH", "titleContent"]
 - !private ["SH", "titleLabel"]
+- !private ["SH", "top"]
 - !private ["SH", "topConstraint"]
 - !private ["SH", "traitCollection"]
 - !private ["SH", "verticalMargins"]
+- !private ["SH", "vertically"]
 - !private ["13SwiftEntryKit10EKPropertyV12LabelContentV", "style"]
 - !private ["13SwiftEntryKit10EKPropertyV10LabelStyleV", "color"]
-- ["So8NSCodingP", "QLAxisConstraints"]
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "UIScreen"]
 - ["So8NSCodingP", ""]
@@ -348,7 +379,7 @@ depends-member:
 - !private ["So8NSObjectC", "content"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "forceContentWrap"]
-- !private ["So8NSObjectC", "horizontalConstraints"]
+- ["So8NSObjectC", "horizontalConstraints"]
 - ["So8NSObjectC", "horizontalMargins"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "labelsOffset"]
@@ -375,7 +406,6 @@ depends-member:
 - !private ["So8NSObjectC", "traitCollection"]
 - ["So8NSObjectC", "traitCollectionDidChange"]
 - ["So8NSObjectC", "verticalMargins"]
-- ["So8NSObjectP", "QLAxisConstraints"]
 - ["So8NSObjectP", "UILabel"]
 - !private ["So8NSObjectP", "UIScreen"]
 - ["So8NSObjectP", ""]
@@ -414,8 +444,19 @@ depends-member:
 - !private ["So8NSObjectP", "traitCollection"]
 - !private ["So8NSObjectP", "verticalMargins"]
 - !private ["Sq", "constant"]
+- !private ["Sq", "first"]
+- !private ["Sq", "second"]
 - !private ["Sq", "style"]
-- ["So29UIAccessibilityIdentificationP", "QLAxisConstraints"]
+- !private ["Sq", "top"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
+- !private ["11QuickLayout17QLAxisConstraintsV", "first"]
+- !private ["11QuickLayout17QLAxisConstraintsV", "second"]
+- !private ["SY", "bottom"]
+- !private ["SY", "left"]
+- !private ["SY", "must"]
+- !private ["SY", "right"]
+- !private ["SY", "top"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - !private ["So29UIAccessibilityIdentificationP", "UIScreen"]
 - ["So29UIAccessibilityIdentificationP", ""]
@@ -450,7 +491,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "topConstraint"]
 - !private ["So29UIAccessibilityIdentificationP", "traitCollection"]
 - !private ["So29UIAccessibilityIdentificationP", "verticalMargins"]
-- ["So12UIAppearanceP", "QLAxisConstraints"]
 - ["So12UIAppearanceP", "UILabel"]
 - !private ["So12UIAppearanceP", "UIScreen"]
 - ["So12UIAppearanceP", ""]
@@ -485,7 +525,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "topConstraint"]
 - !private ["So12UIAppearanceP", "traitCollection"]
 - !private ["So12UIAppearanceP", "verticalMargins"]
-- ["So21UIAppearanceContainerP", "QLAxisConstraints"]
 - ["So21UIAppearanceContainerP", "UILabel"]
 - !private ["So21UIAppearanceContainerP", "UIScreen"]
 - ["So21UIAppearanceContainerP", ""]
@@ -528,7 +567,6 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "style"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "textColor"]
-- ["So17UICoordinateSpaceP", "QLAxisConstraints"]
 - ["So17UICoordinateSpaceP", "UILabel"]
 - !private ["So17UICoordinateSpaceP", "UIScreen"]
 - ["So17UICoordinateSpaceP", ""]
@@ -563,7 +601,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "topConstraint"]
 - !private ["So17UICoordinateSpaceP", "traitCollection"]
 - !private ["So17UICoordinateSpaceP", "verticalMargins"]
-- ["So13UIDynamicItemP", "QLAxisConstraints"]
 - ["So13UIDynamicItemP", "UILabel"]
 - !private ["So13UIDynamicItemP", "UIScreen"]
 - ["So13UIDynamicItemP", ""]
@@ -598,7 +635,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "topConstraint"]
 - !private ["So13UIDynamicItemP", "traitCollection"]
 - !private ["So13UIDynamicItemP", "verticalMargins"]
-- ["So18UIFocusEnvironmentP", "QLAxisConstraints"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - !private ["So18UIFocusEnvironmentP", "UIScreen"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -633,7 +669,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "topConstraint"]
 - !private ["So18UIFocusEnvironmentP", "traitCollection"]
 - !private ["So18UIFocusEnvironmentP", "verticalMargins"]
-- ["So11UIFocusItemP", "QLAxisConstraints"]
 - ["So11UIFocusItemP", "UILabel"]
 - !private ["So11UIFocusItemP", "UIScreen"]
 - ["So11UIFocusItemP", ""]
@@ -668,7 +703,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "topConstraint"]
 - !private ["So11UIFocusItemP", "traitCollection"]
 - !private ["So11UIFocusItemP", "verticalMargins"]
-- ["So20UIFocusItemContainerP", "QLAxisConstraints"]
 - ["So20UIFocusItemContainerP", "UILabel"]
 - !private ["So20UIFocusItemContainerP", "UIScreen"]
 - ["So20UIFocusItemContainerP", ""]
@@ -711,7 +745,7 @@ depends-member:
 - !private ["So7UILabelC", "style"]
 - !private ["So7UILabelC", "text"]
 - !private ["So7UILabelC", "textColor"]
-- ["So30UIPasteConfigurationSupportingP", "QLAxisConstraints"]
+- !private ["So16UILayoutPrioritya", "must"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIScreen"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -761,7 +795,7 @@ depends-member:
 - !private ["So11UIResponderC", "content"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "forceContentWrap"]
-- !private ["So11UIResponderC", "horizontalConstraints"]
+- ["So11UIResponderC", "horizontalConstraints"]
 - ["So11UIResponderC", "horizontalMargins"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "labelsOffset"]
@@ -787,7 +821,6 @@ depends-member:
 - !private ["So11UIResponderC", "traitCollection"]
 - ["So11UIResponderC", "traitCollectionDidChange"]
 - ["So11UIResponderC", "verticalMargins"]
-- ["So30UIResponderStandardEditActionsP", "QLAxisConstraints"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - !private ["So30UIResponderStandardEditActionsP", "UIScreen"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -824,7 +857,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "verticalMargins"]
 - !private ["So8UIScreenC", "bounds"]
 - !private ["So8UIScreenC", "main"]
-- ["So18UITraitEnvironmentP", "QLAxisConstraints"]
 - ["So18UITraitEnvironmentP", "UILabel"]
 - !private ["So18UITraitEnvironmentP", "UIScreen"]
 - ["So18UITraitEnvironmentP", ""]
@@ -861,7 +893,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "topConstraint"]
 - !private ["So18UITraitEnvironmentP", "traitCollection"]
 - !private ["So18UITraitEnvironmentP", "verticalMargins"]
-- ["So23UIUserActivityRestoringP", "QLAxisConstraints"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - !private ["So23UIUserActivityRestoringP", "UIScreen"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -912,7 +943,7 @@ depends-member:
 - !private ["So6UIViewC", "content"]
 - !private ["So6UIViewC", "fatalError"]
 - !private ["So6UIViewC", "forceContentWrap"]
-- !private ["So6UIViewC", "horizontalConstraints"]
+- ["So6UIViewC", "horizontalConstraints"]
 - ["So6UIViewC", "horizontalMargins"]
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "labelsOffset"]
@@ -938,7 +969,7 @@ depends-member:
 - !private ["So6UIViewC", "traitCollection"]
 - ["So6UIViewC", "traitCollectionDidChange"]
 - ["So6UIViewC", "verticalMargins"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "QLAxisConstraints"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "must"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIScreen"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -977,8 +1008,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "traitCollection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "verticalMargins"]
 - !private ["s21_ObjectiveCBridgeableP", "constant"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "must"]
+- !private ["s21_ObjectiveCBridgeableP", "second"]
 - !private ["s21_ObjectiveCBridgeableP", "style"]
-- ["s38__DefaultCustomPlaygroundQuickLookableP", "QLAxisConstraints"]
+- !private ["s21_ObjectiveCBridgeableP", "top"]
+- !private ["s20_SwiftNewtypeWrapperP", "must"]
+- !private ["5UIKit01_A23NumericRawRepresentableP", "must"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIScreen"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
@@ -1014,8 +1050,10 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "traitCollection"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "verticalMargins"]
 depends-nominal:
+- !private "So17NSLayoutAttributeV"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
+- !private "SL"
 - "s28CustomDebugStringConvertibleP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
@@ -1033,6 +1071,9 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - !private "Sq"
+- !private "11QuickLayout6QLAxisO"
+- !private "11QuickLayout17QLAxisConstraintsV"
+- !private "SY"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -1043,6 +1084,7 @@ depends-nominal:
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
 - "So7UILabelC"
+- !private "So16UILayoutPrioritya"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
@@ -1050,8 +1092,11 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- !private "5UIKit01_A23NumericRawRepresentableP"
 - "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
@@ -1068,8 +1113,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"

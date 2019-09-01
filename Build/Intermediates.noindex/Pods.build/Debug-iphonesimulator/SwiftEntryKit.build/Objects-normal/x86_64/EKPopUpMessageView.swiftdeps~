@@ -24,6 +24,11 @@ depends-top-level:
 - "UIView"
 - !private "fatalError"
 depends-member:
+- !private ["So17NSLayoutAttributeV", "bottom"]
+- !private ["So17NSLayoutAttributeV", "centerX"]
+- !private ["So17NSLayoutAttributeV", "centerY"]
+- !private ["So17NSLayoutAttributeV", "height"]
+- !private ["So17NSLayoutAttributeV", "top"]
 - !private ["13SwiftEntryKit10EKPropertyV13ButtonContentV", "highlighedLabelColor"]
 - !private ["So7CALayerC", "cornerRadius"]
 - ["So15CALayerDelegateP", "UIButton"]
@@ -110,6 +115,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "addTarget"]
 - !private ["s28CustomDebugStringConvertibleP", "bounds"]
 - !private ["s28CustomDebugStringConvertibleP", "buttonContent"]
+- !private ["s28CustomDebugStringConvertibleP", "centerY"]
 - !private ["s28CustomDebugStringConvertibleP", "content"]
 - !private ["s28CustomDebugStringConvertibleP", "contentEdgeInsets"]
 - !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
@@ -134,10 +140,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "tintColor"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "top"]
 - !private ["s28CustomDebugStringConvertibleP", "traitCollection"]
+- !private ["s17CustomReflectableP", "centerY"]
 - !private ["s17CustomReflectableP", "imageContent"]
 - !private ["s17CustomReflectableP", "layout"]
 - !private ["s17CustomReflectableP", "layoutToSuperview"]
+- !private ["s17CustomReflectableP", "top"]
 - ["s23CustomStringConvertibleP", "UIButton"]
 - !private ["s23CustomStringConvertibleP", "UIEdgeInsets"]
 - !private ["s23CustomStringConvertibleP", "UIImageView"]
@@ -175,10 +184,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "tintColor"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
 - !private ["s23CustomStringConvertibleP", "traitCollection"]
+- !private ["Se", "centerY"]
 - !private ["Se", "imageContent"]
 - !private ["Se", "init"]
 - !private ["Se", "layout"]
 - !private ["Se", "layoutToSuperview"]
+- !private ["Se", "top"]
 - !private ["13SwiftEntryKit14EKPopUpMessageV", "action"]
 - !private ["13SwiftEntryKit14EKPopUpMessageV", "button"]
 - !private ["13SwiftEntryKit14EKPopUpMessageV", "description"]
@@ -210,10 +221,12 @@ depends-member:
 - !private ["13SwiftEntryKit18EKPopUpMessageViewC", "titleLabel"]
 - !private ["13SwiftEntryKit18EKPopUpMessageViewC", "traitCollection"]
 - ["13SwiftEntryKit18EKPopUpMessageViewC", "traitCollectionDidChange"]
+- !private ["SE", "centerY"]
 - !private ["SE", "imageContent"]
 - !private ["SE", "init"]
 - !private ["SE", "layout"]
 - !private ["SE", "layoutToSuperview"]
+- !private ["SE", "top"]
 - ["SQ", "UIButton"]
 - !private ["SQ", "UIEdgeInsets"]
 - !private ["SQ", "UIImageView"]
@@ -224,15 +237,20 @@ depends-member:
 - !private ["SQ", "actionButtonPressed"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "addTarget"]
+- !private ["SQ", "bottom"]
 - !private ["SQ", "bounds"]
 - !private ["SQ", "buttonContent"]
+- !private ["SQ", "centerX"]
+- !private ["SQ", "centerY"]
 - !private ["SQ", "content"]
 - !private ["SQ", "contentEdgeInsets"]
 - !private ["SQ", "cornerRadius"]
 - !private ["SQ", "descriptionLabel"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "forceContentWrap"]
+- !private ["SQ", "height"]
 - !private ["SQ", "highlighted"]
+- !private ["SQ", "horizontally"]
 - !private ["SQ", "imageContent"]
 - !private ["SQ", "imageView"]
 - ["SQ", "init"]
@@ -252,15 +270,19 @@ depends-member:
 - !private ["SQ", "textColor"]
 - !private ["SQ", "tintColor"]
 - !private ["SQ", "titleLabel"]
+- !private ["SQ", "top"]
 - !private ["SQ", "touchUpInside"]
 - !private ["SQ", "traitCollection"]
+- !private ["SQ", "vertically"]
 - !private ["So15UIControlEventsV", "touchUpInside"]
 - !private ["s25ExpressibleByArrayLiteralP", "highlighted"]
 - !private ["s25ExpressibleByArrayLiteralP", "selected"]
 - !private ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- !private ["s23ExpressibleByNilLiteralP", "centerY"]
 - !private ["s23ExpressibleByNilLiteralP", "imageContent"]
 - !private ["s23ExpressibleByNilLiteralP", "layout"]
 - !private ["s23ExpressibleByNilLiteralP", "layoutToSuperview"]
+- !private ["s23ExpressibleByNilLiteralP", "top"]
 - ["SH", "UIButton"]
 - !private ["SH", "UIEdgeInsets"]
 - !private ["SH", "UIImageView"]
@@ -271,14 +293,19 @@ depends-member:
 - !private ["SH", "actionButtonPressed"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "addTarget"]
+- !private ["SH", "bottom"]
 - !private ["SH", "bounds"]
 - !private ["SH", "buttonContent"]
+- !private ["SH", "centerX"]
+- !private ["SH", "centerY"]
 - !private ["SH", "content"]
 - !private ["SH", "contentEdgeInsets"]
 - !private ["SH", "cornerRadius"]
 - !private ["SH", "descriptionLabel"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "forceContentWrap"]
+- !private ["SH", "height"]
+- !private ["SH", "horizontally"]
 - !private ["SH", "imageContent"]
 - !private ["SH", "imageView"]
 - ["SH", "init"]
@@ -297,7 +324,9 @@ depends-member:
 - !private ["SH", "textColor"]
 - !private ["SH", "tintColor"]
 - !private ["SH", "titleLabel"]
+- !private ["SH", "top"]
 - !private ["SH", "traitCollection"]
+- !private ["SH", "vertically"]
 - !private ["13SwiftEntryKit10EKPropertyV12ImageContentV", "tintColor"]
 - !private ["13SwiftEntryKit10EKPropertyV12LabelContentV", "style"]
 - !private ["13SwiftEntryKit10EKPropertyV10LabelStyleV", "color"]
@@ -418,13 +447,22 @@ depends-member:
 - !private ["s9OptionSetP", "highlighted"]
 - !private ["s9OptionSetP", "selected"]
 - !private ["s9OptionSetP", "touchUpInside"]
+- !private ["Sq", "centerY"]
 - !private ["Sq", "imageContent"]
 - !private ["Sq", "layout"]
 - !private ["Sq", "layoutToSuperview"]
+- !private ["Sq", "top"]
 - ["13SwiftEntryKit14EKPopUpMessageV10ThemeImageV8PositionO", "centerToTop"]
 - ["13SwiftEntryKit14EKPopUpMessageV10ThemeImageV8PositionO", "topToTop"]
+- !private ["11QuickLayout6QLAxisO", "horizontally"]
+- !private ["11QuickLayout6QLAxisO", "vertically"]
+- !private ["SY", "bottom"]
+- !private ["SY", "centerX"]
+- !private ["SY", "centerY"]
+- !private ["SY", "height"]
 - !private ["SY", "highlighted"]
 - !private ["SY", "selected"]
+- !private ["SY", "top"]
 - !private ["SY", "touchUpInside"]
 - !private ["s10SetAlgebraP", "highlighted"]
 - !private ["s10SetAlgebraP", "selected"]
@@ -1015,10 +1053,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tintColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "traitCollection"]
+- !private ["s21_ObjectiveCBridgeableP", "centerY"]
 - !private ["s21_ObjectiveCBridgeableP", "imageContent"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "layout"]
 - !private ["s21_ObjectiveCBridgeableP", "layoutToSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "top"]
 - ["s38__DefaultCustomPlaygroundQuickLookableP", "UIButton"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIEdgeInsets"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
@@ -1054,6 +1094,7 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "traitCollection"]
 depends-nominal:
+- !private "So17NSLayoutAttributeV"
 - !private "13SwiftEntryKit10EKPropertyV13ButtonContentV"
 - !private "So7CALayerC"
 - "So15CALayerDelegateP"
@@ -1081,6 +1122,7 @@ depends-nominal:
 - !private "s9OptionSetP"
 - !private "Sq"
 - "13SwiftEntryKit14EKPopUpMessageV10ThemeImageV8PositionO"
+- !private "11QuickLayout6QLAxisO"
 - !private "SY"
 - !private "s10SetAlgebraP"
 - !private "So14UIControlStateV"
@@ -1126,8 +1168,12 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout-umbrella.h"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/Swift Compatibility Header/QuickLayout-Swift.h"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Pods/Headers/Public/QuickLayout/QuickLayout.modulemap"
+- "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
