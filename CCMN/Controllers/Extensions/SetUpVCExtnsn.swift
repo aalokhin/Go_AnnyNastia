@@ -70,6 +70,10 @@ extension SearchSetUpVC: UITableViewDelegate {
             }
             tableView.endUpdates()
         }
+        else
+        {
+            dateSpan = dates[indexPath.row]
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

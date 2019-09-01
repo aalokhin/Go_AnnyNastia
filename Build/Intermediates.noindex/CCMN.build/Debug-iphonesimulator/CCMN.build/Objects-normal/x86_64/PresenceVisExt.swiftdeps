@@ -9,6 +9,7 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "<"
 - !private "=="
+- !private "??"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
@@ -22,7 +23,7 @@ depends-top-level:
 - !private "IntegerLiteralType"
 - "PresenceVisualizationVC"
 - "SetUpDelegate"
-- !private "String"
+- "String"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
@@ -438,7 +439,7 @@ depends-member:
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "RepeatVisitorsDwell"]
-- !private ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
 - !private ["So8NSObjectC", "allUsers"]
@@ -534,7 +535,7 @@ depends-member:
 - ["4CCMN23PresenceVisualizationVCC", "IndexPath"]
 - ["4CCMN23PresenceVisualizationVCC", "Int"]
 - !private ["4CCMN23PresenceVisualizationVCC", "RepeatVisitorsDwell"]
-- !private ["4CCMN23PresenceVisualizationVCC", "String"]
+- ["4CCMN23PresenceVisualizationVCC", "String"]
 - ["4CCMN23PresenceVisualizationVCC", "UITableView"]
 - ["4CCMN23PresenceVisualizationVCC", "UITableViewCell"]
 - !private ["4CCMN23PresenceVisualizationVCC", "allUsers"]
@@ -854,7 +855,7 @@ depends-member:
 - ["So11UIResponderC", "IndexPath"]
 - ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "RepeatVisitorsDwell"]
-- !private ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UITableView"]
 - ["So11UIResponderC", "UITableViewCell"]
 - !private ["So11UIResponderC", "allUsers"]
@@ -1203,7 +1204,7 @@ depends-member:
 - ["So16UIViewControllerC", "IndexPath"]
 - ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "RepeatVisitorsDwell"]
-- !private ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "String"]
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
 - !private ["So16UIViewControllerC", "allUsers"]
@@ -1442,4 +1443,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4bab037993f474a1f3c9cc98f25874fa"
+interface-hash: "d8d290e94f99ccada776c667984dee21"

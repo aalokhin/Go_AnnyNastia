@@ -225,6 +225,7 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "append"]
 - ["10Foundation4DateV", "init"]
 - ["10Foundation4DateV", "toStringDefault"]
+- !private ["4CCMN18DatePickerDelegateP", "delegate"]
 - !private ["Se", "aesUId"]
 - !private ["Se", "aesUidString"]
 - !private ["Se", "append"]
@@ -1023,6 +1024,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "UINib"]
 - !private ["So20UIScrollViewDelegateP", "UIStoryboard"]
 - !private ["So20UIScrollViewDelegateP", "allUsers"]
+- !private ["So20UIScrollViewDelegateP", "delegate"]
 - !private ["So20UIScrollViewDelegateP", "dwellDistribution"]
 - !private ["So20UIScrollViewDelegateP", "endDate"]
 - !private ["So20UIScrollViewDelegateP", "getAllData"]
@@ -1148,6 +1150,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "UINib"]
 - !private ["So19UITableViewDelegateP", "UIStoryboard"]
 - !private ["So19UITableViewDelegateP", "allUsers"]
+- !private ["So19UITableViewDelegateP", "delegate"]
 - !private ["So19UITableViewDelegateP", "dwellDistribution"]
 - !private ["So19UITableViewDelegateP", "endDate"]
 - !private ["So19UITableViewDelegateP", "getAllData"]
@@ -1406,6 +1409,7 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
 - "10Foundation4DateV"
+- !private "4CCMN18DatePickerDelegateP"
 - "Se"
 - !private "s26DefaultStringInterpolationV"
 - "SD"

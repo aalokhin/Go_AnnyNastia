@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SetUpDelegate {
-    func specifyDates(from : Date, to : Date, hourly : Bool)
+    func specifyDates(from : Date, to : Date, hourly : Bool, dateSpan : String?)
 }
 
 
@@ -25,6 +25,7 @@ class SearchSetUpVC: UIViewController {
     var delegate: SetUpDelegate?
     
     var hourly = true
+    var dateSpan = "today"
     
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -84,9 +85,9 @@ class SearchSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        if (hourly == false){
-            delegate?.specifyDates(from: inputDates[0], to: inputDates[1], hourly : self.hourly)
-        }
+        
+        delegate?.specifyDates(from: inputDates[0], to: inputDates[1], hourly : self.hourly, dateSpan: self.dateSpan)
+        
         
         navigationController?.popViewController(animated: true)
         
