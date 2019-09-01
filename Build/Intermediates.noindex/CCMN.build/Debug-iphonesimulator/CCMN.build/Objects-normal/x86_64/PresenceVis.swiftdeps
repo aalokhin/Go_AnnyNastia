@@ -15,7 +15,7 @@ depends-top-level:
 - "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
+- "BooleanLiteralType"
 - "CastingPrecedence"
 - !private "Client"
 - "Date"
@@ -496,6 +496,7 @@ depends-member:
 - ["So8NSObjectC", "getProximityUsers"]
 - ["So8NSObjectC", "getRepeatDistribution"]
 - ["So8NSObjectC", "getRepeatVis"]
+- ["So8NSObjectC", "hourly"]
 - ["So8NSObjectC", "hours"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "instantiateViewController"]
@@ -604,6 +605,7 @@ depends-member:
 - ["4CCMN23PresenceVisualizationVCC", "getProximityUsers"]
 - ["4CCMN23PresenceVisualizationVCC", "getRepeatDistribution"]
 - ["4CCMN23PresenceVisualizationVCC", "getRepeatVis"]
+- ["4CCMN23PresenceVisualizationVCC", "hourly"]
 - ["4CCMN23PresenceVisualizationVCC", "hours"]
 - ["4CCMN23PresenceVisualizationVCC", "init"]
 - !private ["4CCMN23PresenceVisualizationVCC", "kpiSummaryJSON"]
@@ -933,6 +935,7 @@ depends-member:
 - ["So11UIResponderC", "getProximityUsers"]
 - ["So11UIResponderC", "getRepeatDistribution"]
 - ["So11UIResponderC", "getRepeatVis"]
+- ["So11UIResponderC", "hourly"]
 - ["So11UIResponderC", "hours"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "kpiSummaryJSON"]
@@ -1296,6 +1299,7 @@ depends-member:
 - ["So16UIViewControllerC", "getProximityUsers"]
 - ["So16UIViewControllerC", "getRepeatDistribution"]
 - ["So16UIViewControllerC", "getRepeatVis"]
+- ["So16UIViewControllerC", "hourly"]
 - ["So16UIViewControllerC", "hours"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "kpiSummaryJSON"]
@@ -1536,4 +1540,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3fabca890d74fb15315b353cdb997c27"
+interface-hash: "6034755626bc48446e28610230c45e74"

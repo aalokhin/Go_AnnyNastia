@@ -28,6 +28,7 @@ depends-top-level:
 - !private "FloatLiteralType"
 - "IndexPath"
 - !private "IntegerLiteralType"
+- !private "MacListCell"
 - "SearchSetUpVC"
 - "SetUpDelegate"
 - "String"
@@ -59,6 +60,7 @@ depends-member:
 - !private ["s7CVarArgP", "DateCell"]
 - !private ["s7CVarArgP", "DateTextCell"]
 - !private ["s7CVarArgP", "IndexPath"]
+- !private ["s7CVarArgP", "MacListCell"]
 - !private ["s7CVarArgP", "UIBarButtonItem"]
 - !private ["s7CVarArgP", "UINib"]
 - ["s7CVarArgP", ""]
@@ -102,6 +104,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "DateCell"]
 - !private ["s28CustomDebugStringConvertibleP", "DateTextCell"]
 - !private ["s28CustomDebugStringConvertibleP", "IndexPath"]
+- !private ["s28CustomDebugStringConvertibleP", "MacListCell"]
 - !private ["s28CustomDebugStringConvertibleP", "UIBarButtonItem"]
 - !private ["s28CustomDebugStringConvertibleP", "UINib"]
 - ["s28CustomDebugStringConvertibleP", ""]
@@ -144,6 +147,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "DateCell"]
 - !private ["s23CustomStringConvertibleP", "DateTextCell"]
 - !private ["s23CustomStringConvertibleP", "IndexPath"]
+- !private ["s23CustomStringConvertibleP", "MacListCell"]
 - !private ["s23CustomStringConvertibleP", "UIBarButtonItem"]
 - !private ["s23CustomStringConvertibleP", "UINib"]
 - ["s23CustomStringConvertibleP", ""]
@@ -184,6 +188,7 @@ depends-member:
 - !private ["4CCMN18DatePickerDelegateP", "DateCell"]
 - !private ["4CCMN18DatePickerDelegateP", "DateTextCell"]
 - !private ["4CCMN18DatePickerDelegateP", "IndexPath"]
+- !private ["4CCMN18DatePickerDelegateP", "MacListCell"]
 - !private ["4CCMN18DatePickerDelegateP", "UIBarButtonItem"]
 - !private ["4CCMN18DatePickerDelegateP", "UINib"]
 - !private ["4CCMN18DatePickerDelegateP", "addInitailValues"]
@@ -222,6 +227,7 @@ depends-member:
 - !private ["SQ", "DateCell"]
 - !private ["SQ", "DateTextCell"]
 - !private ["SQ", "IndexPath"]
+- !private ["SQ", "MacListCell"]
 - !private ["SQ", "UIBarButtonItem"]
 - !private ["SQ", "UINib"]
 - ["SQ", ""]
@@ -265,6 +271,7 @@ depends-member:
 - !private ["SH", "DateCell"]
 - !private ["SH", "DateTextCell"]
 - !private ["SH", "IndexPath"]
+- !private ["SH", "MacListCell"]
 - !private ["SH", "UIBarButtonItem"]
 - !private ["SH", "UINib"]
 - ["SH", ""]
@@ -298,6 +305,8 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "init"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["10Foundation9IndexPathV", "section"]
+- !private ["4CCMN11MacListCellC", "nibName"]
+- !private ["4CCMN11MacListCellC", "reuseIdentifier"]
 - !private ["SM", "count"]
 - !private ["SM", "init"]
 - !private ["SM", "row"]
@@ -311,6 +320,7 @@ depends-member:
 - !private ["So8NSCodingP", "DateCell"]
 - !private ["So8NSCodingP", "DateTextCell"]
 - !private ["So8NSCodingP", "IndexPath"]
+- !private ["So8NSCodingP", "MacListCell"]
 - !private ["So8NSCodingP", "UIBarButtonItem"]
 - !private ["So8NSCodingP", "UINib"]
 - ["So8NSCodingP", ""]
@@ -341,6 +351,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DateCell"]
 - !private ["So26NSExtensionRequestHandlingP", "DateTextCell"]
 - !private ["So26NSExtensionRequestHandlingP", "IndexPath"]
+- !private ["So26NSExtensionRequestHandlingP", "MacListCell"]
 - !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
 - !private ["So26NSExtensionRequestHandlingP", "UINib"]
 - ["So26NSExtensionRequestHandlingP", ""]
@@ -365,6 +376,7 @@ depends-member:
 - !private ["So8NSObjectC", "DateCell"]
 - !private ["So8NSObjectC", "DateTextCell"]
 - ["So8NSObjectC", "IndexPath"]
+- !private ["So8NSObjectC", "MacListCell"]
 - ["So8NSObjectC", "SetUpDelegate"]
 - ["So8NSObjectC", "String"]
 - !private ["So8NSObjectC", "UIBarButtonItem"]
@@ -374,6 +386,7 @@ depends-member:
 - ["So8NSObjectC", "UIView"]
 - ["So8NSObjectC", "addInitailValues"]
 - ["So8NSObjectC", "datePickerIndexPath"]
+- ["So8NSObjectC", "dates"]
 - ["So8NSObjectC", "delegate"]
 - ["So8NSObjectC", "hourly"]
 - ["So8NSObjectC", "indexPathToInsertDatePicker"]
@@ -402,6 +415,7 @@ depends-member:
 - !private ["So8NSObjectP", "DateCell"]
 - !private ["So8NSObjectP", "DateTextCell"]
 - !private ["So8NSObjectP", "IndexPath"]
+- !private ["So8NSObjectP", "MacListCell"]
 - !private ["So8NSObjectP", "UIBarButtonItem"]
 - !private ["So8NSObjectP", "UINib"]
 - ["So8NSObjectP", ""]
@@ -447,6 +461,7 @@ depends-member:
 - !private ["4CCMN13SearchSetUpVCC", "DateCell"]
 - !private ["4CCMN13SearchSetUpVCC", "DateTextCell"]
 - ["4CCMN13SearchSetUpVCC", "IndexPath"]
+- !private ["4CCMN13SearchSetUpVCC", "MacListCell"]
 - ["4CCMN13SearchSetUpVCC", "SetUpDelegate"]
 - ["4CCMN13SearchSetUpVCC", "String"]
 - !private ["4CCMN13SearchSetUpVCC", "UIBarButtonItem"]
@@ -456,6 +471,7 @@ depends-member:
 - ["4CCMN13SearchSetUpVCC", "UIView"]
 - ["4CCMN13SearchSetUpVCC", "addInitailValues"]
 - ["4CCMN13SearchSetUpVCC", "datePickerIndexPath"]
+- ["4CCMN13SearchSetUpVCC", "dates"]
 - ["4CCMN13SearchSetUpVCC", "deinit"]
 - ["4CCMN13SearchSetUpVCC", "delegate"]
 - ["4CCMN13SearchSetUpVCC", "hourly"]
@@ -499,6 +515,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "DateCell"]
 - !private ["So21UIAppearanceContainerP", "DateTextCell"]
 - !private ["So21UIAppearanceContainerP", "IndexPath"]
+- !private ["So21UIAppearanceContainerP", "MacListCell"]
 - !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
 - !private ["So21UIAppearanceContainerP", "UINib"]
 - ["So21UIAppearanceContainerP", ""]
@@ -530,6 +547,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "DateCell"]
 - !private ["So18UIContentContainerP", "DateTextCell"]
 - !private ["So18UIContentContainerP", "IndexPath"]
+- !private ["So18UIContentContainerP", "MacListCell"]
 - !private ["So18UIContentContainerP", "UIBarButtonItem"]
 - !private ["So18UIContentContainerP", "UINib"]
 - ["So18UIContentContainerP", ""]
@@ -567,6 +585,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "DateCell"]
 - !private ["So18UIFocusEnvironmentP", "DateTextCell"]
 - !private ["So18UIFocusEnvironmentP", "IndexPath"]
+- !private ["So18UIFocusEnvironmentP", "MacListCell"]
 - !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UIFocusEnvironmentP", "UINib"]
 - ["So18UIFocusEnvironmentP", ""]
@@ -613,6 +632,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "DateCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "DateTextCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "IndexPath"]
+- !private ["So30UIPasteConfigurationSupportingP", "MacListCell"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "UINib"]
 - ["So30UIPasteConfigurationSupportingP", ""]
@@ -642,6 +662,7 @@ depends-member:
 - !private ["So11UIResponderC", "DateCell"]
 - !private ["So11UIResponderC", "DateTextCell"]
 - ["So11UIResponderC", "IndexPath"]
+- !private ["So11UIResponderC", "MacListCell"]
 - ["So11UIResponderC", "SetUpDelegate"]
 - ["So11UIResponderC", "String"]
 - !private ["So11UIResponderC", "UIBarButtonItem"]
@@ -651,6 +672,7 @@ depends-member:
 - ["So11UIResponderC", "UIView"]
 - ["So11UIResponderC", "addInitailValues"]
 - ["So11UIResponderC", "datePickerIndexPath"]
+- ["So11UIResponderC", "dates"]
 - ["So11UIResponderC", "delegate"]
 - ["So11UIResponderC", "hourly"]
 - ["So11UIResponderC", "indexPathToInsertDatePicker"]
@@ -678,6 +700,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "DateCell"]
 - !private ["So30UIResponderStandardEditActionsP", "DateTextCell"]
 - !private ["So30UIResponderStandardEditActionsP", "IndexPath"]
+- !private ["So30UIResponderStandardEditActionsP", "MacListCell"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
 - !private ["So30UIResponderStandardEditActionsP", "UINib"]
 - ["So30UIResponderStandardEditActionsP", ""]
@@ -709,6 +732,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "DateCell"]
 - !private ["So20UIScrollViewDelegateP", "DateTextCell"]
 - !private ["So20UIScrollViewDelegateP", "IndexPath"]
+- !private ["So20UIScrollViewDelegateP", "MacListCell"]
 - !private ["So20UIScrollViewDelegateP", "UIBarButtonItem"]
 - !private ["So20UIScrollViewDelegateP", "UINib"]
 - !private ["So20UIScrollViewDelegateP", "addInitailValues"]
@@ -734,6 +758,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "DateCell"]
 - !private ["So16UIStateRestoringP", "DateTextCell"]
 - !private ["So16UIStateRestoringP", "IndexPath"]
+- !private ["So16UIStateRestoringP", "MacListCell"]
 - !private ["So16UIStateRestoringP", "UIBarButtonItem"]
 - !private ["So16UIStateRestoringP", "UINib"]
 - ["So16UIStateRestoringP", ""]
@@ -762,6 +787,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "DateCell"]
 - !private ["So21UITableViewDataSourceP", "DateTextCell"]
 - !private ["So21UITableViewDataSourceP", "IndexPath"]
+- !private ["So21UITableViewDataSourceP", "MacListCell"]
 - !private ["So21UITableViewDataSourceP", "UIBarButtonItem"]
 - !private ["So21UITableViewDataSourceP", "UINib"]
 - !private ["So21UITableViewDataSourceP", "addInitailValues"]
@@ -782,6 +808,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "DateCell"]
 - !private ["So19UITableViewDelegateP", "DateTextCell"]
 - !private ["So19UITableViewDelegateP", "IndexPath"]
+- !private ["So19UITableViewDelegateP", "MacListCell"]
 - !private ["So19UITableViewDelegateP", "UIBarButtonItem"]
 - !private ["So19UITableViewDelegateP", "UINib"]
 - !private ["So19UITableViewDelegateP", "addInitailValues"]
@@ -802,6 +829,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "DateCell"]
 - !private ["So18UITraitEnvironmentP", "DateTextCell"]
 - !private ["So18UITraitEnvironmentP", "IndexPath"]
+- !private ["So18UITraitEnvironmentP", "MacListCell"]
 - !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
 - !private ["So18UITraitEnvironmentP", "UINib"]
 - ["So18UITraitEnvironmentP", ""]
@@ -831,6 +859,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "DateCell"]
 - !private ["So23UIUserActivityRestoringP", "DateTextCell"]
 - !private ["So23UIUserActivityRestoringP", "IndexPath"]
+- !private ["So23UIUserActivityRestoringP", "MacListCell"]
 - !private ["So23UIUserActivityRestoringP", "UIBarButtonItem"]
 - !private ["So23UIUserActivityRestoringP", "UINib"]
 - ["So23UIUserActivityRestoringP", ""]
@@ -865,6 +894,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "DateCell"]
 - !private ["So16UIViewControllerC", "DateTextCell"]
 - ["So16UIViewControllerC", "IndexPath"]
+- !private ["So16UIViewControllerC", "MacListCell"]
 - ["So16UIViewControllerC", "SetUpDelegate"]
 - ["So16UIViewControllerC", "String"]
 - !private ["So16UIViewControllerC", "UIBarButtonItem"]
@@ -875,6 +905,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - ["So16UIViewControllerC", "addInitailValues"]
 - ["So16UIViewControllerC", "datePickerIndexPath"]
+- ["So16UIViewControllerC", "dates"]
 - ["So16UIViewControllerC", "delegate"]
 - ["So16UIViewControllerC", "hourly"]
 - ["So16UIViewControllerC", "indexPathToInsertDatePicker"]
@@ -910,6 +941,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateTextCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "IndexPath"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MacListCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBarButtonItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UINib"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -971,6 +1003,7 @@ depends-nominal:
 - !private "s23ExpressibleByNilLiteralP"
 - "SH"
 - !private "10Foundation9IndexPathV"
+- !private "4CCMN11MacListCellC"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
@@ -1070,4 +1103,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "849ee3dea8c9137a3685f8fabed3bac1"
+interface-hash: "4b7e4e1eea5e8ae1289957e848965254"

@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 
 protocol SetUpDelegate {
-    func specifyDates(from : Date, to : Date, detailed : Bool)
+    func specifyDates(from : Date, to : Date, hourly : Bool)
 }
 
 
 
 class SearchSetUpVC: UIViewController {
     var str : String?
+    let dates : [String] = ["today", "yesterday", "last 3 days", "tomorrow"]
+
     var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
     var inputDates: [Date] = []
@@ -31,12 +33,10 @@ class SearchSetUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello here")
-       
+        addInitailValues()
+        setupVCForDatePickUp()
 
-        if (hourly == false){
-            addInitailValues()
-            setupVCForDatePickUp()
-        }
+       
     }
     
     
@@ -67,6 +67,7 @@ class SearchSetUpVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save(sender:)))
         tableView.register(UINib(nibName: DateTextCell.nibName(), bundle: nil), forCellReuseIdentifier: DateTextCell.reuseIdentifier())
         tableView.register(UINib(nibName: DateCell.nibName(), bundle: nil), forCellReuseIdentifier: DateCell.reuseIdentifier())
+        tableView.register(UINib(nibName: MacListCell.nibName(), bundle: nil), forCellReuseIdentifier: MacListCell.reuseIdentifier())
     }
     
     func addInitailValues() {
@@ -83,7 +84,10 @@ class SearchSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        delegate?.specifyDates(from: inputDates[0], to: inputDates[1], detailed : self.hourly)
+        if (hourly == false){
+            delegate?.specifyDates(from: inputDates[0], to: inputDates[1], hourly : self.hourly)
+        }
+        
         navigationController?.popViewController(animated: true)
         
     }

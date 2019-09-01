@@ -15,7 +15,7 @@ depends-top-level:
 - "AnyObject"
 - "AssignmentPrecedence"
 - "Bool"
-- !private "BooleanLiteralType"
+- "BooleanLiteralType"
 - "CastingPrecedence"
 - !private "Client"
 - "Date"
@@ -25,7 +25,6 @@ depends-top-level:
 - "Int"
 - "IntegerLiteralType"
 - !private "JSONDecoder"
-- !private "JSONSerialization"
 - !private "NetworkManager"
 - "PresenceVisualizationVC"
 - !private "SearchSetUpVC"
@@ -59,7 +58,6 @@ depends-member:
 - !private ["s7CVarArgP", "HoursForDicInt"]
 - ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "JSONDecoder"]
-- !private ["s7CVarArgP", "JSONSerialization"]
 - !private ["s7CVarArgP", "NetworkManager"]
 - !private ["s7CVarArgP", "RepeatVisitorsDwell"]
 - !private ["s7CVarArgP", "String"]
@@ -80,7 +78,6 @@ depends-member:
 - !private ["s7CVarArgP", "getRepeatVis"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "instantiateViewController"]
-- !private ["s7CVarArgP", "jsonObject"]
 - !private ["s7CVarArgP", "kpiSummaryJSON"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "navigationItem"]
@@ -121,7 +118,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "HoursForDicInt"]
 - ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "JSONDecoder"]
-- !private ["s28CustomDebugStringConvertibleP", "JSONSerialization"]
 - !private ["s28CustomDebugStringConvertibleP", "NetworkManager"]
 - !private ["s28CustomDebugStringConvertibleP", "RepeatVisitorsDwell"]
 - !private ["s28CustomDebugStringConvertibleP", "String"]
@@ -142,7 +138,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "getRepeatVis"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
-- !private ["s28CustomDebugStringConvertibleP", "jsonObject"]
 - !private ["s28CustomDebugStringConvertibleP", "kpiSummaryJSON"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
@@ -183,7 +178,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "HoursForDicInt"]
 - ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "JSONDecoder"]
-- !private ["s23CustomStringConvertibleP", "JSONSerialization"]
 - !private ["s23CustomStringConvertibleP", "NetworkManager"]
 - !private ["s23CustomStringConvertibleP", "RepeatVisitorsDwell"]
 - !private ["s23CustomStringConvertibleP", "String"]
@@ -206,7 +200,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "getRepeatVis"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "instantiateViewController"]
-- !private ["s23CustomStringConvertibleP", "jsonObject"]
 - !private ["s23CustomStringConvertibleP", "kpiSummaryJSON"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
@@ -232,7 +225,6 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "append"]
 - ["10Foundation4DateV", "init"]
 - ["10Foundation4DateV", "toStringDefault"]
-- !private ["4CCMN18DatePickerDelegateP", "delegate"]
 - !private ["Se", "aesUId"]
 - !private ["Se", "aesUidString"]
 - !private ["Se", "append"]
@@ -270,7 +262,6 @@ depends-member:
 - !private ["SQ", "HoursForDicInt"]
 - ["SQ", "Int"]
 - !private ["SQ", "JSONDecoder"]
-- !private ["SQ", "JSONSerialization"]
 - !private ["SQ", "NetworkManager"]
 - !private ["SQ", "RepeatVisitorsDwell"]
 - !private ["SQ", "String"]
@@ -293,7 +284,6 @@ depends-member:
 - !private ["SQ", "getRepeatVis"]
 - ["SQ", "init"]
 - !private ["SQ", "instantiateViewController"]
-- !private ["SQ", "jsonObject"]
 - !private ["SQ", "kpiSummaryJSON"]
 - !private ["SQ", "navigationController"]
 - !private ["SQ", "navigationItem"]
@@ -337,7 +327,6 @@ depends-member:
 - !private ["SH", "HoursForDicInt"]
 - ["SH", "Int"]
 - !private ["SH", "JSONDecoder"]
-- !private ["SH", "JSONSerialization"]
 - !private ["SH", "NetworkManager"]
 - !private ["SH", "RepeatVisitorsDwell"]
 - !private ["SH", "String"]
@@ -360,7 +349,6 @@ depends-member:
 - !private ["SH", "getRepeatVis"]
 - ["SH", "init"]
 - !private ["SH", "instantiateViewController"]
-- !private ["SH", "jsonObject"]
 - !private ["SH", "kpiSummaryJSON"]
 - !private ["SH", "navigationController"]
 - !private ["SH", "navigationItem"]
@@ -385,7 +373,6 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["10Foundation11JSONDecoderC", "decode"]
 - !private ["10Foundation11JSONDecoderC", "init"]
-- !private ["So19NSJSONSerializationC", "jsonObject"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["SM", "append"]
 - !private ["10Foundation19MutableDataProtocolP", "append"]
@@ -399,7 +386,6 @@ depends-member:
 - !private ["So8NSCodingP", "HoursForDicInt"]
 - ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "JSONDecoder"]
-- !private ["So8NSCodingP", "JSONSerialization"]
 - !private ["So8NSCodingP", "NetworkManager"]
 - !private ["So8NSCodingP", "RepeatVisitorsDwell"]
 - !private ["So8NSCodingP", "String"]
@@ -447,7 +433,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "HoursForDicInt"]
 - ["So26NSExtensionRequestHandlingP", "Int"]
 - !private ["So26NSExtensionRequestHandlingP", "JSONDecoder"]
-- !private ["So26NSExtensionRequestHandlingP", "JSONSerialization"]
 - !private ["So26NSExtensionRequestHandlingP", "NetworkManager"]
 - !private ["So26NSExtensionRequestHandlingP", "RepeatVisitorsDwell"]
 - !private ["So26NSExtensionRequestHandlingP", "String"]
@@ -490,7 +475,6 @@ depends-member:
 - ["So8NSObjectC", "HoursForDicInt"]
 - ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "JSONDecoder"]
-- !private ["So8NSObjectC", "JSONSerialization"]
 - !private ["So8NSObjectC", "NetworkManager"]
 - ["So8NSObjectC", "RepeatVisitorsDwell"]
 - !private ["So8NSObjectC", "SearchSetUpVC"]
@@ -511,10 +495,10 @@ depends-member:
 - ["So8NSObjectC", "getProximityUsers"]
 - ["So8NSObjectC", "getRepeatDistribution"]
 - ["So8NSObjectC", "getRepeatVis"]
+- ["So8NSObjectC", "hourly"]
 - ["So8NSObjectC", "hours"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "instantiateViewController"]
-- !private ["So8NSObjectC", "jsonObject"]
 - !private ["So8NSObjectC", "kpiSummaryJSON"]
 - !private ["So8NSObjectC", "navigationController"]
 - !private ["So8NSObjectC", "navigationItem"]
@@ -546,7 +530,6 @@ depends-member:
 - !private ["So8NSObjectP", "HoursForDicInt"]
 - ["So8NSObjectP", "Int"]
 - !private ["So8NSObjectP", "JSONDecoder"]
-- !private ["So8NSObjectP", "JSONSerialization"]
 - !private ["So8NSObjectP", "NetworkManager"]
 - !private ["So8NSObjectP", "RepeatVisitorsDwell"]
 - !private ["So8NSObjectP", "String"]
@@ -566,7 +549,6 @@ depends-member:
 - !private ["So8NSObjectP", "getRepeatVis"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "instantiateViewController"]
-- !private ["So8NSObjectP", "jsonObject"]
 - !private ["So8NSObjectP", "kpiSummaryJSON"]
 - !private ["So8NSObjectP", "navigationController"]
 - !private ["So8NSObjectP", "navigationItem"]
@@ -602,7 +584,6 @@ depends-member:
 - ["4CCMN23PresenceVisualizationVCC", "HoursForDicInt"]
 - ["4CCMN23PresenceVisualizationVCC", "Int"]
 - !private ["4CCMN23PresenceVisualizationVCC", "JSONDecoder"]
-- !private ["4CCMN23PresenceVisualizationVCC", "JSONSerialization"]
 - !private ["4CCMN23PresenceVisualizationVCC", "NetworkManager"]
 - ["4CCMN23PresenceVisualizationVCC", "RepeatVisitorsDwell"]
 - !private ["4CCMN23PresenceVisualizationVCC", "SearchSetUpVC"]
@@ -623,6 +604,7 @@ depends-member:
 - ["4CCMN23PresenceVisualizationVCC", "getProximityUsers"]
 - ["4CCMN23PresenceVisualizationVCC", "getRepeatDistribution"]
 - ["4CCMN23PresenceVisualizationVCC", "getRepeatVis"]
+- ["4CCMN23PresenceVisualizationVCC", "hourly"]
 - ["4CCMN23PresenceVisualizationVCC", "hours"]
 - ["4CCMN23PresenceVisualizationVCC", "init"]
 - !private ["4CCMN23PresenceVisualizationVCC", "kpiSummaryJSON"]
@@ -661,7 +643,6 @@ depends-member:
 - !private ["4CCMN13SetUpDelegateP", "HoursForDicInt"]
 - ["4CCMN13SetUpDelegateP", "Int"]
 - !private ["4CCMN13SetUpDelegateP", "JSONDecoder"]
-- !private ["4CCMN13SetUpDelegateP", "JSONSerialization"]
 - !private ["4CCMN13SetUpDelegateP", "NetworkManager"]
 - !private ["4CCMN13SetUpDelegateP", "RepeatVisitorsDwell"]
 - !private ["4CCMN13SetUpDelegateP", "String"]
@@ -720,7 +701,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "HoursForDicInt"]
 - ["So21UIAppearanceContainerP", "Int"]
 - !private ["So21UIAppearanceContainerP", "JSONDecoder"]
-- !private ["So21UIAppearanceContainerP", "JSONSerialization"]
 - !private ["So21UIAppearanceContainerP", "NetworkManager"]
 - !private ["So21UIAppearanceContainerP", "RepeatVisitorsDwell"]
 - !private ["So21UIAppearanceContainerP", "String"]
@@ -769,7 +749,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "HoursForDicInt"]
 - ["So18UIContentContainerP", "Int"]
 - !private ["So18UIContentContainerP", "JSONDecoder"]
-- !private ["So18UIContentContainerP", "JSONSerialization"]
 - !private ["So18UIContentContainerP", "NetworkManager"]
 - !private ["So18UIContentContainerP", "RepeatVisitorsDwell"]
 - !private ["So18UIContentContainerP", "String"]
@@ -824,7 +803,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "HoursForDicInt"]
 - ["So18UIFocusEnvironmentP", "Int"]
 - !private ["So18UIFocusEnvironmentP", "JSONDecoder"]
-- !private ["So18UIFocusEnvironmentP", "JSONSerialization"]
 - !private ["So18UIFocusEnvironmentP", "NetworkManager"]
 - !private ["So18UIFocusEnvironmentP", "RepeatVisitorsDwell"]
 - !private ["So18UIFocusEnvironmentP", "String"]
@@ -889,7 +867,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "HoursForDicInt"]
 - ["So30UIPasteConfigurationSupportingP", "Int"]
 - !private ["So30UIPasteConfigurationSupportingP", "JSONDecoder"]
-- !private ["So30UIPasteConfigurationSupportingP", "JSONSerialization"]
 - !private ["So30UIPasteConfigurationSupportingP", "NetworkManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "RepeatVisitorsDwell"]
 - !private ["So30UIPasteConfigurationSupportingP", "String"]
@@ -937,7 +914,6 @@ depends-member:
 - ["So11UIResponderC", "HoursForDicInt"]
 - ["So11UIResponderC", "Int"]
 - !private ["So11UIResponderC", "JSONDecoder"]
-- !private ["So11UIResponderC", "JSONSerialization"]
 - !private ["So11UIResponderC", "NetworkManager"]
 - ["So11UIResponderC", "RepeatVisitorsDwell"]
 - !private ["So11UIResponderC", "SearchSetUpVC"]
@@ -958,6 +934,7 @@ depends-member:
 - ["So11UIResponderC", "getProximityUsers"]
 - ["So11UIResponderC", "getRepeatDistribution"]
 - ["So11UIResponderC", "getRepeatVis"]
+- ["So11UIResponderC", "hourly"]
 - ["So11UIResponderC", "hours"]
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "kpiSummaryJSON"]
@@ -990,7 +967,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "HoursForDicInt"]
 - ["So30UIResponderStandardEditActionsP", "Int"]
 - !private ["So30UIResponderStandardEditActionsP", "JSONDecoder"]
-- !private ["So30UIResponderStandardEditActionsP", "JSONSerialization"]
 - !private ["So30UIResponderStandardEditActionsP", "NetworkManager"]
 - !private ["So30UIResponderStandardEditActionsP", "RepeatVisitorsDwell"]
 - !private ["So30UIResponderStandardEditActionsP", "String"]
@@ -1040,7 +1016,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "HoursForDicInt"]
 - ["So20UIScrollViewDelegateP", "Int"]
 - !private ["So20UIScrollViewDelegateP", "JSONDecoder"]
-- !private ["So20UIScrollViewDelegateP", "JSONSerialization"]
 - !private ["So20UIScrollViewDelegateP", "NetworkManager"]
 - !private ["So20UIScrollViewDelegateP", "RepeatVisitorsDwell"]
 - !private ["So20UIScrollViewDelegateP", "String"]
@@ -1048,7 +1023,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "UINib"]
 - !private ["So20UIScrollViewDelegateP", "UIStoryboard"]
 - !private ["So20UIScrollViewDelegateP", "allUsers"]
-- !private ["So20UIScrollViewDelegateP", "delegate"]
 - !private ["So20UIScrollViewDelegateP", "dwellDistribution"]
 - !private ["So20UIScrollViewDelegateP", "endDate"]
 - !private ["So20UIScrollViewDelegateP", "getAllData"]
@@ -1082,7 +1056,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "HoursForDicInt"]
 - ["So16UIStateRestoringP", "Int"]
 - !private ["So16UIStateRestoringP", "JSONDecoder"]
-- !private ["So16UIStateRestoringP", "JSONSerialization"]
 - !private ["So16UIStateRestoringP", "NetworkManager"]
 - !private ["So16UIStateRestoringP", "RepeatVisitorsDwell"]
 - !private ["So16UIStateRestoringP", "String"]
@@ -1131,7 +1104,6 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "HoursForDicInt"]
 - ["So21UITableViewDataSourceP", "Int"]
 - !private ["So21UITableViewDataSourceP", "JSONDecoder"]
-- !private ["So21UITableViewDataSourceP", "JSONSerialization"]
 - !private ["So21UITableViewDataSourceP", "NetworkManager"]
 - !private ["So21UITableViewDataSourceP", "RepeatVisitorsDwell"]
 - !private ["So21UITableViewDataSourceP", "String"]
@@ -1169,7 +1141,6 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "HoursForDicInt"]
 - ["So19UITableViewDelegateP", "Int"]
 - !private ["So19UITableViewDelegateP", "JSONDecoder"]
-- !private ["So19UITableViewDelegateP", "JSONSerialization"]
 - !private ["So19UITableViewDelegateP", "NetworkManager"]
 - !private ["So19UITableViewDelegateP", "RepeatVisitorsDwell"]
 - !private ["So19UITableViewDelegateP", "String"]
@@ -1177,7 +1148,6 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "UINib"]
 - !private ["So19UITableViewDelegateP", "UIStoryboard"]
 - !private ["So19UITableViewDelegateP", "allUsers"]
-- !private ["So19UITableViewDelegateP", "delegate"]
 - !private ["So19UITableViewDelegateP", "dwellDistribution"]
 - !private ["So19UITableViewDelegateP", "endDate"]
 - !private ["So19UITableViewDelegateP", "getAllData"]
@@ -1207,7 +1177,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "HoursForDicInt"]
 - ["So18UITraitEnvironmentP", "Int"]
 - !private ["So18UITraitEnvironmentP", "JSONDecoder"]
-- !private ["So18UITraitEnvironmentP", "JSONSerialization"]
 - !private ["So18UITraitEnvironmentP", "NetworkManager"]
 - !private ["So18UITraitEnvironmentP", "RepeatVisitorsDwell"]
 - !private ["So18UITraitEnvironmentP", "String"]
@@ -1254,7 +1223,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "HoursForDicInt"]
 - ["So23UIUserActivityRestoringP", "Int"]
 - !private ["So23UIUserActivityRestoringP", "JSONDecoder"]
-- !private ["So23UIUserActivityRestoringP", "JSONSerialization"]
 - !private ["So23UIUserActivityRestoringP", "NetworkManager"]
 - !private ["So23UIUserActivityRestoringP", "RepeatVisitorsDwell"]
 - !private ["So23UIUserActivityRestoringP", "String"]
@@ -1307,7 +1275,6 @@ depends-member:
 - ["So16UIViewControllerC", "HoursForDicInt"]
 - ["So16UIViewControllerC", "Int"]
 - !private ["So16UIViewControllerC", "JSONDecoder"]
-- !private ["So16UIViewControllerC", "JSONSerialization"]
 - !private ["So16UIViewControllerC", "NetworkManager"]
 - ["So16UIViewControllerC", "RepeatVisitorsDwell"]
 - !private ["So16UIViewControllerC", "SearchSetUpVC"]
@@ -1329,6 +1296,7 @@ depends-member:
 - ["So16UIViewControllerC", "getProximityUsers"]
 - ["So16UIViewControllerC", "getRepeatDistribution"]
 - ["So16UIViewControllerC", "getRepeatVis"]
+- ["So16UIViewControllerC", "hourly"]
 - ["So16UIViewControllerC", "hours"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "kpiSummaryJSON"]
@@ -1369,7 +1337,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "HoursForDicInt"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONDecoder"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONSerialization"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NetworkManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "RepeatVisitorsDwell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
@@ -1389,7 +1356,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "getRepeatVis"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "kpiSummaryJSON"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
@@ -1440,7 +1406,6 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "10Foundation12DataProtocolP"
 - "10Foundation4DateV"
-- !private "4CCMN18DatePickerDelegateP"
 - "Se"
 - !private "s26DefaultStringInterpolationV"
 - "SD"
@@ -1457,7 +1422,6 @@ depends-nominal:
 - !private "9Alamofire10HTTPMethodO"
 - "SH"
 - !private "10Foundation11JSONDecoderC"
-- !private "So19NSJSONSerializationC"
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
 - !private "10Foundation19MutableDataProtocolP"
@@ -1572,4 +1536,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3fabca890d74fb15315b353cdb997c27"
+interface-hash: "6034755626bc48446e28610230c45e74"

@@ -14,6 +14,7 @@ class PresenceVisualizationVC : UIViewController {
     
     var startDate : String = Date().toStringDefault()
     var endDate : String =  Date().toStringDefault()
+    var hourly : Bool = true
     
     var YValues : [Double] = []
     var allUsers : [[Double]] = []
@@ -188,8 +189,7 @@ class PresenceVisualizationVC : UIViewController {
                 if let d = data{
                     print("connected/hourly/yesterday \n\n")
                     
-//                    if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//
+         //
 //                        //print(json)
 //                    }
                 }

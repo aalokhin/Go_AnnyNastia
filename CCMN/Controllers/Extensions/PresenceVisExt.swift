@@ -77,9 +77,10 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PresenceVisualizationVC : SetUpDelegate {
-    func specifyDates(from: Date, to: Date, detailed : Bool) {
+    func specifyDates(from: Date, to: Date, hourly : Bool) {
         self.startDate = from.toStringDefault()
         self.endDate = to.toStringDefault()
+        self.hourly = hourly
         print("hey from delegat here are our dates \(from) and \(to)")
     }
     
