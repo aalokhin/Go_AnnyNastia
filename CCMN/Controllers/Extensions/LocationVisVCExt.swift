@@ -104,7 +104,7 @@ extension LocationVisVC: UISearchBarDelegate {
         shouldShowSearchResults = searchText != "" ? true : false
         if (shouldShowSearchResults == false){
             print("timer restarted")
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
         }
         tableView.reloadData()
     }

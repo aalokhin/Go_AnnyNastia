@@ -22,7 +22,8 @@ class  LocationVisVC: UIViewController {
     var filteredMacs : [Mac] = []
     var allMacs : [Mac] = []
     var usersSaved  = Set<String>()
-    
+    var currUserSet  = Set<String>()
+
     private var customView: UIView!
     var timer: Timer?
     var currentFloor : String = "735495909441273878"
@@ -66,7 +67,7 @@ class  LocationVisVC: UIViewController {
         tableView?.register(UINib(nibName: MacListCell.nibName(), bundle: nil), forCellReuseIdentifier: MacListCell.reuseIdentifier())
         print("HELLO FROM LOCATION VIS VC")
         getAllClients()
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
         //getActive()
     }
     
@@ -96,7 +97,6 @@ class  LocationVisVC: UIViewController {
     
     func getAllClients(){
         
-        var currUserSet  = Set<String>()
         NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -105,11 +105,13 @@ class  LocationVisVC: UIViewController {
                     return
                 }
                 var tempMacs = [Mac]()
+                self.currUserSet.removeAll()
                 for one in t{
-                    currUserSet.insert(one.macAddress!)
                     if let addr = one.macAddress, let x = one.mapCoordinate?.x, let y = one.mapCoordinate?.y {
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
+                                self.currUserSet.insert(one.macAddress!)
+
                                 tempMacs.append(Mac(x: x, y: y, macAddr: addr))
                             }
                         }
@@ -117,17 +119,19 @@ class  LocationVisVC: UIViewController {
                     }
                 }
                 
-                let newUser = currUserSet.subtracting(self.usersSaved)
+                let newUser = self.currUserSet.subtracting(self.usersSaved)
                 
-                //print("cur ->",  currUserSet.count, "old ->",  self.usersSaved.count, "new ->", newUser.count)
+                //print("cur ->",  self.currUserSet.count, "old ->",  self.usersSaved.count)
                 if self.usersSaved.count > 0{
+                   
+
                     for one in newUser{
                         self.showPopUp()
                         print("New: ", one)
                     }
                 }
                 
-                self.usersSaved = currUserSet
+                self.usersSaved = self.currUserSet
                 self.allMacs = tempMacs
                 if let floor = self.floorsImgs[self.currentFloor]{
                     self.updateFloorImg(floor)

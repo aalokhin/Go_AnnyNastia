@@ -48,6 +48,7 @@ depends-top-level:
 - !private "UIGraphicsGetCurrentContext"
 - !private "UIGraphicsGetImageFromCurrentImageContext"
 - "UIImage"
+- !private "UnicodeScalarType"
 - !private "print"
 - !private "zip"
 depends-member:

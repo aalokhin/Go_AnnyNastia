@@ -26,6 +26,7 @@ depends-top-level:
 - "PresenceVisualizationVC"
 - !private "SearchSetUpVC"
 - "String"
+- "StringLiteralType"
 - !private "UIBarButtonItem"
 - !private "UINib"
 - !private "UIStoryboard"
