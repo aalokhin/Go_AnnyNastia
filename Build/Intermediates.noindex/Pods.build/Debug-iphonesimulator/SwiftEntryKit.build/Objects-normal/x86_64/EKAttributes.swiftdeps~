@@ -7,7 +7,6 @@ provides-member:
 - ["13SwiftEntryKit12EKAttributesV", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "BooleanLiteralType"
 - "EKAttributes"
 - "String"
 depends-member:

@@ -17,7 +17,7 @@ protocol SetUpDelegate {
 
 class SearchSetUpVC: UIViewController {
     var str : String?
-    let dates : [String] = ["today", "yesterday", "last 3 days", "tomorrow"]
+    let dates : [String] = ["today", "yesterday", "3days", "tomorrow"]
 
     var inputTexts: [String] = ["Start date", "End date"]
     var datePickerIndexPath: IndexPath?
@@ -36,8 +36,6 @@ class SearchSetUpVC: UIViewController {
         print("hello here")
         addInitailValues()
         setupVCForDatePickUp()
-
-       
     }
     
     
@@ -85,10 +83,7 @@ class SearchSetUpVC: UIViewController {
     
     @objc func save(sender:UIView){
         print("save button tapped")
-        
         delegate?.specifyDates(from: inputDates[0], to: inputDates[1], hourly : self.hourly, dateSpan: self.dateSpan)
-        
-        
         navigationController?.popViewController(animated: true)
         
     }

@@ -13,6 +13,7 @@ depends-top-level:
 - "CGPoint"
 - "EKWindow"
 - "NSCoder"
+- !private "StringLiteralType"
 - "UIEvent"
 - !private "UIScreen"
 - "UIView"

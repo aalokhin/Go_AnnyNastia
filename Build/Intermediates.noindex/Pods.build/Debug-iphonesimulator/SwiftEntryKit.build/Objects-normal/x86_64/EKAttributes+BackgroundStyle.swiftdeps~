@@ -17,6 +17,7 @@ depends-top-level:
 - "=="
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "CGPoint"
 - "EKAttributes"
 - "EKColor"

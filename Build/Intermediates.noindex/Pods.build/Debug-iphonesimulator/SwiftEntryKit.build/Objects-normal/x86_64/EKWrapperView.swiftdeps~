@@ -9,6 +9,7 @@ provides-dynamic-lookup:
 - "hitTest"
 depends-top-level:
 - !private "!="
+- "BooleanLiteralType"
 - "CGPoint"
 - "EKWrapperView"
 - "UIEvent"

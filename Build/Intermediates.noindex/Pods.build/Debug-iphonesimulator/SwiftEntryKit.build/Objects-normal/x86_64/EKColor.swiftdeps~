@@ -25,6 +25,7 @@ depends-top-level:
 - "EKColor"
 - "Equatable"
 - "Int"
+- !private "StringLiteralType"
 - "UIColor"
 - "UITraitCollection"
 - !private "assert"

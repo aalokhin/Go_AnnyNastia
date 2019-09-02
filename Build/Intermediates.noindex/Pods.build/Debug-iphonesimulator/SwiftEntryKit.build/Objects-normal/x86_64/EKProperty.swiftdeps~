@@ -95,6 +95,7 @@ depends-member:
 - !private ["Sl", "map"]
 - !private ["So17UIViewContentModeV", "scaleAspectFill"]
 - !private ["So17UIViewContentModeV", "scaleToFill"]
+- ["13SwiftEntryKit10EKPropertyV16TextFieldContentV0G7WrapperC", "deinit"]
 - ["13SwiftEntryKit10EKPropertyV16TextFieldContentV0G7WrapperC", "init"]
 - ["13SwiftEntryKit10EKPropertyV16TextFieldContentV0G7WrapperC", "text"]
 - !private ["10Foundation15ContiguousBytesP", "append"]

@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                 print("kpisummary/today\n\n")
                 
             if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                print(json)
+                //print(json)
             }
             
                 if let nbr = String(data: d, encoding: .utf8)?.toInt(){

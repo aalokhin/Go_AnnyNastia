@@ -21,8 +21,6 @@ depends-top-level:
 - "EKWindow"
 - "EKWindowProvider"
 - "EntryPresenterDelegate"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
 - "String"
 - "SwiftEntryKit"
 - !private "UIApplication"

@@ -27,6 +27,8 @@ class  LocationVisVC: UIViewController {
     private var customView: UIView!
     var timer: Timer?
     var currentFloor : String = "735495909441273878"
+    
+    
     let floorsImgs : [String : String] = ["735495909441273878" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor",
                                           "735495909441273979" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "735495909441273980" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
 
@@ -96,7 +98,7 @@ class  LocationVisVC: UIViewController {
     }
     
     func getAllClients(){
-        
+        showPopUp(newClientMAC: "allalall")
         NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -144,20 +146,30 @@ class  LocationVisVC: UIViewController {
     
    
     func showPopUp(newClientMAC : String){
-        var attributes = EKAttributes.topToast
         
+        let floors : [String : String] = ["735495909441273878" : "first floor",
+                                              "735495909441273979" : "second floor", "735495909441273980" : "third floor"]
+        let message : String = " Hi, @xlogin or mac: \(newClientMAC) now is on \(floors[currentFloor] ?? "") "
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/5 - 75, y: self.view.frame.size.height-680, width: 400, height: 100))
+        toastLabel.numberOfLines = 0
+        toastLabel.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        var attributes = EKAttributes.topToast
         EKAttributes.Precedence.QueueingHeuristic.value = .chronological
         attributes.precedence = .enqueue(priority: .normal)
-
         attributes.positionConstraints.safeArea = .empty(fillSafeArea: true)
         attributes.entryBackground = .color(color: .black)
         attributes.windowLevel = .normal
         attributes.entranceAnimation = .translation
         attributes.exitAnimation = .translation
         attributes.displayDuration = 1
-        let customView = UIView(frame: CGRect(x: 100, y: 100, width: view.frame.width, height: 600))
-        customView.backgroundColor = .yellow
-        SwiftEntryKit.display(entry: customView, using: attributes)
+        SwiftEntryKit.display(entry: toastLabel, using: attributes)
     }
     
     func areEqual(mac1:[Mac], mac2: [Mac]) -> Bool {
