@@ -92,7 +92,6 @@ extension UITableViewCell{
         let labels = ["Connected", "Passerby", "Visitor"]
         for i in 0..<dataEntryArr.count{
             let set = BarChartDataSet(entries: dataEntryArr[i], label: labels[i])
-            
             dataSets.append(set)
         }
         for i in 0..<dataSets.count{
@@ -113,6 +112,7 @@ extension UITableViewCell{
         let barSpace = 0.05
         let barWidth = 0.3
         // (0.3 + 0.05) * 2 + 0.3 = 1.00 -> interval per "group"
+        
         
         let groupCount = values[0].count
         let startYear = 0

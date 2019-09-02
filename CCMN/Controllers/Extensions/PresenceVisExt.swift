@@ -11,7 +11,7 @@ import UIKit
 
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (repeatDistribution.count == 0 || setAllRepeat.count == 0 || allUsers.count == 0 || setAllDwell.count == 0){
+        if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeat.count == 0 || allUsersForProximity.count == 0 || setAllDwell.count == 0){
             return 0
         } else {
             return 5
@@ -21,9 +21,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     //http://www.thomashanning.com/the-most-common-mistake-in-using-uitableview/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         // getHourlyConnected()
-       
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
         if indexPath.row == 0{
             for v in cell.subviews{
@@ -34,7 +32,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            
+
             cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
         } else if indexPath.row == 2 {
             for v in cell.subviews{
@@ -51,7 +49,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 values.append(Double(one.value))
             }
             cell.createPieChart(dataPoints: dataPoints, values: values, chartName: "Repeat visitors Distribution")
-            
+
         } else if indexPath.row == 4 {
             for v in cell.subviews{
                 v.removeFromSuperview()
@@ -65,10 +63,13 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             }
             cell.createPieChart(dataPoints: dataPoints, values: values, chartName : "Dwell Time Distribution")
         } else {
+//
+        
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            cell.createGroupedBarChart(dataPoints: hours, values: allUsers)
+             // /////////////////// PROXIMITY //////////////////////////////////////
+            cell.createGroupedBarChart(dataPoints: dailyProximity.datapoints, values: dailyProximity.values)
         }
         return cell
         
@@ -81,6 +82,7 @@ extension PresenceVisualizationVC : SetUpDelegate {
         self.startDate = from.toStringDefault()
         self.endDate = to.toStringDefault()
         self.hourly = hourly
+        self.dateSpan = dateSpan ?? "today"
         print("hey from delegat here are our dates \(from) and \(to), hourly \(hourly), span \(dateSpan ?? "no date span")")
     }
     

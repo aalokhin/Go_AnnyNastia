@@ -13,7 +13,6 @@ depends-top-level:
 - "Bool"
 - "MacListCell"
 - "String"
-- !private "StringLiteralType"
 - "UITableViewCell"
 depends-member:
 - ["So15CALayerDelegateP", ""]
