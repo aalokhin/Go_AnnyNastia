@@ -54,7 +54,12 @@ class PresenceVisualizationVC : UIViewController {
         getDailyProximity()
         //////////////////
         getRepeatDistribution()
+        
         getDwellTimeDistribution()
+        
+        
+        
+        getHourlyProximityUsers()
     }
     
     override func viewDidLoad() {
@@ -130,8 +135,9 @@ class PresenceVisualizationVC : UIViewController {
     
     func getHourlyProximityUsers(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+         self.allUsersForProximity.removeAll()
+        print("api/presence/v1/connected/hourly/\(self.dateSpan)?siteId=\(siteId)")
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
                 let decoder = JSONDecoder()
@@ -150,7 +156,7 @@ class PresenceVisualizationVC : UIViewController {
                 }
                 self.allUsersForProximity.append(firstSet)
                 
-                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
                     data, error in
                     if let d = data{
                         let decoder = JSONDecoder()
@@ -166,7 +172,7 @@ class PresenceVisualizationVC : UIViewController {
                             }
                         }
                         self.allUsersForProximity.append(secondSet)
-                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
                             data, error in
                             if let d = data{
                                 let decoder = JSONDecoder()
@@ -390,7 +396,7 @@ class PresenceVisualizationVC : UIViewController {
                                 self.dailyProximity.values.append(userNbrDataSet)
                                 self.tableView.reloadData()
                                 for one in self.dailyProximity.datapoints{
-                                    print(one)
+                                   // print(one)
                                     let arr = ["conn", "repeat", "passerby"]
                                     for i in 0..<self.dailyProximity.values.count{
                                         print(arr[i], ">>>>", self.dailyProximity.values[i])
