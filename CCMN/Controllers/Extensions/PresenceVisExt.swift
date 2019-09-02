@@ -69,7 +69,12 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 v.removeFromSuperview()
             }
              // /////////////////// PROXIMITY //////////////////////////////////////
-            cell.createGroupedBarChart(dataPoints: dailyProximity.datapoints, values: dailyProximity.values)
+            if (hourly == true)
+            {
+                cell.createGroupedBarChart(dataPoints: hours, values: allUsersForProximity)
+            } else {
+                cell.createGroupedBarChart(dataPoints: dailyProximity.datapoints, values: dailyProximity.values)
+            }
         }
         return cell
         

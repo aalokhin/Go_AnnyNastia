@@ -130,6 +130,7 @@ class PresenceVisualizationVC : UIViewController {
     
     func getHourlyProximityUsers(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -148,6 +149,7 @@ class PresenceVisualizationVC : UIViewController {
                     }
                 }
                 self.allUsersForProximity.append(firstSet)
+                
                 NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
                     data, error in
                     if let d = data{
