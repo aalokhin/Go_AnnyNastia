@@ -1,13 +1,13 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "e70ec041a7e66617a40331cfc1e3c4fe"
-build_time: [1567436456, 405298000]
+build_time: [1567437747, 240431000]
 inputs:
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/EmptyChartCell.swift": [1567167578, 286064753]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/MacListCell.swift": [1567167578, 286282069]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/ViewController.swift": [1567422840, 202520556]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/DateCell.swift": [1567167578, 285545995]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Utilities/PresenceEndpoints.swift": [1567167578, 284681052]
-  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1567435764, 206471870]
+  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1567437419, 657246984]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/AppDelegate.swift": [1567167578, 278939635]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/Singletons/NetworkManager.swift": [1567167578, 285408170]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/LocationVisVCExt.swift": [1567418006, 652931416]
@@ -20,10 +20,10 @@ inputs:
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Requests/ConnectedVisitorsFuncs.swift": [1567167578, 284075868]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Model/Decoders/KPISummary.swift": [1567167578, 283696690]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/SetUpVCExtnsn.swift": [1567431453, 153897223]
-  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/UICellExt.swift": [1567432597, 890361725]
+  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/UICellExt.swift": [1567437402, 675564211]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/DateTextCell.swift": [1567167578, 285811894]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/LocationVisVC.swift": [1567424226, 722014500]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Utilities/LocationRequestEndpoints.swift": [1567167578, 284543335]
-  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/PresenceVis.swift": [1567436455, 970601162]
+  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/PresenceVis.swift": [1567437745, 181904547]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/SearchSetUpVC.swift": [1567434297, 953308633]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Model/Decoders/ClientJSON.swift": [1567167578, 283593640]

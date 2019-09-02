@@ -398,10 +398,10 @@ class PresenceVisualizationVC : UIViewController {
                                 for one in self.dailyProximity.datapoints{
                                    // print(one)
                                     let arr = ["conn", "repeat", "passerby"]
-                                    for i in 0..<self.dailyProximity.values.count{
-                                        print(arr[i], ">>>>", self.dailyProximity.values[i])
-                                        
-                                    }
+//                                    for i in 0..<self.dailyProximity.values.count{
+//                                        print(arr[i], ">>>>", self.dailyProximity.values[i])
+//                                        
+//                                    }
                                     
                                 }
                                 

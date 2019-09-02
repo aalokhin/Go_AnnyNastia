@@ -29,6 +29,7 @@ depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
 - "Bool"
+- "BooleanLiteralType"
 - !private "CGRect"
 - !private "ClientJSON"
 - "Double"

@@ -153,16 +153,10 @@ extension UITableViewCell{
      
     }
     
-    func createLinearChart(hours: [String], allDwell : [(key: Int, value: AnyObject)], timeLabels : [String], addGradient : Bool){
+    func createLinearChart(datapoints: [String], allDwell : [(key: Int, value: AnyObject)], timeLabels : [String], addGradient : Bool){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
-       // print(allDwell)
         let data = LineChartData()
-        
-        //let HoursDwell = ["FIVE_TO_THIRTY_MINUTES", "ONE_TO_FIVE_HOURS", "EIGHT_PLUS_HOURS", "FIVE_TO_EIGHT_HOURS", "THIRTY_TO_SIXTY_MINUTES"]
-        
-       // var dataEntryArr : [[ChartDataEntry]] = []
-        //print("keys>>>",allDwell)
         for i in 0..<timeLabels.count{
             var lineChartEntry = [ChartDataEntry]()
             
@@ -194,9 +188,9 @@ extension UITableViewCell{
         lineChart.xAxis.labelRotationAngle = -90
         lineChart.xAxis.labelPosition = .bottom
     
-        lineChart.xAxis.labelCount = hours.count
+        lineChart.xAxis.labelCount = datapoints.count
         lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
-        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:hours)
+        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:datapoints)
         lineChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
         self.addSubview(lineChart)
 
@@ -208,10 +202,7 @@ extension UITableViewCell{
         pieChart.noDataText = "please enter data"
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<values.count {
-           // let dataEntry = ChartDataEntry(x: Double(i),  y: values[i])
             let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
-//            let dataEntry = PieChartDataEntry(v
-
             dataEntries.append(dataEntry)
         }
         let chartDataSet = PieChartDataSet(entries: dataEntries, label: chartName)
@@ -219,9 +210,7 @@ extension UITableViewCell{
         let legend = pieChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
-        
-        
-        
+ 
         var  colors: [UIColor] = []
         for _ in 0..<dataPoints.count {
             let red = Double(arc4random_uniform(256))
@@ -231,12 +220,8 @@ extension UITableViewCell{
             colors.append(color)
         }
         chartDataSet.colors = colors
-        
         pieChart.drawEntryLabelsEnabled = false       // pieChart.setDrawSliceText(false)
-        
-        //chartDataSet.colors = [getColor(int: 1), getColor(int: 2), getColor(int: 0), getColor(int: 3)]
         let chartData = PieChartData()
-        
         chartData.addDataSet(chartDataSet)
         pieChart.data = chartData
         self.addSubview(pieChart)

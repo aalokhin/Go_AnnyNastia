@@ -27,13 +27,16 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            cell.createLinearChart(hours: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeLabels: RepeatVisitorsDwell, addGradient: false)
+            cell.createLinearChart(datapoints: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeLabels: RepeatVisitorsDwell, addGradient: false)
         } else if indexPath.row == 1{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
 
-            cell.createLinearChart(hours: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
+            cell.createLinearChart(datapoints: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
+            
+            
+            ///////////////////////////////////is okay/////////////////////////////
         } else if indexPath.row == 2 {
             for v in cell.subviews{
                 v.removeFromSuperview()
@@ -63,8 +66,6 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             }
             cell.createPieChart(dataPoints: dataPoints, values: values, chartName : "Dwell Time Distribution")
         } else {
-//
-        
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
