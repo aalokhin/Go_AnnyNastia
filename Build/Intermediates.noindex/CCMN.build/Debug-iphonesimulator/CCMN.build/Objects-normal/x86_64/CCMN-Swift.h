@@ -240,6 +240,9 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 
 SWIFT_CLASS("_TtC4CCMN11ForecastsVC")
 @interface ForecastsVC : UIViewController
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified resultOfForecastLabel;
+- (IBAction)dateChanged:(UIDatePicker * _Nonnull)sender;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

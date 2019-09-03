@@ -15,6 +15,7 @@ provides-member:
 - ["SS", "toDateCustom"]
 - ["10Foundation4DateV", "toStringDefault"]
 - ["10Foundation4DateV", "convertToString"]
+- ["10Foundation4DateV", "interval"]
 - ["So7UIImageC", "imageOverlayingImages"]
 - ["So7UIImageC", "addDots"]
 - ["So7UIImageC", "addImageOverlay"]
@@ -29,9 +30,11 @@ depends-top-level:
 - !private ">"
 - !private "??"
 - "AssignmentPrecedence"
+- !private "BooleanLiteralType"
 - "CGFloat"
 - !private "CGRect"
 - "CGSize"
+- "Calendar"
 - "CastingPrecedence"
 - "Character"
 - !private "Data"
@@ -40,10 +43,13 @@ depends-top-level:
 - !private "DateFormatter"
 - "Double"
 - "Float"
+- !private "FloatLiteralType"
 - "Int"
+- !private "IntegerLiteralType"
 - "Mac"
 - !private "NSString"
 - "String"
+- !private "StringLiteralType"
 - !private "UIGraphicsBeginImageContextWithOptions"
 - !private "UIGraphicsEndImageContext"
 - !private "UIGraphicsGetCurrentContext"
@@ -110,6 +116,9 @@ depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "utf8"]
 - !private ["s7CVarArgP", "zip"]
+- ["10Foundation8CalendarV", "Component"]
+- !private ["10Foundation8CalendarV", "current"]
+- !private ["10Foundation8CalendarV", "ordinality"]
 - !private ["Sl", "Data"]
 - !private ["Sl", "DateFormatter"]
 - !private ["Sl", "Int"]
@@ -124,6 +133,7 @@ depends-member:
 - !private ["Sl", "startIndex"]
 - !private ["Sl", "subscript"]
 - !private ["Sl", "utf8"]
+- !private ["SL", "Calendar"]
 - !private ["SL", "Data"]
 - !private ["SL", "DateFormatter"]
 - !private ["SL", "Int"]
@@ -135,6 +145,7 @@ depends-member:
 - !private ["SL", "startIndex"]
 - !private ["SL", "subscript"]
 - !private ["SL", "utf8"]
+- !private ["10Foundation8CalendarV9ComponentO", "era"]
 - !private ["10Foundation15ContiguousBytesP", "base64EncodedString"]
 - !private ["10Foundation15ContiguousBytesP", "count"]
 - !private ["10Foundation15ContiguousBytesP", "filter"]
@@ -143,6 +154,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "CGRect"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
+- !private ["s28CustomDebugStringConvertibleP", "Calendar"]
+- ["s28CustomDebugStringConvertibleP", "Component"]
 - !private ["s28CustomDebugStringConvertibleP", "Data"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "Int"]
@@ -154,6 +167,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "base64EncodedString"]
 - !private ["s28CustomDebugStringConvertibleP", "components"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "date"]
 - !private ["s28CustomDebugStringConvertibleP", "dateFormat"]
 - !private ["s28CustomDebugStringConvertibleP", "doubleValue"]
@@ -166,6 +180,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "intValue"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "joined"]
+- !private ["s28CustomDebugStringConvertibleP", "ordinality"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "size"]
 - !private ["s28CustomDebugStringConvertibleP", "startIndex"]
@@ -174,18 +189,22 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "utf8"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s28CustomDebugStringConvertibleP", "zip"]
+- !private ["s17CustomReflectableP", "Calendar"]
+- ["s17CustomReflectableP", "Component"]
 - !private ["s17CustomReflectableP", "Data"]
 - !private ["s17CustomReflectableP", "DateFormatter"]
 - !private ["s17CustomReflectableP", "Int"]
 - !private ["s17CustomReflectableP", "base64EncodedString"]
 - !private ["s17CustomReflectableP", "components"]
 - !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "current"]
 - !private ["s17CustomReflectableP", "filter"]
 - !private ["s17CustomReflectableP", "height"]
 - !private ["s17CustomReflectableP", "index"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "joined"]
+- !private ["s17CustomReflectableP", "ordinality"]
 - !private ["s17CustomReflectableP", "print"]
 - !private ["s17CustomReflectableP", "startIndex"]
 - !private ["s17CustomReflectableP", "subscript"]
@@ -194,6 +213,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
 - !private ["s23CustomStringConvertibleP", "CGRect"]
 - !private ["s23CustomStringConvertibleP", "CGSize"]
+- !private ["s23CustomStringConvertibleP", "Calendar"]
+- ["s23CustomStringConvertibleP", "Component"]
 - !private ["s23CustomStringConvertibleP", "Data"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "Int"]
@@ -205,6 +226,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "base64EncodedString"]
 - !private ["s23CustomStringConvertibleP", "components"]
 - !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "date"]
 - !private ["s23CustomStringConvertibleP", "dateFormat"]
 - !private ["s23CustomStringConvertibleP", "doubleValue"]
@@ -216,6 +238,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "intValue"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "joined"]
+- !private ["s23CustomStringConvertibleP", "ordinality"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "size"]
 - !private ["s23CustomStringConvertibleP", "startIndex"]
@@ -230,10 +253,14 @@ depends-member:
 - !private ["10Foundation12DataProtocolP", "filter"]
 - !private ["10Foundation12DataProtocolP", "init"]
 - !private ["10Foundation12DataProtocolP", "joined"]
+- ["10Foundation4DateV", "Calendar"]
+- ["10Foundation4DateV", "Date"]
 - ["10Foundation4DateV", "DateFormatType"]
 - !private ["10Foundation4DateV", "DateFormatter"]
+- ["10Foundation4DateV", "Int"]
 - ["10Foundation4DateV", "String"]
 - ["10Foundation4DateV", "convertToString"]
+- ["10Foundation4DateV", "interval"]
 - !private ["10Foundation4DateV", "print"]
 - ["10Foundation4DateV", "toStringDefault"]
 - !private ["4CCMN14DateFormatTypeO", "deinit"]
@@ -242,35 +269,43 @@ depends-member:
 - !private ["So15NSDateFormatterC", "dateFormat"]
 - !private ["So15NSDateFormatterC", "init"]
 - !private ["So15NSDateFormatterC", "string"]
+- !private ["Se", "Calendar"]
+- ["Se", "Component"]
 - !private ["Se", "Data"]
 - !private ["Se", "DateFormatter"]
 - !private ["Se", "Int"]
 - !private ["Se", "base64EncodedString"]
 - !private ["Se", "components"]
 - !private ["Se", "count"]
+- !private ["Se", "current"]
 - !private ["Se", "filter"]
 - !private ["Se", "height"]
 - !private ["Se", "index"]
 - !private ["Se", "init"]
 - !private ["Se", "isEmpty"]
 - !private ["Se", "joined"]
+- !private ["Se", "ordinality"]
 - !private ["Se", "print"]
 - !private ["Se", "startIndex"]
 - !private ["Se", "subscript"]
 - !private ["Se", "utf8"]
 - !private ["Se", "width"]
+- !private ["SE", "Calendar"]
+- ["SE", "Component"]
 - !private ["SE", "Data"]
 - !private ["SE", "DateFormatter"]
 - !private ["SE", "Int"]
 - !private ["SE", "base64EncodedString"]
 - !private ["SE", "components"]
 - !private ["SE", "count"]
+- !private ["SE", "current"]
 - !private ["SE", "filter"]
 - !private ["SE", "height"]
 - !private ["SE", "index"]
 - !private ["SE", "init"]
 - !private ["SE", "isEmpty"]
 - !private ["SE", "joined"]
+- !private ["SE", "ordinality"]
 - !private ["SE", "print"]
 - !private ["SE", "startIndex"]
 - !private ["SE", "subscript"]
@@ -279,6 +314,8 @@ depends-member:
 - !private ["SQ", "CGFloat"]
 - !private ["SQ", "CGRect"]
 - !private ["SQ", "CGSize"]
+- !private ["SQ", "Calendar"]
+- ["SQ", "Component"]
 - !private ["SQ", "Data"]
 - !private ["SQ", "DateFormatter"]
 - !private ["SQ", "Int"]
@@ -290,10 +327,12 @@ depends-member:
 - !private ["SQ", "base64EncodedString"]
 - !private ["SQ", "components"]
 - !private ["SQ", "count"]
+- !private ["SQ", "current"]
 - !private ["SQ", "date"]
 - !private ["SQ", "dateFormat"]
 - !private ["SQ", "doubleValue"]
 - !private ["SQ", "draw"]
+- !private ["SQ", "era"]
 - !private ["SQ", "filter"]
 - !private ["SQ", "floatValue"]
 - !private ["SQ", "height"]
@@ -305,6 +344,7 @@ depends-member:
 - !private ["SQ", "isEmpty"]
 - !private ["SQ", "joined"]
 - !private ["SQ", "normal"]
+- !private ["SQ", "ordinality"]
 - !private ["SQ", "print"]
 - !private ["SQ", "rawValue"]
 - !private ["SQ", "size"]
@@ -374,6 +414,8 @@ depends-member:
 - !private ["SH", "CGFloat"]
 - !private ["SH", "CGRect"]
 - !private ["SH", "CGSize"]
+- !private ["SH", "Calendar"]
+- ["SH", "Component"]
 - !private ["SH", "Data"]
 - !private ["SH", "DateFormatter"]
 - !private ["SH", "Int"]
@@ -385,10 +427,12 @@ depends-member:
 - !private ["SH", "base64EncodedString"]
 - !private ["SH", "components"]
 - !private ["SH", "count"]
+- !private ["SH", "current"]
 - !private ["SH", "date"]
 - !private ["SH", "dateFormat"]
 - !private ["SH", "doubleValue"]
 - !private ["SH", "draw"]
+- !private ["SH", "era"]
 - !private ["SH", "filter"]
 - !private ["SH", "floatValue"]
 - !private ["SH", "high"]
@@ -399,6 +443,7 @@ depends-member:
 - !private ["SH", "isEmpty"]
 - !private ["SH", "joined"]
 - !private ["SH", "normal"]
+- !private ["SH", "ordinality"]
 - !private ["SH", "print"]
 - !private ["SH", "rawValue"]
 - !private ["SH", "size"]
@@ -638,9 +683,13 @@ depends-member:
 - !private ["SY", "high"]
 - !private ["SY", "normal"]
 - !private ["SY", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "Calendar"]
+- ["10Foundation20ReferenceConvertibleP", "Component"]
 - !private ["10Foundation20ReferenceConvertibleP", "DateFormatter"]
 - !private ["10Foundation20ReferenceConvertibleP", "base64EncodedString"]
+- !private ["10Foundation20ReferenceConvertibleP", "current"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "ordinality"]
 - !private ["10Foundation20ReferenceConvertibleP", "print"]
 - !private ["s10SIMDScalarP", "init"]
 - !private ["ST", "Data"]
@@ -766,6 +815,7 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "init"]
 - !private ["s14_ArrayProtocolP", "joined"]
 - !private ["14CoreFoundation9_CFObjectP", "interpolationQuality"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Calendar"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "Data"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "DateFormatter"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "Int"]
@@ -876,18 +926,25 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "utf8"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "zip"]
+- ["10Foundation14_MutableBoxingP", "Component"]
+- !private ["10Foundation14_MutableBoxingP", "current"]
+- !private ["10Foundation14_MutableBoxingP", "ordinality"]
+- !private ["s21_ObjectiveCBridgeableP", "Calendar"]
+- ["s21_ObjectiveCBridgeableP", "Component"]
 - !private ["s21_ObjectiveCBridgeableP", "Data"]
 - !private ["s21_ObjectiveCBridgeableP", "DateFormatter"]
 - !private ["s21_ObjectiveCBridgeableP", "Int"]
 - !private ["s21_ObjectiveCBridgeableP", "base64EncodedString"]
 - !private ["s21_ObjectiveCBridgeableP", "components"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "current"]
 - !private ["s21_ObjectiveCBridgeableP", "filter"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "index"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "joined"]
+- !private ["s21_ObjectiveCBridgeableP", "ordinality"]
 - !private ["s21_ObjectiveCBridgeableP", "print"]
 - !private ["s21_ObjectiveCBridgeableP", "startIndex"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
@@ -904,20 +961,22 @@ depends-nominal:
 - !private "So6CGRectV"
 - !private "So6CGSizeV"
 - !private "s7CVarArgP"
+- "10Foundation8CalendarV"
 - !private "Sl"
 - !private "SL"
+- !private "10Foundation8CalendarV9ComponentO"
 - !private "10Foundation15ContiguousBytesP"
-- !private "s28CustomDebugStringConvertibleP"
-- !private "s17CustomReflectableP"
-- !private "s23CustomStringConvertibleP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
 - !private "10Foundation4DataV"
 - !private "10Foundation12DataProtocolP"
 - "10Foundation4DateV"
 - !private "4CCMN14DateFormatTypeO"
 - !private "So15NSDateFormatterC"
-- !private "Se"
-- !private "SE"
-- !private "SQ"
+- "Se"
+- "SE"
+- "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -926,7 +985,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s17FixedWidthIntegerP"
 - !private "So11NSFormatterC"
-- !private "SH"
+- "SH"
 - !private "Si"
 - !private "s25LosslessStringConvertibleP"
 - !private "4CCMN3MacC"
@@ -946,7 +1005,7 @@ depends-nominal:
 - !private "Sk"
 - !private "Sm"
 - !private "SY"
-- !private "10Foundation20ReferenceConvertibleP"
+- "10Foundation20ReferenceConvertibleP"
 - !private "s10SIMDScalarP"
 - !private "ST"
 - !private "SZ"
@@ -972,7 +1031,8 @@ depends-nominal:
 - !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
-- !private "s21_ObjectiveCBridgeableP"
+- "10Foundation14_MutableBoxingP"
+- "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.swiftmodule/x86_64.swiftmodule"
@@ -1015,4 +1075,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "fa9475f8580401b74421981c90c2bd48"
+interface-hash: "f958d7b2300060533d57d96d45f87560"

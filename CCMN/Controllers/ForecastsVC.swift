@@ -10,25 +10,43 @@ import Foundation
 import UIKit
 
 class  ForecastsVC: UIViewController {
+    var selectedDate : Date = Date()
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var resultOfForecastLabel: UILabel!
+    
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        selectedDate = datePicker.date
+        print(selectedDate)
+        forecastNbrOf(visitorsType : "visitor")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        datePicker.minimumDate = Date()
         print("Hi from forecast vc ")
        
-        forecastNbrOf(visitorsType : "connected")
+        forecastNbrOf(visitorsType : "visitor") //"passerby" "connected"
        
         
         
     }
     
     func forecastNbrOf(visitorsType : String){
-        let endDate : String = Date(timeInterval: -86400, since: Date()).toStringDefault() //check until yesterday
-        let startDate : String = Date(timeInterval: (-86400 * 31 * 6), since: Date()).toStringDefault()//starting form 6 months ago
+        
+        let endDate : Date = Date(timeInterval: -86400, since: Date())
+        let endDateStr : String = endDate.toStringDefault() //check until yesterday
+        
+        let startDate : Date = Date(timeInterval: (-86400 * 31 * 15), since: Date())
+        let startDateStr : String = startDate.toStringDefault()//starting form 6 months ago
         
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
         
-        let url = "api/presence/v1/\(visitorsType)/daily?siteId=\(siteId)&startDate=\(startDate)&endDate=\(endDate)"
+        
+        let timeInterval = selectedDate.interval(ofComponent: .day, fromDate: endDate)
+        print(">>>>>>>>>>>>", timeInterval)
+        
+        let url = "api/presence/v1/\(visitorsType)/daily?siteId=\(siteId)&startDate=\(startDateStr)&endDate=\(endDateStr)"
         NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -53,9 +71,10 @@ class  ForecastsVC: UIViewController {
                 
                 
                 
-                let result = self.linearRegression(dayInPeriod, numberOfVisitors)(205)
+                let result = self.linearRegression(dayInPeriod, numberOfVisitors)(466)
                 
                 print("on this date the predicted number of connected visitors is about to be \(Int(result))")
+                self.resultOfForecastLabel.text = "\(visitorsType) : \(Int(result))"
                 
                 
                 

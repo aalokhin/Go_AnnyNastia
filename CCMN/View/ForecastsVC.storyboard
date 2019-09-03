@@ -17,13 +17,51 @@
                     <view key="view" contentMode="scaleToFill" id="AWw-mk-kT8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Xag-Su-Nbd">
+                                <rect key="frame" x="0.0" y="144" width="414" height="518"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the date you want to make a forecast for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-DF-Icu">
+                                        <rect key="frame" x="21.5" y="0.0" width="371" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-dG-GMk">
+                                        <rect key="frame" x="47" y="70.5" width="320" height="377"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="589221799.37669098">
+                                            <!--2019-09-03 16:43:19 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="dateChanged:" destination="m3g-Ba-aGI" eventType="valueChanged" id="r2X-vW-L5j"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultLabel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Z-sv-yeZ">
+                                        <rect key="frame" x="158" y="497.5" width="98.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="top" secondItem="Y1H-5z-q3z" secondAttribute="top" constant="100" id="94Y-N4-ycP"/>
+                            <constraint firstItem="Y1H-5z-q3z" firstAttribute="bottom" secondItem="Xag-Su-Nbd" secondAttribute="bottom" constant="200" id="c3s-UA-SrE"/>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="leading" secondItem="AWw-mk-kT8" secondAttribute="leading" id="fDu-HS-cVc"/>
+                            <constraint firstItem="Y1H-5z-q3z" firstAttribute="trailing" secondItem="Xag-Su-Nbd" secondAttribute="trailing" id="fpd-mV-tJh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Y1H-5z-q3z"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="yfJ-dG-GMk" id="Ghk-yF-EUU"/>
+                        <outlet property="resultOfForecastLabel" destination="I3Z-sv-yeZ" id="AjK-yk-2QP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ih9-IT-ks1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="-309"/>
+            <point key="canvasLocation" x="234.78260869565219" y="-309.375"/>
         </scene>
     </scenes>
 </document>

@@ -23,8 +23,11 @@ depends-top-level:
 - "Date"
 - "DateCell"
 - "DatePickerDelegate"
+- !private "FloatLiteralType"
 - "IndexPath"
+- !private "IntegerLiteralType"
 - "String"
+- !private "StringLiteralType"
 - "UIDatePicker"
 - "UITableViewCell"
 depends-member:
