@@ -46,6 +46,13 @@ extension String {
         return date
     }
     
+    func toDateCustom(format : String)-> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let date = dateFormatter.date(from: self)
+        return date
+    }
+    
 }
 
 

@@ -44,20 +44,26 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            
             var datapoints : [String] = []
             
-            for one in setAllDwellString.keys{
-                print(one)
-                datapoints.append(one)
-            }
-            var allDwellSort = [(key: String, value: AnyObject)]()
+//            for one in setAllDwellString.keys{
+//                print(one)
+//                datapoints.append(one)
+//            }
             
+            var allDwellSort = [(key: String, value: AnyObject)]()
             if hourly == true{
+                datapoints = setAllDwellString.keys.sorted(by: { $0.toInt() < $1.toInt() })
+                print("datapoints >>>>>>>>>>>>", datapoints)
                 allDwellSort = setAllDwellString.sorted(by: { $0.key.toInt() < $1.key.toInt() })
             } else {
-                  allDwellSort = setAllDwellString.sorted(by: { $0.key < $1.key })
+                datapoints = setAllDwellString.keys.sorted(by: { $0.toDateCustom(format: "yyyy-MM-dd")! < $1.toDateCustom(format: "yyyy-MM-dd")! })
+                allDwellSort = setAllDwellString.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
             }
+            
+//            for one in setAllDwellString.keys{
+//                print(one.toDateCustom(format: "yyyy-MM-dd"))
+//            }
             
             cell.createLinearChartString(datapoints: datapoints, allDwell: allDwellSort, timeSpanLabels: HoursDwell, addGradient: true)
 /*

@@ -19,12 +19,12 @@ extension UITableViewCell{
         
         for i in 0..<timeSpanLabels.count{
             var lineChartEntry = [ChartDataEntry]()
-            print("------------------------------------------------")
+            //print("------------------------------------------------")
 
             for j in 0..<allDwell.count{
                 if let val = allDwell[j].value[timeSpanLabels[i]]{
                     // print(val as! Double)
-                    print("***", j, "***")
+                   // print("***", j, "***")
                     lineChartEntry.append(ChartDataEntry(x: Double(j), y: val as! Double))
                 }
             }
