@@ -20,18 +20,14 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - "Date"
 - !private "DateCell"
 - !private "DateTextCell"
-- !private "FloatLiteralType"
 - "IndexPath"
-- !private "IntegerLiteralType"
 - !private "MacListCell"
 - "SearchSetUpVC"
 - "SetUpDelegate"
 - "String"
-- "StringLiteralType"
 - !private "UIBarButtonItem"
 - !private "UINib"
 - "UISegmentedControl"
@@ -482,7 +478,7 @@ depends-member:
 - ["4CCMN13SearchSetUpVCC", "datePickerIndexPath"]
 - ["4CCMN13SearchSetUpVCC", "dateSpan"]
 - ["4CCMN13SearchSetUpVCC", "dates"]
-- ["4CCMN13SearchSetUpVCC", "deinit"]
+- !private ["4CCMN13SearchSetUpVCC", "deinit"]
 - ["4CCMN13SearchSetUpVCC", "delegate"]
 - ["4CCMN13SearchSetUpVCC", "hourly"]
 - ["4CCMN13SearchSetUpVCC", "indexPathToInsertDatePicker"]

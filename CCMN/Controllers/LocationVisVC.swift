@@ -150,7 +150,7 @@ class  LocationVisVC: UIViewController {
         let floors : [String : String] = ["735495909441273878" : "first floor",
                                               "735495909441273979" : "second floor", "735495909441273980" : "third floor"]
         let message : String = " Hi, @xlogin or mac: \(newClientMAC) now is on \(floors[currentFloor] ?? "") "
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/5 - 75, y: self.view.frame.size.height-680, width: 400, height: 100))
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/5 - 75, y: self.view.frame.size.height-680, width: self.view.frame.width, height: 300))
         toastLabel.numberOfLines = 0
         toastLabel.backgroundColor = UIColor.blue.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
@@ -160,6 +160,8 @@ class  LocationVisVC: UIViewController {
         toastLabel.alpha = 1.0
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
+        
+        
         var attributes = EKAttributes.topToast
         EKAttributes.Precedence.QueueingHeuristic.value = .chronological
         attributes.precedence = .enqueue(priority: .normal)

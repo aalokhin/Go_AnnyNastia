@@ -94,6 +94,7 @@ depends-member:
 - !private ["So13CAMediaTimingP", "cornerRadius"]
 - !private ["So6CGRectV", "init"]
 - !private ["So6CGRectV", "size"]
+- !private ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "height"]
 - !private ["So6CGSizeV", "width"]
 - !private ["s7CVarArgP", "CGRect"]

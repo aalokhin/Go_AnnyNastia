@@ -12,6 +12,106 @@ import Charts
 //https://stackoverflow.com/questions/35294076/how-to-make-a-grouped-barchart-with-ios-charts
 extension UITableViewCell{
     
+    func createLinearChartString(datapoints: [String], allDwell : [(key: String, value: AnyObject)], timeSpanLabels : [String], addGradient : Bool){
+        let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        lineChart.noDataText = "please enter data"
+        let data = LineChartData()
+        
+        for i in 0..<timeSpanLabels.count{
+            var lineChartEntry = [ChartDataEntry]()
+            print("------------------------------------------------")
+
+            for j in 0..<allDwell.count{
+                if let val = allDwell[j].value[timeSpanLabels[i]]{
+                    // print(val as! Double)
+                    print("***", j, "***")
+                    lineChartEntry.append(ChartDataEntry(x: Double(j), y: val as! Double))
+                }
+            }
+            let line = LineChartDataSet(entries: lineChartEntry, label: timeSpanLabels[i])
+            line.colors = [getColor(int: i)]
+            line.drawValuesEnabled = false
+            
+            if (addGradient){
+                let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
+                line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+                line.drawFilledEnabled =  true// Draw the Gradient
+            }
+            line.circleRadius = 2.5
+            line.circleColors = [getColor(int: i), getColor(int: i)]
+            line.circleHoleRadius = 1.3
+            data.addDataSet(line)
+            
+        }
+        designLinearChart(lineChart : lineChart, datapoints : datapoints)
+
+        lineChart.data = data
+        self.addSubview(lineChart)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    ///////////////////////////////////////////////////////////////////
+    
+    
+    func createLinearChart(datapoints: [String], allDwell : [(key: Int, value: AnyObject)], timeSpanLabels : [String], addGradient : Bool){
+        let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        lineChart.noDataText = "please enter data"
+        let data = LineChartData()
+        for i in 0..<timeSpanLabels.count{
+            var lineChartEntry = [ChartDataEntry]()
+            
+            for j in 0..<allDwell.count{
+                if let val = allDwell[j].value[timeSpanLabels[i]]{
+                    // print(val as! Double)
+                    lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
+                }
+            }
+            
+            
+            let line = LineChartDataSet(entries: lineChartEntry, label: timeSpanLabels[i])
+            line.colors = [getColor(int: i)]
+            line.drawValuesEnabled = false
+            
+            if (addGradient){
+                let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
+                line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+                line.drawFilledEnabled =  true// Draw the Gradient
+            }
+            line.circleRadius = 2.5
+            line.circleColors = [getColor(int: i), getColor(int: i)]
+            line.circleHoleRadius = 1.3
+            data.addDataSet(line)
+        }
+       
+        
+        lineChart.data = data
+        designLinearChart(lineChart : lineChart, datapoints : datapoints)
+        self.addSubview(lineChart)
+        
+    }
+
+    
+    func designLinearChart(lineChart : LineChartView, datapoints : [String]){
+        let legend = lineChart.legend
+        legend.enabled = true
+        legend.verticalAlignment = .top
+        lineChart.xAxis.labelRotationAngle = -90
+        lineChart.xAxis.labelPosition = .bottom
+        lineChart.xAxis.labelCount = datapoints.count
+        lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
+        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:datapoints)
+        lineChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
+    }
+    
+    
+    
+    
     func createBarChart(dataPoints: [String], values: [Double]) {
        // print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
@@ -153,50 +253,7 @@ extension UITableViewCell{
      
     }
     
-    func createLinearChart(datapoints: [String], allDwell : [(key: Int, value: AnyObject)], timeLabels : [String], addGradient : Bool){
-        let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        lineChart.noDataText = "please enter data"
-        let data = LineChartData()
-        for i in 0..<timeLabels.count{
-            var lineChartEntry = [ChartDataEntry]()
-            
-            for j in 0..<allDwell.count{
-                if let val = allDwell[j].value[timeLabels[i]]{
-                   // print(val as! Double)
-                    lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
-                }
-            }
-            let line = LineChartDataSet(entries: lineChartEntry, label: timeLabels[i])
-            line.colors = [getColor(int: i)]
-            line.drawValuesEnabled = false
-
-            if (addGradient){
-                let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
-                line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
-                line.drawFilledEnabled =  true// Draw the Gradient
-            }
-                line.circleRadius = 2.5
-                line.circleColors = [getColor(int: i), getColor(int: i)]
-                line.circleHoleRadius = 1.3
-                data.addDataSet(line)
-        }
-        let legend = lineChart.legend
-        legend.enabled = true
-        legend.verticalAlignment = .top
-        
-        lineChart.data = data
-        lineChart.xAxis.labelRotationAngle = -90
-        lineChart.xAxis.labelPosition = .bottom
-    
-        lineChart.xAxis.labelCount = datapoints.count
-        lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
-        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:datapoints)
-        lineChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
-        self.addSubview(lineChart)
-
-        
-    }
-    
+   
     func createPieChart(dataPoints: [String], values: [Double], chartName : String){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         pieChart.noDataText = "please enter data"

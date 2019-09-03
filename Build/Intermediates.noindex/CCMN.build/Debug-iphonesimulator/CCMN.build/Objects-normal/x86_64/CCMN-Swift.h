@@ -297,6 +297,8 @@ SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+
 @class UIView;
 
 SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")

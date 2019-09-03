@@ -36,6 +36,8 @@ class PresenceVisualizationVC : UIViewController {
     var YValues : [Double] = []
     var allUsersForProximity : [[Double]] = []
     
+    var setAllDwellString = [String : AnyObject]()
+    
     
     var setAllDwell : [Int:AnyObject] = [:]
     var setAllRepeat = [Int : AnyObject]()
@@ -51,26 +53,25 @@ class PresenceVisualizationVC : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidAppear(_ animated: Bool) {
         
-        getDailyProximity()
-        //////////////////
-        getRepeatDistribution()
+       
+        getDwellTimeDaily()
+/////////////////////////////////
         
-        getDwellTimeDistribution()
-        
-        
-        
-        getHourlyProximityUsers()
+//        getDwellTime()
+//        getDailyProximity()
+//        getRepeatDistribution()
+//        getDwellTimeDistribution()
+//        getHourlyProximityUsers()
     }
     
     override func viewDidLoad() {
         print("hi from vis vc")
         super.viewDidLoad()
         setupVC()
-        //getDailyProximity()
         
         
         ////////////////////////////
-        getAllData()
+       // getAllData()
     }
     
     
@@ -82,8 +83,96 @@ class PresenceVisualizationVC : UIViewController {
         
     }
     
-   
+    func getDwellTimeDaily(){
+        
+        self.setAllDwellString.removeAll()
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        var url = ""
+        if hourly == true{
+            url = "api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)"
+        } else {
+            url = "api/presence/v1/dwell/daily?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)"
+        }
+        NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//                    print("************************************************")
+//                    print(json)
+//                }
+                let decoder = JSONDecoder()
+                if self.dateSpan == "3days"{
+                    guard let t = try? decoder.decode([String :[String : [String : Double]]].self, from: d) else {
+                        print("error decoding json for 3 days")
+                        return
+                    }
+                    print(url, "->success decoding json 3days")
+                    
+                }
+                else {
+                    guard let t = try? decoder.decode([String : [String : Double]].self, from: d) else {
+                        print("error decoding json some otehr json")
+                        return
+                    }
+                    print(url, "->success decoding json")
+                    
+                    var setForDwellPeriods : [String:AnyObject] = [:]
+                    for one in t {
+                        print(one.key)
+                        print(one.value)
+                        
+                        if let value = t[one.key] {
+                            for two in self.HoursDwell{
+                                if let value2 = value[two] {
+                                    setForDwellPeriods[two] = value2 as AnyObject?
+                                }
+                            }
+                            self.setAllDwellString[one.key] = setForDwellPeriods as AnyObject?
+                      
+                        }
+                    }
+                    self.tableView.reloadData()
     
+                }
+            }
+        })
+            
+            
+        }
+        
+    /*
+                
+                for one in self.HoursForDicInt {
+                    if let value = t[one]{
+                        for two in self.HoursDwell{
+                            if let value2 = value[two]
+                            {
+                                setForDwellPeriods[two] = value2 as AnyObject?
+                            }
+                        }
+                        self.setAllDwell[one] = setForDwellPeriods as AnyObject?
+                    }
+                }
+ 
+ */
+                
+                
+               // print(t)
+               // var setForDailyDwellPeriods : [String:AnyObject] = [:]
+//                print("keys : ", t.keys)
+//                for one in t.keys {
+//                    if let value = t[one]{
+//                        for two in self.HoursDwell{
+//                            if let value2 = value[two]
+//                            {
+//                                setForDailyDwellPeriods[two] = value2 as AnyObject?
+//                            }
+//                        }
+//                    }
+//                }
+                //print(">>>>>>>>>>>", setForDailyDwellPeriods, "<<<<<<<<<<<<<")
+                
+
     
     
     
@@ -93,13 +182,16 @@ class PresenceVisualizationVC : UIViewController {
     
     func getDwellTime(){
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+        
+        //print("api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)")
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-                //                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                //                    print(json)
-                //
-                //                }
+                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+                    //print("~~~~~~~~~~~~~~~~~~~~~~~~")
+                    //print(json)
+
+                }
                 
                 
                 let decoder = JSONDecoder()
@@ -133,73 +225,7 @@ class PresenceVisualizationVC : UIViewController {
     
     
     
-    func getHourlyProximityUsers(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-         self.allUsersForProximity.removeAll()
-        print("api/presence/v1/connected/hourly/\(self.dateSpan)?siteId=\(siteId)")
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                // print(t)
-                let HoursForDic = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
-                
-                var firstSet : [Double] = []
-                for one in HoursForDic {
-                    if let value = t[one]{
-                        firstSet.append(Double(value))
-                    }
-                }
-                self.allUsersForProximity.append(firstSet)
-                
-                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
-                    data, error in
-                    if let d = data{
-                        let decoder = JSONDecoder()
-                        guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                            print("error decoding json")
-                            return
-                        }
-                        //print(t)
-                        var secondSet : [Double] = []
-                        for one in HoursForDic {
-                            if let value = t[one]{
-                                secondSet.append(Double(value))
-                            }
-                        }
-                        self.allUsersForProximity.append(secondSet)
-                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/hourly/\(self.dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
-                            data, error in
-                            if let d = data{
-                                let decoder = JSONDecoder()
-                                guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                                    print("error decoding json")
-                                    return
-                                }
-                                //print(t)
-                                var thirdSet: [Double] = []
-                                for one in HoursForDic {
-                                    if let value = t[one]{
-                                        thirdSet.append(Double(value))
-                                    }
-                                }
-                                self.allUsersForProximity.append(thirdSet)
-                                
-                            }
-                            
-                        })
-                        
-                    }
-                    
-                })
-            }
-            
-        })
-    }
+   
     
     /////////////////////////////////////////////////////////////////////////////////////
     
@@ -301,119 +327,7 @@ class PresenceVisualizationVC : UIViewController {
     
 ////////////////////////////////////////// adaptive already //////////////////////////////////////////////////////////////////
     
-    func getDwellTimeDistribution(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441" //"api/presence/v1/repeatvisitors/count/yesterday?siteId=\(siteId)"
-
-        var url : String = ""
-        if (hourly == false){
-            url = "api/presence/v1/dwell/count?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)"
-        } else {
-            print("lalallalal adaptive dwell")
-            url = "api/presence/v1/dwell/count/\(dateSpan)?siteId=\(siteId)"
-        }
-        NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                guard let t = try? JSONDecoder().decode([String : Int].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                self.dwellDistribution = t
-                self.tableView.reloadData()
-            }
-            
-        })
-        
-    }
-    
-    func getRepeatDistribution(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441" //"api/presence/v1/repeatvisitors/count/yesterday?siteId=\(siteId)"
-        var url : String = ""
-        if (hourly == false){
-            url = "api/presence/v1/repeatvisitors/count?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)"
-        } else {
-            print("lalallalal adaptive dwell")
-            url = "api/presence/v1/repeatvisitors/count/\(dateSpan)?siteId=\(siteId)"
-        }
-        NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                guard let t = try? JSONDecoder().decode([String : Int].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                self.repeatDistribution = t
-                self.tableView.reloadData()
-            }
-            
-        })
-        
-    }
-    
-    func getDailyProximity(){
-        dailyProximity.datapoints.removeAll()
-        dailyProximity.values.removeAll()
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/daily?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                
-                var userNbrDataSet : [Double] = []
-                for one in t {
-                    self.dailyProximity.datapoints.append(one.key) //appending datapoints once
-                    userNbrDataSet.append(Double(one.value))
-                }
-                self.dailyProximity.values.append(userNbrDataSet)
-                
-                NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/daily?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)", params: [:], method: .get, completion: {
-                    data, error in
-                    if let d = data{
-                        guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                            print("error decoding json")
-                            return
-                        }
-                        userNbrDataSet.removeAll() //clearing data to use the variable to collect new data
-                        for one in t {
-                            userNbrDataSet.append(Double(one.value))
-                        }
-                        self.dailyProximity.values.append(userNbrDataSet)
-                        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/passerby/daily?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)", params: [:], method: .get, completion: {
-                            data, error in
-                            if let d = data{
-                                guard let t = try? decoder.decode([String : Int].self, from: d) else {
-                                    print("error decoding json")
-                                    return
-                                }
-                                userNbrDataSet.removeAll() //clearing data to use the variable to collect new data
-                                for one in t {
-                                    userNbrDataSet.append(Double(one.value))
-                                }
-                                self.dailyProximity.values.append(userNbrDataSet)
-                                self.tableView.reloadData()
-                                for one in self.dailyProximity.datapoints{
-                                   // print(one)
-                                    let arr = ["conn", "repeat", "passerby"]
-//                                    for i in 0..<self.dailyProximity.values.count{
-//                                        print(arr[i], ">>>>", self.dailyProximity.values[i])
-//                                        
-//                                    }
-                                    
-                                }
-                                
-                            }
-                            
-                        })
-                    }
-                })
-                
-            }
-        })
-    }
+  
     
 }
 

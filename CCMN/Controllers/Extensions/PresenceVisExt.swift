@@ -10,30 +10,54 @@ import Foundation
 import UIKit
 
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if setAllDwellString.count == 0{
+            return 0
+        } else {
+            return 1
+        }
+        
+        /*
         if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeat.count == 0 || allUsersForProximity.count == 0 || setAllDwell.count == 0){
             return 0
         } else {
             return 5
         }
-        
+        */
     }
     //http://www.thomashanning.com/the-most-common-mistake-in-using-uitableview/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // getHourlyConnected()
         let cell = tableView.dequeueReusableCell(withIdentifier: EmptyChartCell.reuseIdentifier()) as! EmptyChartCell
+        for v in cell.subviews{
+            v.removeFromSuperview()
+        }
+        var datapoints : [String] = []
+        
+        for one in setAllDwellString.keys{
+            print(one)
+            datapoints.append(one)
+        }
+        cell.createLinearChartString(datapoints: datapoints, allDwell: setAllDwellString.sorted(by: { $0.key < $1.key }), timeSpanLabels: HoursDwell, addGradient: false)
+        
+        /*
+        
         if indexPath.row == 0{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            cell.createLinearChart(datapoints: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeLabels: RepeatVisitorsDwell, addGradient: false)
+            cell.createLinearChart(datapoints: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeSpanLabels: RepeatVisitorsDwell, addGradient: false)
+            
+            
+            
         } else if indexPath.row == 1{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
 
-            cell.createLinearChart(datapoints: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeLabels: HoursDwell, addGradient: true)
+            cell.createLinearChart(datapoints: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeSpanLabels: HoursDwell, addGradient: true)
             
             
             ///////////////////////////////////is okay/////////////////////////////
@@ -77,6 +101,8 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 cell.createGroupedBarChart(dataPoints: dailyProximity.datapoints, values: dailyProximity.values)
             }
         }
+ 
+ */
         return cell
         
     }
@@ -89,7 +115,7 @@ extension PresenceVisualizationVC : SetUpDelegate {
         self.endDate = to.toStringDefault()
         self.hourly = hourly
         self.dateSpan = dateSpan ?? "today"
-        print("hey from delegat here are our dates \(from) and \(to), hourly \(hourly), span \(dateSpan ?? "no date span")")
+       // print("hey from delegat here are our dates \(from) and \(to), hourly \(hourly), span \(dateSpan ?? "no date span")")
     }
     
     

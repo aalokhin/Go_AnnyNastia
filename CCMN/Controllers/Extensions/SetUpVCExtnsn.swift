@@ -30,7 +30,7 @@ extension SearchSetUpVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if (hourly == false){
-            print("we want daily range")
+            //print("we want daily range")
                 if datePickerIndexPath == indexPath {
                     let datePickerCell = tableView.dequeueReusableCell(withIdentifier: DateCell.reuseIdentifier()) as! DateCell
                     datePickerCell.updateCell(date: inputDates[indexPath.row - 1], indexPath: indexPath)
@@ -42,7 +42,7 @@ extension SearchSetUpVC: UITableViewDataSource {
                     return dateCell
                 }
         } else {
-            print("we want hourly range")
+            //print("we want hourly range")
             let cell = tableView.dequeueReusableCell(withIdentifier: MacListCell.reuseIdentifier()) as! MacListCell
             cell.textLabel?.text = dates[indexPath.row]
             return cell
