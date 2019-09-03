@@ -18,26 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-3T-Ena">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-3T-Ena">
                                 <rect key="frame" x="42" y="340" width="330" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check the dweell time distribution visulaiozation"/>
                                 <connections>
                                     <action selector="goToVisualization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3NJ-YS-OOi"/>
                                     <segue destination="yha-f1-KA1" kind="show" identifier="testVis" id="2hU-2a-hv1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lA-ee-bEp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lA-ee-bEp">
                                 <rect key="frame" x="51" y="468" width="295" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="fEQ-Op-Jxy"/>
+                                </constraints>
                                 <state key="normal" title="Check location Services"/>
                                 <connections>
                                     <action selector="locationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGy-y0-krO"/>
                                     <segue destination="CyT-B3-uYj" kind="show" identifier="locationVCSegue" id="HSj-Aw-8iI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcu-hj-dRF">
+                                <rect key="frame" x="0.0" y="531" width="414" height="30"/>
+                                <state key="normal" title="Check Forecast"/>
+                                <connections>
+                                    <segue destination="x0W-HA-kLg" kind="show" identifier="showForecast" id="BgC-u7-HYK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9lA-ee-bEp" firstAttribute="top" secondItem="tZM-3T-Ena" secondAttribute="bottom" constant="8" symbolic="YES" id="16X-ni-gPf"/>
+                            <constraint firstItem="9lA-ee-bEp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="53k-0v-ju7"/>
+                            <constraint firstItem="tZM-3T-Ena" firstAttribute="centerX" secondItem="Qcu-hj-dRF" secondAttribute="centerX" id="AwD-7L-N7r"/>
+                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="top" secondItem="9lA-ee-bEp" secondAttribute="bottom" constant="20" id="LIy-98-pGG"/>
+                            <constraint firstAttribute="bottom" secondItem="9lA-ee-bEp" secondAttribute="bottom" constant="385" id="LLb-Fn-AB0"/>
+                            <constraint firstItem="tZM-3T-Ena" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="O8u-bm-aWe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qcu-hj-dRF" secondAttribute="trailing" id="PPg-TO-lvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lA-ee-bEp" secondAttribute="trailing" constant="68" id="pBF-U9-9Ge"/>
+                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ppZ-dx-UNw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZU1-0o-9BD"/>
@@ -60,7 +79,15 @@
                 <viewControllerPlaceholder storyboardName="LocationVisVC" id="CyT-B3-uYj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7s-gS-6PA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="224"/>
+            <point key="canvasLocation" x="1825" y="81"/>
+        </scene>
+        <!--ForecastsVC-->
+        <scene sceneID="wHD-yK-PVQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForecastsVC" id="x0W-HA-kLg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYB-7V-u16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o7p-uD-Xbi">

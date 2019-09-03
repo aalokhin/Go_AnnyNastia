@@ -236,11 +236,19 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBundle;
+
+SWIFT_CLASS("_TtC4CCMN11ForecastsVC")
+@interface ForecastsVC : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UISearchBar;
 @class UITableView;
 @class UISegmentedControl;
 @class UIImageView;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC4CCMN13LocationVisVC")
 @interface LocationVisVC : UIViewController

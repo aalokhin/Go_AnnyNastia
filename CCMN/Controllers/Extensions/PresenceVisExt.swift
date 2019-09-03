@@ -12,12 +12,6 @@ import UIKit
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if setAllDwellString.count == 0{
-//            return 0
-//        } else {
-//            return 1
-//        }
-        
         
         if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeatString.count == 0 || allUsersForProximity.count == 0 || setAllDwellString.count == 0){
             return 0
@@ -100,6 +94,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
+            //////////////////// dwellDistribution
             var dataPoints : [String] = []
             var values : [Double] = []
             let sorted = dwellDistribution.sorted(by: { $0.value < $1.value })

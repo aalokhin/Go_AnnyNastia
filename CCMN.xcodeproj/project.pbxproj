@@ -12,6 +12,8 @@
 		5D118AD9231E5B7B006F6C60 /* PresenceRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D118AD8231E5B7B006F6C60 /* PresenceRequests.swift */; };
 		5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */; };
 		5D24B7B6230FFC4A002CC7F5 /* PresenceVisExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */; };
+		5D2E2D10231EBEF50041DDC9 /* ForecastsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2E2D0F231EBEF50041DDC9 /* ForecastsVC.storyboard */; };
+		5D2E2D12231EBF290041DDC9 /* ForecastsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E2D11231EBF290041DDC9 /* ForecastsVC.swift */; };
 		5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */; };
 		5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */; };
 		5DA036F5231542F00002A352 /* LocationVisVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA036F4231542F00002A352 /* LocationVisVC.storyboard */; };
@@ -75,6 +77,8 @@
 		5D118AD8231E5B7B006F6C60 /* PresenceRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceRequests.swift; sourceTree = "<group>"; };
 		5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICellExt.swift; sourceTree = "<group>"; };
 		5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceVisExt.swift; sourceTree = "<group>"; };
+		5D2E2D0F231EBEF50041DDC9 /* ForecastsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastsVC.storyboard; sourceTree = "<group>"; };
+		5D2E2D11231EBF290041DDC9 /* ForecastsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsVC.swift; sourceTree = "<group>"; };
 		5D349A27230EA2DA00C5A9A4 /* EmptyChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChartCell.xib; sourceTree = "<group>"; };
 		5D349A29230EA30F00C5A9A4 /* EmptyChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChartCell.swift; sourceTree = "<group>"; };
 		5DA036F4231542F00002A352 /* LocationVisVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationVisVC.storyboard; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				EFDF3CB122FEFBE800A86B3E /* SearchSetUpVC.swift */,
 				EF2E0603230439BD0034C418 /* PresenceVis.swift */,
 				5DA036F6231542FC0002A352 /* LocationVisVC.swift */,
+				5D2E2D11231EBF290041DDC9 /* ForecastsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				EFDF3CAD22FEF9DC00A86B3E /* SearchSetUpVC.storyboard */,
 				EF2E0601230439900034C418 /* DwellTimeVis.storyboard */,
 				5DA036F4231542F00002A352 /* LocationVisVC.storyboard */,
+				5D2E2D0F231EBEF50041DDC9 /* ForecastsVC.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				5DBB56752316634700DD47E8 /* MacListCell.xib in Resources */,
 				EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */,
 				EF2E0602230439900034C418 /* DwellTimeVis.storyboard in Resources */,
+				5D2E2D10231EBEF50041DDC9 /* ForecastsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +559,7 @@
 				5DBB56772316636200DD47E8 /* MacListCell.swift in Sources */,
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,
 				EF374EFB2300020A00D6C64A /* DateCell.swift in Sources */,
+				5D2E2D12231EBF290041DDC9 /* ForecastsVC.swift in Sources */,
 				EF25854A22FD6E70001019E8 /* PresenceEndpoints.swift in Sources */,
 				5D24B7B6230FFC4A002CC7F5 /* PresenceVisExt.swift in Sources */,
 				5D118AD9231E5B7B006F6C60 /* PresenceRequests.swift in Sources */,

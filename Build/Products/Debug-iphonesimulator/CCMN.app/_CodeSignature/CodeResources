@@ -22,23 +22,27 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		6Is3ePghODfxcuZAEoq2BUH4Rls=
+		eVxhZwY9daoUXIzc/tWAQZIumhM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		S8F3fHfxuG9gp+57OHFHs957lgQ=
+		gD3xNXYU4rhVP8S34bsJw/Qa4UY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<data>
-		8VvozaLNesmqAM9bjDBMnU3L03Q=
+		rOy+s5Z7uasWKY4Z2fE/rqySLGo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CyT-B3-uYj.nib</key>
 		<data>
-		A8YTErlvPqg6SVcToYJsUxxjBVE=
+		PqtyRpmZR2uxvx6Lef0VgmLH0Qg=
+		</data>
+		<key>Base.lproj/Main.storyboardc/UIViewController-x0W-HA-kLg.nib</key>
+		<data>
+		SMnBhF8BfHKkjc/n0PT4GENI/hY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<data>
-		/bYcTl2yTqEHRUhpiGnxXEU29As=
+		DN7IpRgLk4d3rzF60r+3hoJY7JU=
 		</data>
 		<key>ChartViewCell.nib</key>
 		<data>
@@ -67,6 +71,18 @@
 		<key>EmptyChartCell.nib</key>
 		<data>
 		RrRtSZkGZyFgp58JQWwhExc0I30=
+		</data>
+		<key>ForecastsVC.storyboardc/Info.plist</key>
+		<data>
+		WoHKMqtZnm/vBQEJZ8PwXKTdIBo=
+		</data>
+		<key>ForecastsVC.storyboardc/UIViewController-m3g-Ba-aGI.nib</key>
+		<data>
+		slx6e6Ix9X+iy5aOtdnkTpfaFqc=
+		</data>
+		<key>ForecastsVC.storyboardc/m3g-Ba-aGI-view-AWw-mk-kT8.nib</key>
+		<data>
+		F+vkOsHmkqXdLOXq7XagcslHQxA=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -143,35 +159,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RmUarBmR//sG6W0Rfmhjvu0aFyr5AjeEz8Ivp1v1SpU=
+			s09a3HJjPATW1AyGIJ4+QdH0JBrnDUU+pkw7pwmQeH8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WjS7Br08MB8dV+23hK3FZmI/NnaiRJmtLNZ5su+2fvw=
+			FNMQlou9fqavXx+kH5ECiwVLpGv0Z4wNbycQVfWQjTU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-BN9-AZ-jnb.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GlXDBGHtJlppbvS/BMuaqAuqDSamEXLIhCk3UJiespI=
+			SwULnUMrk7L0ztgk5rFILMP2cZG10/CZH4hnhEuIa7M=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-CyT-B3-uYj.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7RkgYHRQQJVmHWPeW+G4cdduM+PBZYs1QaVNCDhgqs8=
+			NCVvhIqI1OLF0/AYAYs1RfCjSZ0YxW1GQOlEKjLvd1Y=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/UIViewController-x0W-HA-kLg.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U+XcTbHf8tqsiu7SwGftYfcM3k8rwRWC8eTnSR7rxhQ=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-yha-f1-KA1.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXXaLMgu3VsOw4r0aVwrooCPnnhXTHXSkevcdmU2/vY=
+			hFh654PXONPYk+r56b64Q5UayIMClLOKNE67NuFyxNU=
 			</data>
 		</dict>
 		<key>ChartViewCell.nib</key>
@@ -221,6 +244,27 @@
 			<key>hash2</key>
 			<data>
 			bxHfCjN071Lugb3FTwgu0XXcU9H23dOxz51pHT31/zc=
+			</data>
+		</dict>
+		<key>ForecastsVC.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vuy+LwQ16YBDkFW2UZvxD1YlyJnwM1URSllLTt/PkLc=
+			</data>
+		</dict>
+		<key>ForecastsVC.storyboardc/UIViewController-m3g-Ba-aGI.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3bWPEmgzZ35xtuhoD/rLD/Q3AzhKWyJZpMw/iVrzC5g=
+			</data>
+		</dict>
+		<key>ForecastsVC.storyboardc/m3g-Ba-aGI-view-AWw-mk-kT8.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZSuFj6vnseQZ1YDgmPF0kmtU0TDi998oNEvrWJiNrnU=
 			</data>
 		</dict>
 		<key>LocationVisVC.storyboardc/Info.plist</key>

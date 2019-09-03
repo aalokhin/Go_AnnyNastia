@@ -12,6 +12,7 @@ provides-member:
 - ["SS", "toDouble"]
 - ["SS", "subscript"]
 - ["SS", "toDate"]
+- ["SS", "toDateCustom"]
 - ["10Foundation4DateV", "toStringDefault"]
 - ["10Foundation4DateV", "convertToString"]
 - ["So7UIImageC", "imageOverlayingImages"]
@@ -679,6 +680,7 @@ depends-member:
 - ["SS", "subscript"]
 - ["SS", "toBase64"]
 - ["SS", "toDate"]
+- ["SS", "toDateCustom"]
 - ["SS", "toDouble"]
 - ["SS", "toFloat"]
 - ["SS", "toInt"]
@@ -1017,4 +1019,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5d62448507668c2076a25d70c9214c84"
+interface-hash: "fa9475f8580401b74421981c90c2bd48"

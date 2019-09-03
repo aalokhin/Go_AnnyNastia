@@ -10,6 +10,7 @@ depends-top-level:
 - !private "+"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - !private "Client"
 - "Data"
 - "Error"
@@ -70,7 +71,6 @@ depends-member:
 - ["4CCMN14NetworkManagerC", "UIImage"]
 - !private ["4CCMN14NetworkManagerC", "URLEncoding"]
 - ["4CCMN14NetworkManagerC", "Void"]
-- ["4CCMN14NetworkManagerC", "deinit"]
 - ["4CCMN14NetworkManagerC", "getImage"]
 - ["4CCMN14NetworkManagerC", "getRequestData"]
 - ["4CCMN14NetworkManagerC", "init"]
