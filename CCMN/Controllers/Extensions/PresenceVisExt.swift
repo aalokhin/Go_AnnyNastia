@@ -36,7 +36,9 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
-            cell.createLinearChart(datapoints: hours, allDwell: setAllRepeat.sorted(by: { $0.key < $1.key }), timeSpanLabels: RepeatVisitorsDwell, addGradient: false)
+            
+            let allDwellSort = setAllRepeat.sorted(by: { $0.key < $1.key })
+            cell.createLinearChart(datapoints: hours, allDwell: allDwellSort, timeSpanLabels: RepeatVisitorsDwell, addGradient: false)
             
         } else if indexPath.row == 1{
             for v in cell.subviews{
@@ -49,7 +51,15 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 print(one)
                 datapoints.append(one)
             }
-            cell.createLinearChartString(datapoints: datapoints, allDwell: setAllDwellString.sorted(by: { $0.key < $1.key }), timeSpanLabels: HoursDwell, addGradient: true)
+            var allDwellSort = [(key: String, value: AnyObject)]()
+            
+            if hourly == true{
+                allDwellSort = setAllDwellString.sorted(by: { $0.key.toInt() < $1.key.toInt() })
+            } else {
+                  allDwellSort = setAllDwellString.sorted(by: { $0.key < $1.key })
+            }
+            
+            cell.createLinearChartString(datapoints: datapoints, allDwell: allDwellSort, timeSpanLabels: HoursDwell, addGradient: true)
 /*
             cell.createLinearChart(datapoints: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeSpanLabels: HoursDwell, addGradient: true)
  
