@@ -19,7 +19,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
 //        }
         
         
-        if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeat.count == 0 || allUsersForProximity.count == 0 || setAllDwellString.count == 0){
+        if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeatString.count == 0 || allUsersForProximity.count == 0 || setAllDwellString.count == 0){
             return 0
         } else {
             return 5
@@ -37,20 +37,31 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 v.removeFromSuperview()
             }
             
-            let allDwellSort = setAllRepeat.sorted(by: { $0.key < $1.key })
+            var datapoints : [String] = []
+            
+            var allRepeatSort = [(key: String, value: AnyObject)]()
+            if hourly == true{
+                datapoints = setAllRepeatString.keys.sorted(by: { $0.toInt() < $1.toInt() })
+                print("datapoints >>>>>>>>>>>>", datapoints)
+                allRepeatSort = setAllRepeatString.sorted(by: { $0.key.toInt() < $1.key.toInt() })
+            } else {
+                datapoints = setAllRepeatString.keys.sorted(by: { $0.toDateCustom(format: "yyyy-MM-dd")! < $1.toDateCustom(format: "yyyy-MM-dd")! })
+                allRepeatSort = setAllRepeatString.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
+            }
+            
+            cell.createLinearChartString(datapoints: datapoints, allDwell: allRepeatSort, timeSpanLabels: RepeatVisitorsDwell, addGradient: false)
+            
+            
+            
+            /*
             cell.createLinearChart(datapoints: hours, allDwell: allDwellSort, timeSpanLabels: RepeatVisitorsDwell, addGradient: false)
+ */
             
         } else if indexPath.row == 1{
             for v in cell.subviews{
                 v.removeFromSuperview()
             }
             var datapoints : [String] = []
-            
-//            for one in setAllDwellString.keys{
-//                print(one)
-//                datapoints.append(one)
-//            }
-            
             var allDwellSort = [(key: String, value: AnyObject)]()
             if hourly == true{
                 datapoints = setAllDwellString.keys.sorted(by: { $0.toInt() < $1.toInt() })
@@ -60,11 +71,7 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
                 datapoints = setAllDwellString.keys.sorted(by: { $0.toDateCustom(format: "yyyy-MM-dd")! < $1.toDateCustom(format: "yyyy-MM-dd")! })
                 allDwellSort = setAllDwellString.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
             }
-            
-//            for one in setAllDwellString.keys{
-//                print(one.toDateCustom(format: "yyyy-MM-dd"))
-//            }
-            
+
             cell.createLinearChartString(datapoints: datapoints, allDwell: allDwellSort, timeSpanLabels: HoursDwell, addGradient: true)
 /*
             cell.createLinearChart(datapoints: hours, allDwell: setAllDwell.sorted(by: { $0.key < $1.key }), timeSpanLabels: HoursDwell, addGradient: true)

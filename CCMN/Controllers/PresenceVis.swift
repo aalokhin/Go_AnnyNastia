@@ -37,7 +37,10 @@ class PresenceVisualizationVC : UIViewController {
     var allUsersForProximity : [[Double]] = []
     
     var setAllDwellString = [String : AnyObject]()
-    var setAllRepeat = [Int : AnyObject]()
+    var setAllRepeatString = [String : AnyObject]()
+    
+    
+    //var setAllRepeat = [Int : AnyObject]()
     
     
     //var setAllDwell : [Int:AnyObject] = [:]
@@ -59,6 +62,8 @@ class PresenceVisualizationVC : UIViewController {
 /////////////////////////////////
         
         getDwellTimeDaily()
+        getRepeatDaily()
+        
         getDailyProximity()
         getRepeatDistribution()
         getDwellTimeDistribution()
@@ -79,10 +84,62 @@ class PresenceVisualizationVC : UIViewController {
     func getAllData(){
         getHourlyProximityUsers()
         getDwellTimeDaily()
-        getRepeatVis()
+        getRepeatDaily()
         getRepeatDistribution()
         
     }
+    
+    func getRepeatDaily(){
+        
+        self.setAllRepeatString.removeAll()
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        var url = ""
+        if hourly == true{
+            url = "api/presence/v1/repeatvisitors/hourly/\(dateSpan)?siteId=\(siteId)"
+        } else {
+            url = "api/presence/v1/repeatvisitors/daily?siteId=\(siteId)&startDate=\(self.startDate)&endDate=\(self.endDate)"
+        }
+        NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                
+                let decoder = JSONDecoder()
+                if self.dateSpan == "3days"{
+                    guard let t = try? decoder.decode([String :[String : [String : Double]]].self, from: d) else {
+                        print("error decoding json for repeat  3 days")
+                        return
+                    }
+                    print(url, "->success decoding json  for repeat 3days")
+                    
+                }
+                else {
+                    guard let t = try? decoder.decode([String : [String : Double]].self, from: d) else {
+                        print("error decoding json some otehr for repeat  json")
+                        return
+                    }
+                    print(url, "->success decoding  for repeat  json")
+                    
+                    var setForDwellPeriods : [String:AnyObject] = [:]
+                    for one in t {
+                        print(one.key)
+                        print(one.value)
+                        if let value = t[one.key] {
+                            for two in self.RepeatVisitorsDwell{
+                                if let value2 = value[two] {
+                                    setForDwellPeriods[two] = value2 as AnyObject?
+                                }
+                            }
+                            self.setAllRepeatString[one.key] = setForDwellPeriods as AnyObject?
+                            
+                        }
+                    }
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        })
+    }
+    
     
     func getDwellTimeDaily(){
         
@@ -97,30 +154,27 @@ class PresenceVisualizationVC : UIViewController {
         NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-//                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//                    print("************************************************")
-//                    print(json)
-//                }
+
                 let decoder = JSONDecoder()
                 if self.dateSpan == "3days"{
                     guard let t = try? decoder.decode([String :[String : [String : Double]]].self, from: d) else {
-                        print("error decoding json for 3 days")
+                        //print("error decoding json for 3 days")
                         return
                     }
-                    print(url, "->success decoding json 3days")
+                    //print(url, "->success decoding json 3days")
                     
                 }
                 else {
                     guard let t = try? decoder.decode([String : [String : Double]].self, from: d) else {
-                        print("error decoding json some otehr json")
+                        //print("error decoding json some otehr json")
                         return
                     }
-                    print(url, "->success decoding json")
+                    //print(url, "->success decoding json")
                     
                     var setForDwellPeriods : [String:AnyObject] = [:]
                     for one in t {
-                        print(one.key)
-                        print(one.value)
+                        //print(one.key)
+                        //print(one.value)
                         
                         if let value = t[one.key] {
                             for two in self.HoursDwell{
@@ -252,40 +306,7 @@ class PresenceVisualizationVC : UIViewController {
     
     
     
-    func getRepeatVis(){
-        print("Let's get repeat visitors")
-        
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/repeatvisitors/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([Int : [String : Double]].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                //print(t)
-                var setForDwellRepeat : [String:AnyObject] = [:]
-                for one in self.HoursForDicInt {
-                    if let value = t[one]{
-                        // print(one, ">>>")
-                        for two in self.RepeatVisitorsDwell{
-                            if let value2 = value[two]
-                            {
-                                setForDwellRepeat[two] = value2 as AnyObject?
-                            }
-                        }
-                        self.setAllRepeat[one] = setForDwellRepeat as AnyObject?
-                    }
-                }
-                self.tableView.reloadData()
-                //print("------------------------\(self.setAllRepeat)-----------------------------")
-            }
-            
-        })
-    }
-    
-  
+   
     
     
 ////////////////////////////////////////// unneeded so far //////////////////////////////////////////////////////////////////
@@ -327,7 +348,44 @@ class PresenceVisualizationVC : UIViewController {
             
         })
     }
- */
+     
+
     
+    func getRepeatVis(){
+        print("Let's get repeat visitors")
+        
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/repeatvisitors/hourly/yesterday?siteId=\(siteId)", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                let decoder = JSONDecoder()
+                guard let t = try? decoder.decode([Int : [String : Double]].self, from: d) else {
+                    print("error decoding json")
+                    return
+                }
+                //print(t)
+                var setForDwellRepeat : [String:AnyObject] = [:]
+                for one in self.HoursForDicInt {
+                    if let value = t[one]{
+                        // print(one, ">>>")
+                        for two in self.RepeatVisitorsDwell{
+                            if let value2 = value[two]
+                            {
+                                setForDwellRepeat[two] = value2 as AnyObject?
+                            }
+                        }
+                        self.setAllRepeat[one] = setForDwellRepeat as AnyObject?
+                    }
+                }
+                self.tableView.reloadData()
+                //print("------------------------\(self.setAllRepeat)-----------------------------")
+            }
+            
+        })
+    }
+     
+     */
+    
+ 
 }
 
