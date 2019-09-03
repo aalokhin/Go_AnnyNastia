@@ -37,10 +37,11 @@ class PresenceVisualizationVC : UIViewController {
     var allUsersForProximity : [[Double]] = []
     
     var setAllDwellString = [String : AnyObject]()
-    
-    
-    var setAllDwell : [Int:AnyObject] = [:]
     var setAllRepeat = [Int : AnyObject]()
+    
+    
+    //var setAllDwell : [Int:AnyObject] = [:]
+    
     
     var repeatDistribution : [String : Int] = [:]
     var dwellDistribution : [String : Int] = [:]
@@ -54,14 +55,14 @@ class PresenceVisualizationVC : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
        
-        getDwellTimeDaily()
+        //getDwellTimeDaily()
 /////////////////////////////////
         
-//        getDwellTime()
-//        getDailyProximity()
-//        getRepeatDistribution()
-//        getDwellTimeDistribution()
-//        getHourlyProximityUsers()
+        getDwellTimeDaily()
+        getDailyProximity()
+        getRepeatDistribution()
+        getDwellTimeDistribution()
+        getHourlyProximityUsers()
     }
     
     override func viewDidLoad() {
@@ -71,13 +72,13 @@ class PresenceVisualizationVC : UIViewController {
         
         
         ////////////////////////////
-       // getAllData()
+       getAllData()
     }
     
     
     func getAllData(){
         getHourlyProximityUsers()
-        getDwellTime()
+        getDwellTimeDaily()
         getRepeatVis()
         getRepeatDistribution()
         
@@ -179,44 +180,6 @@ class PresenceVisualizationVC : UIViewController {
     
     
     ////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    func getDwellTime(){
-        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        
-        //print("api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)")
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                    //print("~~~~~~~~~~~~~~~~~~~~~~~~")
-                    //print(json)
-
-                }
-                
-                
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([Int : [String : Double]].self, from: d) else {
-                    print("error decoding json")
-                    return
-                }
-                var setForDwellPeriods : [String:AnyObject] = [:]
-                for one in self.HoursForDicInt {
-                    if let value = t[one]{
-                        for two in self.HoursDwell{
-                            if let value2 = value[two]
-                            {
-                                setForDwellPeriods[two] = value2 as AnyObject?
-                            }
-                        }
-                        self.setAllDwell[one] = setForDwellPeriods as AnyObject?
-                    }
-                }
-                self.tableView.reloadData()
-                
-            }
-            
-        })
-    }
     
     
     
@@ -325,9 +288,46 @@ class PresenceVisualizationVC : UIViewController {
   
     
     
-////////////////////////////////////////// adaptive already //////////////////////////////////////////////////////////////////
-    
-  
+////////////////////////////////////////// unneeded so far //////////////////////////////////////////////////////////////////
+    /*
+    func getDwellTime(){
+        let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
+        
+        //print("api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)")
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/dwell/hourly/\(dateSpan)?siteId=\(siteId)", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+                    //print("~~~~~~~~~~~~~~~~~~~~~~~~")
+                    //print(json)
+                    
+                }
+                
+                
+                let decoder = JSONDecoder()
+                guard let t = try? decoder.decode([Int : [String : Double]].self, from: d) else {
+                    print("error decoding json")
+                    return
+                }
+                var setForDwellPeriods : [String:AnyObject] = [:]
+                for one in self.HoursForDicInt {
+                    if let value = t[one]{
+                        for two in self.HoursDwell{
+                            if let value2 = value[two]
+                            {
+                                setForDwellPeriods[two] = value2 as AnyObject?
+                            }
+                        }
+                        self.setAllDwell[one] = setForDwellPeriods as AnyObject?
+                    }
+                }
+                self.tableView.reloadData()
+                
+            }
+            
+        })
+    }
+ */
     
 }
 
