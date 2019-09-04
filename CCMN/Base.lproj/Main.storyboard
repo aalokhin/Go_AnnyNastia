@@ -18,48 +18,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome to our CCMN! Please, shoose below which data you want to know!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-qI-83R">
+                                <rect key="frame" x="20" y="98" width="374" height="576"/>
+                                <color key="textColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZM-3T-Ena">
-                                <rect key="frame" x="42" y="340" width="330" height="120"/>
-                                <state key="normal" title="Check the dweell time distribution visulaiozation"/>
+                                <rect key="frame" x="20" y="694" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Check the dweell time distribution">
+                                    <color key="titleColor" red="0.86367693639999998" green="0.78419505840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="goToVisualization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3NJ-YS-OOi"/>
                                     <segue destination="yha-f1-KA1" kind="show" identifier="testVis" id="2hU-2a-hv1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lA-ee-bEp">
-                                <rect key="frame" x="51" y="468" width="295" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="fEQ-Op-Jxy"/>
-                                </constraints>
-                                <state key="normal" title="Check location Services"/>
+                                <rect key="frame" x="20" y="750" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Check location Services">
+                                    <color key="titleColor" red="0.97555677600692448" green="0.88077928911575853" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="locationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gGy-y0-krO"/>
                                     <segue destination="CyT-B3-uYj" kind="show" identifier="locationVCSegue" id="HSj-Aw-8iI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcu-hj-dRF">
-                                <rect key="frame" x="0.0" y="531" width="414" height="30"/>
-                                <state key="normal" title="Check Forecast"/>
+                                <rect key="frame" x="20" y="806" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Check Forecast">
+                                    <color key="titleColor" red="0.86367693639856524" green="0.78419505838483494" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="x0W-HA-kLg" kind="show" identifier="showForecast" id="BgC-u7-HYK"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="9lA-ee-bEp" firstAttribute="top" secondItem="tZM-3T-Ena" secondAttribute="bottom" constant="8" symbolic="YES" id="16X-ni-gPf"/>
-                            <constraint firstItem="9lA-ee-bEp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="51" id="53k-0v-ju7"/>
-                            <constraint firstItem="tZM-3T-Ena" firstAttribute="centerX" secondItem="Qcu-hj-dRF" secondAttribute="centerX" id="AwD-7L-N7r"/>
-                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="top" secondItem="9lA-ee-bEp" secondAttribute="bottom" constant="20" id="LIy-98-pGG"/>
-                            <constraint firstAttribute="bottom" secondItem="9lA-ee-bEp" secondAttribute="bottom" constant="385" id="LLb-Fn-AB0"/>
-                            <constraint firstItem="tZM-3T-Ena" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="O8u-bm-aWe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qcu-hj-dRF" secondAttribute="trailing" id="PPg-TO-lvP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lA-ee-bEp" secondAttribute="trailing" constant="68" id="pBF-U9-9Ge"/>
-                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ppZ-dx-UNw"/>
+                            <constraint firstItem="Rhf-qI-83R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E0N-6x-WFh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qcu-hj-dRF" secondAttribute="trailing" constant="20" id="G0O-zl-Ou6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rhf-qI-83R" secondAttribute="trailing" constant="20" id="KuS-Jl-jc7"/>
+                            <constraint firstItem="9lA-ee-bEp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N6m-C5-QCS"/>
+                            <constraint firstItem="9lA-ee-bEp" firstAttribute="top" secondItem="tZM-3T-Ena" secondAttribute="bottom" constant="20" id="QVi-aS-UbZ"/>
+                            <constraint firstItem="tZM-3T-Ena" firstAttribute="top" secondItem="Rhf-qI-83R" secondAttribute="bottom" constant="20" id="Z4Y-xw-nNl"/>
+                            <constraint firstItem="Rhf-qI-83R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ZxT-SH-11s"/>
+                            <constraint firstItem="tZM-3T-Ena" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="akc-FF-Ud4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qcu-hj-dRF" secondAttribute="bottom" constant="20" id="l2T-Gz-pPe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tZM-3T-Ena" secondAttribute="trailing" constant="20" id="los-p9-WMR"/>
+                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m4C-eA-YMi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9lA-ee-bEp" secondAttribute="trailing" constant="20" id="q0b-Ui-PRK"/>
+                            <constraint firstItem="Qcu-hj-dRF" firstAttribute="top" secondItem="9lA-ee-bEp" secondAttribute="bottom" constant="20" id="rei-23-V1E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZU1-0o-9BD"/>
+                    <connections>
+                        <outlet property="startText" destination="Rhf-qI-83R" id="npr-h0-NPI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

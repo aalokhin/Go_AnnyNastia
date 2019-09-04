@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0FC39A563B5414AC0E5A8B77 /* libPods-CCMNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2FF37ADC7CC93F9544F3FC0 /* libPods-CCMNTests.a */; };
 		1C98C7BA8D4E1B20827878A5 /* libPods-CCMNUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8FA4D2E39F98B21D07F557D /* libPods-CCMNUITests.a */; };
+		5C8E3532231FF61D0022F810 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E3531231FF61D0022F810 /* Gif.swift */; };
+		5C8E3536231FFE760022F810 /* space.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5C8E3535231FFE760022F810 /* space.gif */; };
+		5C8E353C23200D030022F810 /* space2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5C8E353B23200D020022F810 /* space2.gif */; };
 		5D118AD9231E5B7B006F6C60 /* PresenceRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D118AD8231E5B7B006F6C60 /* PresenceRequests.swift */; };
 		5D24B7B4230FFBC0002CC7F5 /* UICellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */; };
 		5D24B7B6230FFC4A002CC7F5 /* PresenceVisExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */; };
@@ -74,6 +77,9 @@
 		0B33FB1236B9637DB700DD50 /* Pods-CCMNUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNUITests.release.xcconfig"; path = "Target Support Files/Pods-CCMNUITests/Pods-CCMNUITests.release.xcconfig"; sourceTree = "<group>"; };
 		236A6095A5F772CFE68C8129 /* Pods-CCMNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMNTests.release.xcconfig"; path = "Target Support Files/Pods-CCMNTests/Pods-CCMNTests.release.xcconfig"; sourceTree = "<group>"; };
 		29F15A1414696DF53B35BA83 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
+		5C8E3531231FF61D0022F810 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		5C8E3535231FFE760022F810 /* space.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = space.gif; path = ../../Desktop/space.gif; sourceTree = "<group>"; };
+		5C8E353B23200D020022F810 /* space2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = space2.gif; path = ../../Desktop/space2.gif; sourceTree = "<group>"; };
 		5D118AD8231E5B7B006F6C60 /* PresenceRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceRequests.swift; sourceTree = "<group>"; };
 		5D24B7B3230FFBC0002CC7F5 /* UICellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICellExt.swift; sourceTree = "<group>"; };
 		5D24B7B5230FFC4A002CC7F5 /* PresenceVisExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceVisExt.swift; sourceTree = "<group>"; };
@@ -168,6 +174,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5C8E353A232001560022F810 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				5C8E3531231FF61D0022F810 /* Gif.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		5D24B7B2230FFBA2002CC7F5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +272,7 @@
 		EF48C4F822EDE92F00980012 /* CCMN */ = {
 			isa = PBXGroup;
 			children = (
+				5C8E353A232001560022F810 /* Design */,
 				EFB281DC22FDA37E00B714EA /* Requests */,
 				EF8580C822EF62C700F6B58D /* Utilities */,
 				EF8580C522EF568E00F6B58D /* View */,
@@ -266,6 +281,8 @@
 				EF48C4F922EDE92F00980012 /* AppDelegate.swift */,
 				EF48C4FD22EDE92F00980012 /* Main.storyboard */,
 				EF48C50022EDE93100980012 /* Assets.xcassets */,
+				5C8E3535231FFE760022F810 /* space.gif */,
+				5C8E353B23200D020022F810 /* space2.gif */,
 				EF48C50222EDE93100980012 /* LaunchScreen.storyboard */,
 				EF48C50522EDE93100980012 /* Info.plist */,
 			);
@@ -452,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF374EF52300016200D6C64A /* DateTextCell.xib in Resources */,
+				5C8E3536231FFE760022F810 /* space.gif in Resources */,
 				EF48C50422EDE93100980012 /* LaunchScreen.storyboard in Resources */,
 				5D349A28230EA2DA00C5A9A4 /* EmptyChartCell.xib in Resources */,
 				EF48C50122EDE93100980012 /* Assets.xcassets in Resources */,
@@ -462,6 +480,7 @@
 				EFDF3CAE22FEF9DC00A86B3E /* SearchSetUpVC.storyboard in Resources */,
 				EF2E0602230439900034C418 /* DwellTimeVis.storyboard in Resources */,
 				5D2E2D10231EBEF50041DDC9 /* ForecastsVC.storyboard in Resources */,
+				5C8E353C23200D030022F810 /* space2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8E3532231FF61D0022F810 /* Gif.swift in Sources */,
 				5D349A2A230EA30F00C5A9A4 /* EmptyChartCell.swift in Sources */,
 				5DBB56772316636200DD47E8 /* MacListCell.swift in Sources */,
 				EF48C4FC22EDE92F00980012 /* ViewController.swift in Sources */,

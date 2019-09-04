@@ -14,6 +14,7 @@ import SwiftEntryKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var startText: UITextView!
     //this shit helps us a  lot
     ///api/analytics/v1/now/connectedDetected
     let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
@@ -26,6 +27,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        
+        let width = UIScreen.main.bounds.size.width
+        let height = UIScreen.main.bounds.size.height
+        let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        backgroundImage.loadGif(name: "space2")
+        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+
         
         /*
          ... Customize the view as you like ...
@@ -98,6 +107,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func goToVisualization(_ sender: UIButton) {
+        print("\n\n\n hello goToVisualization ------------>>>> \n\n\n")
         
     }
     override func viewDidAppear(_ animated: Bool) {
