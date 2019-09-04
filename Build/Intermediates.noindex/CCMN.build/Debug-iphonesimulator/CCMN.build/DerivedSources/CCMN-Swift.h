@@ -236,10 +236,12 @@ SWIFT_CLASS("_TtC4CCMN14EmptyChartCell")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC4CCMN11ForecastsVC")
 @interface ForecastsVC : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified someViewForVisualization;
 @property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified resultOfForecastLabel;
 - (IBAction)dateChanged:(UIDatePicker * _Nonnull)sender;
@@ -310,7 +312,6 @@ SWIFT_CLASS("_TtC4CCMN23PresenceVisualizationVC")
 
 
 
-@class UIView;
 
 SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
 @interface SearchSetUpVC : UIViewController

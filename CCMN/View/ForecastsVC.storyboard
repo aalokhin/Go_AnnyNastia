@@ -19,16 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Xag-Su-Nbd">
-                                <rect key="frame" x="0.0" y="144" width="414" height="518"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="378.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the date you want to make a forecast for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-DF-Icu">
-                                        <rect key="frame" x="21.5" y="0.0" width="371" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose the date you want to make a forecast for" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-DF-Icu">
+                                        <rect key="frame" x="22" y="0.0" width="370" height="41"/>
+                                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.34152178700000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-dG-GMk">
-                                        <rect key="frame" x="47" y="70.5" width="320" height="377"/>
+                                        <rect key="frame" x="47" y="91" width="320" height="216"/>
+                                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.34152178700000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <date key="date" timeIntervalSinceReferenceDate="589221799.37669098">
                                             <!--2019-09-03 16:43:19 +0000-->
                                         </date>
@@ -36,27 +39,41 @@
                                             <action selector="dateChanged:" destination="m3g-Ba-aGI" eventType="valueChanged" id="r2X-vW-L5j"/>
                                         </connections>
                                     </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultLabel: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Z-sv-yeZ">
-                                        <rect key="frame" x="158" y="497.5" width="98.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultLabel: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3Z-sv-yeZ">
+                                        <rect key="frame" x="158" y="357" width="98.5" height="21.5"/>
+                                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="0.34152178700000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="8Ta-DF-Icu" firstAttribute="leading" secondItem="Xag-Su-Nbd" secondAttribute="leading" constant="22" id="RIg-Ro-9g0"/>
+                                </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-yb-H5t">
+                                <rect key="frame" x="0.0" y="530.5" width="414" height="331.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="0.91157427229999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="top" secondItem="Y1H-5z-q3z" secondAttribute="top" constant="100" id="94Y-N4-ycP"/>
-                            <constraint firstItem="Y1H-5z-q3z" firstAttribute="bottom" secondItem="Xag-Su-Nbd" secondAttribute="bottom" constant="200" id="c3s-UA-SrE"/>
-                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="leading" secondItem="AWw-mk-kT8" secondAttribute="leading" id="fDu-HS-cVc"/>
-                            <constraint firstItem="Y1H-5z-q3z" firstAttribute="trailing" secondItem="Xag-Su-Nbd" secondAttribute="trailing" id="fpd-mV-tJh"/>
+                            <constraint firstItem="y1k-yb-H5t" firstAttribute="top" secondItem="Xag-Su-Nbd" secondAttribute="bottom" constant="8" symbolic="YES" id="Fti-9G-YMF"/>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="trailing" secondItem="y1k-yb-H5t" secondAttribute="trailing" id="JYq-Ed-r5K"/>
+                            <constraint firstAttribute="trailing" secondItem="Xag-Su-Nbd" secondAttribute="trailing" id="MSG-fy-Mp7"/>
+                            <constraint firstItem="y1k-yb-H5t" firstAttribute="bottom" secondItem="Y1H-5z-q3z" secondAttribute="bottom" id="UZp-8Y-9Qn"/>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="leading" secondItem="y1k-yb-H5t" secondAttribute="leading" id="W73-Bg-42k"/>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="top" secondItem="Y1H-5z-q3z" secondAttribute="top" constant="100" id="c1M-ao-UYQ"/>
+                            <constraint firstItem="Xag-Su-Nbd" firstAttribute="leading" secondItem="AWw-mk-kT8" secondAttribute="leading" id="pyk-cu-D47"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y1H-5z-q3z"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="yfJ-dG-GMk" id="Ghk-yF-EUU"/>
                         <outlet property="resultOfForecastLabel" destination="I3Z-sv-yeZ" id="AjK-yk-2QP"/>
+                        <outlet property="someViewForVisualization" destination="y1k-yb-H5t" id="ADr-6n-YYS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ih9-IT-ks1" userLabel="First Responder" sceneMemberID="firstResponder"/>
