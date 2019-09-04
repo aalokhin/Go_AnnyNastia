@@ -22,7 +22,7 @@ class  ForecastsVC: UIViewController {
     
     @IBAction func dateChanged(_ sender: UIDatePicker) {
         selectedDate = datePicker.date
-        print(selectedDate)
+        //print(selectedDate)
         forecastNbrOf(visitorsType : "visitor")
     }
     override func viewDidLoad() {
@@ -37,6 +37,7 @@ class  ForecastsVC: UIViewController {
     }
     
     func forecastNbrOf(visitorsType : String){
+        self.resultOfForecastLabel.text = ""
         self.datapoints.removeAll()
         
         
@@ -47,40 +48,39 @@ class  ForecastsVC: UIViewController {
         let startDateStr : String = startDate.toStringDefault()//starting form 6 months ago
         
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        
-        
-       
-        
         let url = "api/presence/v1/\(visitorsType)/daily?siteId=\(siteId)&startDate=\(startDateStr)&endDate=\(endDateStr)"
         NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-//              if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-//                 print(json)
-//              }
                 guard let t = try? JSONDecoder().decode([String : Int].self, from: d) else {
                     print("error decoding json")
                     return
                 }
-                print(t.count)
                 let sortedData = t.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
-                
                 let resultingData = self.makePrediction(visitorsType : visitorsType, data: sortedData, endDate: endDate, startDate: startDate)
-                
                 for i in 0..<resultingData.count{
                     self.datapoints.append(Date(timeInterval: (TimeInterval(86400 * i)), since: Date()).toStringDefault())
                 }
-                
-                print(self.datapoints)
-                print(resultingData)
-                
+               // print(self.datapoints)
+                //print(resultingData)
                 self.createGroupedBarChart(dataPoints: self.datapoints, values: [resultingData])
-                
-                
             }
         })
         
     }
+    
+    
+//    static func getDictionaries(_ urlEndpoint : String, _ parameters : Parameters, completion: @escaping ([Double], Error?) -> Void){
+//        getRequestData(isLocation: true, endpoint : urlEndpoint, params : parameters, method : .get, completion: { data, error in
+//            if let d =  data {
+//                if let downloadedImage = UIImage(data:d) {
+//                    completion(tempSet, nil)
+//                }
+//            } else if let err = error {
+//                print(err.localizedDescription)
+//            }
+//        })
+//    }
     
     
     
@@ -101,8 +101,8 @@ class  ForecastsVC: UIViewController {
         let resultDayNbr = self.selectedDate.interval(ofComponent: .day, fromDate: startDate) //the order number  of the day in extrapolated sequence  from start till selected date
         let timeInterval = self.selectedDate.interval(ofComponent: .day, fromDate: endDate) // the number of days to extrapolate from end date of data set until the selected datte
         
-        print(">>>>>>>>>>>>  resultDayNbr : ", resultDayNbr)
-        print(">>>>>>>>>>>>  number of days to extrapolate : ", timeInterval)
+      //  print(">>>>>>>>>>>>  resultDayNbr : ", resultDayNbr)
+      //  print(">>>>>>>>>>>>  number of days to extrapolate : ", timeInterval)
         
         /// don't touch it
        
@@ -125,7 +125,7 @@ class  ForecastsVC: UIViewController {
         let result = self.linearRegression(daysInPeriod, numberOfVisitors)(Double(resultDayNbr))
         print("on this date the predicted number of connected visitors is about to be \(Int(result))")
         
-       self.resultOfForecastLabel.text = "\(visitorsType) : \(Int(result))"
+        self.resultOfForecastLabel.text = self.resultOfForecastLabel.text ?? "" + "\(visitorsType) : \(Int(result))"
         return tempSet.reversed()
     }
     
@@ -268,5 +268,8 @@ func forecastHourly(){
                 print(json)
             }
         }
+        
+        
+        
     })
 }

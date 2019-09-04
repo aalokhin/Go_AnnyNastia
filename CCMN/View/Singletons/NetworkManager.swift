@@ -54,6 +54,9 @@ class NetworkManager {
             }
         })
     }
+    
+    
+   
    
     //https://cisco-cmx.unit.ua/api/config/v1/maps/count
 }
