@@ -63,7 +63,7 @@ extension Date{
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let fun =  formatter.string(from: self)
-        print(fun)
+        //print(fun)
         return fun
     }
 

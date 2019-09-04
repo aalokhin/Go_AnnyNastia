@@ -29,7 +29,6 @@ class  ForecastsVC: UIViewController {
         super.viewDidLoad()
         datePicker.minimumDate = Date()
         print("Hi from forecast vc ")
-       
         forecastNbrOf(visitorsType : "connected") //"visitor", "passerby" "connected"
        
         
@@ -49,6 +48,7 @@ class  ForecastsVC: UIViewController {
         
         let siteId = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
         let url = "api/presence/v1/\(visitorsType)/daily?siteId=\(siteId)&startDate=\(startDateStr)&endDate=\(endDateStr)"
+        
         NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
             data, error in
             if let d = data{
@@ -61,7 +61,7 @@ class  ForecastsVC: UIViewController {
                 for i in 0..<resultingData.count{
                     self.datapoints.append(Date(timeInterval: (TimeInterval(86400 * i)), since: Date()).toStringDefault())
                 }
-               // print(self.datapoints)
+                //print(self.datapoints)
                 //print(resultingData)
                 self.createGroupedBarChart(dataPoints: self.datapoints, values: [resultingData])
             }
@@ -99,11 +99,11 @@ class  ForecastsVC: UIViewController {
         }
         
         let resultDayNbr = self.selectedDate.interval(ofComponent: .day, fromDate: startDate) //the order number  of the day in extrapolated sequence  from start till selected date
+        
         let timeInterval = self.selectedDate.interval(ofComponent: .day, fromDate: endDate) // the number of days to extrapolate from end date of data set until the selected datte
         
-      //  print(">>>>>>>>>>>>  resultDayNbr : ", resultDayNbr)
-      //  print(">>>>>>>>>>>>  number of days to extrapolate : ", timeInterval)
-        
+        //  print(">>>>>>>>>>>>  resultDayNbr : ", resultDayNbr)
+        //  print(">>>>>>>>>>>>  number of days to extrapolate : ", timeInterval)
         /// don't touch it
        
 
@@ -123,7 +123,7 @@ class  ForecastsVC: UIViewController {
         }
         
         let result = self.linearRegression(daysInPeriod, numberOfVisitors)(Double(resultDayNbr))
-        print("on this date the predicted number of connected visitors is about to be \(Int(result))")
+        //print("on this date the predicted number of connected visitors is about to be \(Int(result))")
         
         self.resultOfForecastLabel.text = self.resultOfForecastLabel.text ?? "" + "\(visitorsType) : \(Int(result))"
         return tempSet.reversed()
@@ -170,7 +170,7 @@ class  ForecastsVC: UIViewController {
         }
         
         var dataSets : [BarChartDataSet] = []
-        ///https://stackoverflow.com/questions/35294076/how-to-make-a-grouped-barchart-with-ios-charts        var dataSets: [BarChartDataSet] = []
+   
         let labels = ["Connected", "Passerby", "Visitor"]
         for i in 0..<dataEntryArr.count{
             let set = BarChartDataSet(entries: dataEntryArr[i], label: labels[i])
@@ -182,8 +182,6 @@ class  ForecastsVC: UIViewController {
         
         let chartData = BarChartData(dataSets: dataSets)
         barChart.data = chartData
-        
-        
         let legend = barChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
@@ -256,20 +254,20 @@ class  ForecastsVC: UIViewController {
 
 
 /////////////////////////
-func forecastHourly(){
-    let endDate : String = Date(timeInterval: -86400, since: Date()).toStringDefault() //check until yesterday
-    let startDate : String = Date(timeInterval: (-86400 * 31 * 6), since: Date()).toStringDefault()//starting form 6 months ago
-    
-    let url = "api/presence/v1/connected/hourly?siteId=1513804707441&date=\(startDate)"
-    NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
-        data, error in
-        if let d = data{
-            if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                print(json)
-            }
-        }
-        
-        
-        
-    })
-}
+//func forecastHourly(){
+//    let endDate : String = Date(timeInterval: -86400, since: Date()).toStringDefault() //check until yesterday
+//    let startDate : String = Date(timeInterval: (-86400 * 31 * 6), since: Date()).toStringDefault()//starting form 6 months ago
+//    
+//    let url = "api/presence/v1/connected/hourly?siteId=1513804707441&date=\(startDate)"
+//    NetworkManager.getRequestData(isLocation: false, endpoint: url, params: [:], method: .get, completion: {
+//        data, error in
+//        if let d = data{
+//            if let json = try? JSONSerialization.jsonObject(with: d, options: []){
+//               // print(json)
+//            }
+//        }
+//        
+//        
+//        
+//    })
+//}

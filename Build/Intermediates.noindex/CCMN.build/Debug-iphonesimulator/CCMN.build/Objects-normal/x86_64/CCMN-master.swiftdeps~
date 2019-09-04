@@ -1,12 +1,12 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "e70ec041a7e66617a40331cfc1e3c4fe"
-build_time: [1567607189, 400719000]
+build_time: [1567608004, 588764000]
 inputs:
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/EmptyChartCell.swift": [1567167578, 286064753]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/MacListCell.swift": [1567167578, 286282069]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/ViewController.swift": [1567422840, 202520556]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/View/cells/DateCell.swift": [1567529262, 245185199]
-  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/ForecastsVC.swift": !dirty [1567599868, 633162413]
+  "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/ForecastsVC.swift": [1567608003, 791671652]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Utilities/PresenceEndpoints.swift": [1567167578, 284681052]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/PresenceVisExt.swift": [1567589124, 440634880]
   "/Users/anastasia/Swift/Go_Aloha/CCMN/Controllers/Extensions/PresenceRequests.swift": [1567500896, 347958868]
