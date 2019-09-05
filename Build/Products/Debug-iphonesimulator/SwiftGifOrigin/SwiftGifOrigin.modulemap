@@ -1,0 +1,12 @@
+module SwiftGifOrigin {
+  umbrella header "SwiftGifOrigin-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+
+module SwiftGifOrigin.Swift {
+  header "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftGifOrigin/Swift Compatibility Header/SwiftGifOrigin-Swift.h"
+  requires objc
+}

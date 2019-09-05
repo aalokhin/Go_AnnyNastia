@@ -20,7 +20,6 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
-- "BooleanLiteralType"
 - "Date"
 - !private "DateCell"
 - !private "DateTextCell"
@@ -479,7 +478,7 @@ depends-member:
 - ["4CCMN13SearchSetUpVCC", "datePickerIndexPath"]
 - ["4CCMN13SearchSetUpVCC", "dateSpan"]
 - ["4CCMN13SearchSetUpVCC", "dates"]
-- ["4CCMN13SearchSetUpVCC", "deinit"]
+- !private ["4CCMN13SearchSetUpVCC", "deinit"]
 - ["4CCMN13SearchSetUpVCC", "delegate"]
 - ["4CCMN13SearchSetUpVCC", "hourly"]
 - ["4CCMN13SearchSetUpVCC", "indexPathToInsertDatePicker"]
@@ -1114,6 +1113,7 @@ depends-external:
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/SwiftEntryKit/SwiftEntryKit.modulemap"
 - "/Users/anastasia/Swift/Go_Aloha/Build/Products/Debug-iphonesimulator/QuickLayout/QuickLayout.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreML.framework/Headers/CoreML.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"

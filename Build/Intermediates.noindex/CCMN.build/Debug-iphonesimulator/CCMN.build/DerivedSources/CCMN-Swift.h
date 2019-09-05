@@ -344,11 +344,17 @@ SWIFT_CLASS("_TtC4CCMN13SearchSetUpVC")
 
 
 
+
+
+
+
+@class UITextView;
 @class UIButton;
 @class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC4CCMN14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified startText;
 - (void)viewDidLoad;
 - (IBAction)locationButtonTapped:(UIButton * _Nonnull)sender;
 - (IBAction)goToVisualization:(UIButton * _Nonnull)sender;

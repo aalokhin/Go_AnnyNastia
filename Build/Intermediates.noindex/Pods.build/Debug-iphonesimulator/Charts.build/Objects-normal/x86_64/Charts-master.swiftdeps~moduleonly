@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "34d1eeb235115a8fd5f4744988778672"
-build_time: [1567244444, 884722000]
+build_time: [1567683194, 212817000]
 inputs:
   "/Users/anastasia/Swift/Go_Aloha/Pods/Charts/Source/Charts/Jobs/AnimatedMoveViewJob.swift": [1567167664, 200024472]
   "/Users/anastasia/Swift/Go_Aloha/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift": [1567167664, 199559498]

@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "8bd65312e49ef4c68178c400af5bd602"
+build_time: [1567683194, 225779000]
+inputs:
+  "/Users/anastasia/Swift/Go_Aloha/Pods/SwiftGifOrigin/SwiftGifCommon/UIImage+Gif.swift": [1567683166, 805908721]
