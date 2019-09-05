@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Charts
+import CoreML
 
 class  ForecastsVC: UIViewController {
     
@@ -23,7 +24,7 @@ class  ForecastsVC: UIViewController {
     @IBAction func dateChanged(_ sender: UIDatePicker) {
         selectedDate = datePicker.date
         //print(selectedDate)
-        forecastNbrOf(visitorsType : "visitor")
+        forecastNbrOf(visitorsType : "connected")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,7 @@ class  ForecastsVC: UIViewController {
                     return
                 }
                 let sortedData = t.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
+              
                 let resultingData = self.makePrediction(visitorsType : visitorsType, data: sortedData, endDate: endDate, startDate: startDate)
                 for i in 0..<resultingData.count{
                     self.datapoints.append(Date(timeInterval: (TimeInterval(86400 * i)), since: Date()).toStringDefault())
@@ -83,7 +85,68 @@ class  ForecastsVC: UIViewController {
 //    }
     
     
+    func prediction(input:[Double], resultDayNbr : Int) -> [Double]{
+        typealias PointTuple = (day: Double, mW: Double)
+        var points: [PointTuple] = []
+        for i in 0..<input.count {
+            points.append(PointTuple(Double(i), input[i]))
+            
+            
+        }
+        
+        let meanDays = points.reduce(0) { $0 + $1.day } / Double(points.count)
+        let meanMW   = points.reduce(0) { $0 + $1.mW  } / Double(points.count)
+        
+        let a = points.reduce(0) { $0 + ($1.day - meanDays) * ($1.mW - meanMW) }
+        let b = points.reduce(0) { $0 + pow($1.day - meanDays, 2) }
+        
+        // The equation of a straight line is: y = mx + c
+        // Where m is the gradient and c is the y intercept.
+        let m = a / b
+        let c = meanMW - m * meanDays
+        
+        var TempSetRes : [Double] = []
+        
+        for i in input.count..<resultDayNbr{
+        
+           TempSetRes.append(m * Double(i) + c)
+        }
+        return TempSetRes
+//
+//        var array : [NSNumber] = []
+//        for one in input {
+//            array.append(NSNumber(value: one))
+//        }
+//        let sequence = MLSequence(int64s:array)
+        
+    }
+    ///////////////////////////////////// makePrediction  /////////////////////////////////////////////////
     
+    
+    func predictAvg(input : [Double], resultDayNbr : Int) ->[Double ] {//
+        let startDayIndex = input.count - 1
+        var tempSet = [Double]()
+        
+    
+        var forecastedRow  = input
+        for i in startDayIndex..<resultDayNbr { //for every new day
+            var tempForAvg : [Double] = []
+            var j = i
+            while(j >= 0){
+                print("j: ", j)
+                tempForAvg.append(forecastedRow[j])
+                j = j - 7
+            }
+            let sum = tempForAvg.reduce(0, +)
+            print("Sum of Array is : ", sum)
+            let res = sum / Double(tempForAvg.count)
+            print("Sres is : ", res)
+            forecastedRow.append(res)
+            tempSet.append(res)
+        }
+        return tempSet
+    
+    }
     func makePrediction(visitorsType : String, data : [(key: String, value: Int)], endDate : Date, startDate : Date) -> [Double]{
         
         
@@ -101,11 +164,11 @@ class  ForecastsVC: UIViewController {
         let resultDayNbr = self.selectedDate.interval(ofComponent: .day, fromDate: startDate) //the order number  of the day in extrapolated sequence  from start till selected date
         
         let timeInterval = self.selectedDate.interval(ofComponent: .day, fromDate: endDate) // the number of days to extrapolate from end date of data set until the selected datte
-        
+        return predictAvg(input : numberOfVisitors, resultDayNbr : resultDayNbr)
         //  print(">>>>>>>>>>>>  resultDayNbr : ", resultDayNbr)
         //  print(">>>>>>>>>>>>  number of days to extrapolate : ", timeInterval)
         /// don't touch it
-       
+     /*
 
         var tempSet : [Double] = []
 
@@ -115,8 +178,8 @@ class  ForecastsVC: UIViewController {
             let result = Int(self.linearRegression(daysInPeriod, numberOfVisitors)(Double(resultDayNbr - i)))
             
             
-            daysInPeriod.append(Double(daysInPeriod.count + i))
-            numberOfVisitors.append(Double(result))
+            //daysInPeriod.append(Double(daysInPeriod.count + i))
+            //numberOfVisitors.append(Double(result))
             
             tempSet.append(Double(result))
 
@@ -127,6 +190,8 @@ class  ForecastsVC: UIViewController {
         
         self.resultOfForecastLabel.text = self.resultOfForecastLabel.text ?? "" + "\(visitorsType) : \(Int(result))"
         return tempSet.reversed()
+ 
+    */
     }
     
     func average(_ input: [Double]) -> Double {
