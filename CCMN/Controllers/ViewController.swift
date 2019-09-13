@@ -6,62 +6,93 @@
 //  Copyright © 2019 Anastasiia ALOKHINA. All rights reserved.
 //
 
+// https://www.scalyr.com/blog/getting-started-swift-logging/ <== logging described
+
+
+/*
+ Every iOS app gets a slice of storage just for itself, meaning that you can read and write your app's files there without worrying about colliding with other apps. This is called the user's documents directory, and it's exposed both in code (as you'll see in a moment) and also through iTunes file sharing.
+ 
+ Unfortunately, the code to find the user's documents directory isn't very memorable, so I nearly always use this helpful function – and now you can too!
+ 
+ func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    let documentsDirectory = paths[0]
+    return documentsDirectory
+ }
+ */
 import UIKit
 import Alamofire
 import Charts
 import SwiftEntryKit
+import SQLite3
 
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var startText: UITextView!
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+         getPrimaryData()
+    }
+    
+    
     //this shit helps us a  lot
     ///api/analytics/v1/now/connectedDetected
-    let periods = [ "today", "yesterday", "3days", "lastweek", "lastmonth" ]
-    
+    let labelsVsImages : [String] = ["total", "totalConnected", "totalPasserby", "avgDwell", "peakHour", "conversionRate", "topManufacturer", "connectedPercentage"]
     var startDate : String = Date().toStringDefault()
     var endDate : String =  Date().toStringDefault()
+    var labelsForStatistics = [String : AnyObject]()
+    @IBOutlet weak var tableView: UITableView!
     
     
-
     override func viewDidLoad() {
-
         super.viewDidLoad()
-        
-        let width = UIScreen.main.bounds.size.width
-        let height = UIScreen.main.bounds.size.height
-        let backgroundImage = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        backgroundImage.loadGif(name: "space2")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
-
-        
-        /*
-         ... Customize the view as you like ...
-         */
-        
-        // Display the view with the configuration
-
-        
-        //getInit()
-        getSiteID()
-        //forToday()
-        
-        /*
-         cisco-presence.unit.ua/api/presence/v1/visitor/count/today?siteId=1513804707441
-         cisco-presence.unit.ua/api/presence/v1/dwell/average/today?siteId=1513804707441
-         cisco-presence.unit.ua/api/presence/v1/kpisummary/today?siteId=1513804707441
-         */
- 
- 
-
-        setFloorImgs()
-      //  getConnectedDevices()
-       
-        
-        //getting the floors information
-    
+        //query()
+        self.tableView.rowHeight = 150
+        getPrimaryData()
     }
+    
+    func getPrimaryData(){
+        for one in self.view.subviews{
+            one.isHidden = true
+        }
+        
+        KPIforToday(completion: {
+            loaded, error in
+            if loaded == true && error == nil{
+                self.tableView.reloadData()
+            }
+            else if let err = error {
+                self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: NSString(string: err.localizedDescription))
+                
+            }
+            
+        })
+        getSiteID(complete: {
+            canLoad, error in
+            if canLoad == true{
+                self.getInitialLocationData(complete: {
+                    canLoad2, error2 in
+                    if canLoad2 == true{
+                        for one in self.view.subviews{
+                            one.isHidden = false
+                        }
+                        
+                    }
+                    else if let err2 = error2 {
+                        self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: "Error from Initial View Controller. Details: \(err2.localizedDescription)" as NSString)
+                        self.callErrorWithCustomMessage("Something went wrong with loading data")
+                    }
+                })
+                
+            }
+            else if let err = error{
+                self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: "Error from Initial View Controller. Details: \(err.localizedDescription)" as NSString)
+                self.callErrorWithCustomMessage("Something went wrong with loading data")
+            }
+        })
+    }
+    
+    
+    
     
     
     
@@ -70,218 +101,53 @@ class ViewController: UIViewController {
         
     }
     
-    func forToday(){
-        
-        
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/visitor/count/today?siteId=1513804707441", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-              //  print("count/today")
-//                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-//                print(json ?? "serialization of json failed\n\n")
-                 let nbr = String(data: d, encoding: .utf8)?.toInt()
-                print("count/today visitors \(nbr ?? -1)\n\n")
-            }
-        })
-        
-      
-        
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary/today?siteId=1513804707441", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                print("kpisummary/today\n\n")
-                
-            if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                //print(json)
-            }
-            
-                if let nbr = String(data: d, encoding: .utf8)?.toInt(){
-                    print("kpi summary  \(nbr)\n\n")
-                }
-                }
-            
-        })
-        
-        
-    }
-    
-    
     @IBAction func goToVisualization(_ sender: UIButton) {
-        print("\n\n\n hello goToVisualization ------------>>>> \n\n\n")
-        
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        testPresenceConnect()
-    }
-    
-    func testPresenceRepeat(){
-        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        print("repeeeeeeeeeat count for periods ===================================================")
-
-        for one in self.periods{
-            NetworkManager.getRequestData(isLocation : false, endpoint : "api/presence/v1/repeatvisitors/count/\(one)?siteId=\(siteID)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                print("repeeeeeeeeeat ==============  \(one)  =====================================")
-
-                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
-               // print("repeeeeeeeeeat ===================================================")
-
-                }
-            })
-        }
-        
-        
-        print("repeeeeeeeeeat ========================================")
-
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/repeatvisitors/count?siteId=\(siteID)", params: [:], method: .get, completion: {
-            data, error in
-            if let d = data{
-                
-                let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
-            //    print("repeeeeeeeeeat ===================================================")
-                
-            }
-        })
-        
-        
-        //&startDate=<date in yyyy-mm-dd>&endDate=<date in yyyy-mm-dd> dweell time done we can add some tdate picker here and it might wanna work after that
         
     }
     
-    
-    
-    
-    func testPresenceConnect(){
-        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        var connectedVisitorsTotalOverPeriod : [[String : Int]] = []
-/*
-        for one in self.periods {
-            NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/total/\(one)?siteId=\(siteID)", params: [:], method: .get, completion: {
-                data, error in
-                if let d = data{
-                    let nbr = String(data: d, encoding: .utf8)?.toInt()
-                    connectedVisitorsTotalOverPeriod.append([one : nbr ?? -1])
-                    print(connectedVisitorsTotalOverPeriod)
-                    
-                    
-                }
-            })
-            
-        }
-*/
-        //&startDate=<date in yyyy-mm-dd>&endDate=<date in yyyy-mm-dd> dweell time done we can add some tdate picker here and it might wanna work after that
-        
-//        let startDate = "2019-06-01"
-//        let endDate = "2019-08-01"
-
-        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/connected/total?siteId=\(siteID)&startDate=\(self.startDate)&endDate=\(self.endDate)", params: [:], method: .get, completion: {
-                data, error in
-             print("=\(self.startDate)&endDate=\(self.endDate)")
-            if let d = data{
-                
-
-                let nbr = String(data: d, encoding: .utf8)?.toInt()
-                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", nbr ?? "nothing received")
-                
-                
-            }
-        })
-    }
-    
-//    "Today" : ("/today", "/hourly/today"),
-//    "Yesterday" : ("/yesterday", "/hourly/yesterday"),
-//    "Last 3 days" : ("/3days", "/hourly/3days"),
-//    "Last 7 days" : ("/lastweek", "/daily/lastweek"),
-//    "Last 30 days" : ("/lastmonth", "/daily/lastmonth"),
-//    "Custom" : ("", "/daily"),
-//    "hourly" : ("", "/hourly")
-    
-    func getConnectedDevices(){
-        
-        let siteID = Client.sharedInstance.siteID?.aesUidString ?? "1513804707441"
-        let urlPath = PresenceEndpoints.connectedDevicesUntilNow.rawValue + "?siteId=\(siteID)"
-        print(urlPath)
-        
-        NetworkManager.getRequestData(isLocation: false, endpoint: PresenceEndpoints.connectedDevicesUntilNow.rawValue, params: [:], method: .get, completion: { data, error in
-            if let d = data {
-                print("request on getting connectedDevicesUntilNow info completed")
-                print(d)
-                let nbrConnectedDevicesToday =  String(data: d, encoding: .utf8)?.toInt()
-                print("what we recieved in utf8: ", nbrConnectedDevicesToday ?? "nothing")
-            }
-            if let err = error{
-                print(err.localizedDescription)
-            }
-        })
-    }
-    
-    func getSiteID (){
-
+    /* Initialozas Singleton with starting data such as Campus, SiteId and other important parameters for future requests */
+    func getSiteID (complete: @escaping (Bool?, Error?) -> Void){
         NetworkManager.getRequestData(isLocation: false, endpoint: "api/config/v1/sites", params: [:], method: .get, completion: { data, error in
             if let d = data {
-               // print("request on getting sites ID info completed")
-                //let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                //print(json ?? "serialization of json failed")
-                let decoder = JSONDecoder()
-                guard let t = try? decoder.decode([SiteID].self, from: d) else {
-                    print("error decoding json")
+                guard let t = try? JSONDecoder().decode([SiteID].self, from: d) else {
+                    print("Error decoding json")
+                    complete(false, nil)
                     return
                 }
+                complete(true, nil)
                 Client.sharedInstance.siteID = t[0]
-               // Client.sharedInstance.siteID?.printAll()
-
+                
+            }
+            if let err = error{
+                self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: "Error from Initial View Controller. Error getting site ID. Details: \(err.localizedDescription)" as NSString)
+                print("Error getting site ID. Details: \(err.localizedDescription)")
+                complete(false, err)
             }
         })
         
     }
     
-    func getInit(){
-        let parameters : Parameters = ["" : ""]
-        NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.clientsCount.rawValue, params : parameters, method : .get, completion:  { data, error in
-            if let d =  data{
-                print("request clients count  completed")
-                 let json = try? JSONSerialization.jsonObject(with: d, options: [])
-                print(json ?? "serialization of json failed")
-            }
-            else {
-                print("some error completing task")
-            }
-        })
-        
-        
-        NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.allFloors.rawValue, params : parameters, method : .get, completion: { data, error in
+    
+    func getInitialLocationData(complete: @escaping (Bool?, Error?) -> Void){
+        NetworkManager.getRequestData(isLocation : true, endpoint : locationEndpoints.allFloors.rawValue, params : [:], method : .get, completion: { data, error in
             //if let error should be added
             if let d =  data{
                 print("request on getting campus info completed")
-         
                 let decoder = JSONDecoder()
                 guard let t = try? decoder.decode(mapJSON.self, from: d) else {
+                    complete(false, nil)
                     print("error decoding json")
                     return
                 }
                 Client.sharedInstance.setCampus(t : t)
+                complete(true, nil)
+            }
+            if let err = error{
+                print("Error getting site ID. Details: \(err)")
+                complete(false, err)
             }
         })
     }
-    
-    
-    func setFloorImgs(){
-        let floorsImgs = ["api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
-        for i in 0..<3{
-            //Client.sharedInstance.floorImgs?.append(UIImage())
-             NetworkManager.getImage(floorsImgs[i], [:] , completion: { image, error in
-                if let img = image {
-                    print("we've got an image")
-                    Client.sharedInstance.floorImgs?.append(img)
-                    
-                }
-            })
-        }
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
@@ -292,8 +158,79 @@ class ViewController: UIViewController {
             print("testVis")
         case "locationVCSegue":
             print("locationVCSegue")
+        case "showForecast":
+            print("showForecast")
         default:
             print("unexpected segue identifier")
         }
+    }
+    
+    func KPIforToday(completion : @escaping (Bool, Error?) -> Void){
+        NetworkManager.getRequestData(isLocation: false, endpoint: "api/presence/v1/kpisummary/today?siteId=1513804707441", params: [:], method: .get, completion: {
+            data, error in
+            if let d = data{
+                //            print("kpisummary/today\n\n")
+                //            let json = try? JSONSerialization.jsonObject(with: d, options: [])
+                //            print(json ?? "serialization of json failed")
+                guard let t = try? JSONDecoder().decode(kpiSummaryJSON.self, from: d) else {
+                    print("error decoding json")
+                    return
+                }
+                
+                if let visitorCount = t.visitorCount {
+                    self.labelsForStatistics["total"] = "Total count of visitors today: \(visitorCount)" as AnyObject
+                } else {
+                    self.labelsForStatistics["total"] = "Total count of visitors today ...loading..." as AnyObject
+                }
+                if let averageDwell = t.averageDwell  {
+                    let avgDwell = String(format: "%.02f", averageDwell)
+                    self.labelsForStatistics["avgDwell"] = "Average dwell time  today is \(avgDwell)%" as AnyObject
+                } else {
+                    self.labelsForStatistics["avgDwell"] = "Average dwell time  today is ...loading...) %" as AnyObject
+                }
+                if let totalConnectedCount = t.totalConnectedCount{
+                    self.labelsForStatistics["totalConnected"] = "Total number of connected visitors today: \(totalConnectedCount)" as AnyObject
+                } else {
+                    self.labelsForStatistics["totalConnected"] = "Total number of connected visitors today: ...loading..." as AnyObject
+                }
+                if let totalPasserbyCount = t.totalPasserbyCount{
+                    self.labelsForStatistics["totalPasserby"] = "Total number of passers-by  today: \(totalPasserbyCount)" as AnyObject
+                } else {
+                    self.labelsForStatistics["totalPasserby"] = "Total number of passers-by  today: ...loading..." as AnyObject
+                }
+                
+                if let conversionRate = t.conversionRate {
+                    self.labelsForStatistics["conversionRate"] = "Conversion rate is \(conversionRate) " as AnyObject
+                } else {
+                    self.labelsForStatistics["conversionRate"] = "Conversion rate is ...loading... " as AnyObject
+                }
+                if let topManufacturers = t.topManufacturers{
+                    if let name = topManufacturers.name {
+                        self.labelsForStatistics["topManufacturer"] = "Tope manufacturer is \(name) " as AnyObject
+                    } else {
+                        self.labelsForStatistics["topManufacturer"] = "Tope manufacturer is ...loading... " as AnyObject
+                    }
+                } else {
+                    self.labelsForStatistics["topManufacturer"] = "Tope manufacturer is ...loading... " as AnyObject
+                }
+                if let connectedPercentage =  t.connectedPercentage {
+                    let CP = String(format: "%.02f", connectedPercentage)
+                    self.labelsForStatistics["connectedPercentage"] = "Connected percentage is \(CP)%" as AnyObject
+                } else {
+                    self.labelsForStatistics["connectedPercentage"] = "Connected percentage is ...loading..." as AnyObject
+                }
+                if let peakHour = t.peakSummary?.peakHour{
+                    self.labelsForStatistics["peakHour"] = "Peak hour by far is \(peakHour) " as AnyObject
+                } else {
+                    self.labelsForStatistics["peakHour"] = "Peak hour by far is .... " as AnyObject
+                }
+                
+                completion(true, nil)
+                // t.prinAll()
+            } else if let e = error {
+                completion(false, e)
+            }
+            
+        })
     }
 }

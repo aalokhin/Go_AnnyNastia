@@ -8,7 +8,7 @@ target 'CCMN' do
    pod 'SwiftEntryKit'
    pod 'SwiftGifOrigin'
 
-#  github "bahlo/SwiftGif" ~> 1.7.0
+  
 
   # Pods for CCMN
 

@@ -22,7 +22,8 @@ extension SearchSetUpVC: UITableViewDataSource {
             }
         }
         else {
-            return 3
+            return dates.count
+//            return inputTexts.count
         }
         
     }
@@ -32,18 +33,31 @@ extension SearchSetUpVC: UITableViewDataSource {
         if (hourly == false){
             //print("we want daily range")
                 if datePickerIndexPath == indexPath {
+                    
                     let datePickerCell = tableView.dequeueReusableCell(withIdentifier: DateCell.reuseIdentifier()) as! DateCell
+               
                     datePickerCell.updateCell(date: inputDates[indexPath.row - 1], indexPath: indexPath)
                     datePickerCell.delegate = self
                     return datePickerCell
                 } else {
                     let dateCell = tableView.dequeueReusableCell(withIdentifier: DateTextCell.reuseIdentifier()) as! DateTextCell
+//                    dateCell.updateText(text: inputTexts[indexPath.row], date:
+//                        [indexPath.row])
+                    print("\n\n\n>>>>>>>>>>", inputTexts.count, "dates lalal ", dates.count)
+                    print("\n\n\n>>>>>>>>>>", hourly)
+                    
+                    print(indexPath.row)
+                 
                     dateCell.updateText(text: inputTexts[indexPath.row], date: inputDates[indexPath.row])
+                    dateCell.layer.cornerRadius = 10
                     return dateCell
                 }
         } else {
+            self.datePickerIndexPath = nil
+            print("\n\n>>>>.>>>.>>> houly now", hourly)
             //print("we want hourly range")
             let cell = tableView.dequeueReusableCell(withIdentifier: MacListCell.reuseIdentifier()) as! MacListCell
+            cell.layer.cornerRadius = 10
             cell.textLabel?.text = dates[indexPath.row]
             return cell
         }
@@ -59,16 +73,22 @@ extension SearchSetUpVC: UITableViewDelegate {
             tableView.beginUpdates()
             if let datePickerIndexPath = datePickerIndexPath, datePickerIndexPath.row - 1 == indexPath.row {
                 tableView.deleteRows(at: [datePickerIndexPath], with: .fade)
+                print("1111111")
                 self.datePickerIndexPath = nil
+                
             } else {
                 if let datePickerIndexPath = datePickerIndexPath {
                     tableView.deleteRows(at: [datePickerIndexPath], with: .fade)
+                    
+                    print("22222")
+                   
                 }
                 datePickerIndexPath = indexPathToInsertDatePicker(indexPath: indexPath)
                 tableView.insertRows(at: [datePickerIndexPath!], with: .fade)
                 tableView.deselectRow(at: indexPath, animated: true)
             }
             tableView.endUpdates()
+            
         }
         else
         {

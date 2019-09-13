@@ -19,31 +19,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-BF-rAS">
-                                <rect key="frame" x="0.0" y="121" width="414" height="393"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="459"/>
+                                <color key="backgroundColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6tm-vU-I6q" id="Vh5-YF-c14"/>
                                     <outlet property="delegate" destination="6tm-vU-I6q" id="5Tv-PD-oMC"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-sh-cWQ">
-                                <rect key="frame" x="20" y="535" width="384" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-sh-cWQ">
+                                <rect key="frame" x="10" y="534" width="394" height="29"/>
+                                <color key="backgroundColor" red="0.86367693639999998" green="0.78419505840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Hourly"/>
                                     <segment title="Daily"/>
                                 </segments>
+                                <color key="tintColor" red="0.54974603652954102" green="0.25172939896583557" blue="0.91929918527603149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentedControlValueChanged:" destination="6tm-vU-I6q" eventType="valueChanged" id="08V-F6-XRD"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="YU2-BF-rAS" firstAttribute="trailing" secondItem="BmP-ME-Wtm" secondAttribute="trailing" id="FFP-QC-7Hw"/>
-                            <constraint firstItem="YU2-BF-rAS" firstAttribute="leading" secondItem="BmP-ME-Wtm" secondAttribute="leading" id="W8M-wP-hP7"/>
-                            <constraint firstItem="YU2-BF-rAS" firstAttribute="top" secondItem="BmP-ME-Wtm" secondAttribute="top" constant="77" id="YuL-TJ-Z9b"/>
-                            <constraint firstItem="BmP-ME-Wtm" firstAttribute="bottom" secondItem="YU2-BF-rAS" secondAttribute="bottom" constant="348" id="mhv-JF-9Nf"/>
+                            <constraint firstItem="2L3-sh-cWQ" firstAttribute="top" secondItem="YU2-BF-rAS" secondAttribute="bottom" constant="21" id="2bf-Hb-lHc"/>
+                            <constraint firstItem="YU2-BF-rAS" firstAttribute="leading" secondItem="BmP-ME-Wtm" secondAttribute="leading" id="5uF-7m-UvA"/>
+                            <constraint firstItem="BmP-ME-Wtm" firstAttribute="bottom" secondItem="2L3-sh-cWQ" secondAttribute="bottom" constant="300" id="8Kg-Nd-mrk"/>
+                            <constraint firstItem="BmP-ME-Wtm" firstAttribute="trailing" secondItem="2L3-sh-cWQ" secondAttribute="trailing" constant="10" id="I3m-ix-H8O"/>
+                            <constraint firstItem="YU2-BF-rAS" firstAttribute="trailing" secondItem="BmP-ME-Wtm" secondAttribute="trailing" id="bt7-1P-Kqy"/>
+                            <constraint firstItem="2L3-sh-cWQ" firstAttribute="leading" secondItem="BmP-ME-Wtm" secondAttribute="leading" constant="10" id="iX6-h6-Lg5"/>
+                            <constraint firstItem="YU2-BF-rAS" firstAttribute="top" secondItem="BmP-ME-Wtm" secondAttribute="top" constant="10" id="qAf-hG-sO8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BmP-ME-Wtm"/>
                     </view>

@@ -12,14 +12,9 @@ import UIKit
 extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if (dailyProximity.datapoints.count == 0 || dailyProximity.values.count == 0 || repeatDistribution.count == 0 || setAllRepeatString.count == 0 || allUsersForProximity.count == 0 || setAllDwellString.count == 0){
-            return 0
-        } else {
-            return 5
-        }
- 
+        return numberOfSections
     }
+    
     //http://www.thomashanning.com/the-most-common-mistake-in-using-uitableview/
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -36,9 +31,11 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             var allRepeatSort = [(key: String, value: AnyObject)]()
             if hourly == true{
                 datapoints = setAllRepeatString.keys.sorted(by: { $0.toInt() < $1.toInt() })
-                print("datapoints >>>>>>>>>>>>", datapoints)
+                //print("datapoints >>>>>>>>>>>>", datapoints)
                 allRepeatSort = setAllRepeatString.sorted(by: { $0.key.toInt() < $1.key.toInt() })
             } else {
+               // print(setAllRepeatString)
+                //print("KEYS +++> ", setAllRepeatString.keys, "hourly true? ", hourly)
                 datapoints = setAllRepeatString.keys.sorted(by: { $0.toDateCustom(format: "yyyy-MM-dd")! < $1.toDateCustom(format: "yyyy-MM-dd")! })
                 allRepeatSort = setAllRepeatString.sorted(by: { $0.key.toDateCustom(format: "yyyy-MM-dd")! < $1.key.toDateCustom(format: "yyyy-MM-dd")! })
             }
@@ -59,7 +56,8 @@ extension PresenceVisualizationVC : UITableViewDelegate, UITableViewDataSource {
             var allDwellSort = [(key: String, value: AnyObject)]()
             if hourly == true{
                 datapoints = setAllDwellString.keys.sorted(by: { $0.toInt() < $1.toInt() })
-                print("datapoints >>>>>>>>>>>>", datapoints)
+               // print("dwell count", setAllDwellString.count)
+                //print("datapoints >>>>>>>>>>>>", datapoints)
                 allDwellSort = setAllDwellString.sorted(by: { $0.key.toInt() < $1.key.toInt() })
             } else {
                 datapoints = setAllDwellString.keys.sorted(by: { $0.toDateCustom(format: "yyyy-MM-dd")! < $1.toDateCustom(format: "yyyy-MM-dd")! })
@@ -128,7 +126,8 @@ extension PresenceVisualizationVC : SetUpDelegate {
         self.endDate = to.toStringDefault()
         self.hourly = hourly
         self.dateSpan = dateSpan ?? "today"
-       // print("hey from delegat here are our dates \(from) and \(to), hourly \(hourly), span \(dateSpan ?? "no date span")")
+        getAllData()
+
     }
     
     

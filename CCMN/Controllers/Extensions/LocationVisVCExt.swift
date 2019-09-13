@@ -15,9 +15,24 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
         
         let mac : String
         if shouldShowSearchResults == true {
-            mac = filteredMacs[indexPath.row].macAddr
+            if (indexPath.row < filteredMacs.count){
+                 mac = filteredMacs[indexPath.row].macAddr
+            }
+            else {
+                print("index out of range here")
+                mac = "...loading"
+                
+            }
+          
         } else {
-            mac = allMacs[indexPath.row].macAddr
+            if (indexPath.row < self.allMacs.count){
+                mac = allMacs[indexPath.row].macAddr
+            }
+             else {
+                print("index out of range here")
+                mac = "...loading"
+                
+            }
         }
         cell.textLabel?.text = mac
         return cell
@@ -31,18 +46,18 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-      
+        
         var macName = ""
         
         //need to fix out of range here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         if shouldShowSearchResults == true {
-            if (indexPath.row < allMacs.count){
+            if (indexPath.row < filteredMacs.count){
                 macName = filteredMacs[indexPath.row].macAddr
             }
             else {
-                    print("index out of range here")
-                    print("filtered macs : ", self.filteredMacs.count, "   <->   ", indexPath.row )
-                    return
+                print("index out of range here")
+                print("filtered macs : ", self.filteredMacs.count, "   <->   ", indexPath.row )
+                return
             }
         } else {
             if (indexPath.row < self.allMacs.count){
@@ -65,20 +80,6 @@ extension  LocationVisVC : UITableViewDelegate, UITableViewDataSource {
             }
             
         }
-        
-        
-        /*
-         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-         let protein : String
-         if shouldShowSearchResults == true {
-         protein = filteredProteins[indexPath.row]
-         } else {
-         protein = unFilteredProteins[indexPath.row]
-         }
-         let destination = segue.destination as! ProteinVisVC
-         destination.protein = protein
-         */
-        //    self.performSegue(withIdentifier: "FromTableView", sender: self)
     }
 }
 
@@ -100,7 +101,7 @@ extension LocationVisVC: UISearchBarDelegate {
         filteredMacs = allMacs.filter({( protein : Mac) -> Bool in
             return protein.macAddr.lowercased().contains(searchText.lowercased())
         })
-
+        
         shouldShowSearchResults = searchText != "" ? true : false
         if (shouldShowSearchResults == false){
             print("timer restarted")
@@ -114,11 +115,5 @@ extension LocationVisVC: UISearchBarDelegate {
         searchBar.delegate = self
     }
     
-//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//        print("searchBarCancelButtonClicked")
-//        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
-//        searchBar.text = ""
-//        self.shouldShowSearchResults = false
-//    }
+    
 }
-

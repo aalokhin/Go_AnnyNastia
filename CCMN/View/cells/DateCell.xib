@@ -20,6 +20,7 @@
                 <subviews>
                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="qaf-jU-bnV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
+                        <color key="backgroundColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <date key="date" timeIntervalSinceReferenceDate="587202970.13593602">
                             <!--2019-08-11 07:56:10 +0000-->
                         </date>

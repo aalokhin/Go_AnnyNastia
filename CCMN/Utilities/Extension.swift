@@ -9,6 +9,33 @@
 import Foundation
 import UIKit
 import Alamofire
+import SQLite3
+
+
+///https://gist.github.com/berikv/903ba265e79c634cbeff
+
+/// Calculates a moving average.
+/// - Parameter period: the period to calculate averages for.
+/// - Warning: the supplied `period` must be larger than 1.
+/// - Warning: the supplied `period` should not exceed the collection's `count`.
+/// - Returns: a dictionary of indexes and averages.
+extension Collection where Element == Int, Index == Int {
+
+func movingAverage(period: Int) -> [Int: Float] {
+    precondition(period > 1)
+    precondition(count > period)
+    let result = (0..<self.count).compactMap { index -> (Int, Float)? in
+        if (0..<period).contains(index) { return nil }
+        let range = index - period..<index
+        let sum = self[range].reduce(0, +)
+        let result = Float(sum) / Float(period)
+        
+        return (index, result)
+    }
+    return Dictionary(uniqueKeysWithValues: result)
+}
+}
+
 
 extension String {
 
@@ -37,6 +64,7 @@ extension String {
         return self[index(startIndex, offsetBy: i)]
     }
     
+    
     func toDate()-> Date? {
         let format : String = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         
@@ -56,7 +84,12 @@ extension String {
 }
 
 
+
 extension Date{
+    
+    func getTimeStamp() -> Int64 {
+        return Int64(self.timeIntervalSince1970)
+    }
     // converts to "yyyy-MM-dd" format
     func toStringDefault() -> String {
        
@@ -183,6 +216,86 @@ extension UIImage {
     
 }
 
+
+extension UIViewController {
+    func callErrorWithCustomMessage(_ message : String) {
+        let alert = UIAlertController(
+            title : "Error",
+            message : message,
+            preferredStyle : UIAlertController.Style.alert
+        );
+        
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+            UIAlertAction in
+            print("Okay!")
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    func logError(timestamp : Int32, ErrorMsg : NSString) {
+        var insertStatement: OpaquePointer? = nil
+        let insertStatementString = "INSERT INTO ErrorLogTable (Timestamp, Error) VALUES (?, ?);"
+        
+        // 1
+        print(timestamp)
+        if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
+            
+            // 2
+            sqlite3_bind_int(insertStatement, 1, timestamp)
+            // 3
+            sqlite3_bind_text(insertStatement, 2, ErrorMsg.utf8String, -1, nil)
+            
+            // 4
+            if sqlite3_step(insertStatement) == SQLITE_DONE {
+                print("Successfully inserted row.")
+            } else {
+                print(ErrorMsg)
+                //print(sqlite3_step(insertStatement))
+                print("Could not insert row.")
+            }
+        } else {
+            print("INSERT statement could not be prepared.")
+        }
+        // 5
+        sqlite3_finalize(insertStatement)
+    }
+    
+    func query() {
+       
+
+        
+        var queryStatement: OpaquePointer? = nil
+        // 1
+        let queryStatementString = "SELECT * FROM ErrorLogTable;"
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            // 2
+            //print(sqlite3_step(queryStatement))
+            if sqlite3_step(queryStatement) == SQLITE_ROW{
+                // 3
+                let id = sqlite3_column_int(queryStatement, 0)
+                
+                // 4
+                let queryResultCol1 = sqlite3_column_text(queryStatement, 1)
+                let name = String(cString: queryResultCol1!)
+                
+                // 5
+                print("Query Result:")
+                print("\(id) | \(name)")
+                
+            } else {
+                print("Query returned no results")
+            }
+        } else {
+            print("SELECT statement could not be prepared")
+        }
+        
+        // 6
+        sqlite3_finalize(queryStatement)
+    }
+}
 
 
 

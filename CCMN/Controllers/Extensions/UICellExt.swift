@@ -15,16 +15,20 @@ extension UITableViewCell{
     func createLinearChartString(datapoints: [String], allDwell : [(key: String, value: AnyObject)], timeSpanLabels : [String], addGradient : Bool){
         let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
         lineChart.noDataText = "please enter data"
+        if (datapoints.count == 0 || allDwell.count == 0 || timeSpanLabels.count == 0 ){
+            self.addSubview(lineChart)
+            return
+        }
+        
         let data = LineChartData()
         
         for i in 0..<timeSpanLabels.count{
             var lineChartEntry = [ChartDataEntry]()
             //print("------------------------------------------------")
-
             for j in 0..<allDwell.count{
                 if let val = allDwell[j].value[timeSpanLabels[i]]{
                     // print(val as! Double)
-                   // print("***", j, "***")
+                    // print("***", j, "***")
                     lineChartEntry.append(ChartDataEntry(x: Double(j), y: val as! Double))
                 }
             }
@@ -44,66 +48,20 @@ extension UITableViewCell{
             
         }
         designLinearChart(lineChart : lineChart, datapoints : datapoints)
-
+        
         lineChart.data = data
         self.addSubview(lineChart)
         
     }
-    
-    
-    
-    
-    
-    
-    
-    ///////////////////////////////////////////////////////////////////
-    
-    
-    func createLinearChart(datapoints: [String], allDwell : [(key: Int, value: AnyObject)], timeSpanLabels : [String], addGradient : Bool){
-        let lineChart = LineChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        lineChart.noDataText = "please enter data"
-        let data = LineChartData()
-        for i in 0..<timeSpanLabels.count{
-            var lineChartEntry = [ChartDataEntry]()
-            
-            for j in 0..<allDwell.count{
-                if let val = allDwell[j].value[timeSpanLabels[i]]{
-                    // print(val as! Double)
-                    lineChartEntry.append(ChartDataEntry(x: Double(allDwell[j].key), y: val as! Double))
-                }
-            }
-            
-            
-            let line = LineChartDataSet(entries: lineChartEntry, label: timeSpanLabels[i])
-            line.colors = [getColor(int: i)]
-            line.drawValuesEnabled = false
-            
-            if (addGradient){
-                let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: [getColor(int: i).cgColor, getColor(int: i).cgColor] as CFArray, locations: [1.0, 0.0]) // Gradient Object
-                line.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
-                line.drawFilledEnabled =  true// Draw the Gradient
-            }
-            line.circleRadius = 2.5
-            line.circleColors = [getColor(int: i), getColor(int: i)]
-            line.circleHoleRadius = 1.3
-            data.addDataSet(line)
-        }
-       
-        
-        lineChart.data = data
-        designLinearChart(lineChart : lineChart, datapoints : datapoints)
-        self.addSubview(lineChart)
-        
-    }
-
     
     func designLinearChart(lineChart : LineChartView, datapoints : [String]){
         let legend = lineChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
-        lineChart.xAxis.labelRotationAngle = -90
+        lineChart.leftAxis.axisMinimum = 0
+        // lineChart.xAxis.labelRotationAngle = -45
         lineChart.xAxis.labelPosition = .bottom
-        lineChart.xAxis.labelCount = datapoints.count
+        lineChart.xAxis.labelCount = 12
         lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
         lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:datapoints)
         lineChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
@@ -112,151 +70,34 @@ extension UITableViewCell{
     
     
     
-    func createBarChart(dataPoints: [String], values: [Double]) {
-       // print(self.frame.height, self.frame.width)
-        let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        //print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
-        barChart.noDataText = "please enter data"
-        
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<values.count {
-            
-            
-            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
-            //(value: values[i], xIndex: i)
-            
-            dataEntries.append(dataEntry)
-        }
-        
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Connected visitors hourly")
-        let chartData = BarChartData(dataSet: chartDataSet)
-        let legend = barChart.legend
-        legend.enabled = true
-        legend.verticalAlignment = .top
-        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
-        barChart.xAxis.labelPosition = .bottom
-        barChart.xAxis.drawAxisLineEnabled = true
-        barChart.xAxis.drawGridLinesEnabled = true
-        // barChart.xAxis.centerAxisLabelsEnabled = true
-        barChart.xAxis.enabled = true
-        // barChart.xAxis.granularityEnabled = true
-        barChart.xAxis.axisMinimum = 0.0
-        barChart.xAxis.labelPosition = .bottom
-        barChart.xAxis.labelRotationAngle = -90
-        barChart.rightAxis.drawLabelsEnabled = false
-        barChart.rightAxis.enabled = false
-        barChart.rightAxis.drawLabelsEnabled = false
-        barChart.rightAxis.drawGridLinesEnabled = true
-        barChart.leftAxis.enabled = false
-        barChart.leftAxis.drawAxisLineEnabled = false
-        barChart.leftAxis.drawGridLinesEnabled = false
-        barChart.notifyDataSetChanged()
-        barChart.xAxis.labelCount = dataPoints.count
-        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
-        barChart.notifyDataSetChanged()
-        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
-        barChart.data = chartData
-        
-        
-        barChart.translatesAutoresizingMaskIntoConstraints = true
-        barChart.topAnchor.constraint(equalTo: self.topAnchor)
-        barChart.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        barChart.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-        barChart.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        self.addSubview(barChart)
-    }
     
     func createGroupedBarChart(dataPoints: [String], values: [[Double]]) {
-        
-        var dataEntryArr : [[BarChartDataEntry]] = []
-        
-     //   print(self.frame.height, self.frame.width)
         let barChart =  BarChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
-        //print(barChart.frame.minX, barChart.frame.minY, barChart.frame.maxX, barChart.frame.maxY)
         barChart.noDataText = "please enter data"
-        
-        for one in 0..<values.count{
-            var dataEntries: [BarChartDataEntry] = []
-            for i in 0..<values[one].count {
-                let dataEntry = BarChartDataEntry(x: Double(i), y: values[one][i])
-                dataEntries.append(dataEntry)
-            }
-            dataEntryArr.append(dataEntries)
+        if dataPoints.count != 0 && values.count != 0 {
+            barChart.fillDatasets(dataPoints : dataPoints, values: values)
+            barChart.designBarChart(dataPoints: dataPoints)
         }
-        
-        var dataSets : [BarChartDataSet] = []
-///https://stackoverflow.com/questions/35294076/how-to-make-a-grouped-barchart-with-ios-charts        var dataSets: [BarChartDataSet] = []
-        let labels = ["Connected", "Passerby", "Visitor"]
-        for i in 0..<dataEntryArr.count{
-            let set = BarChartDataSet(entries: dataEntryArr[i], label: labels[i])
-            dataSets.append(set)
-        }
-        for i in 0..<dataSets.count{
-            dataSets[i].colors = [getColor(int: i)]
-        }
-        
-        let chartData = BarChartData(dataSets: dataSets)
-        barChart.data = chartData
-        
-        
-        let legend = barChart.legend
-        legend.enabled = true
-        legend.verticalAlignment = .top
-        barChart.xAxis.labelFont = UIFont.systemFont(ofSize: 9)
-        
-        
-        let groupSpace = 0.3
-        let barSpace = 0.05
-        let barWidth = 0.3
-        // (0.3 + 0.05) * 2 + 0.3 = 1.00 -> interval per "group"
-        
-        
-        let groupCount = values[0].count
-        let startYear = 0
-        chartData.barWidth = barWidth;
-        barChart.xAxis.axisMinimum = Double(startYear)
-        let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
-      //  print("Groupspace: \(gg)")
-        barChart.xAxis.axisMaximum = Double(startYear) + gg * Double(groupCount)
-        
-        chartData.groupBars(fromX: Double(startYear), groupSpace: groupSpace, barSpace: barSpace)
-        //chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
-        barChart.notifyDataSetChanged()
-        
-        
-        
-        
-        
-        
-        
-        //background color
-        barChart.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
-        
-        //chart animation
-        barChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
-        designBarChart(barChart: barChart, dataPoints: dataPoints)
         self.addSubview(barChart)
     }
     
-    func designBarChart(barChart : BarChartView, dataPoints: [String]){
-        let xaxis = barChart.xAxis
-        xaxis.drawGridLinesEnabled = true
-        xaxis.labelPosition = .bottom
-        xaxis.valueFormatter = IndexAxisValueFormatter(values : dataPoints)
-       // xaxis.labelCount = dataPoints.count
-        xaxis.labelRotationAngle = -90
-        barChart.rightAxis.drawLabelsEnabled = false
-        barChart.rightAxis.enabled = false
-     
-    }
     
-   
+    
+    
+    
     func createPieChart(dataPoints: [String], values: [Double], chartName : String){
         let pieChart = PieChartView(frame: CGRect(x: 0.0, y: 0.0, width: self.frame.width, height: self.frame.height))
+        
+        pieChart.holeRadiusPercent = 0.0
+        pieChart.transparentCircleRadiusPercent = 0
+        
         pieChart.noDataText = "please enter data"
+        
+        if (dataPoints.count == 0 || values.count == 0){
+            self.addSubview(pieChart)
+            return
+        }
+        
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<values.count {
             let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
@@ -267,7 +108,7 @@ extension UITableViewCell{
         let legend = pieChart.legend
         legend.enabled = true
         legend.verticalAlignment = .top
- 
+        
         var  colors: [UIColor] = []
         for _ in 0..<dataPoints.count {
             let red = Double(arc4random_uniform(256))
@@ -277,10 +118,16 @@ extension UITableViewCell{
             colors.append(color)
         }
         chartDataSet.colors = colors
+        
+        chartDataSet.yValuePosition = .outsideSlice
+        
+        chartDataSet.valueTextColor = .black
         pieChart.drawEntryLabelsEnabled = false       // pieChart.setDrawSliceText(false)
         let chartData = PieChartData()
         chartData.addDataSet(chartDataSet)
         pieChart.data = chartData
+        
+        
         self.addSubview(pieChart)
         
     }
@@ -304,4 +151,3 @@ extension UITableViewCell{
         }
     }
 }
-

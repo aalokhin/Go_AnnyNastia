@@ -33,6 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="OIp-KD-Omi" id="K3w-Wd-D0t"/>

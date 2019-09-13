@@ -18,63 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g7y-jG-fQQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gKX-Jd-E5g">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
-                                        <subviews>
-                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="s8u-2u-8pO">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="Oxn-9b-YuX" id="CNX-6h-9AH"/>
-                                                </connections>
-                                            </searchBar>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="us4-1h-SSp">
-                                                <rect key="frame" x="0.0" y="109" width="414" height="475"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="475" id="XqO-gU-70M"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="Oxn-9b-YuX" id="qi2-dI-h0A"/>
-                                                    <outlet property="delegate" destination="Oxn-9b-YuX" id="W5P-CL-nNo"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q74-Yv-GoH">
-                                        <rect key="frame" x="0.0" y="584" width="414" height="234"/>
-                                        <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-qL-kTF">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
-                                                <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
-                                                    <segment title="Third"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="SegmentedControlChanged:" destination="Oxn-9b-YuX" eventType="valueChanged" id="0uz-7S-YVO"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzx-UE-fu0">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="206"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="s8u-2u-8pO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="backgroundColor" red="0.86367693639999998" green="0.78419505840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.54974603652954102" green="0.25172939896583557" blue="0.91929918527603149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Oxn-9b-YuX" id="CNX-6h-9AH"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p2d-qL-kTF">
+                                <rect key="frame" x="0.0" y="814" width="414" height="29"/>
+                                <color key="backgroundColor" red="0.86367693639999998" green="0.78419505840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <color key="tintColor" red="0.79036873579025269" green="0.0" blue="0.98955637216567993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="SegmentedControlChanged:" destination="Oxn-9b-YuX" eventType="valueChanged" id="0uz-7S-YVO"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzx-UE-fu0">
+                                <rect key="frame" x="0.0" y="100" width="414" height="228"/>
                                 <constraints>
-                                    <constraint firstItem="q74-Yv-GoH" firstAttribute="top" secondItem="g7y-jG-fQQ" secondAttribute="top" constant="584" id="8XM-S2-jEd"/>
+                                    <constraint firstAttribute="height" constant="228" id="Dzg-Wx-KBx"/>
                                 </constraints>
-                            </stackView>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="us4-1h-SSp">
+                                <rect key="frame" x="0.0" y="328" width="414" height="486"/>
+                                <color key="backgroundColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexColor" red="0.54974603652954102" green="0.25172939896583557" blue="0.91929918527603149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.44495335221290588" green="0.90470564365386963" blue="0.85288244485855103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.71126240491867065" green="0.56539374589920044" blue="0.91676241159439087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Oxn-9b-YuX" id="qi2-dI-h0A"/>
+                                    <outlet property="delegate" destination="Oxn-9b-YuX" id="W5P-CL-nNo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97555677600000001" green="0.88077928910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="g7y-jG-fQQ" firstAttribute="leading" secondItem="pxo-qK-wdm" secondAttribute="leading" id="0hr-kT-6zV"/>
-                            <constraint firstItem="pxo-qK-wdm" firstAttribute="bottom" secondItem="g7y-jG-fQQ" secondAttribute="bottom" id="Ei4-3I-TA4"/>
-                            <constraint firstItem="g7y-jG-fQQ" firstAttribute="top" secondItem="pxo-qK-wdm" secondAttribute="top" id="fdI-ok-iPf"/>
-                            <constraint firstItem="g7y-jG-fQQ" firstAttribute="trailing" secondItem="pxo-qK-wdm" secondAttribute="trailing" id="l6W-yx-UTZ"/>
+                            <constraint firstItem="pxo-qK-wdm" firstAttribute="bottom" secondItem="p2d-qL-kTF" secondAttribute="bottom" constant="20" id="29h-E2-GkC"/>
+                            <constraint firstItem="p2d-qL-kTF" firstAttribute="leading" secondItem="pxo-qK-wdm" secondAttribute="leading" id="6Hh-ve-dUW"/>
+                            <constraint firstItem="p2d-qL-kTF" firstAttribute="top" secondItem="us4-1h-SSp" secondAttribute="bottom" id="CB3-Z7-qMd"/>
+                            <constraint firstItem="us4-1h-SSp" firstAttribute="leading" secondItem="pxo-qK-wdm" secondAttribute="leading" id="CZ8-hE-Dq8"/>
+                            <constraint firstItem="fzx-UE-fu0" firstAttribute="top" secondItem="s8u-2u-8pO" secondAttribute="bottom" id="FMJ-nd-f8N"/>
+                            <constraint firstItem="us4-1h-SSp" firstAttribute="top" secondItem="fzx-UE-fu0" secondAttribute="bottom" id="GmV-hp-0EN"/>
+                            <constraint firstItem="us4-1h-SSp" firstAttribute="trailing" secondItem="pxo-qK-wdm" secondAttribute="trailing" id="PhG-NO-IN2"/>
+                            <constraint firstItem="s8u-2u-8pO" firstAttribute="trailing" secondItem="pxo-qK-wdm" secondAttribute="trailing" id="R08-I1-Sgg"/>
+                            <constraint firstItem="fzx-UE-fu0" firstAttribute="trailing" secondItem="pxo-qK-wdm" secondAttribute="trailing" id="dMe-fJ-efT"/>
+                            <constraint firstItem="fzx-UE-fu0" firstAttribute="leading" secondItem="pxo-qK-wdm" secondAttribute="leading" id="gja-Jx-UKC"/>
+                            <constraint firstItem="s8u-2u-8pO" firstAttribute="leading" secondItem="pxo-qK-wdm" secondAttribute="leading" id="ui6-5U-oF7"/>
+                            <constraint firstItem="s8u-2u-8pO" firstAttribute="top" secondItem="pxo-qK-wdm" secondAttribute="top" id="wGK-yW-tdW"/>
+                            <constraint firstItem="p2d-qL-kTF" firstAttribute="trailing" secondItem="pxo-qK-wdm" secondAttribute="trailing" id="yws-wC-Emm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pxo-qK-wdm"/>
                     </view>

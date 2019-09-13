@@ -38,6 +38,7 @@
  */
 import Foundation
 import Alamofire
+import SQLite3
 
 final class Client {
     let locateUrl = "https://cisco-cmx.unit.ua/"
@@ -51,7 +52,7 @@ final class Client {
     var campusInformation : mapJSON?
     var siteID : SiteID?
     var floorImgs : [UIImage]?
-    
+   
     
     
     let locateAuthHeader = "Basic " + String("\(username):" + locatePass).toBase64()
@@ -83,11 +84,14 @@ final class Client {
 //
     
     static let sharedInstance = Client()
+
     
     private init(){
         print("Singleton client has been initialized")
-    
     }
+    
+    
+   
 //
     func setCampus(t : mapJSON){
         self.campusInformation = t

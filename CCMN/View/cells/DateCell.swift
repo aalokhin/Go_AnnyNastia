@@ -38,8 +38,18 @@ class DateCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("\n\n-----------awakeFromNib\n\n")
         initView()
+        var components = DateComponents()
+        components.year = -3
+        let minDate = Calendar.current.date(byAdding: components, to: Date())
+//        components.year = 10
+//        let maxDate = Calendar.current.date(byAdding: components, to: Date())
+        
         datePicker.maximumDate = Date()
+        datePicker.minimumDate = minDate
+        
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

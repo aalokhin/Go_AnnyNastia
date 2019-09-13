@@ -23,7 +23,7 @@ class  LocationVisVC: UIViewController {
     var allMacs : [Mac] = []
     var usersSaved  = Set<String>()
     var currUserSet  = Set<String>()
-
+    
     private var customView: UIView!
     var timer: Timer?
     var currentFloor : String = "735495909441273878"
@@ -31,19 +31,20 @@ class  LocationVisVC: UIViewController {
     
     let floorsImgs : [String : String] = ["735495909441273878" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/1st_Floor",
                                           "735495909441273979" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/2nd_Floor", "735495909441273980" : "api/config/v1/maps/image/System%20Campus/UNIT.Factory/3rd_Floor"]
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var floorMapImageView: UIImageView!
+    
     @IBAction func SegmentedControlChanged(_ sender: UISegmentedControl) {
         print("segmented contorl clicked")
-    
+        
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-           updateTV("735495909441273878")
-           print("case 1st floor ")
+            updateTV("735495909441273878")
+            print("case 1st floor ")
         case 1:
             print("case 2: second floor")
             updateTV("735495909441273979")
@@ -63,7 +64,6 @@ class  LocationVisVC: UIViewController {
         print("HELLO FROM LOCATION VIS VC")
         getAllClients()
         timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(checkAll), userInfo: nil, repeats: true)
-        //getActive()
     }
     
     @objc func checkAll(){
@@ -94,15 +94,18 @@ class  LocationVisVC: UIViewController {
                 let imageTest = img.addDots(macs: self.allMacs)
                 self.floorMapImageView.image = imageTest
             }
+            else if let err = error{
+                self.callErrorWithCustomMessage("Couldn't update image for some reason. Please try again")
+                self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: NSString(string: err.localizedDescription))
+            }
         })
     }
     
     func getAllClients(){
-        showPopUp(newClientMAC: "allalall")
         NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients", params: [:], method: .get, completion: {
             data, error in
             if let d = data{
-               guard let t = try? JSONDecoder().decode([ClientJSON].self, from: d) else {
+                guard let t = try? JSONDecoder().decode([ClientJSON].self, from: d) else {
                     print("error decoding json")
                     return
                 }
@@ -113,11 +116,10 @@ class  LocationVisVC: UIViewController {
                         if let refId = one.mapInfo.floorRefId {
                             if refId == self.currentFloor{
                                 self.currUserSet.insert(one.macAddress!)
-
                                 tempMacs.append(Mac(x: x, y: y, macAddr: addr))
                             }
                         }
-
+                        
                     }
                 }
                 
@@ -125,8 +127,8 @@ class  LocationVisVC: UIViewController {
                 
                 //print("cur ->",  self.currUserSet.count, "old ->",  self.usersSaved.count)
                 if self.usersSaved.count > 0{
-                   
-
+                    
+                    
                     for one in newUser{
                         self.showPopUp(newClientMAC : one)
                         print("New: ", one)
@@ -140,15 +142,19 @@ class  LocationVisVC: UIViewController {
                 }
                 self.tableView.reloadData()
             }
+            else if let err = error{
+                self.callErrorWithCustomMessage("Couldn't get clients info. Please try again")
+                self.logError(timestamp: Int32(Date().getTimeStamp()), ErrorMsg: NSString(string: err.localizedDescription))
+            }
             
         })
     }
     
-   
+    
     func showPopUp(newClientMAC : String){
-        
+        /*                       made by Anny                                      */
         let floors : [String : String] = ["735495909441273878" : "first floor",
-                                              "735495909441273979" : "second floor", "735495909441273980" : "third floor"]
+                                          "735495909441273979" : "second floor", "735495909441273980" : "third floor"]
         let message : String = " Hi, @xlogin or mac: \(newClientMAC) now is on \(floors[currentFloor] ?? "") "
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/5 - 75, y: self.view.frame.size.height-680, width: self.view.frame.width, height: 300))
         toastLabel.numberOfLines = 0
@@ -160,8 +166,7 @@ class  LocationVisVC: UIViewController {
         toastLabel.alpha = 1.0
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds  =  true
-        
-        
+        /*                       made by Anny                                      */
         var attributes = EKAttributes.topToast
         EKAttributes.Precedence.QueueingHeuristic.value = .chronological
         attributes.precedence = .enqueue(priority: .normal)
@@ -176,7 +181,7 @@ class  LocationVisVC: UIViewController {
     
     func areEqual(mac1:[Mac], mac2: [Mac]) -> Bool {
         // Don't equal size => false
-     
+        
         // sort two arrays
         let array1 = mac1.sorted(by: { $0.macAddr < $1.macAddr })
         let array2 = mac2.sorted(by: { $0.macAddr < $1.macAddr })
@@ -195,12 +200,12 @@ class  LocationVisVC: UIViewController {
     }
     
     
-
+    
 }
 
 class Mac : Equatable, Hashable {
     static func == (lhs: Mac, rhs: Mac) -> Bool {
-       return lhs.macAddr == rhs.macAddr  && lhs.x == rhs.x && lhs.y == rhs.y
+        return lhs.macAddr == rhs.macAddr  && lhs.x == rhs.x && lhs.y == rhs.y
     }
     
     let x : Double
@@ -219,30 +224,3 @@ class Mac : Equatable, Hashable {
         self.macAddr = macAddr
     }
 }
-
-
-
-
-/*
-
-func getActive(){
-    ///api/location/v2/clients/active
-    NetworkManager.getRequestData(isLocation: true, endpoint:  "api/location/v2/clients/active", params: [:], method: .get, completion: {
-        data, error in
-        if let d = data{
-            if let json = try? JSONSerialization.jsonObject(with: d, options: []){
-                print(json)
-            }
-            guard let t = try? JSONDecoder().decode([String].self, from: d) else {
-                print("error decoding json")
-                return
-            }
-            print("active>>>> ", t.count)
-            
-        }
-        
-    })
-    
-}
-
-*/
